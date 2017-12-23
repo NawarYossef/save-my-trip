@@ -1,0 +1,182 @@
+@import url("whitespace-reset.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(93, 88, 88);
+}
+
+/* Grid measurements:
+ *
+ *   960px wide including 12 gutters (half gutters on both edges)
+ *
+ *   60px columns (12)
+ *   20px gutters (two half-gutters + 11 full gutters, so 12 total)
+ *
+ *
+ *   For smaller screens, we always want 20px of padding on either side,
+ *   so 960 + 20 + 20 => 1000px
+ *
+ **/
+ main {
+  padding-top: 100px;
+}
+
+header {
+  display: block;
+  text-align: center;
+  background-color: rgb(70, 62, 139);
+}
+
+/* .app-title {
+  display: inline-block;
+  text-align: center;
+} */
+
+body header .navbar {
+  display: inline-block;
+  text-align: center;
+  float: none;
+}
+
+body header nav .ul-header {
+  width: 80%;
+  display: inline-block;
+  float: none;
+}
+
+nav ul li {
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+}
+
+nav ul li a {
+  font-size: 1.6em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #222020;
+}
+
+/* * * * * * * * * * * */
+/*      form styles    */
+/* * * * * * * * * * * */
+.h2-wrapper {
+  text-align: center;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(199, 202, 199);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  outline: none;
+}
+
+input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+.departure-info, .arrival-info {
+  display: block;
+}
+
+body main .dep-date, body main .arriv-date {
+  width: 20%;
+}
+
+label[for=transportation] {
+  display: block;
+}
+/* * * * * * * * * * * */
+/*      grid rules     */
+/* * * * * * * * * * * */
+main .row {
+  margin-bottom: 20px;
+}
+
+.box {
+  height: 200px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+/* Clearfix */
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+  float: left;
+
+  /* Gutters:
+   * Each column is padded by half-a-gutter on each side,
+   *
+   * Half a gutter is 10px, 10/960 (context) = 1.041666%
+   *
+   */
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+
+/* Mobile defaults */
+.col-3, .col-4, .col-6, .col-12 {
+  width: 100%;
+}
+
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 640px) {
+  /* 3 columns, 3/12 in % */
+  .col-3 {
+    width: 25%;
+  }
+
+  /* 4 columns */
+  .col-4 {
+		width: 33.33%;
+  }
+
+  /* 6 columns */
+  .col-6 {
+		width: 50%;
+  }
+
+  /* 12 columns */
+  .col-12 {
+  }
+}
