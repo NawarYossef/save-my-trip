@@ -6,14 +6,8 @@ const {PORT} = require("./config");
 app.use(express.static('public'));
 
 app.get("/", (req, res) => {
-  res.status(200).send("Server is running");
-  res.sendFile(path.join(__dirname, 'public', 'home.html'));
+  res.status(200).sendFile(path.join(__dirname, 'public', 'landing-page.html'));
 })
-
-// app.get("/", (req, res) => {
-//   res.status(200).send("Server is running");
-//   res.sendFile(path.join(__dirname, 'public', 'home.html'));
-// })
 
 app.listen(port = PORT, () => {
   console.log(`Your app is listening on port ${port}`);

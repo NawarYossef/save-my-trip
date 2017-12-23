@@ -11,6 +11,7 @@ describe("GET request", function() {
     .get('/')
     .end(function(err, res) {
       res.should.have.status(200);
+      res.should.be.html;
       done();                               // <= Call done to signal callback end
     });
   })
