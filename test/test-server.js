@@ -3,7 +3,6 @@ const chaiHttp = require('chai-http');
 const app = require("../server")
 const should = chai.should();
 
-
 chai.use(chaiHttp);
 
 describe("GET request", function() {
@@ -14,6 +13,6 @@ describe("GET request", function() {
       res.should.have.status(200);
       done();                               // <= Call done to signal callback end
     });
-  });
+  })
 })
 
