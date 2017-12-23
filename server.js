@@ -6,6 +6,7 @@ app.use(express.static('public'));
 
 app.get("/", (req, res) => {
   res.status(200).send("Server is running");
+  res.sendFile(path.join(__dirname, '../public', 'home.html'));
 })
 
 app.listen(port = PORT, () => {
