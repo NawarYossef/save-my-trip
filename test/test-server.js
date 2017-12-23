@@ -5,8 +5,28 @@ const should = chai.should();
 
 chai.use(chaiHttp);
 
-describe("GET request", function() {
-  it('return status 200', function() { // <= Pass in done callback
+describe("GET endpoint", function() {
+  it('should return status 200 and send HTML file for landing page', function(done) { // <= Pass in done callback
+    chai.request(app)
+    .get('/')
+    .end(function(err, res) {
+      res.should.have.status(200);
+      res.should.be.html;
+      done();                               // <= Call done to signal callback end
+    });
+  })
+
+  it('should return status 200 and send dashboard page', function(done) { // <= Pass in done callback
+    chai.request(app)
+    .get('/dashboard')
+    .end(function(err, res) {
+      res.should.have.status(200);
+      res.should.be.html;
+      done();                               // <= Call done to signal callback end
+    });
+  })
+
+  it('should return status 200 and send new-trip page', function(done) { // <= Pass in done callback
     chai.request(app)
     .get('/')
     .end(function(err, res) {
