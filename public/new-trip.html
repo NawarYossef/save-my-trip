@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>New Trip</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">  
+  <link rel="stylesheet" type="text/css" href="stylesheets/new-trip.css">
+</head>
+<body>
+  <header class="col-12">
+    <nav class="navbar col-12">
+        <ul class=" ul-header">
+          <li class=""><a href="#">Trips</a></li>
+          <li class=""><a href="#">Add New Trip</a></li>
+          <li class=""><a href="#">Checkin</a></li>
+          <li class=""><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+    <div class="h2-wrapper col-12">
+      <h2 class="heading-for-new-trip">
+        New Trip
+      </h2>
+    </div>
+    <div>
+    <section class="trip-wrapper col-12">
+      <form action="">
+        <label for="from">From</label>
+        <input type="text" id="from" name="firstname" placeholder="from..">
+    
+        <label for="destination">Destination</label>
+        <input type="text" id="destination" name="destination" placeholder="Your destination..">
+        
+        <label for="confirmation-number">Confirmation Number</label>
+        <input type="text" id="confirmation-number" name="confirmation" placeholder="confirmation number..">
+
+        <div class="departure-info">
+          <label for="departure-date">Departure Date</label>
+          <input type="text" id="datepicker-1" name="" class="dep-date">
+          <label for="time">Departure Time</label>
+          <input id="departure-time" type="time">
+        </div>
+
+        <div class="arrival-info">
+          <label for="arrival-date">Arrival Date</label>
+          <input type="text" id="datepicker-2" name="" class="arriv-date">
+          <label for="arrival-time">Arrival Time</label>
+          <input id="time" type="time">
+        </div>
+
+        <label for="transportation">Transportation</label>
+        <input type="text" id="transportation" name="transportation" placeholder="transportation..">
+
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="subject" placeholder="Add notes.."></textarea>
+    
+        <input type="submit" value="Save">
+        <input type="reset" value="Reset">
+      </form>
+    </section>
+  </main>
+  <!-- <script type="text/javascript" src="js/main.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/bundle.js"></script>
+</body>
+
+
