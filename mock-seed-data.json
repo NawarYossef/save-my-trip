@@ -1,0 +1,25 @@
+{
+  "_id":{"$oid":"59074c7c057aaffaafb0da64"},
+  "originAirportName":"ATL",
+  "originTerminalName": "Terminal 2",
+  "originConfirmationNumber": "ABC123",
+  "originDepartureDateAndTime": "Mon Dec 04 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
+  "originTransportation": "by bus",
+  "destinationAirportName": "NYC",
+  "destinationTerminalName": "Terminal 1",
+  "destinationConfirmationNumber": "111",
+  "destinationArrivalDateAndTime": "Wed Dec 20 2017 00:00:00 GMT-0500 (Eastern Standard Time)"
+},
+
+{
+  "_id":{"$oid":"59074c7c057aaffaafb0da79"},
+  "originAirportName":"BHM",
+  "originTerminalName": "Terminal 4",
+  "originConfirmationNumber": "ABC",
+  "originDepartureDateAndTime": "Sun Dec 17 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
+  "destinationAirportName": "CA",
+  "destinationTerminalName": "Terminal 4",
+  "destinationConfirmationNumber": "333",
+  "destinationArrivalDateAndTime": "Sat Dec 30 2017 00:00:00 GMT-0500 (Eastern Standard Time)"
+}
+
