@@ -21,47 +21,145 @@
   </header>
 
   <main role="main">
-    <div class="h2-wrapper col-12">
-      <h2 class="heading-for-new-trip">
-        New Trip
-      </h2>
+    <div class="departure-info">
+      <div class="h2-wrapper col-12">
+        <h2 class="heading-for-new-trip">
+          New Trip
+        </h2>
+      <div>
+      <div class="h2-wrapper col-12">
+        <h3 class="heading-for-new-trip">
+          From
+        </h3>
+      <div>
+
+      <section class="trip-wrapper col-12">
+        <form action="">
+          <label for="airport-name">
+            <h4>
+              Airport Name
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="airport-name" name="name" placeholder="airport name..">
+          </div>
+
+          <label for="terminal-name">
+            <h4>
+              Terminal Name
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="terminal-name" name="terminal" placeholder="terminal name..">
+          </div>
+          
+          
+          <label for="confirmation-number">
+            <h4>
+              Confirmation Number
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="confirmation-number" name="confirmation" placeholder="confirmation number..">
+          </div>
+
+          <label for="departure-date">
+            <h4>
+              Departure Date
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="datepicker-1" name="" class="dep-date">
+          </div>
+
+          <label for="departure-time">
+            <h4>
+              Departure Time
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="time" id="departure-time">
+          </div>
+          
+          <label for="transportation">
+            <h4>
+              Transportation
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="transportation" name="transport" placeholder="transportation details..">
+          </div>
+        </form>
+      </section>
     </div>
-    <div>
-    <section class="trip-wrapper col-12">
-      <form action="">
-        <label for="from">From</label>
-        <input type="text" id="from" name="firstname" placeholder="from..">
     
-        <label for="destination">Destination</label>
-        <input type="text" id="destination" name="destination" placeholder="Your destination..">
-        
-        <label for="confirmation-number">Confirmation Number</label>
-        <input type="text" id="confirmation-number" name="confirmation" placeholder="confirmation number..">
-
-        <div class="departure-info">
-          <label for="departure-date">Departure Date</label>
-          <input type="text" id="datepicker-1" name="" class="dep-date">
-          <label for="time">Departure Time</label>
-          <input id="departure-time" type="time">
-        </div>
-
-        <div class="arrival-info">
-          <label for="arrival-date">Arrival Date</label>
-          <input type="text" id="datepicker-2" name="" class="arriv-date">
-          <label for="arrival-time">Arrival Time</label>
-          <input id="time" type="time">
-        </div>
-
-        <label for="transportation">Transportation</label>
-        <input type="text" id="transportation" name="transportation" placeholder="transportation..">
-
-        <label for="comments">Comments</label>
-        <textarea id="comments" name="subject" placeholder="Add notes.."></textarea>
     
-        <input type="submit" value="Save">
-        <input type="reset" value="Reset">
-      </form>
-    </section>
+    <div class="arrival-info">
+      <div class="h2-wrapper col-12">
+        <h3 class="heading-for-new-trip">
+          Going To
+        </h3>
+      <div>
+
+      <section class="trip-wrapper col-12">
+        <form action="">
+          <label for="airport-name">
+            <h4>
+              Airport Name
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="airport-name" name="name" placeholder="airport name..">
+          </div>
+
+          <label for="terminal-name">
+            <h4>
+              Terminal Name
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="terminal-name" name="terminal" placeholder="terminal name..">
+          </div>
+          
+          
+          <label for="confirmation-number">
+            <h4>
+              Confirmation Number
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="confirmation-number" name="confirmation" placeholder="confirmation number..">
+          </div>
+
+          <label for="departure-date">
+            <h4>
+              Departure Date
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="datepicker-2" name="" class="dep-date">
+          </div>
+
+          <label for="departure-time">
+            <h4>
+              Departure Time
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="time" id="departure-time">
+          </div>
+          
+          <label for="transportation">
+            <h4>
+              Transportation
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="transportation" name="transport" placeholder="transportation details..">
+          </div>
+        </form>
+      </section>
+    </div>
   </main>
   <!-- <script type="text/javascript" src="js/main.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -66,7 +66,7 @@ nav ul li a:hover {
 /* * * * * * * * * * * */
 /*      form styles    */
 /* * * * * * * * * * * */
-.h2-wrapper {
+.h2-wrapper, .h3-wrapper {
   text-align: center;
 }
 

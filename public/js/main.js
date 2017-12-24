@@ -1,3 +1,9 @@
 
 "use strict";
-console.log("hello")
+$( function() {
+  $( "#datepicker-1" ).datepicker();
+} );
+
+$( function() {
+  $( "#datepicker-2" ).datepicker();
+} );
