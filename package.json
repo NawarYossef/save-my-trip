@@ -4,7 +4,8 @@
   "description": "app that helps users save flight information",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+    "start": "node server.js"
   },
   "author": "Nawar Yossef",
   "license": "ISC",
