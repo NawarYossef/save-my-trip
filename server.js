@@ -30,4 +30,12 @@ app.listen(port = PORT, () => {
   console.log(`Your app is listening on port ${port}`);
 })
 
+// let server 
+
+// function startServer() {
+//   return new Promise((resolve, reject) => {
+//     mongoose.connect()
+//   })
+// }
+
 module.exports = app;
