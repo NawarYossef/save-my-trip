@@ -5,7 +5,8 @@
 }
 
 body {
-	background-color: rgb(93, 88, 88);
+  background-color: rgb(93, 88, 88);
+  font-size: 1em;
 }
 
 /* Grid measurements:
@@ -26,16 +27,18 @@ body {
 
 header {
   display: block;
+  position: relative;
   text-align: center;
-  background-image: url("../images/header-img.jpg");
-  height: 600px;
+  background-size: cover; 
+  height: 700px;
+  background-color: #2475AC;
+  /* background-color: #7b4397; */
 }
 
 body header .navbar {
-  background-color: rgb(77, 62, 51);
   display: inline-block;
   text-align: center;
-  float: none;
+  float: right;
 }
 
 body header nav .ul-header {
@@ -51,7 +54,7 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: #ffffff;
   text-decoration: none;
 }
@@ -62,14 +65,32 @@ nav ul li a:hover {
 
 h1 {
   color: #ffffff;
-  font-size: 50px;
+  font-size: 1.6em;
 }
 
 .h1-wrapper {
-  margin-top: 150px;
+  display: inline-block;
+  margin-right: 10%;
   text-align: center;
 }
 
+body header .container-for-img {
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  text-align: center;
+}
+
+body header .phones-img-wrapper {
+  display: inline-block;
+  float: right;
+}
+
+.phones-img-wrapper img {
+  width: 70%;
+  height: auto;
+}
 /* * * * * * * * * * * */
 /*       Body          */
 /* * * * * * * * * * * */
@@ -86,6 +107,11 @@ h2 {
 /* * * * * * * * * * * */
 /*       About         */
 /* * * * * * * * * * * */
+
+main {
+  background-color: #ffffff;
+  /* background-color: #fdcc52; */
+}
 
 .description-img {
   text-align: center;

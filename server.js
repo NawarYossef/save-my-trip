@@ -1,6 +1,5 @@
 const bodyParser = require('body-parser');
 const express = require("express");
-const path = require("path");
 const mongoose = require('mongoose');
 const morgan = require("morgan")
 
@@ -71,4 +70,4 @@ app.listen(PORT, () => {
 //   runServer().catch(err => console.error(err));
 // }
 
-module.exports = { app};
+module.exports = {app};
