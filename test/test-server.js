@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 
 describe("GET endpoint", function() {
   it('should return status 200 and send HTML file for landing page', function(done) { // <= Pass in done callback
-    chai.request('http://localhost:8080/trips')
+    chai.request('http://localhost:8080')
     .get('/')
     .end(function(err, res) {
       res.should.have.status(200);
@@ -16,9 +16,9 @@ describe("GET endpoint", function() {
     });
   })
 
-  it('should return status 200 and send dashboard page', function(done) { // <= Pass in done callback
-    chai.request('http://localhost:8080/trips')
-    .get('/dashboard')
+  it('should return status 200 and send trips page', function(done) { // <= Pass in done callback
+    chai.request('http://localhost:8080')
+    .get('/trips')
     .end(function(err, res) {
       res.should.have.status(200);
       res.should.be.html;
@@ -27,8 +27,8 @@ describe("GET endpoint", function() {
   })
 
   it('should return status 200 and send new-trip page', function(done) { // <= Pass in done callback
-    chai.request('http://localhost:8080/trips')
-    .get('/')
+    chai.request('http://localhost:8080')
+    .get('/trips/new-trip')
     .end(function(err, res) {
       res.should.have.status(200);
       res.should.be.html;

@@ -8,11 +8,7 @@ const {Trip} = require('./models');
 
 
 router.get("/", (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'public', 'landing-page.html'));
-})
-
-router.get("/dashboard", (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'public', 'dashboard.html'));
+  res.status(200).sendFile(path.join(__dirname, 'public', 'trips.html'));
 })
 
 router.get("/new-trip", (req, res) => {
