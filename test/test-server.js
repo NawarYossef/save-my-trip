@@ -61,7 +61,7 @@ describe("GET endpoint", function() {
     // at the end of the test. The `chai.request(server).get...` call is asynchronous
     // and returns a Promise, so we just return it.
     chai.request(app)
-      .get('/trips/all-test')
+      .get('/trips/json')
       .then(function(res) {
         // console.log(res.body)
         res.should.have.status(200);

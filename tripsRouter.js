@@ -7,7 +7,7 @@ const {Trip} = require('./models');
 
 
 // ============== test requests ==============
-router.get('/all-test', (req, res) => {
+router.get('/json', (req, res) => {
 Trip
   .find()
   // we're limiting because restaurants db has > 25,000
@@ -27,5 +27,6 @@ Trip
     res.status(500).json({ message: 'Internal server error' });
   });
 });
+
 
 module.exports = router;
