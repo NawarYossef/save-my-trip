@@ -74,12 +74,47 @@ h1 {
   text-align: center;
 }
 
-body header .container-for-img {
+body header .phones-img-wrapper {
   display: block;
   position: absolute;
   bottom: 100px;
-  left: 0;
+  right: 0;
   text-align: center;
+}
+
+.header-text-wrapper {
+  margin-top: 12%;
+}
+
+.container-for-header-info h2 {
+  font: normal 2.5em sans-serif;
+  color: #ffffff;
+}
+
+.container-for-header-info p {
+  margin-top: 15%;
+  font: normal 1.5em sans-serif;
+  color: #ffffff;
+  text-align: left;
+}
+
+.sign-up-btn {
+  background: #fdcc52;
+  font: normal 1.5em sans-serif;
+  color: #222020;
+  border: none;
+  outline: none;
+  width: 22%;
+  display: inline-block;
+  height: 48px;
+  margin-top: 15px;
+  border-radius: 25px;
+  /* box-shadow: 6px 5px 10px #484848; */
+}
+
+.sign-up-btn:hover {
+  cursor: pointer;
+  background: #e6b949;
 }
 
 body header .phones-img-wrapper {
