@@ -1,11 +1,29 @@
 const chai = require("chai");
 const chaiHttp = require('chai-http');
-const {app} = require("../server")
+const {app, runServer, closeServer} = require("../server")
 const should = chai.should();
 
 chai.use(chaiHttp);
 
 describe("GET endpoint", function() {
+  before(function() {
+  // Before our tests run, we activate the server. Our `runServer`
+  // function returns a promise, and we return the that promise by
+  // doing `return runServer`. If we didn't return a promise here,
+  // there's a possibility of a race condition where our tests start
+  // running before our server has started.
+    return runServer();
+  });
+
+  // although we only have one test module at the moment, we'll
+  // close our server at the end of these tests. Otherwise,
+  // if we add another test module that also has a `before` block
+  // that starts our server, it will cause an error because the
+  // server would still be running from the previous tests.
+  after(function() {
+    return closeServer();
+  });
+
   it('should return status 200 and send HTML file for landing page', function(done) { // <= Pass in done callback
     chai.request('http://localhost:8080')
     .get('/')
