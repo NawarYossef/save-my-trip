@@ -29,16 +29,19 @@ header {
   display: block;
   position: relative;
   text-align: center;
-  background-size: cover; 
   height: 700px;
-  background-color: #2475AC;
+  /* background-color: #2475AC; */
   /* background-color: #7b4397; */
+  background-image: url("../images/airport1.jpg");
+  background-position: center;
+  background-size: 100%;
 }
 
 body header .navbar {
   display: inline-block;
   text-align: center;
   float: right;
+  background-color: rgba(0,0,0,0.6);
 }
 
 body header nav .ul-header {
@@ -74,13 +77,6 @@ h1 {
   text-align: center;
 }
 
-body header .phones-img-wrapper {
-  display: block;
-  position: absolute;
-  bottom: 100px;
-  right: 0;
-  text-align: center;
-}
 
 .header-text-wrapper {
   margin-top: 12%;
@@ -119,16 +115,6 @@ body header .phones-img-wrapper {
 .sign-up-btn:hover {
   cursor: pointer;
   background: #e6b949;
-}
-
-body header .phones-img-wrapper {
-  display: inline-block;
-  float: right;
-}
-
-.phones-img-wrapper img {
-  width: 70%;
-  height: auto;
 }
 /* * * * * * * * * * * */
 /*       Body          */

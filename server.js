@@ -14,10 +14,6 @@ app.use(bodyParser.json());
 app.use(morgan("common"));
 app.use(express.static('public'));
 
-// app.get("/", (req, res) => {
-//   res.status(200).sendFile(path.join(__dirname, 'public', 'landing-page.html'));
-// })
-
 app.use('/trips', tripsRouter);
 
 app.use('*', function(req, res) {

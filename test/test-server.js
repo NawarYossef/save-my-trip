@@ -63,7 +63,7 @@ describe("GET endpoint", function() {
     chai.request(app)
       .get('/trips/all-test')
       .then(function(res) {
-        console.log(res.body)
+        // console.log(res.body)
         res.should.have.status(200);
         done()
       })
