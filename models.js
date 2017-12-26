@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const TripSchema = mongoose.Schema({
   originAirportName: {type: String, required: true},
+  originAirlines: {type: String, required: true},
   originTerminalName: {type: String, required: false}, 
   originConfirmationCode: {type: String, required: false},
   originDepartureDateAndTime: {type: Date, required: false},
@@ -21,6 +22,7 @@ TripSchema.methods.serialize = function() {
   return {
     id: this._id,
     originAirportName: this.originAirportName,
+    originAirlines: this.originAirlines,
     originTerminalName: this.originTerminalName,
     originConfirmationNumber: this.originConfirmationNumber,
     originDepartureDateAndTime: this.originDepartureDateAndTime,
