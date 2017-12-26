@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: rgb(93, 88, 88);
   font-size: 1em;
 }
 
@@ -21,143 +20,8 @@ body {
  *   so 960 + 20 + 20 => 1000px
  *
  **/
- main {
-  padding-top: 100px;
-}
 
-header {
-  display: block;
-  position: relative;
-  text-align: center;
-  height: 700px;
-  /* background-color: #2475AC; */
-  /* background-color: #7b4397; */
-  background-image: url("../images/airport1.jpg");
-  background-position: center;
-  background-size: 100%;
-}
-
-body header .navbar {
-  display: inline-block;
-  text-align: center;
-  float: right;
-  background-color: rgba(0,0,0,0.6);
-}
-
-body header nav .ul-header {
-  width: 80%;
-  display: inline-block;
-  float: none;
-}
-
-nav ul li {
-  width: 24%;
-  display: inline-block;
-  text-align: center;
-}
-
-nav ul li a {
-  font-size: 1.4em;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: #222020;
-}
-
-h1 {
-  color: #ffffff;
-  font-size: 1.6em;
-}
-
-.h1-wrapper {
-  display: inline-block;
-  margin-right: 10%;
-  text-align: center;
-}
-
-
-.header-text-wrapper {
-  margin-top: 12%;
-}
-
-.container-for-header-info {
-  text-align: center;
-}
-
-.container-for-header-info h2 {
-  font: normal 2.2em sans-serif;
-  color: #ffffff;
-}
-
-.container-for-header-info p {
-  margin-top: 15%;
-  font: normal 1.2em sans-serif;
-  color: #ffffff;
-  text-align: left;
-}
-
-.sign-up-btn {
-  background: #fdcc52;
-  font: normal 1.5em sans-serif;
-  color: #222020;
-  border: none;
-  outline: none;
-  width: 22%;
-  display: inline-block;
-  height: 48px;
-  margin-top: 15px;
-  border-radius: 25px;
-  /* box-shadow: 6px 5px 10px #484848; */
-}
-
-.sign-up-btn:hover {
-  cursor: pointer;
-  background: #e6b949;
-}
-/* * * * * * * * * * * */
-/*       Body          */
-/* * * * * * * * * * * */
-h2 {
-  font-size: 30px;
-}
-
-.h2-wrapper {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-
-/* * * * * * * * * * * */
-/*       About         */
-/* * * * * * * * * * * */
-
-main {
-  background-color: #ffffff;
-  /* background-color: #fdcc52; */
-}
-
-main h2 {
-  color: #212529;
-}
-.description-img {
-  text-align: center;
-} 
-
-.about-img {
-  width: 90%;
-}
-
-.fa-sign-in, .fa-file {
-  width: 40%;
-  color: blue;
-}
-.description p {
-  font: normal 16px sans-serif;
-} 
-
-/* * * * * * * * * * * */
+ /* * * * * * * * * * * */
 /*      Grid css       */
 /* * * * * * * * * * * */
 main .row {
@@ -229,3 +93,150 @@ main .row {
   .col-12 {
   }
 }
+
+
+/* * * * * * * * * * * */
+/*      header css     */
+/* * * * * * * * * * * */
+ main {
+  padding-top: 10px;
+}
+
+header {
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 700px;
+  background-image: url("../images/airport1.jpg");
+  background-position: center;
+  background-size: 100%;
+}
+
+body header .header-wrapper {
+  background-color: rgba(0,0,0,0.6);
+  height: 700px;
+}
+
+body header .navbar {
+  display: inline-block;
+  text-align: center;
+  float: right;
+}
+
+body header nav .ul-header {
+  width: 80%;
+  display: inline-block;
+  float: none;
+}
+
+nav ul li {
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+}
+
+nav ul li a {
+  font-size: 1.4em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #222020;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 1.6em;
+}
+
+.h1-wrapper {
+  display: inline-block;
+  margin-right: 10%;
+  text-align: center;
+}
+
+.header-text-wrapper {
+  margin: 12% auto 0 auto;
+  float: none;
+}
+
+.container-for-header-text {
+  text-align: center;
+}
+
+.container-for-header-text h2 {
+  font: normal 2.2em sans-serif;
+  color: #ffffff;
+}
+
+.container-for-header-text p {
+  margin-top: 15%;
+  font: normal 1.2em sans-serif;
+  color: #ffffff;
+}
+
+.sign-up-btn {
+  background: #fdcc52;
+  font: normal 1.5em sans-serif;
+  color: #222020;
+  border: none;
+  outline: none;
+  width: 22%;
+  display: inline-block;
+  height: 48px;
+  margin-top: 15px;
+  border-radius: 25px;
+  /* box-shadow: 6px 5px 10px #484848; */
+}
+
+.sign-up-btn:hover {
+  cursor: pointer;
+  background: #e6b949;
+}
+
+/* * * * * * * * * * * */
+/*       Body          */
+/* * * * * * * * * * * */
+h2 {
+  font-size: 30px;
+}
+
+.h2-wrapper {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+/* * * * * * * * * * * */
+/*       About         */
+/* * * * * * * * * * * */
+
+main {
+  background-color: #ffffff;
+  /* background-color: #fdcc52; */
+}
+
+main h2 {
+  color: #212529;
+}
+
+.about-img {
+  width: 90%;
+}
+
+.fa-clock-o {
+  color: #2576AC;
+  width: 20px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  font-size: 3em;
+  margin-right: 25px;
+}
+.description p {
+  font: normal 1em sans-serif;
+  display: inline-block;
+  width: 200px;
+} 
