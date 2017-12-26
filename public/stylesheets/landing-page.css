@@ -86,14 +86,18 @@ body header .phones-img-wrapper {
   margin-top: 12%;
 }
 
+.container-for-header-info {
+  text-align: center;
+}
+
 .container-for-header-info h2 {
-  font: normal 2.5em sans-serif;
+  font: normal 2.2em sans-serif;
   color: #ffffff;
 }
 
 .container-for-header-info p {
   margin-top: 15%;
-  font: normal 1.5em sans-serif;
+  font: normal 1.2em sans-serif;
   color: #ffffff;
   text-align: left;
 }
@@ -148,14 +152,21 @@ main {
   /* background-color: #fdcc52; */
 }
 
+main h2 {
+  color: #212529;
+}
 .description-img {
   text-align: center;
 } 
 
 .about-img {
-  width: 60%;
+  width: 90%;
 }
 
+.fa-sign-in, .fa-file {
+  width: 40%;
+  color: blue;
+}
 .description p {
   font: normal 16px sans-serif;
 } 
