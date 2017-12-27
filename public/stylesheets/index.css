@@ -106,10 +106,11 @@ header {
   display: block;
   position: relative;
   text-align: center;
-  width: 100%;
+  /* width: 100%; */
   height: 700px;
   background-image: url("../images/airport1.jpg");
-  background-position: center;
+  background-position: 50% 80%; 
+  /* background-position-x: 10px;  */
   background-size: 100%;
 }
 
@@ -137,7 +138,7 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 1.4em;
+  font: normal 1.4em 'Merriweather', serif;
   color: #ffffff;
   text-decoration: none;
 }
@@ -148,7 +149,7 @@ nav ul li a:hover {
 
 h1 {
   color: #ffffff;
-  font-size: 1.6em;
+  font: italic 1.8em 'Merriweather', serif;
 }
 
 .h1-wrapper {
@@ -158,7 +159,7 @@ h1 {
 }
 
 .header-text-wrapper {
-  margin: 12% auto 0 auto;
+  margin: 15% auto 0 auto;
   width: 80%;
   float: none;
 }
@@ -168,7 +169,7 @@ h1 {
 }
 
 .container-for-header-text h2 {
-  font: normal 3.5em sans-serif;
+  font: italic 3em 'Merriweather', serif;
   color: #ffffff;
 }
 
@@ -184,7 +185,7 @@ h1 {
   color: #222020;
   border: none;
   outline: none;
-  width: 11%;
+  width: 12%;
   display: inline-block;
   height: 48px;
   margin-top: 40px;
@@ -197,13 +198,18 @@ h1 {
   background: #e6b949;
 }
 
-.fa-arrow-circle-down {
-  font-size: 4em;
-  color: #ffffff;
+.arrows {
+	width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 48.5%;
+  bottom: 25%;
 }
 
-.arrow-wrapper {
-  margin-top: 100px;
+.arrows path {
+	stroke: #F2E6C6;
+	fill: transparent;
+	stroke-width: 1.5px;	
 }
 
 /* * * * * * * * * * * */
