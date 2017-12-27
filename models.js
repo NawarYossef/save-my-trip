@@ -1,20 +1,20 @@
 const mongoose = require('mongoose');
 
 const TripSchema = mongoose.Schema({
-  originAirportName: {type: String, required: true},
-  originAirlines: {type: String, required: true},
-  originTerminalName: {type: String, required: false}, 
-  originConfirmationCode: {type: String, required: false},
-  originDepartureDateAndTime: {type: Date, required: false},
-  originTransportation: {type: String, required: true},
+  airline: {type: String, required: true},
+  confirmationCode: {type: String, required: false},
+  tripComments:  {type: String, required: false},
 
-  destinationAirportName: {type: String, required: true},
-  destinationTerminalName: {type: String, required: false}, 
-  destinationConfirmationCode: {type: String, required: false},
-  destinationArrivalDateAndTime: {type: Date, required: false},
-  destinationTransportation: {type: String, required: false},
-
-  tripComments:  {type: String, required: false}
+  departure: {
+    airport: {type: String, required: true},
+    date: {type: Date, required: true},
+    transportation: {type: String, required: false},
+  },
+  arrival: {
+    airport: {type: String, required: true},
+    date: {type: Date, required: false},
+    transportation: {type: String, required: false},
+  }
 });
 
 
