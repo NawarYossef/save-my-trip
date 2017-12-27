@@ -25,13 +25,13 @@ TripSchema.methods.serialize = function() {
     confirmationCode: this.confirmationCode,
     tripComments: this.tripComments,
 
-    departureAirport: this.departureAirport,
-    departureDate: this.departureDate,
-    departureTransportation: this.departureTransportation,
+    departureAirport: this.departure.airport,
+    departureDate: this.departure.date,
+    departureTransportation: this.departure.transportation,
 
-    arrivalAirport: this.arrivalAirport,
-    arrivalDate: this.arrivalDate,
-    arrivalTransportation: this.arrivalTransportation
+    arrivalAirport: this.arrival.airport,
+    arrivalDate: this.arrival.date,
+    arrivalTransportation: this.arrival.transportation
   };
 }
 
