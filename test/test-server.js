@@ -132,8 +132,8 @@ describe('Trips API resource', function() {
     })
   })
   
+  //test for PUT endpoint
   describe('PUT endpoint', function() {
-
     // strategy:
     //  1. Get an existing restaurant from db
     //  2. Make a PUT request to update that restaurant
@@ -171,6 +171,37 @@ describe('Trips API resource', function() {
     });
   });
 
+  //test for DELETE endpoint
+  describe('DELETE endpoint', function() {
+    // strategy:
+    //  1. get a restaurant
+    //  2. make a DELETE request for that restaurant's id
+    //  3. assert that response has right status code
+    //  4. prove that restaurant with the id doesn't exist in db anymore
+    it('delete a trip by id', function(done) {
+
+      let trip;
+
+      Trip
+        .findOne()
+        .then(function(_trip) {
+          trip = _trip;
+          chai.request(app).delete(`/trips/delete/${trip.id}`);
+        })
+        .then(function(res) {
+          res.should.have.status(204);
+          Trip.findById(trip.id);
+        })
+        .then(function(_restaurant) {
+          // when a variable's value is null, chaining `should`
+          // doesn't work. so `_restaurant.should.be.null` would raise
+          // an error. `should.be.null(_restaurant)` is how
+          // assertions can be made about a null value.
+          should.not.exist(_trip);
+        });
+      done()
+    });
+  });
 })
   
 
