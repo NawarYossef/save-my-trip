@@ -76,16 +76,15 @@ describe('Trips API resource', function() {
   describe("POST endpoint", function() {
     it("should add a new trip", function(done) {
       const newTrip = {
-        "originAirportName":"ATL",
-        "originAirlines":"USA",
-        "originTerminalName": "Terminal 2",
-        "originConfirmationCode": "ABC123",
-        "originDepartureDateAndTime": "Mon Dec 04 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
-        "originTransportation": "by bus",
-        "destinationAirportName": "NYC",
-        "destinationTerminalName": "Terminal 1",
-        "destinationConfirmationNumber": "111",
-        "destinationArrivalDateAndTime": "Wed Dec 20 2017 00:00:00 GMT-0500 (Eastern Standard Time)"
+        "airline":"Delta",
+        "confirmationCode":"1234565",
+        "tripComments": "going to hotel after arrival",
+        "departureAirport": "ATL",
+        "departureDate": "Mon Dec 04 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "departureTransportation": "by bus",
+        "arrivalAirport": "NYC",
+        "arrivalDate": "Wed Dec 20 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "arrivalTransportation": "by taxi"
       }
   
       chai.request(app)
@@ -96,36 +95,32 @@ describe('Trips API resource', function() {
         res.should.be.json
         res.should.be.an('object');
         res.body.should.include.keys(
-          'originAirportName', 'originAirlines', 'originTerminalName',
-          'originConfirmationCode', 'originDepartureDateAndTime', 'originTransportation',
-          'destinationAirportName', 'destinationTerminalName', 
-          'destinationConfirmationNumber', 'destinationArrivalDateAndTime'
+          "airline", "confirmationCode", 'tripComments', 'departureAirport', "departureDate",
+          "departureTransportation", "arrivalAirport", "arrivalDate", "arrivalTransportation" 
         );
         // Mongo should have created id on insertion
         res.body.id.should.not.be.null;
-        res.body.originAirportName.should.equal(newTrip.originAirportName);
-        res.body.originAirlines.should.equal(newTrip.originAirlines);
-        res.body.originTerminalName.should.equal(newTrip.originTerminalName);
-        res.body.originConfirmationCode.should.equal(newTrip.originConfirmationCode);
-        res.body.originDepartureDateAndTime.should.equal(newTrip.originDepartureDateAndTime);
-        res.body.originTransportation.should.equal(newTrip.originTransportation);
-        res.body.destinationAirportName.should.equal(newTrip.destinationAirportName);
-        res.body.destinationTerminalName.should.equal(newTrip.destinationTerminalName);
-        res.body.destinationConfirmationNumber.should.equal(newTrip.destinationConfirmationNumber);
-        res.body.destinationArrivalDateAndTime.should.equal(newTrip.destinationArrivalDateAndTime);
+        res.body.airline.should.equal(newTrip.airline);
+        res.body.confirmationCode.should.equal(newTrip.confirmationCode);
+        res.body.tripComments.should.equal(newTrip.tripComments);
+        res.body.departureAirport.should.equal(newTrip.departureAirport);
+        res.body.departureDate.should.equal(newTrip.departureDate);
+        res.body.departureTransportation.should.equal(newTrip.departureTransportation);
+        res.body.arrivalAirport.should.equal(newTrip.arrivalAirport);
+        res.body.arrivalDate.should.equal(newTrip.arrivalDate);
+        res.body.arrivalTransportation.should.equal(newTrip.arrivalTransportation);
         return Trip.findById(res.body.id);
         })
         .then(function(Trip) {
-          Trip.originAirportName.should.equal(newTrip.originAirportName);
-          Trip.originAirlines.should.equal(newTrip.originAirlines);
-          Trip.originTerminalName.should.equal(newTrip.originTerminalName);
-          Trip.originConfirmationCode.should.equal(newTrip.originConfirmationCode);
-          Trip.originDepartureDateAndTime.should.equal(newTrip.originDepartureDateAndTime);
-          Trip.originTransportation.should.equal(newTrip.originTransportation);
-          Trip.destinationAirportName.should.equal(newTrip.destinationAirportName);
-          Trip.destinationTerminalName.should.equal(newTrip.destinationTerminalName);
-          Trip.destinationConfirmationNumber.should.equal(newTrip.destinationConfirmationNumber);
-          Trip.destinationArrivalDateAndTime.should.equal(newTrip.destinationArrivalDateAndTime);
+          Trip.airline.should.equal(newTrip.airline);
+          Trip.confirmationCode.should.equal(newTrip.confirmationCode);
+          Trip.tripComments.should.equal(newTrip.tripComments);
+          Trip.departureAirport.should.equal(newTrip.departureAirport);
+          Trip.departureDate.should.equal(newTrip.departureDate);
+          Trip.departureTransportation.should.equal(newTrip.departureTransportation);
+          Trip.arrivalAirport.should.equal(newTrip.arrivalAirport);
+          Trip.arrivalDate.should.equal(newTrip.arrivalDate);
+          Trip.arrivalTransportation.should.equal(newTrip.arrivalTransportation);
         });
         done();
       })
@@ -141,9 +136,9 @@ describe('Trips API resource', function() {
     //  4. Prove restaurant in db is correctly updated
     it('should update fields you send over', function(done) {
       const updateData = {
-        originAirportName: 'fofofofofofofof',
-        destinationTerminalName: 'futuristic fusion',
-        originConfirmationCode: "BBB"
+        airline: 'Delta',
+        arrivalAirport: 'NYC',
+        arrivalTransportation: "Bus"
       };
 
       Trip
@@ -163,9 +158,9 @@ describe('Trips API resource', function() {
           Trip.findById(updateData.id);
         })
         .then(function(trip) {
-          trip.originAirportName.should.equal(updateData.originAirportName);
-          trip.destinationTerminalName.should.equal(updateData.destinationTerminalName);
-          trip.originConfirmationCode.should.equal(updateData.originConfirmationCode);
+          trip.airline.should.equal(updateData.airline);
+          trip.arrivalAirport.should.equal(updateData.arrivalAirport);
+          trip.arrivalTransportation.should.equal(updateData.arrivalTransportation);
         });
       done();
     });
