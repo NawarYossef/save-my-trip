@@ -30,9 +30,8 @@ Trip
 
 router.post('/new', (req, res) => {
   const requiredFields = [
-    "originAirportName", "originAirlines", 'originTerminalName', 'originConfirmationCode', 
-    "originDepartureDateAndTime", "originTransportation", "destinationAirportName", "destinationTerminalName",
-    "destinationConfirmationNumber", "destinationArrivalDateAndTime"
+    "airline", "confirmationCode", 'tripComments', 'departureAirport', "departureDate",
+    "departureTransportation", "arrivalAirport", "arrivalDate", "arrivalTransportation"
   ];
 
   for (let i = 0; i < requiredFields.length; i++) {
@@ -46,16 +45,16 @@ router.post('/new', (req, res) => {
 
   Trip
     .create({
-      originAirportName: req.body.originAirportName,
+      airline: req.body.airline,
       originAirlines: req.body.originAirlines,
-      originTerminalName: req.body.originTerminalName,
-      originConfirmationCode: req.body.originConfirmationCode,
-      originDepartureDateAndTime: req.body.originDepartureDateAndTime,
-      originTransportation: req.body.originTransportation,
-      destinationAirportName: req.body.destinationAirportName,
-      destinationTerminalName: req.body.destinationTerminalName,
-      destinationConfirmationNumber: req.body.destinationConfirmationNumber,
-      destinationArrivalDateAndTime: req.body.destinationArrivalDateAndTime
+      confirmationCode: req.body.confirmationCode,
+      tripComments: req.body.tripComments,
+      departureAirport: req.body.departureAirport,
+      departureDate: req.body.departureDate,
+      departureTransportation: req.body.departureTransportation,
+      arrivalAirport: req.body.arrivalAirport,
+      arrivalDate: req.body.arrivalDate,
+      arrivalTransportation: req.body.arrivalTransportation
     })
     .then(trip => res.status(201).json(trip.serialize()))
     .catch(err => {
@@ -74,9 +73,8 @@ router.put('/:id', (req, res) => {
   
   const updated = {};
   const updateableFields = [
-    "originAirportName", "originAirlines", 'originTerminalName', 'originConfirmationCode', 
-    "originDepartureDateAndTime", "originTransportation", "destinationAirportName", "destinationTerminalName",
-    "destinationConfirmationNumber", "destinationArrivalDateAndTime"
+    "airline", "confirmationCode", 'tripComments', 'departureAirport', "departureDate",
+    "departureTransportation", "arrivalAirport", "arrivalDate", "arrivalTransportation"
   ];
 
   updateableFields.forEach(field => {
