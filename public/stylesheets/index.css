@@ -159,6 +159,7 @@ h1 {
 
 .header-text-wrapper {
   margin: 12% auto 0 auto;
+  width: 80%;
   float: none;
 }
 
@@ -167,7 +168,7 @@ h1 {
 }
 
 .container-for-header-text h2 {
-  font: normal 2.2em sans-serif;
+  font: normal 3.5em sans-serif;
   color: #ffffff;
 }
 
@@ -183,10 +184,10 @@ h1 {
   color: #222020;
   border: none;
   outline: none;
-  width: 22%;
+  width: 11%;
   display: inline-block;
   height: 48px;
-  margin-top: 15px;
+  margin-top: 40px;
   border-radius: 25px;
   /* box-shadow: 6px 5px 10px #484848; */
 }
@@ -194,6 +195,15 @@ h1 {
 .sign-up-btn:hover {
   cursor: pointer;
   background: #e6b949;
+}
+
+.fa-arrow-circle-down {
+  font-size: 4em;
+  color: #ffffff;
+}
+
+.arrow-wrapper {
+  margin-top: 100px;
 }
 
 /* * * * * * * * * * * */
