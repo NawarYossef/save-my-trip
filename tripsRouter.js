@@ -30,8 +30,7 @@ Trip
 
 router.post('/new', (req, res) => {
   const requiredFields = [
-    "airline", "confirmationCode", 'tripComments', 'departureAirport', "departureDate",
-    "departureTransportation", "arrivalAirport", "arrivalDate", "arrivalTransportation"
+    "airline", "confirmationCode", 'tripComments', 'departure', "arrival",
   ];
 
   for (let i = 0; i < requiredFields.length; i++) {
@@ -46,15 +45,14 @@ router.post('/new', (req, res) => {
   Trip
     .create({
       airline: req.body.airline,
-      originAirlines: req.body.originAirlines,
       confirmationCode: req.body.confirmationCode,
       tripComments: req.body.tripComments,
-      departureAirport: req.body.departureAirport,
-      departureDate: req.body.departureDate,
-      departureTransportation: req.body.departureTransportation,
-      arrivalAirport: req.body.arrivalAirport,
-      arrivalDate: req.body.arrivalDate,
-      arrivalTransportation: req.body.arrivalTransportation
+      departureAirport: req.body.departure[airport],
+      departureDate: req.body.departure[date],
+      departureTransportation: req.body.departure[transportation],
+      arrivalAirport: req.body.arrival[airport],
+      arrivalDate: req.body.arrival[date],
+      arrivalTransportation: req.body.arrival[transportation]
     })
     .then(trip => res.status(201).json(trip.serialize()))
     .catch(err => {
@@ -73,8 +71,7 @@ router.put('/:id', (req, res) => {
   
   const updated = {};
   const updateableFields = [
-    "airline", "confirmationCode", 'tripComments', 'departureAirport', "departureDate",
-    "departureTransportation", "arrivalAirport", "arrivalDate", "arrivalTransportation"
+    "airline", "confirmationCode", 'tripComments', 'departure', "arrival",
   ];
 
   updateableFields.forEach(field => {
