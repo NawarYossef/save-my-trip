@@ -21,18 +21,17 @@ const TripSchema = mongoose.Schema({
 TripSchema.methods.serialize = function() {
   return {
     id: this._id,
-    originAirportName: this.originAirportName,
-    originAirlines: this.originAirlines,
-    originTerminalName: this.originTerminalName,
-    originConfirmationNumber: this.originConfirmationNumber,
-    originDepartureDateAndTime: this.originDepartureDateAndTime,
-    originTransportation: this.originTransportation,
-    destinationAirportName: this.destinationAirportName,
-    destinationTerminalName: this.destinationTerminalName,
-    destinationConfirmationNumber: this.destinationConfirmationNumber,
-    destinationArrivalDateAndTime: this.destinationDepartureDateAndTime,
-    destinationTransportation: this.destinationTransportation,
-    comments: this.comments
+    airline: this.airline,
+    confirmationCode: this.confirmationCode,
+    tripComments: this.tripComments,
+
+    departureAirport: this.departureAirport,
+    departureDate: this.departureDate,
+    departureTransportation: this.departureTransportation,
+
+    arrivalAirport: this.arrivalAirport,
+    arrivalDate: this.arrivalDate,
+    arrivalTransportation: this.arrivalTransportation
   };
 }
 
