@@ -28,7 +28,7 @@ Trip
   });
 });
 
-router.post('/post/json', (req, res) => {
+router.post('/new', (req, res) => {
   const requiredFields = [
     "originAirportName", "originAirlines", 'originTerminalName', 'originConfirmationCode', 
     "originDepartureDateAndTime", "originTransportation", "destinationAirportName", "destinationTerminalName",
@@ -65,7 +65,7 @@ router.post('/post/json', (req, res) => {
 });
 
 
-router.put('/put/:id/json', (req, res) => {
+router.put('/:id', (req, res) => {
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
     res.status(400).json({
       error: 'Request path id and request body id values must match'

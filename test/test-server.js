@@ -89,7 +89,7 @@ describe('Trips API resource', function() {
       }
   
       chai.request(app)
-      .post("/new/json")
+      .post("/trips/new")
       .send(newTrip)
       .then(function(res) {
         res.should.have.status(201);
@@ -154,7 +154,7 @@ describe('Trips API resource', function() {
           // make request then inspect it to make sure it reflects
           // data we sent
           chai.request(app)
-          .put(`/restaurants/${trip.id}`)
+          .put(`/trips/${trip.id}`)
           .send(updateData);
         })
         .then(function(res) {
