@@ -28,7 +28,7 @@ Trip
   });
 });
 
-router.post('/new/json', (req, res) => {
+router.post('/post/json', (req, res) => {
   const requiredFields = [
     "originAirportName", "originAirlines", 'originTerminalName', 'originConfirmationCode', 
     "originDepartureDateAndTime", "originTransportation", "destinationAirportName", "destinationTerminalName",
@@ -65,7 +65,7 @@ router.post('/new/json', (req, res) => {
 });
 
 
-router.put('/:id/json', (req, res) => {
+router.put('/put/:id/json', (req, res) => {
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
     res.status(400).json({
       error: 'Request path id and request body id values must match'
@@ -92,5 +92,12 @@ router.put('/:id/json', (req, res) => {
     .catch(err => res.status(500).json({message: 'Something went wrong'}));
 });
 
+
+router.delete('/delete/:id', (req, res) => {
+  Trip
+    .findByIdAndRemove(req.params.id)
+    .then(trip => res.status(204).end())
+    .catch(err => res.status(500).json({ message: 'Internal server error' }));
+});
 
 module.exports = router;
