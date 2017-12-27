@@ -8,26 +8,24 @@ chai.use(chaiHttp);
 
 describe('Trips API resource', function() {
   before(function() {
-  // Before our tests run, we activate the server. Our `runServer`
-  // function returns a promise, and we return the that promise by
-  // doing `return runServer`. If we didn't return a promise here,
+  // Before the tests run, the server is activated. the`runServer`
+  // function returns a promise, and that promise is returned by
+  // doing `return runServer`. Without returning a promise here,
   // there's a possibility of a race condition where our tests start
   // running before our server has started.
     return runServer(TEST_DATABASE_URL);
   });
 
-  // although we only have one test module at the moment, we'll
+
   // close server at the end of these tests. Otherwise,
-  // if we add another test module that also has a `before` block
-  // that starts our server, it will cause an error because the
+  // if another test module is added that also has a `before` block
+  // and starts the server, it will cause an error because the
   // server would still be running from the previous tests.
   after(function() {
     return closeServer();
   });
 
-  // note the use of nested `describe` blocks.
-  // this allows us to make clearer, more discrete tests that focus
-  // on proving something small
+  // tests for GET endpoint
   describe("GET endpoint", function() {
     it('should return status 200 and send HTML file for landing page', function(done) { // <= Pass in done callback
       chai.request(app)
@@ -60,10 +58,10 @@ describe('Trips API resource', function() {
     })
   
     it('should list items on GET', function(done) {
-      // for Mocha tests, when we're dealing with asynchronous operations,
-      // we must either return a Promise object or else call a `done` callback
+      // for Mocha tests, when dealing with asynchronous operations,
+      // a Promise object must be returned or else call a `done` callback
       // at the end of the test. The `chai.request(server).get...` call is asynchronous
-      // and returns a Promise, so we just return it.
+      // and returns a Promise, so it must be returned.
       chai.request(app)
       .get('/trips/json')
       .then(function(res) {
@@ -73,6 +71,7 @@ describe('Trips API resource', function() {
     })
   })
 
+  // tests for POST endpoint
   describe("POST endpoint", function() {
     it("should add a new trip", function(done) {
       const newTrip = {
@@ -101,7 +100,7 @@ describe('Trips API resource', function() {
           'destinationAirportName', 'destinationTerminalName', 
           'destinationConfirmationNumber', 'destinationArrivalDateAndTime'
         );
-        // cause Mongo should have created id on insertion
+        // Mongo should have created id on insertion
         res.body.id.should.not.be.null;
         res.body.originAirportName.should.equal(newTrip.originAirportName);
         res.body.originAirlines.should.equal(newTrip.originAirlines);
@@ -127,10 +126,12 @@ describe('Trips API resource', function() {
           Trip.destinationConfirmationNumber.should.equal(newTrip.destinationConfirmationNumber);
           Trip.destinationArrivalDateAndTime.should.equal(newTrip.destinationArrivalDateAndTime);
         });
-        done()
+        done();
       })
     })
   })
+  
+
 })
   
 
