@@ -71,13 +71,14 @@ router.put('/:id/json', (req, res) => {
       error: 'Request path id and request body id values must match'
     });
   }
-
+  
   const updated = {};
   const updateableFields = [
     "originAirportName", "originAirlines", 'originTerminalName', 'originConfirmationCode', 
     "originDepartureDateAndTime", "originTransportation", "destinationAirportName", "destinationTerminalName",
     "destinationConfirmationNumber", "destinationArrivalDateAndTime"
   ];
+
   updateableFields.forEach(field => {
     if (field in req.body) {
       updated[field] = req.body[field];
