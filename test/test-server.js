@@ -131,6 +131,45 @@ describe('Trips API resource', function() {
       })
     })
   })
+  
+  describe('PUT endpoint', function() {
+
+    // strategy:
+    //  1. Get an existing restaurant from db
+    //  2. Make a PUT request to update that restaurant
+    //  3. Prove restaurant returned by request contains data we sent
+    //  4. Prove restaurant in db is correctly updated
+    it('should update fields you send over', function(done) {
+      const updateData = {
+        originAirportName: 'fofofofofofofof',
+        destinationTerminalName: 'futuristic fusion',
+        originConfirmationCode: "BBB"
+      };
+
+      Trip
+        .findOne()
+        .then(function(trip) {
+          updateData.id = trip.id;
+
+          // make request then inspect it to make sure it reflects
+          // data we sent
+          chai.request(app)
+          .put(`/restaurants/${trip.id}`)
+          .send(updateData);
+        })
+        .then(function(res) {
+          res.should.have.status(204);
+
+          Trip.findById(updateData.id);
+        })
+        .then(function(trip) {
+          trip.originAirportName.should.equal(updateData.originAirportName);
+          trip.destinationTerminalName.should.equal(updateData.destinationTerminalName);
+          trip.originConfirmationCode.should.equal(updateData.originConfirmationCode);
+        });
+      done();
+    });
+  });
 
 })
   
