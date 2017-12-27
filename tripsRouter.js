@@ -87,8 +87,7 @@ router.put('/put/:id/json', (req, res) => {
 
   Trip
     .findByIdAndUpdate(req.params.id, {$set: updated}, {new: true})
-    .exec()
-    .then(updatedTrip => res.status(204).json(updatedTrip.apiRepr()))
+    .then(updatedTrip => res.status(204).json(updatedTrip.serialize()))
     .catch(err => res.status(500).json({message: 'Something went wrong'}));
 });
 
