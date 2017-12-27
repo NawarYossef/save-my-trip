@@ -1,10 +1,11 @@
 const chai = require("chai");
 const chaiHttp = require('chai-http');
+
 const {app, runServer, closeServer} = require("../server")
-const should = chai.should();
 const {TEST_DATABASE_URL} = require("../config")
 const {Trip} = require("../models")
 
+const should = chai.should();
 chai.use(chaiHttp);
 
 describe('Trips API resource', function() {
@@ -16,7 +17,6 @@ describe('Trips API resource', function() {
   // running before our server has started.
     return runServer(TEST_DATABASE_URL);
   });
-
 
   // close server at the end of these tests. Otherwise,
   // if another test module is added that also has a `before` block
@@ -79,12 +79,16 @@ describe('Trips API resource', function() {
         "airline":"Delta",
         "confirmationCode":"1234565",
         "tripComments": "going to hotel after arrival",
-        "departureAirport": "ATL",
-        "departureDate": "Mon Dec 04 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
-        "departureTransportation": "by bus",
-        "arrivalAirport": "NYC",
-        "arrivalDate": "Wed Dec 20 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
-        "arrivalTransportation": "by taxi"
+        "departure": {
+          "airport": "ATL",
+          "date": "Mon Dec 04 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
+          "transportation": "by bus",
+        },
+        "arrival": {
+          "airport": "NYC",
+          "date": "Wed Dec 20 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
+          "transportation": "by taxi"
+        }
       }
   
       chai.request(app)
@@ -95,32 +99,35 @@ describe('Trips API resource', function() {
         res.should.be.json
         res.should.be.an('object');
         res.body.should.include.keys(
-          "airline", "confirmationCode", 'tripComments', 'departureAirport', "departureDate",
-          "departureTransportation", "arrivalAirport", "arrivalDate", "arrivalTransportation" 
+          'airline', 'confirmationCode', 'departure', 'arrival'
         );
         // Mongo should have created id on insertion
         res.body.id.should.not.be.null;
+
         res.body.airline.should.equal(newTrip.airline);
         res.body.confirmationCode.should.equal(newTrip.confirmationCode);
         res.body.tripComments.should.equal(newTrip.tripComments);
-        res.body.departureAirport.should.equal(newTrip.departureAirport);
-        res.body.departureDate.should.equal(newTrip.departureDate);
-        res.body.departureTransportation.should.equal(newTrip.departureTransportation);
-        res.body.arrivalAirport.should.equal(newTrip.arrivalAirport);
-        res.body.arrivalDate.should.equal(newTrip.arrivalDate);
-        res.body.arrivalTransportation.should.equal(newTrip.arrivalTransportation);
+
+        res.body.departure.should.equal(newTrip.departure);
+        res.body.departure.should.be.an("object");
+        res.body.departure.should.include.keys(
+          'airport', 'date', 'transportation'
+        )
+
+        res.body.arrival.should.equal(newTrip.arrival);
+        res.body.arrival.should.be.an("object");
+        res.body.arrival.should.include.keys(
+          'airport', 'date', 'transportation'
+        )
+        
         return Trip.findById(res.body.id);
         })
-        .then(function(Trip) {
-          Trip.airline.should.equal(newTrip.airline);
-          Trip.confirmationCode.should.equal(newTrip.confirmationCode);
-          Trip.tripComments.should.equal(newTrip.tripComments);
-          Trip.departureAirport.should.equal(newTrip.departureAirport);
-          Trip.departureDate.should.equal(newTrip.departureDate);
-          Trip.departureTransportation.should.equal(newTrip.departureTransportation);
-          Trip.arrivalAirport.should.equal(newTrip.arrivalAirport);
-          Trip.arrivalDate.should.equal(newTrip.arrivalDate);
-          Trip.arrivalTransportation.should.equal(newTrip.arrivalTransportation);
+        .then(function(trip) {
+          trip.airline.should.equal(newTrip.airline);
+          trip.confirmationCode.should.equal(newTrip.confirmationCode);
+          trip.tripComments.should.equal(newTrip.tripComments);
+          trip.departure.should.equal(newTrip.departure);
+          trip.arrival.should.equal(newTrip.arrival);
         });
         done();
       })
@@ -137,8 +144,10 @@ describe('Trips API resource', function() {
     it('should update fields you send over', function(done) {
       const updateData = {
         airline: 'Delta',
-        arrivalAirport: 'NYC',
-        arrivalTransportation: "Bus"
+        arrival: {
+          airport: 'NYC',
+          transportation: "Bus"
+        }
       };
 
       Trip
@@ -159,8 +168,8 @@ describe('Trips API resource', function() {
         })
         .then(function(trip) {
           trip.airline.should.equal(updateData.airline);
-          trip.arrivalAirport.should.equal(updateData.arrivalAirport);
-          trip.arrivalTransportation.should.equal(updateData.arrivalTransportation);
+          trip.arrival[airport].should.equal(updateData.arrival[airport]);
+          trip.arrival[transportation].should.equal(updateData.arrival[transportation]);
         });
       done();
     });
