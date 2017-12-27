@@ -34,6 +34,7 @@ router.post('/new/json', (req, res) => {
     "originDepartureDateAndTime", "originTransportation", "destinationAirportName", "destinationTerminalName",
     "destinationConfirmationNumber", "destinationArrivalDateAndTime"
   ];
+
   for (let i = 0; i < requiredFields.length; i++) {
     const field = requiredFields[i];
     if (!(field in req.body)) {
@@ -61,7 +62,33 @@ router.post('/new/json', (req, res) => {
       console.error(err);
       res.status(500).json({ error: 'Something went wrong' });
     });
+});
 
+
+router.put('/:id/json', (req, res) => {
+  if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
+    res.status(400).json({
+      error: 'Request path id and request body id values must match'
+    });
+  }
+
+  const updated = {};
+  const updateableFields = [
+    "originAirportName", "originAirlines", 'originTerminalName', 'originConfirmationCode', 
+    "originDepartureDateAndTime", "originTransportation", "destinationAirportName", "destinationTerminalName",
+    "destinationConfirmationNumber", "destinationArrivalDateAndTime"
+  ];
+  updateableFields.forEach(field => {
+    if (field in req.body) {
+      updated[field] = req.body[field];
+    }
+  });
+
+  Trip
+    .findByIdAndUpdate(req.params.id, {$set: updated}, {new: true})
+    .exec()
+    .then(updatedTrip => res.status(204).json(updatedTrip.apiRepr()))
+    .catch(err => res.status(500).json({message: 'Something went wrong'}));
 });
 
 
