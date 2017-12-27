@@ -99,7 +99,7 @@ describe('Trips API resource', function() {
         res.should.be.json
         res.should.be.an('object');
         res.body.should.include.keys(
-          'airline', 'confirmationCode', 'departure', 'arrival'
+          'airline', 'confirmationCode', 'tripComments', 'departure', 'arrival'
         );
         // Mongo should have created id on insertion
         res.body.id.should.not.be.null;

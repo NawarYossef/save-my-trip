@@ -47,12 +47,8 @@ router.post('/new', (req, res) => {
       airline: req.body.airline,
       confirmationCode: req.body.confirmationCode,
       tripComments: req.body.tripComments,
-      departureAirport: req.body.departure[airport],
-      departureDate: req.body.departure[date],
-      departureTransportation: req.body.departure[transportation],
-      arrivalAirport: req.body.arrival[airport],
-      arrivalDate: req.body.arrival[date],
-      arrivalTransportation: req.body.arrival[transportation]
+      departure: req.body.departure,
+      arrival: req.body.arrival
     })
     .then(trip => res.status(201).json(trip.serialize()))
     .catch(err => {
