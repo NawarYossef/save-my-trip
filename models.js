@@ -24,14 +24,16 @@ TripSchema.methods.serialize = function() {
     airline: this.airline,
     confirmationCode: this.confirmationCode,
     tripComments: this.tripComments,
-
-    departureAirport: this.departure.airport,
-    departureDate: this.departure.date,
-    departureTransportation: this.departure.transportation,
-
-    arrivalAirport: this.arrival.airport,
-    arrivalDate: this.arrival.date,
-    arrivalTransportation: this.arrival.transportation
+    departure: {
+      airport: this.departure.airport,
+      date: this.departure.date,
+      transportation: this.departure.transportation  
+    }, 
+    arrival: {
+      airport: this.departure.airport,
+      date: this.departure.date,
+      transportation: this.departure.transportation  
+    }, 
   };
 }
 
