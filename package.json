@@ -2,7 +2,7 @@
   "name": "save-my-trip",
   "version": "1.0.0",
   "description": "app that helps users save flight information",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "mocha --exit",
     "start": "node server.js"
