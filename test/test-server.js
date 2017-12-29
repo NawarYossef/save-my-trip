@@ -28,36 +28,6 @@ describe('Trips API resource', function() {
 
   // tests for GET endpoint
   describe("GET endpoint", function() {
-    it('should return status 200 and send HTML file for landing page', function(done) { // <= Pass in done callback
-      chai.request(app)
-      .get('/')
-      .end(function(err, res) {
-        res.should.have.status(200);
-        res.should.be.html;
-        done();                               // <= Call done to signal callback end
-      });
-    })
-  
-    it('should return status 200 and send trips page', function(done) { // <= Pass in done callback
-      chai.request(app)
-      .get('/trips.html')
-      .end(function(err, res) {
-        res.should.have.status(200);
-        res.should.be.html;
-        done();                               // <= Call done to signal callback end
-      });
-    })
-  
-    it('should return status 200 and send new-trip page', function(done) { // <= Pass in done callback
-      chai.request(app)
-      .get('/new-trip.html')
-      .end(function(err, res) {
-        res.should.have.status(200);
-        res.should.be.html;
-        done();                               // <= Call done to signal callback end
-      });
-    })
-  
     it('should list items on GET', function(done) {
       // for Mocha tests, when dealing with asynchronous operations,
       // a Promise object must be returned or else call a `done` callback
