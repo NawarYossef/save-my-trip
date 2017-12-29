@@ -21,13 +21,8 @@ app.use('*', function(req, res) {
 });
 
 
-// app.listen(PORT, () => {
-//   console.log(`Your app is listening on port ${PORT}`);
-// })
-
-// closeServer needs access to a server object, but that only
-// gets created when `runServer` runs, so we declare `server` here
-// and then assign a value to it in run
+// server` object is declared in the global scope 
+// because closeServer functions needs access to it.
 let server;
 
 // this function connects to our database, then starts the server
