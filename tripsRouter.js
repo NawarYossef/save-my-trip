@@ -2,24 +2,15 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
-
 const {Trip} = require('./models');
 
 
-// ============== test requests ==============
-router.get('/json', (req, res) => {
-Trip
+router.get('/', (req, res) => {
+  Trip
   .find()
-  // we're limiting because restaurants db has > 25,000
-  // documents, and that's too much to process/return
-
-  // success callback: for each restaurant we got back, we'll
-  // call the `.serialize` instance method we've created in
-  // models.js in order to only expose the data we want the API return.
   .then(trips => {
     res.json({
-      trips: trips.map(
-        (trip) => trip.serialize())
+      trips: trips.map( trip => trip.serialize() )
     });
   })
   .catch(err => {
@@ -28,7 +19,8 @@ Trip
   });
 });
 
-router.post('/new', (req, res) => {
+
+router.post('/', (req, res) => {
   const requiredFields = [
     "airline", "confirmationCode", 'tripComments', 'departure', "arrival",
   ];
@@ -43,18 +35,18 @@ router.post('/new', (req, res) => {
   }
 
   Trip
-    .create({
-      airline: req.body.airline,
-      confirmationCode: req.body.confirmationCode,
-      tripComments: req.body.tripComments,
-      departure: req.body.departure,
-      arrival: req.body.arrival
-    })
-    .then(trip => res.status(201).json(trip.serialize()))
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({ error: 'Something went wrong' });
-    });
+  .create({
+    airline: req.body.airline,
+    confirmationCode: req.body.confirmationCode,
+    tripComments: req.body.tripComments,
+    departure: req.body.departure,
+    arrival: req.body.arrival
+  })
+  .then(trip => res.status(201).json(trip.serialize()))
+  .catch(err => {
+    console.error(err);
+    res.status(500).json({ error: 'Something went wrong' });
+  });
 });
 
 
@@ -64,7 +56,7 @@ router.put('/:id', (req, res) => {
       error: 'Request path id and request body id values must match'
     });
   }
-  
+
   const updated = {};
   const updateableFields = [
     "airline", "confirmationCode", 'tripComments', 'departure', "arrival",
@@ -77,17 +69,17 @@ router.put('/:id', (req, res) => {
   });
 
   Trip
-    .findByIdAndUpdate(req.params.id, {$set: updated}, {new: true})
-    .then(updatedTrip => res.status(204).json(updatedTrip.serialize()))
-    .catch(err => res.status(500).json({message: 'Something went wrong'}));
+  .findByIdAndUpdate(req.params.id, {$set: updated}, {new: true})
+  .then(updatedTrip => res.status(204).json(updatedTrip.serialize()))
+  .catch(err => res.status(500).json({message: 'Something went wrong'}));
 });
 
 
-router.delete('/delete/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   Trip
-    .findByIdAndRemove(req.params.id)
-    .then(trip => res.status(204).end())
-    .catch(err => res.status(500).json({ message: 'Internal server error' }));
+  .findByIdAndRemove(req.params.id)
+  .then(trip => res.status(204).end())
+  .catch(err => res.status(500).json({ message: 'Internal server error' }));
 });
 
 module.exports = router;
