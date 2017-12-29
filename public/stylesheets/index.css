@@ -98,9 +98,6 @@ main .row {
 /* * * * * * * * * * * */
 /*      header css     */
 /* * * * * * * * * * * */
- main {
-  padding-top: 10px;
-}
 
 header {
   display: block;
@@ -252,47 +249,286 @@ h2 {
   margin-bottom: 10px;
 }
 
+main {
+  width: 100%;
+  background-color: #f5f5f5;
+  /* background-color: #fdcc52; */
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 10px;
+  
+}
 
 /* * * * * * * * * * * */
 /*       About         */
 /* * * * * * * * * * * */
 
-main {
-  background-color: #f5f5f5;
-  /* background-color: #fdcc52; */
-}
-
-main h2 {
-  color: #212529;
+.about-section {
+  height: 500px;
 }
 
 .about-img {
   width: 90%;
 }
 
-.fa-clock-o {
+.fa-clock-o, .fa-user, .fa-envelope, .fa-tasks {
   color: #2576AC;
   width: 20px;
-  height: 50px;
+  height: 65px;
   display: inline-block;
   vertical-align: text-bottom;
   font-size: 3em;
-  margin-right: 25px;
 }
 
-.description  {
+.fa-clock-o, .fa-user {
+  margin-left: 3px;
+  margin-right: 20px;
+}
+
+.fa-envelope, .fa-tasks {
+  margin-right: 33px;
+}
+
+.description-1, .description-2  {
   margin-top: 40px;
 }
 
-.description p {
-  font: normal 1em sans-serif;
+.description-1 {
+  text-align: right;
+}
+
+.description-1 p, .description-2 p {
+  font: normal 1em  'Roboto', sans-serif;
+  color: #6a6a6a;
   display: inline-block;
   width: 200px;
 } 
 
-.description-header {
-  font: normal 1.2em sans-serif;
+.h2-wrapper {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+body main h2 {
+  font: italic 3em 'Josefin Sans', sans-serif;
+  color: #303030;
+}
+
+body main .description-header {
+  font: normal 1.5em 'Josefin Sans', sans-serif;
+  color: #169ece;
 }
 .text-2 {
   margin-top: 60px;
 }
+
+.description-img  {
+  text-align: center;
+}
+
+/* * * * * * * * * * * */
+/*       Sign Up        */
+/* * * * * * * * * * * */
+.sign-up-section {
+  height: 500px;
+  background-color: #d4d3d3;
+  padding: 0px; 
+}
+
+/* * * * * * * * * * * */
+/*  Sign up animation  */
+/* * * * * * * * * * * */
+/* *,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #c1bdba;
+  font-family: "Titillium Web", sans-serif;
+} */
+
+main .sign-up-section a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+main .sign-up-section a:hover {
+  color: #179b77;
+}
+
+body main .sign-up-section .form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+          box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+body main .sign-up-section .tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+body main .sign-up-section .tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body main .sign-up-section .tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+body main .sign-up-section .tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+body main .sign-up-section .tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+body main .sign-up-section .tab-content > div:last-child {
+  display: none;
+}
+
+body main .sign-up-section h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+body main .sign-up-section label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 22px;
+}
+
+label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+label.active {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #ffffff;
+}
+
+body main .sign-up-section input,
+body main .sign-up-section textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color 0.25s ease, -webkit-box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, -webkit-box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
+}
+body main .sign-up-section input:focus,
+body main .sign-up-section textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > div:last-child {
+  margin: 0;
+}
+
+body main .sign-up-section .button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+body main .sign-up-section .button:hover, 
+body main .sign-up-section .button:focus {
+  background: #179b77;
+}
+
+body main .sign-up-section .button-block {
+  display: block;
+  width: 100%;
+}
+
+body main .sign-up-section .forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+
+
+
+
