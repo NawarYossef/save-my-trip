@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">  
-  <link rel="stylesheet" type="text/css" href="../stylesheets/new-trip.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/new-trip.css">
 </head>
 <body>
   <header class="col-12">
@@ -20,153 +20,119 @@
   </header>
 
   <main role="main">
-    <form action="">
-      <div class="departure-info">
-        <div class="h2-wrapper col-12">
-          <h2 class="heading-for-new-trip">
-            New Trip
-          </h2>
-        <div>
-        <div class="h2-wrapper col-12">
-          <h3 class="heading-for-new-trip">
-            From
-          </h3>
-        <div>
-
-        <section class="trip-wrapper col-12">
-          <label for="airport-name">
+    <div class="h2-wrapper col-12">
+      <h2 class="heading-for-new-trip">
+        New Trip
+      </h2>
+    <div>
+    <section class="trip-form">
+      <form action="">
+        <div class="departure-info">
+          <div class="h2-wrapper col-12">
+            <h3 class="heading-for-new-trip">
+              From
+            </h3>
+          <div>
+          <label for="departure-airline">
             <h4>
-              Airport Name
+              Airline
             </h4>
           </label>
           <div class="input-wrapper">
-            <input type="text" id="airport-name" name="name" placeholder="airport name..">
+            <input type="text" id="departure-airline" name="airline" placeholder="airline name..">
           </div>
 
-          <label for="terminal-name">
+          <label for="confirmation-code">
             <h4>
-              Terminal Name
+              Confirmation Code
             </h4>
           </label>
           <div class="input-wrapper">
-            <input type="text" id="terminal-name" name="terminal" placeholder="terminal name..">
+            <input type="text" id="confirmation-code" name="confirmation" placeholder="confirmation code..">
           </div>
           
-          
-          <label for="confirmation-number">
+          <label for="trip-comments">
             <h4>
-              Confirmation Number
+              Trip Comments
             </h4>
           </label>
           <div class="input-wrapper">
-            <input type="text" id="confirmation-number" name="confirmation" placeholder="confirmation number..">
+            <input type="text" id="trip-confirmation" name="comments" placeholder="trip-comments..">
           </div>
 
-          <label for="departure-date">
+          <label for="arrival-airport">
             <h4>
-              Departure Date
+              Airport
             </h4>
           </label>
           <div class="input-wrapper">
-            <input type="text" id="datepicker-1" name="" class="dep-date">
+            <input type="text" id="arrival-airport" name="arrival-airport" placeholder="airport name..">
           </div>
 
-          <label for="departure-time">
+          <label for="arrival-date">
             <h4>
-              Departure Time
+              Date
             </h4>
           </label>
           <div class="input-wrapper">
-            <input type="time" id="departure-time">
+            <input type="text" id="datepicker-2" name="arrival-date" class="arriv-date">
+          </div>
+
+          <label for="arrival-time">
+            <h4>
+              Time
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="time" id="arrival-time">
+          </div>
+        </div>
+      
+        <div class="arrival-info">
+          <div class="h2-wrapper col-12">
+            <h3 class="heading-for-new-trip">
+              Going To
+            </h3>
+          <div>
+
+          <label for="arrival-airport">
+            <h4>
+              Airport
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="arrival-airport" name="arrival-airport" placeholder="airport name..">
+          </div>
+
+          <label for="arrival-date">
+            <h4>
+              Date
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="datepicker-2" name="arrival-date" class="arriv-date">
+          </div>
+
+          <label for="arrival-time">
+            <h4>
+              Time
+            </h4>
+          </label>
+          <div class="input-wrapper">
+            <input type="time" id="arrival-time">
           </div>
           
-          <label for="transportation">
+          <label for="arrival-transportation">
             <h4>
               Transportation
             </h4>
           </label>
           <div class="input-wrapper">
-            <input type="text" id="transportation" name="transport" placeholder="transportation details..">
+            <input type="text" id="arrival-transportation" name="arrival-transport" placeholder="transportation details..">
           </div>
-        </section>
-      </div>
-    
-    
-      <div class="arrival-info">
-        <div class="h2-wrapper col-12">
-          <h3 class="heading-for-new-trip">
-            Going To
-          </h3>
-        <div>
-
-        <section class="trip-wrapper col-12">
-          <label for="airport-name">
-            <h4>
-              Airport Name
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="airport-name" name="name" placeholder="airport name..">
-          </div>
-
-          <label for="terminal-name">
-            <h4>
-              Terminal Name
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="terminal-name" name="terminal" placeholder="terminal name..">
-          </div>
-          
-          
-          <label for="confirmation-number">
-            <h4>
-              Confirmation Number
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="confirmation-number" name="confirmation" placeholder="confirmation number..">
-          </div>
-
-          <label for="departure-date">
-            <h4>
-              Departure Date
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="datepicker-2" name="" class="dep-date">
-          </div>
-
-          <label for="departure-time">
-            <h4>
-              Departure Time
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="time" id="departure-time">
-          </div>
-          
-          <label for="transportation">
-            <h4>
-              Transportation
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="transportation" name="transport" placeholder="transportation details..">
-          </div>
-        </section>
-        <section class="comments-wrapper">
-          <label for="comments">
-            <h4>
-              Comments
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="comments" name="user-comments" placeholder="comments..">
-          </div>
-        </section>
-      </div>
-    </form>
+        </div>
+      </form>
+    </section>
   </main>
   <!-- <script type="text/javascript" src="js/main.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

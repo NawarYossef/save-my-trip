@@ -3,11 +3,11 @@ const express = require("express");
 const mongoose = require('mongoose');
 const morgan = require("morgan")
 
-mongoose.Promise = global.Promise;
-
 const tripsRouter = require('./tripsRouter');
 const {PORT, DATABASE_URL} = require("./config");
 const {Trip} = require("./models")
+
+mongoose.Promise = global.Promise;
 
 const app = express();
 app.use(bodyParser.json());

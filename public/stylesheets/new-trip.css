@@ -20,96 +20,8 @@ body {
  *   so 960 + 20 + 20 => 1000px
  *
  **/
- main {
-  padding-top: 100px;
-}
-
-header {
-  display: block;
-  text-align: center;
-  background-color: rgb(70, 62, 139);
-}
-
-/* .app-title {
-  display: inline-block;
-  text-align: center;
-} */
-
-body header .navbar {
-  display: inline-block;
-  text-align: center;
-  float: none;
-}
-
-body header nav .ul-header {
-  width: 80%;
-  display: inline-block;
-  float: none;
-}
-
-nav ul li {
-  width: 24%;
-  display: inline-block;
-  text-align: center;
-}
-
-nav ul li a {
-  font-size: 1.6em;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: #222020;
-}
-
-/* * * * * * * * * * * */
-/*      form styles    */
-/* * * * * * * * * * * */
-.h2-wrapper, .h3-wrapper {
-  text-align: center;
-}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  background-color: rgb(199, 202, 199);
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  outline: none;
-}
-
-input[type=submit], input[type=reset] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
-}
-
-input[type=submit]:hover, input[type=reset]:hover {
-  background-color: #45a049;
-}
-
-.departure-info, .arrival-info {
-  display: block;
-}
-
-body main .dep-date, body main .arriv-date {
-  width: 20%;
-}
-
-label[for=transportation] {
-  display: block;
-}
-/* * * * * * * * * * * */
-/*      grid rules     */
+ /* * * * * * * * * * * */
+/*      grid css        */
 /* * * * * * * * * * * */
 main .row {
   margin-bottom: 20px;
@@ -179,4 +91,96 @@ main .row {
   /* 12 columns */
   .col-12 {
   }
+}
+
+ /* * * * * * * * * * * */
+/*      Body            */
+/* * * * * * * * * * * */
+ main {
+  padding-top: 100px;
+}
+
+header {
+  display: block;
+  text-align: center;
+  background-color: rgb(70, 62, 139);
+}
+
+body header .navbar {
+  display: inline-block;
+  text-align: center;
+  float: none;
+}
+
+body header nav .ul-header {
+  width: 80%;
+  display: inline-block;
+  float: none;
+}
+
+nav ul li {
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+}
+
+nav ul li a {
+  font-size: 1.6em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #222020;
+}
+
+/* * * * * * * * * * * */
+/*      form styles    */
+/* * * * * * * * * * * */
+
+.arrival-info {
+  margin-top: 50px;
+}
+
+.h2-wrapper, .h3-wrapper {
+  text-align: center;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(199, 202, 199);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  outline: none;
+}
+
+input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+.departure-info, .arrival-info {
+  display: block;
+}
+
+body main .dep-date, body main .arriv-date {
+  width: 20%;
+}
+
+label[for=transportation] {
+  display: block;
 }
