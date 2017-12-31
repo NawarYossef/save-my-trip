@@ -1,7 +1,9 @@
 const bodyParser = require('body-parser');
 const express = require("express");
 const mongoose = require('mongoose');
+
 const morgan = require("morgan")
+
 
 const tripsRouter = require('./tripsRouter');
 const {PORT, DATABASE_URL} = require("./config");
@@ -21,7 +23,7 @@ app.use('*', function(req, res) {
 });
 
 
-// server` object is declared in the global scope 
+// server` object is declared in the global scope
 // because closeServer functions needs access to it.
 let server;
 
