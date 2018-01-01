@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: rgb(93, 88, 88);
+	background-color: #22659c;
 }
 
 /* Grid measurements:
@@ -138,49 +138,34 @@ nav ul li a:hover {
 /*      form styles    */
 /* * * * * * * * * * * */
 
-.arrival-info {
+.form-box {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.h2-wrapper, .h3-wrapper {
-  text-align: center;
+.data-segment-wrapper {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  background: #ffffff;
+  border-bottom: 1px solid gray;
 }
 
-input[type=text], select, textarea {
+form input {
+  display: block;
+  height: 35px;
   width: 100%;
-  padding: 12px;
-  background-color: rgb(199, 202, 199);
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  outline: none;
-}
-
-input[type=submit], input[type=reset] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
 }
 
-input[type=submit]:hover, input[type=reset]:hover {
-  background-color: #45a049;
+.form-departure-city, .form-arrival-city, .airport-table-head {
+  padding: 0px;
 }
 
-.departure-info, .arrival-info {
-  display: block;
+.table-row {
+  display: inline-flex;
 }
 
-body main .dep-date, body main .arriv-date {
-  width: 20%;
-}
-
-label[for=transportation] {
-  display: block;
+.airport-table-head {
+  border-right: 1px solid gray;
 }
