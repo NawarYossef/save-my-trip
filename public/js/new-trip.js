@@ -1,4 +1,4 @@
-
+"use strict"
 "use strict";
 $( function() {
   $( "#datepicker-1" ).datepicker();
