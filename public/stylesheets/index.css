@@ -367,7 +367,7 @@ body form input {
 }
 
 body form input:focus {
-  border-bottom: 1px solid #0088ff;
+  border-bottom: 2px solid #0088ff;
 }
 
 body form button {
