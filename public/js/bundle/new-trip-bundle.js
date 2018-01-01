@@ -9,4 +9,5 @@ $( function() {
   $( "#datepicker-2" ).datepicker();
 } );
 
+console.log(323)
 },{}]},{},[1]);
