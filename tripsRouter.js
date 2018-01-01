@@ -5,7 +5,6 @@ const jsonParser = bodyParser.json();
 
 const {Trip} = require('./models');
 
-
 // ============== test requests ==============
 router.get('/', (req, res) => {
 Trip
