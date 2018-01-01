@@ -7,3 +7,5 @@ $( function() {
 $( function() {
   $( "#datepicker-2" ).datepicker();
 } );
+
+console.log(323)
