@@ -25,7 +25,6 @@ TripSchema.methods.serialize = function() {
     id: this._id,
     airline: this.airline,
     confirmationCode: this.confirmationCode,
-    tripComments: this.tripComments,
     departure: {
       city: this.departure.city,
       airport: this.departure.airport,
