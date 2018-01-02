@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(morgan("common"));
 app.use(express.static('public'));
 
-app.use('/trips', tripsRouter);
+app.use('/api/trips', tripsRouter);
 
 app.use('*', function(req, res) {
   res.status(404).json({message: 'Not Found'});

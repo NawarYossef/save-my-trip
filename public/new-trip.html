@@ -9,168 +9,79 @@
   <link rel="stylesheet" type="text/css" href="./stylesheets/new-trip.css">
 </head>
 <body>
-  <header class="col-12">
-    <nav class="navbar col-12">
+  <header>
+    <div class="header-wrapper col-12">
+      <nav class="navbar col-6">
         <ul class=" ul-header">
-          <li class=""><a href="#">Trips</a></li>
-          <li class=""><a href="#">Add New Trip</a></li>
-          <li class=""><a href="#">Logout</a></li>
+          <li class="">
+            <a href="#" class="hvr-underline-from-left">About</a>
+          </li>
+          <li class="">
+            <a href="#" class="hvr-underline-from-left">Trips</a>
+          </li>
+          <li class="log-in">
+            <a href="#" class="hvr-underline-from-left">Log Out</a>
+          </li>
         </ul>
-    </nav>
+      </nav>
+  
+      <div class="h1-wrapper">
+        <h1>SaveMyTrip</h1>
+      </div>
+    </div>
   </header>
 
   <main role="main">
-    <div class="h2-wrapper col-12">
-      <h2 class="heading-for-new-trip">
-        New Trip
-      </h2>
-    <div>
-    <section class="trip-form">
-      <form action="">
-        <div class="departure-info">
-          <div class="h2-wrapper col-12">
-            <h3 class="heading-for-new-trip">
-              From
-            </h3>
-          <div>
-          <label for="departure-airline">
-            <h4>
-              Airline
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="departure-airline" name="airline" placeholder="airline name..">
+    <section class="col-12 new-trip-form">
+      <div class="form-box">
+        <!-- <div class="h2-wrapper col-12">
+          <h2 class="heading-for-new-trip">
+            Please eneter your trip details below
+          </h2>
+        <div> -->
+        <div class="h3-wrapper col-12">
+          <h3 class="heading-for-new-trip">
+            General Information
+          </h3>
+        <div>
+        <form class="col-12" id="new-trip-form">
+          <div class="departure-data col-12">
+            <fieldset>
+              <input type="text" name="airline-choice" id="departure-airline" placeholder="Airline.."  class="airline">
+              <input type="text" name="confirmation-number" id="confirmation" placeholder="Confirmation Number.."  class="confirmation">
+            </fieldset>
+          </div>
+          <div class="departure-info-wrapper col-6">
+            <legend>Departure</legend>
+            <fieldset name="register-info">
+              <input type="text" name="city-choice" id="departure-city" placeholder="City.." required="" class="">
+              <input type="text" name="airport-choice" id="departure-airport" placeholder="Airport.." class="">
+              <input type="text" name="transportation-choice" id="departure-transportation" placeholder="Transportation.." class="">
+              <input type="text" name="date" id="datepicker-1" placeholder="Date And Time.."  class="">
+            </fieldset>
           </div>
 
-          <label for="confirmation-code">
-            <h4>
-              Confirmation Code
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="confirmation-code" name="confirmation" placeholder="confirmation code..">
+          <div class="arrival-info-wrapper col-6">
+            <legend>Arrival</legend>
+            <fieldset name="register-info">
+              <input type="text" name="city-choice" id="arrival-city" placeholder="City.." required="" class="">
+              <input type="text" name="airport-choice" id="arrival-airport" placeholder="Airport.."  class="">
+              <input type="text" name="transportation-choice" id="arrival-transportation" placeholder="Transportation.." class="">
+              <input type="text" name="date" id="datepicker-2" placeholder="Date And Time.." class="">
+            </fieldset>
           </div>
-          
-          <label for="trip-comments">
-            <h4>
-              Trip Comments
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="trip-confirmation" name="comments" placeholder="trip-comments..">
-          </div>
-
-          <label for="arrival-airport">
-            <h4>
-              Airport
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="arrival-airport" name="arrival-airport" placeholder="airport name..">
-          </div>
-
-          <label for="arrival-date">
-            <h4>
-              Date
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="datepicker-2" name="arrival-date" class="arriv-date">
-          </div>
-
-          <label for="arrival-time">
-            <h4>
-              Time
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="time" id="arrival-time">
-          </div>
-        </div>
-      
-        <div class="arrival-info">
-          <div class="h2-wrapper col-12">
-            <h3 class="heading-for-new-trip">
-              Going To
-            </h3>
-          <div>
-
-          <label for="arrival-airport">
-            <h4>
-              Airport
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="arrival-airport" name="arrival-airport" placeholder="airport name..">
-          </div>
-
-          <label for="arrival-date">
-            <h4>
-              Date
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="datepicker-2" name="arrival-date" class="arriv-date">
-          </div>
-
-          <label for="arrival-time">
-            <h4>
-              Time
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="time" id="arrival-time">
-          </div>
-          
-          <label for="arrival-transportation">
-            <h4>
-              Transportation
-            </h4>
-          </label>
-          <div class="input-wrapper">
-            <input type="text" id="arrival-transportation" name="arrival-transport" placeholder="transportation details..">
-          </div>
-        </div>
-      </form>
-    </section>
-
-    <section class="form-box col-12">
-    
-      <form class="">
-        <div class="data-segment-wrapper">
-          <div class="table-row col-12">
-            <div class="airport-table-head col-4">
-              <span>Airport</span>
+          <div class="btns-wrapper col-12">
+              <button type="button" value="Reset">Reset</button>
+              <button type="submit" value="Submit" class="save-button" >Save</button>
             </div>
-            <div class="form-departure-city col-4">
-              <span>From</span>
-              <input type="text">
-            </div>
-            <div class="form-arrival-city col-4">
-              <span>to</span>
-              <input type="text">
-            </div>
-          </div>
-        </div>
-        <div class="data-segment-wrapper">
-            <div class="table-row col-12">
-              <div class="airport-table-head col-4">
-                <span>Airline</span>
-              </div>
-              <div class="form-arrival-city col-6">
-                <input type="text" placeholder="airline name..">
-              </div>
-            </div>
-          </div>
-      </form>
-
+        </form>
+      </div>
     </section>
   </main>
   <!-- <script type="text/javascript" src="js/main.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/bundle/new-trip-bundle.js"></script>
+  <script type="text/javascript" src="js/new-trip.js"></script>
 </body>
-
 

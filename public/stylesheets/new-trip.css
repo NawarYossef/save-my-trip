@@ -94,22 +94,25 @@ main .row {
 }
 
  /* * * * * * * * * * * */
-/*      Body            */
+/*      header          */
 /* * * * * * * * * * * */
- main {
-  padding-top: 100px;
+body {
+  font-size: 1em;
+  background-image: url("../images/plane-view-img.jpg");
+  background-position: 50% 80%; 
+  background-size: 100%;
 }
 
-header {
-  display: block;
-  text-align: center;
-  background-color: rgb(70, 62, 139);
+body header .header-wrapper {
+  background-color: rgba(0,0,0,0.6);
+  height: 50px;
 }
 
 body header .navbar {
   display: inline-block;
   text-align: center;
-  float: none;
+  float: right;
+  margin-top: 5px;
 }
 
 body header nav .ul-header {
@@ -125,47 +128,149 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 1.6em;
+  font: normal 1.2em 'Merriweather', serif;
   color: #ffffff;
   text-decoration: none;
 }
 
-nav ul li a:hover {
-  color: #222020;
+h1 {
+  color: #ffffff;
+  font: italic 1.8em 'Merriweather', serif;
 }
 
+.h1-wrapper {
+  display: inline-block;
+  margin-right: 10%;
+  text-align: center;
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/*      css hover effect for nav bar   */
+/* * * * * * * * * * * * * * * * * * * */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: rgb(236, 236, 236);
+  height: 2px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, 
+.hvr-underline-from-left:active:before {
+  right: 0;
+}
+/* ========================== */
+
+ /* * * * * * * * * * * */
+/*      main            */
+/* * * * * * * * * * * */
+ main {
+  padding-top: 100px;
+}
+
+.h2-wrapper, .h3-wrapper  {
+  text-align: center; 
+}
+
+h2 {
+  font: bold 1.2em 'Merriweather', serif;
+}
+
+.h3-wrapper {
+  margin-top: 30px;
+}
+
+h3 {
+  font: bold 1em 'Merriweather', serif;
+  text-decoration: underline;
+}
 /* * * * * * * * * * * */
 /*      form styles    */
 /* * * * * * * * * * * */
-
 .form-box {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.data-segment-wrapper {
-  display: flex;
-  width: 80%;
+  background: #f5f5f5;
+  width: 60%;
+  height: 650px;
   margin: 0 auto;
-  background: #ffffff;
-  border-bottom: 1px solid gray;
 }
 
-form input {
-  display: block;
-  height: 35px;
+body form {
+  margin: 0 auto;
+  width: 50%;
+}
+
+body form fieldset {
   width: 100%;
+}
+
+body form input {
+  font: normal 1.2em 'Raleway', sans-serif;
+  color: #020202;
+  width: 80%;
+  border: 2px solid #d8d8d8;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  padding: 2px 0;
+  background-color: transparent;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  text-align: center;
+  outline: none;
+  overflow-x: scroll;
+}
+
+body form .airline, body form .confirmation {
+  width: 50%;
+}
+
+body form ::-webkit-input-placeholde {
+  font: normal 1.2em 'Raleway', sans-serif;
+  color: #6b6b6b;
+}
+
+body form input:focus {
+  border-bottom: 2px solid #0088ff;
+}
+
+body form button {
+  width: 25%;
+  height: 43px;
+  color: #ffffff;
+  background: #e28714;
+  margin-top: 15px;
+  font-size: 1.4em;
   border: none;
+  outline: none;
 }
 
-.form-departure-city, .form-arrival-city, .airport-table-head {
-  padding: 0px;
+.arrival-info-wrapper, .departure-info-wrapper {
+  margin-top: 30px;
 }
 
-.table-row {
-  display: inline-flex;
+.departure-info-wrapper {
+  border-right: 1px solid rgb(177, 177, 177);
 }
 
-.airport-table-head {
-  border-right: 1px solid gray;
+legend {
+  font: bold 1em sans-serif;
+  color: #1f1818; 
+  text-decoration: underline;
 }
