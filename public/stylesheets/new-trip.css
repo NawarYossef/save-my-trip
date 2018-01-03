@@ -178,8 +178,14 @@ h1 {
 .hvr-underline-from-left:active:before {
   right: 0;
 }
-/* ========================== */
 
+.hamburger {
+  outline: none;
+}
+
+.noSelect {
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
 
 /* ========================== */
 

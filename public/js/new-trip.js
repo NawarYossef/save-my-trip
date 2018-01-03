@@ -1,22 +1,43 @@
 "use strict";
 
+class NewTrip  {
 
-$(() => {
-  $( "#datepicker-1" ).datepicker();
-  $( "#datepicker-2" ).datepicker();
+  init() {
+    this.calenderInitialize();
+    this.postNewTrip();
+    this.toggleHamburger();
+  }
+  calenderInitialize() {
+    $("#datepicker-1").datepicker();
+    $("#datepicker-2").datepicker();
+    $(".header-wrapper").animate({top: "300px"});
+  }
 
-  $("#new-trip-form").submit((e) => {
-    e.preventDefault()
-    console.log(34)
-    $.ajax({
-    url: "http://localhost:8080/api/trips",
-    type: 'POST',   
-    success: function(data){
-      console.log(data)
-    }
-  });
-  })
-})
+  postNewTrip() {
+    $("#new-trip-form").submit((e) => {
+      e.preventDefault();
+      console.log(34);
+      $.ajax({
+        url: "http://localhost:8080/api/trips",
+        type: 'POST',   
+        success: function(data){
+          console.log(data)
+        }
+      });
+    });
+  }
 
-//content type json
-// data
+  toggleHamburger() {
+    $(".hamburger").click(function() {
+      if ($(this).hasClass("is-active") ) {
+        $(this).removeClass("is-active");
+      } else {
+        $(this).addClass("is-active");
+      }
+    })
+  }
+}
+
+const app = new NewTrip();
+app.init();
+
