@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const TripSchema = mongoose.Schema({
   airline: {type: String, required: true},
   confirmationCode: {type: String, required: false},
-  tripComments:  {type: String, required: false},
 
   departure: {
     city: {type: String, required: true},
