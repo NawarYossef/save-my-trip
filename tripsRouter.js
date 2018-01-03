@@ -24,7 +24,7 @@ Trip
 
 router.post('/', (req, res) => {
   const requiredFields = [
-    "airline", "confirmationCode", 'tripComments', 'departure', "arrival",
+    "airline", "confirmationCode", 'departure', "arrival",
   ];
 
   for (let i = 0; i < requiredFields.length; i++) {
@@ -40,7 +40,6 @@ router.post('/', (req, res) => {
     .create({
       airline: req.body.airline,
       confirmationCode: req.body.confirmationCode,
-      tripComments: req.body.tripComments,
       departure: req.body.departure,
       arrival: req.body.arrival
     })
@@ -61,7 +60,7 @@ router.put('/:id', (req, res) => {
   
   const updated = {};
   const updateableFields = [
-    "airline", "confirmationCode", 'tripComments', 'departure', "arrival",
+    "airline", "confirmationCode", 'departure', "arrival",
   ];
 
   updateableFields.forEach(field => {
