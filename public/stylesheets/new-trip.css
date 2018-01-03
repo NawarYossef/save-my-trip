@@ -100,12 +100,15 @@ body {
   font-size: 1em;
   background-image: url("../images/plane-view-img.jpg");
   background-position: 50% 80%; 
-  background-size: 100%;
+  background-size: cover;
 }
 
-body header .header-wrapper {
-  background-color: rgba(0,0,0,0.6);
+header {
+  display: block;
+  position: relative;
+  text-align: center;
   height: 50px;
+  background-color: rgba(0,0,0,0.6);
 }
 
 body header .navbar {
@@ -133,17 +136,16 @@ nav ul li a {
   text-decoration: none;
 }
 
-h1 {
-  color: #ffffff;
-  font: italic 1.8em 'Merriweather', serif;
-}
-
 .h1-wrapper {
   display: inline-block;
   margin-right: 10%;
   text-align: center;
 }
 
+h1 {
+    color: #ffffff;
+    font: italic 1.8em 'Merriweather', serif;
+}
 /* * * * * * * * * * * * * * * * * * * */
 /*      css hover effect for nav bar   */
 /* * * * * * * * * * * * * * * * * * * */
@@ -178,6 +180,9 @@ h1 {
 }
 /* ========================== */
 
+
+/* ========================== */
+
  /* * * * * * * * * * * */
 /*      main            */
 /* * * * * * * * * * * */
@@ -194,7 +199,8 @@ h2 {
 }
 
 .h3-wrapper {
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 h3 {
@@ -224,10 +230,7 @@ body form input {
   font: normal 1.2em 'Raleway', sans-serif;
   color: #020202;
   width: 80%;
-  border: 2px solid #d8d8d8;
-  border-left: none;
-  border-top: none;
-  border-right: none;
+  border: 1px solid #d8d8d8;
   padding: 2px 0;
   background-color: transparent;
   margin-bottom: 20px;
@@ -269,8 +272,13 @@ body form button {
   border-right: 1px solid rgb(177, 177, 177);
 }
 
+.departure-data, .departure-info-wrapper, .arrival-info-wrapper, .btns-wrapper {
+  text-align: center;
+}
+
 legend {
   font: bold 1em sans-serif;
   color: #1f1818; 
   text-decoration: underline;
+  margin-bottom: 10px;
 }
