@@ -151,6 +151,7 @@ nav ul li a {
   position: relative;
   overflow: hidden;
 }
+
 .hvr-underline-from-left:before {
   content: "";
   position: absolute;
@@ -381,7 +382,45 @@ body form button {
   border: none;
 }
 
+/* * * * * * * * * * * * * */
+/* general Media Queries   */
+/* * * * * * * * * * * * * */
+@media screen and (max-width: 320px) {
 
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+
+}
+
+/* * * * * * * * * * * * * */
+/* specific Media Queries  */
+/* * * * * * * * * * * * * */
+@media only screen and (max-width: 1024px) {
+  .nav-bar {
+    display: none;
+  }
+}
 
 
 
