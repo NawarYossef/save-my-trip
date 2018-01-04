@@ -18,13 +18,18 @@ class NewTrip  {
     $("#new-trip-form").submit((e) => {
       e.preventDefault();
       console.log(34);
+
       $.ajax({
-        url: "http://localhost:8080/api/trips",
-        type: 'POST',   
-        success: function(data){
-          console.log(data)
-        }
-      });
+        url: "http://localhost:8081/trips",
+        type: 'POST',  
+        dataType: "html"
+      })
+      .done(data => {
+        console.log(data)
+      })
+      .fail(data => {
+        console.error("something is wrong")
+      })
     });
   }
 
