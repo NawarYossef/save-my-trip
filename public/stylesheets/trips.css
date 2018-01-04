@@ -196,7 +196,9 @@ h1 {
   padding-top: 100px;
 }
 
-
+.all-trips-wrapper {
+  text-align: center;
+}
 /* * * * * * * * * * * * * */
 /* general Media Queries   */
 /* * * * * * * * * * * * * */
