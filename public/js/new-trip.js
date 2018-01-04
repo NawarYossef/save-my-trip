@@ -3,11 +3,12 @@
 class NewTrip  {
 
   init() {
-    this.calenderInitialize();
+    this.initializeCalender();
     this.postNewTrip();
     this.toggleHamburger();
   }
-  calenderInitialize() {
+
+  initializeCalender() {
     $("#datepicker-1").datepicker();
     $("#datepicker-2").datepicker();
     $(".header-wrapper").animate({top: "300px"});
@@ -29,7 +30,7 @@ class NewTrip  {
 
   toggleHamburger() {
     $(".hamburger").click(function() {
-      if ($(this).hasClass("is-active") ) {
+      if ($(this).hasClass("is-active")) {
         $(this).removeClass("is-active");
       } else {
         $(this).addClass("is-active");

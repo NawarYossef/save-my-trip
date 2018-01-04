@@ -99,8 +99,7 @@ main .row {
 body {
   font-size: 1em;
   background-image: url("../images/plane-view-img.jpg");
-  background-position: 50% 80%; 
-  background-size: cover;
+  background-position: 0px -200px; 
 }
 
 header {
@@ -111,7 +110,8 @@ header {
   background-color: rgba(0,0,0,0.6);
 }
 
-body header .navbar {
+body header nav {
+  width: 50%;
   display: inline-block;
   text-align: center;
   float: right;
@@ -294,59 +294,64 @@ legend {
 /* general Media Queries   */
 /* * * * * * * * * * * * * */
 @media screen and (max-width: 320px) {
-  .h1-wrapper {
+  body header .h1-wrapper {
     float: left;
     margin-top: 3%;
     margin-left: 2%;
   }
 
-  h1 {
+  body header h1 {
     font-size: 1.3em;
   }
 
-  .nav-bar {
+  body header nav {
     display: none;
   }
 }
 
 @media screen and (min-width: 321px) and (max-width: 375px) {
-  .nav-bar {
+  body header nav {
     display: none;
   }
 }
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
-  .nav-bar {
+  body header nav {
     display: none;
   }
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  .nav-bar {
+  body header nav {
     display: none;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .nav-bar {
+  body header nav {
     display: none;
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  button.hamburger {
+  body header button.hamburger {
     display: none;
+  }
+
+  body header nav {
+    display: initial;
+    float: right;
   }
 }
 
 @media screen and (min-width: 1441px) and (max-width: 1600px) {
-  button.hamburger {
+  body header button.hamburger {
     display: none;
   }
 }
 
 @media screen and (min-width: 1601px) and (max-width: 2560px) {
-  button.hamburger {
+  body header button.hamburger {
     display: none;
   }
 }
