@@ -76,7 +76,7 @@ router.put('/:id', (req, res) => {
 });
 
 
-router.delete('/delete/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   Trip
     .findByIdAndRemove(req.params.id)
     .then(trip => res.status(204).end())
