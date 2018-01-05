@@ -33,7 +33,7 @@ describe('Trips API resource', function () {
       // at the end of the test. The `chai.request(server).get...` call is asynchronous
       // and returns a Promise, so it must be returned.
       chai.request(app)
-        .get('/trips')
+        .get('/')
         .then(function (res) {
           // console.log(res.body)
           res.should.have.status(200);
@@ -47,13 +47,14 @@ describe('Trips API resource', function () {
         const newTrip = {
           airline: "Delta",
           confirmationCode: 1234565,
-          tripComments: "going to hotel after arrival",
           departure: {
+            "city": "New York",
             airport: "ATL",
             date: "Mon Dec 04 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
             transportation: "by bus",
           },
           arrival: {
+            "city": "Atlanta",
             airport: "NYC",
             date: "Wed Dec 20 2017 00:00:00 GMT-0500 (Eastern Standard Time)",
             transportation: "by taxi"
@@ -75,7 +76,6 @@ describe('Trips API resource', function () {
 
             res.body.airline.should.equal(newTrip.airline);
             res.body.confirmationCode.should.equal(newTrip.confirmationCode);
-            res.body.tripComments.should.equal(newTrip.tripComments);
 
             res.body.departure.should.equal(newTrip.departure);
             res.body.departure.should.be.an("object");
@@ -94,7 +94,6 @@ describe('Trips API resource', function () {
           .then(function (trip) {
             trip.airline.should.equal(newTrip.airline);
             trip.confirmationCode.should.equal(newTrip.confirmationCode);
-            trip.tripComments.should.equal(newTrip.tripComments);
             trip.departure.should.equal(newTrip.departure);
             trip.arrival.should.equal(newTrip.arrival);
           });
@@ -127,7 +126,7 @@ describe('Trips API resource', function () {
           // make request then inspect it to make sure it reflects
           // data we sent
           chai.request(app)
-            .put(`/trips/${trip.id}`)
+            .put(`/${trip.id}`)
             .send(updateData);
         })
         .then(function (res) {
@@ -159,7 +158,7 @@ describe('Trips API resource', function () {
         .findOne()
         .then(function (_trip) {
           trip = _trip;
-          chai.request(app).delete(`/trips/delete/${trip.id}`);
+          chai.request(app).delete(`/${trip.id}`);
         })
         .then(function (res) {
           res.should.have.status(204);
