@@ -198,6 +198,38 @@ h1 {
 
 .all-trips-wrapper {
   text-align: center;
+  position: relative;
+}
+
+.trip-wrapper {
+  margin: 0 auto;
+  float: none;
+  width: 50%;
+  height: 50px;
+  background: #e28714;
+}
+
+.trip-heading {
+  height: 100%;
+  padding: 0px;
+}
+
+.city {
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+span {
+  font-size: 2.5em;
+  margin-top: 0px;
+}
+
+.hamburger-wrapper {
+  position: absolute;
+  left: 22%;
+  background: #e28714;
+  height: 50px;
 }
 /* * * * * * * * * * * * * */
 /* general Media Queries   */
