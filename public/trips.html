@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">  
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./stylesheets/trips.css">
   <link rel="stylesheet" href="./stylesheets/hamburger.css">
 </head>
@@ -16,10 +17,10 @@
       <nav>
         <ul class=" ul-header">
           <li class="">
-            <a href="#" class="hvr-underline-from-left">About</a>
+            <a href="#" class="hvr-underline-from-left">Trips</a>
           </li>
           <li class="">
-            <a href="#" class="hvr-underline-from-left">Trips</a>
+            <a href="#" class="hvr-underline-from-left">New Trips</a>
           </li>
           <li class="log-in">
             <a href="#" class="hvr-underline-from-left">Log Out</a>
@@ -46,18 +47,32 @@
     </div>
     <section class="all-trips-wrapper col-12">
       <div class="trip-wrapper">
-        <div class="trip-heading col-12">
-          <div class="departure-city city col-4">
-            <h3>New York</h3>
+        <div class="trip-row col-12">
+          <div class="hamburger-wrapper">
+            <button class="hamburger hamburger--spin noSelect" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
           </div>
-          <div class="departure-city city col-4">
-            <span>&#10230;</span>
-          </div>
-          <div class="arrival-city city col-4">
-            <h3>Atlanta</h3>         
+          <div class="trip-heading">
+            <div class="departure-city city">
+              <h2 class="">San Francsisco, CA</h2>
+            </div>
+            <div class="span-wrapper">
+              <span>&#10230;</span>
+            </div>
+            <div class="arrival-city city">
+              <h2>Atlanta, GA</h2>
+            </div>
           </div>
         </div>
-      </div>     
+        <div class="trip-details col-12">
+          <div class="general-info-wrapper">
+
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <!-- <script type="text/javascript" src="js/main.js"></script> -->
