@@ -28,18 +28,16 @@ TripSchema.methods.serialize = function() {
       city: this.departure.city,
       airport: this.departure.airport,
       date: this.departure.date,
-      transportation: this.departure.transportation  
-    }, 
+      transportation: this.departure.transportation
+    },
     arrival: {
-      city: this.departure.city,
-      airport: this.departure.airport,
-      date: this.departure.date,
-      transportation: this.departure.transportation  
-    }, 
+      city: this.arrival.city,
+      airport: this.arrival.airport,
+      date: this.arrival.date,
+      transportation: this.arrival.transportation  
+    },
   };
 }
 
 const Trip = mongoose.model('Trip', TripSchema);
 module.exports = {Trip};
-
-

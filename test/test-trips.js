@@ -26,7 +26,7 @@ function seedTripData() {
   for (let i= 1; i<= 5; i++) {
     seedData.push(generateTripData());
   }
- 
+
   // this will return a promise
   return Trip.insertMany(seedData);
 }
@@ -64,16 +64,16 @@ function generateTripData() {
     confirmationCode: faker.random.number(),
     departure: {
       city: faker.address.city(),
-      airport: generateAirport(), 
+      airport: generateAirport(),
       date: faker.date.recent(),
-      transportation: generateTransportation(), 
-    }, 
+      transportation: generateTransportation(),
+    },
     arrival: {
       city: faker.address.city(),
-      airport: generateAirport(), 
+      airport: generateAirport(),
       date: faker.date.future(),
-      transportation: generateTransportation(), 
-    }, 
+      transportation: generateTransportation(),
+    },
   };
 }
 
@@ -118,13 +118,13 @@ describe('Trip API resource', function() {
         .then(function(_res) {
           // so subsequent .then blocks can access resp obj.
           res = _res;
-          res.should.have.status(200);  
+          res.should.have.status(200);
           // otherwise the db seeding didn't work
           res.body.trips.should.have.length.of.at.least(1);
           return Trip.count();
         })
         .then(function(count) {
-          res.body.trips.should.have.length.of(count);
+          res.body.trips.should.have.lengthOf(count);
         });
     });
 
@@ -149,14 +149,18 @@ describe('Trip API resource', function() {
           return Trip.findById(resTrip.id);
         })
         .then(function(trip) {
-          console.log(trip)
-          console.log("TTTTTTTTTTTTTTTTTTTT")
-          console.log(resTrip)
           resTrip.id.should.equal(trip.id);
           resTrip.airline.should.equal(trip.airline);
           resTrip.confirmationCode.should.equal(trip.confirmationCode);
-          resTrip.departure.should.deep.equal(trip.departure);
-          resTrip.arrival.should.deep.equal(trip.arrival);
+
+          resTrip.departure.airport.should.equal(trip.departure.airport);
+          resTrip.departure.city.should.equal(trip.departure.city);
+          resTrip.departure.transportation.should.equal(trip.departure.transportation);
+
+          resTrip.arrival.airport.should.equal(trip.arrival.airport);
+          resTrip.arrival.city.should.equal(trip.arrival.city);
+          resTrip.arrival.transportation.should.equal(trip.arrival.transportation);
+
         });
     });
   });
@@ -180,16 +184,36 @@ describe('Trip API resource', function() {
           res.body.should.include.keys(
             'airline', 'confirmationCode', 'departure', 'arrival');
           res.body.airline.should.equal(newTrip.airline);
-          res.body.confirmationCode.should.equal(newTrip.confirmationCode);
-          res.body.departure.should.equal(newTrip.departure);
-          res.body.arrival.should.equal(newTrip.arrival);
+          res.body.confirmationCode.should.equal(""+newTrip.confirmationCode);
+
+          res.body.departure.airport.should.equal(newTrip.departure.airport);
+          res.body.departure.city.should.equal(newTrip.departure.city);
+          res.body.departure.transportation.should.equal(newTrip.departure.transportation);
+
+          res.body.arrival.airport.should.equal(newTrip.arrival.airport);
+          res.body.arrival.city.should.equal(newTrip.arrival.city);
+          res.body.arrival.transportation.should.equal(newTrip.arrival.transportation);
+
+
           return Trip.findById(res.body.id);
         })
         .then(function(trip) {
           trip.airline.should.equal(newTrip.airline);
-          trip.confirmationCode.should.equal(newTrip.confirmationCode);
-          trip.departure.should.equal(newTrip.departure);
-          trip.arrival.should.equal(newTrip.arrival);
+          trip.confirmationCode.should.equal(""+newTrip.confirmationCode);
+
+          trip.departure.airport.should.equal(newTrip.departure.airport);
+          trip.departure.city.should.equal(newTrip.departure.city);
+          trip.departure.transportation.should.equal(newTrip.departure.transportation);
+
+          trip.arrival.airport.should.equal(newTrip.arrival.airport);
+          trip.arrival.city.should.equal(newTrip.arrival.city);
+          trip.arrival.transportation.should.equal(newTrip.arrival.transportation);
+
+
+
+
+
+
         });
     });
   });
@@ -203,9 +227,15 @@ describe('Trip API resource', function() {
     //  4. Prove trip in db is correctly updated
     it('should update fields sent over', function() {
       const updateData = {
-        airport: 'xxx',
-        confirmationCode: '1111111'
+        confirmationCode: '1111111',
+        arrival: {
+          city: 'asd',
+          airport: 'xxx',
+          date: "2018-01-05T15:17:34.267Z",
+          transportation: 'Uber'
+        }
       };
+
 
       return Trip
         .findOne()
@@ -224,7 +254,7 @@ describe('Trip API resource', function() {
           return Trip.findById(updateData.id);
         })
         .then(function(trip) {
-          trip.airport.should.equal(updateData.airport);
+          trip.arrival.airport.should.equal(updateData.arrival.airport);
           trip.confirmationCode.should.equal(updateData.confirmationCode);
         });
     });
