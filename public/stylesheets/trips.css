@@ -198,6 +198,29 @@ h1 {
 
 .all-trips-wrapper {
   text-align: center;
+  background: #f5f5f5;
+}
+
+.trip-wrapper {
+  margin: 0 auto;
+  float: none;
+  width: 50%;
+  height: 50px;
+  background: #e28714;
+}
+
+.trip-header {
+  height: 100%;
+  padding: 0px;
+}
+
+.city {
+  text-align: center;
+  display: inline-block;
+}
+
+span {
+  font-size: 2.5em;
 }
 /* * * * * * * * * * * * * */
 /* general Media Queries   */

@@ -114,7 +114,7 @@ describe('Trip API resource', function() {
     it('should return all existing trips', function() {
       let res;
       return chai.request(app)
-        .get('/')
+        .get('/trips')
         .then(function(_res) {
           // so subsequent .then blocks can access resp obj.
           res = _res;
@@ -133,7 +133,7 @@ describe('Trip API resource', function() {
       // Get back all restaurants, and ensure they have expected keys
       let resTrip;
       return chai.request(app)
-        .get('/')
+        .get('/trips')
         .then(function(res) {
           res.should.have.status(200);
           res.should.be.json;
@@ -149,9 +149,9 @@ describe('Trip API resource', function() {
           return Trip.findById(resTrip.id);
         })
         .then(function(trip) {
-          // console.log(trip)
-          // console.log("TTTTTTTTTTTTTTTTTTTT")
-          // console.log(resTrip)
+          console.log(trip)
+          console.log("TTTTTTTTTTTTTTTTTTTT")
+          console.log(resTrip)
           resTrip.id.should.equal(trip.id);
           resTrip.airline.should.equal(trip.airline);
           resTrip.confirmationCode.should.equal(trip.confirmationCode);
@@ -171,7 +171,7 @@ describe('Trip API resource', function() {
       const newTrip = generateTripData();
 
       return chai.request(app)
-        .post('/')
+        .post('/trips')
         .send(newTrip)
         .then(function(res) {
           res.should.have.status(201);
@@ -215,7 +215,7 @@ describe('Trip API resource', function() {
           // make request then inspect it to make sure it reflects
           // the data ent
           return chai.request(app)
-            .put(`/${trip.id}`)
+            .put(`/trips/${trip.id}`)
             .send(updateData);
         })
         .then(function(res) {
@@ -243,7 +243,7 @@ describe('Trip API resource', function() {
         .findOne()
         .then(function(_trip) {
           trip = _trip;
-          return chai.request(app).delete(`/${trip.id}`);
+          return chai.request(app).delete(`/trips/${trip.id}`);
         })
         .then(function(res) {
           res.should.have.status(204);
