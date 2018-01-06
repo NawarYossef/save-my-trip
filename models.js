@@ -8,13 +8,12 @@ const TripSchema = mongoose.Schema({
     city: {type: String, required: true},
     airport: {type: String, required: true},
     date: {type: Date, required: true},
-    transportation: {type: String, required: false},
   },
   arrival: {
     city: {type: String, required: true},
     airport: {type: String, required: true},
     date: {type: Date, required: false},
-    transportation: {type: String, required: false},
+
   }
 });
 
@@ -28,13 +27,11 @@ TripSchema.methods.serialize = function() {
       city: this.departure.city,
       airport: this.departure.airport,
       date: this.departure.date,
-      transportation: this.departure.transportation
     },
     arrival: {
       city: this.arrival.city,
       airport: this.arrival.airport,
       date: this.arrival.date,
-      transportation: this.arrival.transportation  
     },
   };
 }
