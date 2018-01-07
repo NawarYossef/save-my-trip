@@ -15,7 +15,7 @@ const should = chai.should();
 chai.use(chaiHttp);
 
 // this function is used to put randomish documents in db
-// so we have data to work with and assert about.
+// so that there is data to work with and assert about.
 // the Faker library is used to automatically
 // generate placeholder values for author, title, content
 // and then insert that data into mongo
@@ -47,13 +47,6 @@ function generateAirport() {
   return airport[Math.floor(Math.random() * airport.length)];
 }
 
-// used to generate data to put in db
-function generateTransportation() {
-  const transportation = [
-    'Bus', 'Taxi', 'Lemo', 'Uber', 'friend'
-  ];
-  return transportation[Math.floor(Math.random() * transportation.length)];
-}
 
 // generate an object represnting a trip.
 // can be used to generate seed data for db
@@ -61,18 +54,20 @@ function generateTransportation() {
 function generateTripData() {
   return {
     airline: generateAirline(),
-    confirmationCode: faker.random.number(),
+    confirmationCode: String(faker.random.uuid()),
     departure: {
       city: faker.address.city(),
-      airport: generateAirport(), 
-      date: faker.date.recent(),
-      transportation: generateTransportation(), 
+      airport: generateAirport(),
+      terminal: faker.random.number(), 
+      gate: faker.random.number(), 
+      date: faker.date.recent(), 
     }, 
     arrival: {
       city: faker.address.city(),
       airport: generateAirport(), 
-      date: faker.date.future(),
-      transportation: generateTransportation(), 
+      terminal: faker.random.number(),
+      gate: faker.random.number(),
+      date: faker.date.future(), 
     }, 
   };
 }
@@ -130,7 +125,7 @@ describe('Trip API resource', function() {
 
 
     it('should return trips with right fields', function() {
-      // Get back all restaurants, and ensure they have expected keys
+      // Get back all trips, and ensure they have expected keys
       let resTrip;
       return chai.request(app)
         .get('/trips')
@@ -149,21 +144,29 @@ describe('Trip API resource', function() {
           return Trip.findById(resTrip.id);
         })
         .then(function(trip) {
-          console.log(trip)
-          console.log("TTTTTTTTTTTTTTTTTTTT")
-          console.log(resTrip)
+          let tripDate = new Date(trip.departure.date).getMilliseconds();
+          let resTripDate = new Date(trip.departure.date).getMilliseconds();
+
           resTrip.id.should.equal(trip.id);
-          resTrip.airline.should.equal(trip.airline);
-          resTrip.confirmationCode.should.equal(trip.confirmationCode);
-          resTrip.departure.should.deep.equal(trip.departure);
-          resTrip.arrival.should.deep.equal(trip.arrival);
+          
+          resTrip.departure.city.should.equal(trip.departure.city);
+          resTrip.departure.airport.should.equal(trip.departure.airport);
+          resTrip.departure.terminal.should.equal(trip.departure.terminal);
+          resTrip.departure.gate.should.equal(trip.departure.gate);
+          resTripDate.should.equal(tripDate);
+
+          resTrip.arrival.city.should.equal(trip.arrival.city);
+          resTrip.arrival.airport.should.equal(trip.arrival.airport);
+          resTrip.arrival.terminal.should.equal(trip.arrival.terminal);
+          resTrip.arrival.gate.should.equal(trip.arrival.gate);
+          resTripDate.should.equal(tripDate);         
         });
     });
   });
 
   describe('POST endpoint', function() {
     // make a POST request with data,
-    // then prove that the restaurant we get back has
+    // then prove that the trip you get back has
     // right keys, and that `id` is there (which means
     // the data was inserted into db)
     it('should add a new trip', function() {
@@ -181,15 +184,32 @@ describe('Trip API resource', function() {
             'airline', 'confirmationCode', 'departure', 'arrival');
           res.body.airline.should.equal(newTrip.airline);
           res.body.confirmationCode.should.equal(newTrip.confirmationCode);
-          res.body.departure.should.equal(newTrip.departure);
-          res.body.arrival.should.equal(newTrip.arrival);
+
+          res.body.departure.city.should.equal(newTrip.departure.city);
+          res.body.departure.airport.should.equal(newTrip.departure.airport);
+          res.body.departure.terminal.should.equal(newTrip.departure.terminal);
+          res.body.departure.gate.should.equal(newTrip.departure.gate);
+          
+          res.body.arrival.city.should.equal(newTrip.arrival.city);
+          res.body.arrival.airport.should.equal(newTrip.arrival.airport);
+          res.body.arrival.terminal.should.equal(newTrip.arrival.terminal);
+          res.body.arrival.gate.should.equal(newTrip.arrival.gate)
+
           return Trip.findById(res.body.id);
         })
         .then(function(trip) {
           trip.airline.should.equal(newTrip.airline);
           trip.confirmationCode.should.equal(newTrip.confirmationCode);
-          trip.departure.should.equal(newTrip.departure);
-          trip.arrival.should.equal(newTrip.arrival);
+          
+          trip.departure.city.should.equal(newTrip.departure.city);
+          trip.departure.airport.should.equal(newTrip.departure.airport);
+          trip.departure.terminal.should.equal(newTrip.departure.terminal);
+          trip.departure.gate.should.equal(newTrip.departure.gate);
+          
+          trip.arrival.city.should.equal(newTrip.arrival.city);
+          trip.arrival.airport.should.equal(newTrip.arrival.airport);
+          trip.arrival.terminal.should.equal(newTrip.arrival.terminal);
+          trip.arrival.gate.should.equal(newTrip.arrival.gate)
         });
     });
   });
@@ -203,7 +223,9 @@ describe('Trip API resource', function() {
     //  4. Prove trip in db is correctly updated
     it('should update fields sent over', function() {
       const updateData = {
-        airport: 'xxx',
+        departure: {
+          airport: 'xxx'
+        },
         confirmationCode: '1111111'
       };
 
@@ -224,7 +246,7 @@ describe('Trip API resource', function() {
           return Trip.findById(updateData.id);
         })
         .then(function(trip) {
-          trip.airport.should.equal(updateData.airport);
+          trip.departure.airport.should.equal(updateData.departure.airport);
           trip.confirmationCode.should.equal(updateData.confirmationCode);
         });
     });
@@ -252,8 +274,8 @@ describe('Trip API resource', function() {
         .then(function(_trip) {
           // when a variable's value is null, chaining `should`
           // doesn't work. so `_trip.should.be.null` would raise
-          // an error. `should.be.null(_trip)` is how we can
-          // make assertions about a null value.
+          // an error. `should.be.null(_trip)` is a assertions is made 
+          // about a null value.
           should.not.exist(_trip);
         });
     });
