@@ -215,7 +215,6 @@ describe('Trip API resource', function() {
   });
 
   describe('PUT endpoint', function() {
-
     // strategy:
     //  1. Get an existing trip from db
     //  2. Make a PUT request to update that trip
