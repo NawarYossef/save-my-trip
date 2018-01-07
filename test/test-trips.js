@@ -55,7 +55,7 @@ function generateTransportation() {
   return transportation[Math.floor(Math.random() * transportation.length)];
 }
 
-// generate an object represnting a restaurant.
+// generate an object represnting a trip.
 // can be used to generate seed data for db
 // or request.body data
 function generateTripData() {
