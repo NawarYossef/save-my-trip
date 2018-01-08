@@ -9,13 +9,13 @@ class Trips  {
   }
 
   getTripEntries() {
-  $.ajax({
-    url: "http://localhost:8081/trips",
-    type: 'GET',   
-    success: function(data){
-      console.log(data)
-    }
-  });
+    $.ajax({
+      url: "http://localhost:8081/trips",
+      type: 'GET',   
+      success: function(data){
+        console.log(data)
+      }
+    });
   }
 
   toggleHamburger() {

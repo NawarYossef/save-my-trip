@@ -100,6 +100,7 @@ body {
   font-size: 1em;
   background-image: url("../images/plane-view-img.jpg");
   background-position: 0px -200px; 
+  text-align: center; 
 }
 
 body header {
@@ -195,9 +196,8 @@ body header h1 {
 /* * * * * * * * * * * */
  main {
   width: 60%;
-  height: 700px;
+  display: inline-block;
   margin: 100px auto 0 auto;
-  /* background-color: #ffffff; */
   background-color: #d7e3f0;
   border-radius: 10px;  
 }
@@ -213,8 +213,14 @@ h2 {
   color: #424242;
 }
 
-.trip {
+.trip-container {
   width: 80%;
+  float: none;
+  margin: auto;
+}
+
+.trip-header {
+  width: 100%;
   height: 78px;
   background: #F2994A;
   margin: 30px auto 0 auto;
@@ -292,7 +298,8 @@ h4 {
 /*     drop down details   */
 /* * * * * * * * * * * * * */
 .trip-details {
-  width: 80%;
+  width: 100%;
+  text-align: left;
   height: 210px;
   margin: auto;
   background: rgb(255, 255, 255);
@@ -302,7 +309,7 @@ h4 {
 
 .departure-wrapper {
   margin-top: 15px;
-  margin-left: 17px;
+  margin-left: 17px;  
 }
 
 .arrival-wrapper {
@@ -345,6 +352,7 @@ h4 {
 /* * * * * * * * * * * * * */
 .control-btns {
   padding: 0px;
+  padding-bottom: 20px;
 }
 
 .control-btns button {
