@@ -194,82 +194,93 @@ body header h1 {
 /*      main            */
 /* * * * * * * * * * * */
  main {
-  padding-top: 100px;
-}
-
-.all-trips-wrapper {
-  text-align: left;
-}
-
-.trip-row {
-  padding: 0px;
-}
-
-.trip-wrapper {
-  margin: 0 auto;
-  float: none;
   width: 60%;
-  height: 45px;
-  background: #e28714;
+  height: 500px;
+  margin: 100px auto 0 auto;
+  /* background-color: #ffffff; */
+  background-color: #d7e3f0;
+  border-radius: 10px;  
 }
 
-.trip-heading, .trip-controllers {
-  height: 100%;
-  width: 90%;
-  float: left;
-  padding: 0px;
-}
-
-.city {
-  text-align: center;
-  float: left;
-  display: inline-block;
+.h2-wrapper {
   margin-top: 10px;
-  width: 40%
-}
-
-.span-wrapper {
   text-align: center;
-  width: 20%;
-  float: left;
-}
-
-span {
-  font-size: 2em;
-  margin-top: 0px;
+  float: none;
 }
 
 h2 {
-  font: normal 1em 'Merriweather', serif;
+  font: normal 2.4em sans-serif;
+  color: #000000;
 }
 
-.hamburger-wrapper {
-  width: 10%;
-  float: left;
-  margin-top: 8px;
+.trip {
+  width: 80%;
+  height: 80px;
+  background: #F2994A;
+  margin: 30px auto 0 auto;
+  border-radius: 10px;
 }
 
-.empty-square {
-  width: 10%;
-  float: left;
-  margin-top: 8px;
+body section .airports-wrapper {
+  margin: auto;
+  padding-top: 15px;
+  text-align: center;
+  display: inline-block
 }
 
-.btn-wrapper {
-  text-align: left;
-  padding: 0px;
-  background: #e28714; 
-  width: 33.33%;
-  float: left;
-  margin-top: 10px;
+body section .confirmation {
+  padding-left: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  /* padding-right: 90px; */
+  text-align: center;
 }
 
-.btn-wrapper button {
-  background: #e28714; 
-  padding-bottom: 5px;
-  outline: none;
-  border: none;
-  width: 100%;
+main .confirmation .confirmation-title, 
+main .airline-wrapper .airline-title {
+  font: bold 1em 'roboto', sans-serif;
+  color: #2C2A87; 
+}
+
+main .confirmation .confirmation-text, 
+main .airline-wrapper .airline-text {
+  font: bold 0.9em sans-serif;
+  color: #4F4F4F; 
+}
+
+.confir-wrapper {
+  text-align: center;
+}
+
+body section .data-wrapper { 
+  display: inline-block;
+  padding-right: 10px;
+}
+
+body .airports-wrapper h3 {
+  display: inline-block;
+  font: bold 1.6em sans-serif;
+  color: #ffffff;
+}
+
+H4 {
+  font-size: 14px;
+}
+
+.airline-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow-wrapper {
+ text-align: right; 
+ font-size: 4em;
+ /* margin-top: -9px; */
+}
+
+.fa-arrow-right {
+  font-size: 1.4em;
+  color: #0f080d;
 }
 /* * * * * * * * * * * * * */
 /* general Media Queries   */
