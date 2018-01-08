@@ -195,7 +195,7 @@ body header h1 {
 /* * * * * * * * * * * */
  main {
   width: 60%;
-  height: 500px;
+  height: 700px;
   margin: 100px auto 0 auto;
   /* background-color: #ffffff; */
   background-color: #d7e3f0;
@@ -209,16 +209,16 @@ body header h1 {
 }
 
 h2 {
-  font: normal 2.4em sans-serif;
-  color: #000000;
+  font: normal 2.4em 'Bree Serif', serif;
+  color: #424242;
 }
 
 .trip {
   width: 80%;
-  height: 80px;
+  height: 78px;
   background: #F2994A;
   margin: 30px auto 0 auto;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 body section .airports-wrapper {
@@ -229,7 +229,7 @@ body section .airports-wrapper {
 }
 
 body section .confirmation {
-  padding-left: 10px;
+  padding-left: 20px;
   display: inline-block;
   margin-top: 20px;
   /* padding-right: 90px; */
@@ -238,13 +238,13 @@ body section .confirmation {
 
 main .confirmation .confirmation-title, 
 main .airline-wrapper .airline-title {
-  font: bold 1em 'roboto', sans-serif;
+  font: bold 1em 'Kanit', sans-serif;
   color: #2C2A87; 
 }
 
 main .confirmation .confirmation-text, 
 main .airline-wrapper .airline-text {
-  font: bold 0.9em sans-serif;
+  font: bold 0.9em 'roboto', sans-serif;
   color: #4F4F4F; 
 }
 
@@ -254,17 +254,18 @@ main .airline-wrapper .airline-text {
 
 body section .data-wrapper { 
   display: inline-block;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 body .airports-wrapper h3 {
   display: inline-block;
-  font: bold 1.6em sans-serif;
+  font: normal 1.7em 'Bree Serif', serif;
   color: #ffffff;
 }
 
-H4 {
-  font-size: 14px;
+h4 {
+  font: normal 1em 'Bree Serif', serif; 
+  /* font-size: 14px; */
 }
 
 .airline-wrapper {
@@ -280,7 +281,95 @@ H4 {
 
 .fa-arrow-right {
   font-size: 1.4em;
-  color: #0f080d;
+  color: #161616;
+}
+
+.fa-caret-down {
+  color: #424242;
+}
+/* * * * * * * * * * * * * */
+/*     drop down details   */
+/* * * * * * * * * * * * * */
+.trip-details {
+  width: 80%;
+  height: 210px;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  line-height: 100%;
+  /* border-radius: 10px; */
+}
+
+.departure-wrapper {
+  margin-top: 15px;
+  margin-left: 17px;
+}
+
+.arrival-wrapper {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-left: 17px;
+}
+
+.depart-word {
+  font: bold 1.3em 'Bree Serif', serif; 
+  color: #333333;
+  margin-right: 5px;
+}
+
+.date-text {
+  font: normal 1.3em 'roboto', sans-serif;
+  color: #1862C7; 
+}
+
+.city {
+  font: normal 1em 'Kanit', sans-serif;
+  color: #787575;
+}
+
+.terminal-gate-wrapper {
+  padding-left: 0px;
+}
+
+.terminal, .gate {
+  display: inline-block;
+  font: normal 1em 'Kanit', sans-serif;
+  color: #000000;
+}
+
+.gate {
+  float: right;
+}
+/* * * * * * * * * * * * * */
+/*      Control Buttons    */
+/* * * * * * * * * * * * * */
+.control-btns {
+  padding: 0px;
+}
+
+.control-btns button {
+  font: normal 1em 'roboto', sans-serif;
+  color: #ffffff;
+  background: #F2994A;
+  height: 30px;
+  outline: none;
+}
+
+.control-btns button:hover {
+  cursor: pointer;
+  background: rgb(153, 83, 21); 
+}
+
+.email-btn {
+  border: none;
+}
+
+.edit-btn, .delete-btn {
+  border: none;
+  border-right: 1px solid #ffffff;
+}
+
+.fa-trash-o, .fa-envelope, .fa-pencil {
+  margin-left: 8px;
 }
 /* * * * * * * * * * * * * */
 /* general Media Queries   */
