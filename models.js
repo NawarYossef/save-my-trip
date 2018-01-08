@@ -6,16 +6,16 @@ const TripSchema = mongoose.Schema({
   departure: {
     city: {type: String, required: true},
     airport: {type: String, required: true},
-    terminal: {type: Number, required: true},
+    terminal: {type: String, required: true},
     gate: {type: Number, required: true},
     date: {type: Date, required: true},
   },
   arrival: {
     city: {type: String, required: true},
     airport: {type: String, required: true},
-    terminal: {type: Number, required: true},
+    terminal: {type: String, required: true},
     gate: {type: Number, required: true},
-    date: {type: Date, required: false},
+    date: {type: Date, required: true},
 
   }
 });

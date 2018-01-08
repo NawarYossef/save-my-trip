@@ -218,12 +218,13 @@ h2 {
   height: 78px;
   background: #F2994A;
   margin: 30px auto 0 auto;
-  /* border-radius: 10px; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 body section .airports-wrapper {
   margin: auto;
-  padding-top: 15px;
+  padding-top: 6px;
   text-align: center;
   display: inline-block
 }
@@ -361,6 +362,12 @@ h4 {
 
 .email-btn {
   border: none;
+  border-bottom-right-radius: 10px;  
+}
+
+.edit-btn {
+  border: none;
+  border-bottom-left-radius: 10px;  
 }
 
 .edit-btn, .delete-btn {

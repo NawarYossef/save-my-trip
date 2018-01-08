@@ -11,23 +11,43 @@ class NewTrip  {
   initializeCalender() {
     $("#datepicker-1").datepicker();
     $("#datepicker-2").datepicker();
-    $(".header-wrapper").animate({top: "300px"});
   }
 
   postNewTrip() {
-    $("#new-trip-form").submit((e) => {
+    $("#new-trip-form").submit(function(e) {
       e.preventDefault();
-      console.log(34);
+      const trip = {
+        airline: $("#airline").val(),
+        confirmationCode: $("#confirmation").val(),
+        departure: {
+          city: $("#departure-city").val(),
+          airport: $("#departure-airport").val(),
+          terminal: $("#departure-terminal").val(),
+          gate: $("#departure-gate").val(),
+          date: $("#datepicker-1").val(),
+        },
+        arrival: {
+          city: $("#departure-city").val(),
+          airport: $("#departure-airport").val(),
+          terminal: $("#departure-terminal").val(),
+          gate: $("#departure-gate").val(),
+          date: $("#datepicker-2").val(),
+        }
+    }
+    console.log(trip)
 
       $.ajax({
-        url: "http://localhost:8081/trips",
-        type: 'POST',  
-        dataType: "html"
+        "type": "POST",
+        url: 'http://localhost:8081/trips',
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data : JSON.stringify(trip)
       })
       .done(data => {
         console.log(data)
       })
       .fail(data => {
+        console.log(data)
         console.error("something is wrong")
       })
     });

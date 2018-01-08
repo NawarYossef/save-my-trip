@@ -48,22 +48,23 @@
         <div> -->
         <div class="h3-wrapper col-12">
           <h3 class="heading-for-new-trip">
-            General Information
+            New Trip
           </h3>
         </div>
         <form class="col-12" id="new-trip-form">
           <div class="departure-data col-12">
             <fieldset>
-              <input type="text" name="airline-choice" id="departure-airline" placeholder="Airline.."  class="airline">
-              <input type="text" name="confirmation-number" id="confirmation" placeholder="Confirmation Number.."  class="confirmation">
+              <input type="text" name="airline-choice" id="airline" placeholder="Airline.."  required="" class="airline">
+              <input type="text" name="confirmation-number" id="confirmation" placeholder="Confirmation Number.."  required="" class="confirmation">
             </fieldset>
           </div>
           <div class="departure-info-wrapper col-6">
             <legend>Departure</legend>
             <fieldset name="register-info">
               <input type="text" name="city-choice" id="departure-city" placeholder="City.." required="" class="">
-              <input type="text" name="airport-choice" id="departure-airport" placeholder="Airport.." class="">
-              <input type="text" name="transportation-choice" id="departure-transportation" placeholder="Transportation.." class="">
+              <input type="text" name="airport-choice" id="departure-airport" placeholder="Airport.." required="" class="">
+              <input type="text" name="terminal-choice" id="departure-terminal" placeholder="Terminal.." required="" class="">
+              <input type="number" name="gate-choice" id="departure-gate" placeholder="Gate.." required="" class="">
               <input type="text" name="date" id="datepicker-1" placeholder="Date And Time.."  class="">
             </fieldset>
           </div>
@@ -72,9 +73,10 @@
             <legend>Arrival</legend>
             <fieldset name="register-info">
               <input type="text" name="city-choice" id="arrival-city" placeholder="City.." required="" class="">
-              <input type="text" name="airport-choice" id="arrival-airport" placeholder="Airport.."  class="">
-              <input type="text" name="transportation-choice" id="arrival-transportation" placeholder="Transportation.." class="">
-              <input type="text" name="date" id="datepicker-2" placeholder="Date And Time.." class="">
+              <input type="text" name="airport-choice" id="arrival-airport" placeholder="Airport.."  required="" class="">
+              <input type="text" name="terminal-choice" id="arrival-termianl" placeholder="Terminal.." required="" class="">
+              <input type="number" name="gate-choice" id="arrival-gate" placeholder="Gate.." required="" class="">
+              <input type="text" name="date" id="datepicker-2" placeholder="Date And Time.." required="" class="">
             </fieldset>
           </div>
           <div class="btns-wrapper col-12">
