@@ -196,6 +196,7 @@ body header h1 {
 /* * * * * * * * * * * */
  main {
   width: 60%;
+  height: 500px;
   display: inline-block;
   margin: 100px auto 0 auto;
   background-color: #d7e3f0;
@@ -224,8 +225,6 @@ h2 {
   height: 78px;
   background: #F2994A;
   margin: 30px auto 0 auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 body section .airports-wrapper {
@@ -291,25 +290,34 @@ h4 {
   color: #161616;
 }
 
-.fa-caret-down {
+.fa-caret-down, .fa-caret-up {
   color: #424242;
+}
+
+.trip-header {
+  cursor: pointer;
 }
 /* * * * * * * * * * * * * */
 /*     drop down details   */
 /* * * * * * * * * * * * * */
+.departure-wrapper, .arrival-wrapper {
+  display: none;
+}
+
 .trip-details {
+  display: inline-block;
   width: 100%;
   text-align: left;
-  height: 210px;
   margin: auto;
   background: rgb(255, 255, 255);
   line-height: 100%;
   /* border-radius: 10px; */
 }
 
+
 .departure-wrapper {
   margin-top: 15px;
-  margin-left: 17px;  
+  margin-left: 20px;  
 }
 
 .arrival-wrapper {
@@ -352,7 +360,6 @@ h4 {
 /* * * * * * * * * * * * * */
 .control-btns {
   padding: 0px;
-  padding-bottom: 20px;
 }
 
 .control-btns button {
@@ -361,6 +368,7 @@ h4 {
   background: #F2994A;
   height: 30px;
   outline: none;
+  border-top: 1px solid rgb(255, 255, 255);
 }
 
 .control-btns button:hover {
@@ -370,12 +378,10 @@ h4 {
 
 .email-btn {
   border: none;
-  border-bottom-right-radius: 10px;  
 }
 
 .edit-btn {
   border: none;
-  border-bottom-left-radius: 10px;  
 }
 
 .edit-btn, .delete-btn {
