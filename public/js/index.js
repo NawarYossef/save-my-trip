@@ -9,6 +9,7 @@ class SaveMyTrip {
   showModal() {
     $(".log-in").click(() => {
       $("#my-modal").css("display", "block");
+      $(".modal-content").animate({'top' : '50px'}, 600);
 
     })
   }
@@ -16,6 +17,7 @@ class SaveMyTrip {
   closeModal() {
     $(".close").click(() => {
       $("#my-modal").css("display", "none");
+      $(".modal-content").animate({'top' : '-50px'}, 600);
     })
   }
 }
