@@ -1,99 +1,4 @@
-@import url("whitespace-reset.css");
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-	background-color: #22659c;
-}
-
-/* Grid measurements:
- *
- *   960px wide including 12 gutters (half gutters on both edges)
- *
- *   60px columns (12)
- *   20px gutters (two half-gutters + 11 full gutters, so 12 total)
- *
- *
- *   For smaller screens, we always want 20px of padding on either side,
- *   so 960 + 20 + 20 => 1000px
- *
- **/
- /* * * * * * * * * * * */
-/*      grid css        */
 /* * * * * * * * * * * */
-main .row {
-  margin-bottom: 20px;
-}
-
-.box {
-  height: 200px;
-  text-align: center;
-  padding-top: 30px;
-}
-
-.row {
-  max-width: 1000px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-}
-
-/* Clearfix */
-.row::before,
-.row::after {
-  display: table;
-  content: '';
-}
-
-.row::after {
-  clear: both;
-}
-
-.col-3, .col-4, .col-6, .col-12 {
-  float: left;
-
-  /* Gutters:
-   * Each column is padded by half-a-gutter on each side,
-   *
-   * Half a gutter is 10px, 10/960 (context) = 1.041666%
-   *
-   */
-  padding-left: 1.04166666%;
-  padding-right: 1.04166666%;
-}
-
-
-/* Mobile defaults */
-.col-3, .col-4, .col-6, .col-12 {
-  width: 100%;
-}
-
-
-/* Non-mobile, grid */
-@media only screen and (min-width: 640px) {
-  /* 3 columns, 3/12 in % */
-  .col-3 {
-    width: 25%;
-  }
-
-  /* 4 columns */
-  .col-4 {
-		width: 33.33%;
-  }
-
-  /* 6 columns */
-  .col-6 {
-		width: 50%;
-  }
-
-  /* 12 columns */
-  .col-12 {
-  }
-}
-
- /* * * * * * * * * * * */
 /*      header          */
 /* * * * * * * * * * * */
 body {
@@ -196,11 +101,11 @@ body header h1 {
 /* * * * * * * * * * * */
  main {
   width: 60%;
-  height: 500px;
   display: inline-block;
   margin: 100px auto 0 auto;
   background-color: #d7e3f0;
   border-radius: 10px;  
+  padding-top: 0px;
 }
 
 .h2-wrapper {
@@ -218,18 +123,19 @@ h2 {
   width: 80%;
   float: none;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .trip-header {
   width: 100%;
-  height: 78px;
+  height: 65px;
   background: #F2994A;
   margin: 30px auto 0 auto;
 }
 
 body section .airports-wrapper {
   margin: auto;
-  padding-top: 6px;
+  padding-bottom: 5px;
   text-align: center;
   display: inline-block
 }
@@ -237,7 +143,7 @@ body section .airports-wrapper {
 body section .confirmation {
   padding-left: 20px;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 10px;
   /* padding-right: 90px; */
   text-align: center;
 }
@@ -261,28 +167,31 @@ main .airline-wrapper .airline-text {
 body section .data-wrapper { 
   display: inline-block;
   padding-right: 20px;
+  float: none;
 }
 
 body .airports-wrapper h3 {
   display: inline-block;
   font: normal 1.7em 'Bree Serif', serif;
   color: #ffffff;
+  margin-bottom: -1px;
 }
 
 h4 {
   font: normal 1em 'Bree Serif', serif; 
   /* font-size: 14px; */
+  margin-top: -2px;
 }
 
 .airline-wrapper {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .arrow-wrapper {
  text-align: right; 
  font-size: 4em;
- /* margin-top: -9px; */
+ margin-top: -9px;
 }
 
 .fa-arrow-right {
@@ -327,13 +236,13 @@ h4 {
 }
 
 .depart-word {
-  font: bold 1.3em 'Bree Serif', serif; 
+  font: bold 1.1em 'Bree Serif', serif; 
   color: #333333;
   margin-right: 5px;
 }
 
 .date-text {
-  font: normal 1.3em 'roboto', sans-serif;
+  font: normal 1.1em 'roboto', sans-serif;
   color: #1862C7; 
 }
 
