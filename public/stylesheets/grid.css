@@ -89,6 +89,98 @@ main .row {
   width: 100%;
 }
 
+/* * * * * * * * * * * */
+/*      header          */
+/* * * * * * * * * * * */
+body {
+  font-size: 1em;
+  background-image: url("../images/plane-view-img.jpg");
+  background-position: 0px -200px; 
+  text-align: center; 
+}
+
+body header {
+  display: block;
+  position: relative;
+  text-align: center;
+  height: 50px;
+  background-color: rgba(0,0,0,0.6);
+}
+
+body header nav {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  float: right;
+  margin-top: 5px;
+}
+
+body header nav .ul-header {
+  width: 80%;
+  display: inline-block;
+  float: none;
+  padding: 5px; 
+}
+
+
+body header nav ul li {
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+}
+
+body header nav ul li a {
+  font: normal 1.2em 'Merriweather', serif;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+body header .h1-wrapper {
+  display: inline-block;
+  margin-right: 10%;
+  text-align: center;
+}
+
+body header h1 {
+  color: #ffffff;
+  font: italic 1.8em 'Merriweather', serif;
+  padding: 5px; 
+}
+/* * * * * * * * * * * * * * * * * * * */
+/*      css hover effect for nav bar   */
+/* * * * * * * * * * * * * * * * * * * */
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: rgb(255, 255, 255);
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+/* ========================== */
+
 
 /* Non-mobile, grid */
 @media only screen and (min-width: 640px) {
