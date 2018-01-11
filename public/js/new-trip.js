@@ -1,17 +1,19 @@
 "use strict";
+const flatpickr = require("flatpickr");
 
 class NewTrip  {
 
   init() {
-    this.initializeCalender();
+    // this.initializeCalender();
     this.postNewTrip();
     this.toggleHamburger();
+    this.dateAndTimePickerSetup();
   }
 
-  initializeCalender() {
-    $("#datepicker-1").datepicker();
-    $("#datepicker-2").datepicker();
-  }
+  // initializeCalender() {
+  //   $("#datepicker-1").datepicker();
+  //   $("#datepicker-2").datepicker();
+  // }
 
   postNewTrip() {
     $("#new-trip-form").submit(function(e) {
@@ -60,6 +62,12 @@ class NewTrip  {
       } else {
         $(this).addClass("is-active");
       }
+    })
+  }
+
+  dateAndTimePickerSetup() {
+    $("#datepicker-1").flatpickr({ enableTime: true,
+      dateFormat: "Y-m-d H:i"
     })
   }
 }
