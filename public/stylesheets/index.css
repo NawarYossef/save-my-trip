@@ -212,7 +212,7 @@ nav ul li a {
 .modal-content {
   position: absolute;
   left: 30%;
-  top: -50px;
+  top: -100px;
   background-color: #f5f5f5;
   margin:  5% auto 0 auto; 
   padding: 20px;
@@ -333,13 +333,9 @@ h1 {
 /* * * * * * * * * * * */
 /*       Body          */
 /* * * * * * * * * * * */
-h2 {
-  font-size: 30px;
-}
-
 .h2-wrapper {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 main {
@@ -396,12 +392,8 @@ main {
   width: 200px;
 } 
 
-.h2-wrapper {
-  margin-bottom: 30px;
-}
-
 body main h2 {
-  font: normal 3em 'Roboto', sans-serif;
+  font: normal 2.5em 'Roboto', sans-serif;
   color: #303030;
   padding: 15px;  
 }
@@ -421,6 +413,10 @@ body main .description-header {
 /* * * * * * * * * * * */
 /*       Sign Up        */
 /* * * * * * * * * * * */
+
+.sign-up-heading-wrapper {
+  text-align: center;
+}
 
 .sign-up-section {
   background: #f5f5f5;
