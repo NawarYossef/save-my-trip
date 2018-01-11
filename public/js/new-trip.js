@@ -1,5 +1,4 @@
 "use strict";
-const flatpickr = require("flatpickr");
 
 class NewTrip  {
 
@@ -66,8 +65,13 @@ class NewTrip  {
   }
 
   dateAndTimePickerSetup() {
-    $("#datepicker-1").flatpickr({ enableTime: true,
-      dateFormat: "Y-m-d H:i"
+    $("#datepicker-1, #datepicker-2")
+    .flatpickr({ 
+      enableTime: true,
+      dateFormat: "m-d-y H:i",
+      minDate: "today",
+      time_24hr: false,
+      
     })
   }
 }
