@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./stylesheets/hamburger.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/new-trip.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/confetti.min.css">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
   <header>
@@ -42,13 +42,23 @@
   </header>
 
   <main role="main">
+    <script>
+      $(document).ready(function() {
+        function init() {
+          const departureCity = document.getElementById('departure-city');
+          const arrivalCity = document.getElementById('arrival-city');
+          const departureAirport = document.getElementById('departure-airport');
+          const arrivalAirport = document.getElementById('arrival-airport');
+          const autocompleteDeparture = new google.maps.places.Autocomplete(departureCity);
+          const autocompleteArrival = new google.maps.places.Autocomplete(arrivalCity);
+          const autocompleteDepartureAirport = new google.maps.places.Autocomplete(departureAirport);
+          const autocompleteArrivalAirport = new google.maps.places.Autocomplete(arrivalAirport);
+        }
+        google.maps.event.addDomListener(window, 'load', init);	
+      });	
+    </script>
     <section class="col-12 new-trip-form">
       <div class="form-box">
-        <!-- <div class="h2-wrapper col-12">
-          <h2 class="heading-for-new-trip">
-            Please eneter your trip details below
-          </h2>
-        <div> -->
         <div class="h3-wrapper col-12">
           <h3 class="heading-for-new-trip">New Trip</h3>
           <h4>Enter your trip information below</h4>
@@ -89,7 +99,7 @@
       </div>
     </section>
   </main>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxbrnP5jd_Uq6TwZ9frPsnqhD2_wgIAnU&v=3.exp&libraries=places"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
