@@ -47,12 +47,8 @@
         function init() {
           const departureCity = document.getElementById('departure-city');
           const arrivalCity = document.getElementById('arrival-city');
-          const departureAirport = document.getElementById('departure-airport');
-          const arrivalAirport = document.getElementById('arrival-airport');
           const autocompleteDeparture = new google.maps.places.Autocomplete(departureCity);
           const autocompleteArrival = new google.maps.places.Autocomplete(arrivalCity);
-          const autocompleteDepartureAirport = new google.maps.places.Autocomplete(departureAirport);
-          const autocompleteArrivalAirport = new google.maps.places.Autocomplete(arrivalAirport);
         }
         google.maps.event.addDomListener(window, 'load', init);	
       });	
