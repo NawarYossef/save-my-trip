@@ -65,14 +65,13 @@
         <form class="col-12" id="new-trip-form">
           <div class="departure-data col-12">
             <fieldset>
-              <input type="text" name="airline-choice" id="airline" placeholder="Airline.."  required="" class="airline">
+              <input type="text" name="airline-choice" id="airline" placeholder="Airline.."  maxlength="20" required="" class="airline">
               <input type="text" name="confirmation-number" id="confirmation" maxlength="10" placeholder="Confirmation Code.."  required="" class="confirmation">
             </fieldset>
           </div>
           <div class="departure-info-wrapper col-6">
             <legend>
               Departure
-              <img src="./images/departures.png" class="">
             </legend>
             
             <fieldset name="register-info">
@@ -84,10 +83,9 @@
             </fieldset>
           </div>
 
-          <div class="arrival-info-wrapper col-6">
+          <div class="arrival-info-wrapper col-6"> 
             <legend>
               Arrival
-              <img src="./images/arrivals.png" class="">
             </legend>
             <fieldset name="register-info">
               <input type="text" name="city-choice" id="arrival-city" placeholder="City.." required="" class="">

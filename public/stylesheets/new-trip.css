@@ -46,7 +46,7 @@ body form fieldset {
 }
 
 .departure-info-wrapper img, .arrival-info-wrapper img {
-  width: 10%;
+  width: 15%;
   vertical-align: middle;
   /* margin-bottom: 10px; */
 }
@@ -96,9 +96,13 @@ body form button {
 .departure-info-wrapper {
   border-right: 1px solid rgb(177, 177, 177);
 }
-
+  
 .departure-data, .departure-info-wrapper, .arrival-info-wrapper, .btns-wrapper {
   text-align: center;
+}
+
+.departure-data {
+  margin-bottom: 15px;
 }
 
 .btns-wrapper {
@@ -106,9 +110,9 @@ body form button {
 }
 
 legend {
-  font: normal 1.3em 'Bree Serif', serif;
+  font: normal 1.2em 'Bree Serif', serif;
   color: #1f1818; 
-  /* text-decoration: underline; */
+  text-decoration: underline;
   margin-bottom: 10px;
 }
 
