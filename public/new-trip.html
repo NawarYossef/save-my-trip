@@ -54,130 +54,7 @@
           const autocompleteArrival = new google.maps.places.Autocomplete(arrivalCity);
         }
         google.maps.event.addDomListener(window, 'load', init);	
-      
-
-      var options = {
-  shouldSort: true,
-  threshold: 0.4,
-  maxPatternLength: 32,
-  keys: [{
-    name: 'iata',
-    weight: 0.5
-  }, {
-    name: 'name',
-    weight: 0.3
-  }, {
-    name: 'city',
-    weight: 0.2
-  }]
-};
-
-var fuse = new Fuse(airports, options)
-
-
-var ac = $('#departure-airport')
-  .on('click', function(e) {
-    e.stopPropagation();
-  })
-  .on('focus keyup', search)
-  .on('keydown', onKeyDown);
-
-var wrap = $('<div>')
-  .addClass('autocomplete-wrapper')
-  .insertBefore(ac)
-  .append(ac);
-
-var list = $('<div>')
-  .addClass('autocomplete-results')
-  .on('click', '.autocomplete-result', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    selectIndex($(this).data('index'));
-  })
-  .appendTo(wrap);
-
-$(document)
-  .on('mouseover', '.autocomplete-result', function(e) {
-    var index = parseInt($(this).data('index'), 10);
-    if (!isNaN(index)) {
-      list.attr('data-highlight', index);
-    }
-  })
-  .on('click', clearResults);
-
-function clearResults() {
-  results = [];
-  numResults = 0;
-  list.empty();
-}
-
-function selectIndex(index) {
-  if (results.length >= index + 1) {
-    ac.val(results[index].iata);
-    clearResults();
-  }  
-}
-
-var results = [];
-var numResults = 0;
-var selectedIndex = -1;
-
-function search(e) {
-  if (e.which === 38 || e.which === 13 || e.which === 40) {
-    return;
-  }
-  
-  if (ac.val().length > 0) {
-    results = _.take(fuse.search(ac.val()), 7);
-    numResults = results.length;
-    
-    var divs = results.map(function(r, i) {
-        return '<div class="autocomplete-result" data-index="'+ i +'">'
-             + '<div><b>'+ r.iata +'</b> - '+ r.name +'</div>'
-             + '<div class="autocomplete-location">'+ r.city +', '+ r.country +'</div>'
-             + '</div>';
-     });
-    
-    selectedIndex = -1;
-    list.html(divs.join(''))
-      .attr('data-highlight', selectedIndex);
-
-  } else {
-    numResults = 0;
-    list.empty();
-  }
-}
-
-function onKeyDown(e) {
-  switch(e.which) {
-    case 38: // up
-      selectedIndex--;
-      if (selectedIndex <= -1) {
-        selectedIndex = -1;
-      }
-      list.attr('data-highlight', selectedIndex);
-      break;
-    case 13: // enter
-      selectIndex(selectedIndex);
-      break;
-    case 9: // enter
-      selectIndex(selectedIndex);
-      e.stopPropagation();
-      return;
-    case 40: // down
-      selectedIndex++;
-      if (selectedIndex >= numResults) {
-        selectedIndex = numResults-1;
-      }
-      list.attr('data-highlight', selectedIndex);
-      break;
-
-    default: return; // exit this handler for other keys
-  }
-  e.stopPropagation();
-  e.preventDefault(); // prevent the default action (scroll / move caret)
-}
-});	
+      });	
     </script>
     <section class="col-12 new-trip-form">
       <div class="form-box">
@@ -189,27 +66,34 @@ function onKeyDown(e) {
           <div class="departure-data col-12">
             <fieldset>
               <input type="text" name="airline-choice" id="airline" placeholder="Airline.."  required="" class="airline">
-              <input type="text" name="confirmation-number" id="confirmation" placeholder="Confirmation Number.."  required="" class="confirmation">
+              <input type="text" name="confirmation-number" id="confirmation" maxlength="10" placeholder="Confirmation Code.."  required="" class="confirmation">
             </fieldset>
           </div>
           <div class="departure-info-wrapper col-6">
-            <legend>Departure</legend>
+            <legend>
+              Departure
+              <img src="./images/departures.png" class="">
+            </legend>
+            
             <fieldset name="register-info">
               <input type="text" name="city-choice" id="departure-city" placeholder="City.." required="" class="">
-              <input type="text" name="airport-choice" id="departure-airport" placeholder="Airport.." required="" class="">
-              <input type="text" name="terminal-choice" id="departure-terminal" placeholder="Terminal.." required="" class="">
-              <input type="number" name="gate-choice" id="departure-gate" placeholder="Gate.." required="" class="">
+              <input type="text" name="airport-choice" id="departure-airport" maxlength="3" placeholder="Airport.." required="" class="">
+              <input type="text" name="terminal-choice" id="departure-terminal" maxlength="3" placeholder="Terminal.." required="" class="">
+              <input type="number" name="gate-choice" id="departure-gate" maxlength="3" placeholder="Gate.." required="" class="">
               <input type="text" name="date" id="datepicker-1" placeholder="Date And Time.."  class="">
             </fieldset>
           </div>
 
           <div class="arrival-info-wrapper col-6">
-            <legend>Arrival</legend>
+            <legend>
+              Arrival
+              <img src="./images/arrivals.png" class="">
+            </legend>
             <fieldset name="register-info">
               <input type="text" name="city-choice" id="arrival-city" placeholder="City.." required="" class="">
-              <input type="text" name="airport-choice" id="arrival-airport" placeholder="Airport.."  required="" class="">
-              <input type="text" name="terminal-choice" id="arrival-termianl" placeholder="Terminal.." required="" class="">
-              <input type="number" name="gate-choice" id="arrival-gate" placeholder="Gate.." required="" class="">
+              <input type="text" name="airport-choice" id="arrival-airport" maxlength="3" placeholder="Airport.."  required="" class="">
+              <input type="text" name="terminal-choice" id="arrival-termianl" maxlength="3" placeholder="Terminal.." required="" class="">
+              <input type="number" name="gate-choice" id="arrival-gate" maxlength="3" placeholder="Gate.." required="" class="">
               <input type="text" name="date" id="datepicker-2" placeholder="Date And Time.." required="" class="">
             </fieldset>
           </div>

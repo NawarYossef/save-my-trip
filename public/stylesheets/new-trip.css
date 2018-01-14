@@ -45,6 +45,12 @@ body form fieldset {
   width: 100%;
 }
 
+.departure-info-wrapper img, .arrival-info-wrapper img {
+  width: 10%;
+  vertical-align: middle;
+  /* margin-bottom: 10px; */
+}
+
 body form input {
   font: normal 1.2em 'Raleway', sans-serif;
   color: #020202;
@@ -100,9 +106,9 @@ body form button {
 }
 
 legend {
-  font: bold 1em sans-serif;
+  font: normal 1.3em 'Bree Serif', serif;
   color: #1f1818; 
-  text-decoration: underline;
+  /* text-decoration: underline; */
   margin-bottom: 10px;
 }
 
