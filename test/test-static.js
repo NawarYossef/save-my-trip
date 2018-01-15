@@ -45,4 +45,14 @@ describe('Server Static Serve', function(){
       done();                               // <= Call done to signal callback end
     });
   })
+
+  it('should return status 200 and serve a HTML page', function(done) { // <= Pass in done callback
+    chai.request(app)
+    .get('/edit-trip.html')
+    .end(function(err, res) {
+      res.should.have.status(200);
+      res.should.be.html;
+      done();                               // <= Call done to signal callback end
+    });
+  })
 })
