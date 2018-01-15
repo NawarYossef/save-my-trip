@@ -2,115 +2,180 @@
 <html lang="en">
 <head>
 	<title>Trips</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">  
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-  <link rel="stylesheet" href="./stylesheets/hamburger.css">
-  <link rel="stylesheet" type="text/css" href="./stylesheets/grid.css">
-  <link rel="stylesheet" type="text/css" href="./stylesheets/trips.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="./stylesheets/hamburger.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/grid.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/trips.css">
 </head>
 <body>
-  <header>
-    <div class="header-wrapper col-12">
-      <nav>
-        <ul class=" ul-header">
-          <li class="">
-            <a href="#" class="hvr-underline-from-center">Trips</a>
-          </li>
-          <li class="">
-            <a href="#" class="hvr-underline-from-center">New Trip</a>
-          </li>
-          <li class="log-in">
-            <a href="#" class="hvr-underline-from-center">Log Out</a>
-          </li>
-        </ul>
-      </nav>
-  
-      <div class="h1-wrapper">
-        <h1>SaveMyTrip</h1>
-      </div>
-      <button class="hamburger hamburger--spin noSelect" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>  
-    </div>
-  </header>
+	<header>
+		<div class="header-wrapper col-12">
+			<nav>
+				<ul class=" ul-header">
+					<li class="">
+						<a href="#" class="hvr-underline-from-center">Trips</a>
+					</li>
+					<li class="">
+						<a href="#" class="hvr-underline-from-center">New Trip</a>
+					</li>
+					<li class="log-in">
+						<a href="#" class="hvr-underline-from-center">Log Out</a>
+					</li>
+				</ul>
+			</nav>
 
-  <main role="main">
-    <div class="h2-wrapper col-12">
-      <h2 class="heading-for-trips">
-        Your Trips
-      </h2>
-    </div>
-    <section class="trips-container">
-      <!-- <div class="trip-header">
-        <div class="confirmation col-4">
-          <div class="confir-wrapper col-6">
-            <span class="confirmation-title">CONFIRMATION</span><br>
-            <span class="confirmation-text">RGHF43</span>
-          </div>
-        </div>
+			<div class="h1-wrapper">
+				<h1>SaveMyTrip</h1>
+			</div>
+			<button class="hamburger hamburger--spin noSelect" type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
+		</div>
+	</header>
 
-        <div class="airports-wrapper col-4">
-          <h3>ALT</h3>
-          <i class="fa fa-arrow-right" aria-hidden="true"></i>
-          <h3>BGM</h3>
-          <h4>November 3rd, 2016</h4>
-        </div>
+	<main role="main">
+		<div class="h2-wrapper col-12">
+			<h2 class="heading-for-trips">
+				Your Trips
+			</h2>
+		</div>
+		<section class="trips-container">
+			<!-- <div class="trip-header">
+			<div class="confirmation col-4">
+			<div class="confir-wrapper col-6">
+			<span class="confirmation-title">CONFIRMATION</span><br>
+			<span class="confirmation-text">RGHF43</span>
+		</div>
+	</div>
 
-        <div class="data-wrapper col-4">
-          <div class="airline-wrapper col-6">
-            <span class="airline-title">AIRLINE</span><br>
-            <span class="airline-text">Delta</span>
-          </div>
-          <div class="arrow-wrapper col-6">
-            <i class="fa fa-caret-down" aria-hidden="true"></i>
-          </div>
-        </div>
-      </div>
-      <div class="trip-details">
-        <div class="departure-wrapper col-12">
-          <p><span class="depart-word">DEPARTS:</span><span class="date-text">5:30 AM Sunday, November 17th</span></p>
-          <p class="city">New York, NY, United States</p>
+	<div class="airports-wrapper col-4">
+	<h3>ALT</h3>
+	<i class="fa fa-arrow-right" aria-hidden="true"></i>
+	<h3>BGM</h3>
+	<h4>November 3rd, 2016</h4>
+</div>
 
-          <div class="terminal-gate-wrapper col-4">
-            <p class="terminal">Terminal: 5</p>
-            <p class="gate">Gate: 3</p>
-          </div>
-        </div>
-        <div class="arrival-wrapper col-12">
-          <p><span class="depart-word">ARRIVES:</span><span class="date-text">2:30 PM Tuesday, December 12th</span></p>
-          <p class="city">Chicago, IL, United States</p>
+<div class="data-wrapper col-4">
+<div class="airline-wrapper col-6">
+<span class="airline-title">AIRLINE</span><br>
+<span class="airline-text">Delta</span>
+</div>
+<div class="arrow-wrapper col-6">
+<i class="fa fa-caret-down" aria-hidden="true"></i>
+</div>
+</div>
+</div>
+<div class="trip-details">
+<div class="departure-wrapper col-12">
+<p><span class="depart-word">DEPARTS:</span><span class="date-text">5:30 AM Sunday, November 17th</span></p>
+<p class="city">New York, NY, United States</p>
 
-          <div class="terminal-gate-wrapper col-4">
-            <p class="terminal">Terminal: 5</p>
-            <p class="gate">Gate: 3</p>
-          </div>
-        </div>
-        <div class="col-12 control-btns">
-          <button class="col-4 edit-btn">
-            Edit
-            <i class="fa fa-pencil" aria-hidden="true"></i>    
-          </button>
-          <button class="col-4 delete-btn">
-            Delete
-            <i class="fa fa-trash-o" aria-hidden="true"></i>
-          </button>
-          <button class="col-4 email-btn">  
-            Email
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div> -->
-    </section>
-  </main>
-  <!-- <script type="text/javascript" src="js/main.js"></script> -->
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/trips.js"></script>
+<div class="terminal-gate-wrapper col-4">
+<p class="terminal">Terminal: 5</p>
+<p class="gate">Gate: 3</p>
+</div>
+</div>
+<div class="arrival-wrapper col-12">
+<p><span class="depart-word">ARRIVES:</span><span class="date-text">2:30 PM Tuesday, December 12th</span></p>
+<p class="city">Chicago, IL, United States</p>
+
+<div class="terminal-gate-wrapper col-4">
+<p class="terminal">Terminal: 5</p>
+<p class="gate">Gate: 3</p>
+</div>
+</div>
+<div class="col-12 control-btns">
+<button class="col-4 edit-btn">
+Edit
+<i class="fa fa-pencil" aria-hidden="true"></i>
+</button>
+<button class="col-4 delete-btn">
+Delete
+<i class="fa fa-trash-o" aria-hidden="true"></i>
+</button>
+<button class="col-4 email-btn">
+Email
+<i class="fa fa-envelope" aria-hidden="true"></i>
+</button>
+</div>
+</div> -->
+
+
+
+
+<div class="trip hidden" id="example-trip">
+	<div class="trip-header">
+		<div class="confirmation col-4">
+			<div class="confir-wrapper col-6">
+				<span class="confirmation-title">CONFIRMATION</span><br>
+				<span class="confirmation-text">${trip.confirmationCode}</span>
+			</div>
+		</div>
+
+		<div class="airports-wrapper col-4">
+			<h3>${trip.departure.airport}</h3>
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>
+			<h3>${trip.arrival.airport}</h3>
+			<h4>${trip.arrival.date}</h4>
+		</div>
+
+		<div class="data-wrapper col-4">
+			<div class="airline-wrapper col-6">
+				<span class="airline-title">AIRLINE</span><br>
+				<span class="airline-text">${trip.airline}</span>
+			</div>
+			<div class="arrow-wrapper col-6">
+				<i class="fa fa-caret-down" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+	<div class="trip-details">
+		<div class="departure-wrapper col-12">
+			<p><span class="depart-word">DEPARTS:</span><span class="date-text">${trip.departure.date}</span></p>
+			<p class="city">${trip.departure.city}</p>
+
+			<div class="terminal-gate-wrapper col-4">
+				<p class="terminal">Terminal: ${trip.departure.terminal}</p>
+				<p class="gate">Gate: ${trip.departure.gate}</p>
+			</div>
+		</div>
+		<div class="arrival-wrapper col-12">
+			<p><span class="depart-word">ARRIVES:</span><span class="date-text">${trip.arrival.date}</span></p>
+			<p class="city">${trip.arrival.city}</p>
+
+			<div class="terminal-gate-wrapper col-4">
+				<p class="terminal">Terminal: ${trip.arrival.terminal}</p>
+				<p class="gate">Gate: ${trip.arrival.gate}</p>
+			</div>
+		</div>
+		<div class="col-12 control-btns">
+			<button class="col-4 edit-btn">
+				Edit
+				<i class="fa fa-pencil" aria-hidden="true"></i>
+			</button>
+			<button class="col-4 delete-btn">
+				Delete
+				<i class="fa fa-trash-o" aria-hidden="true"></i>
+			</button>
+			<button class="col-4 email-btn">
+				Email
+				<i class="fa fa-envelope" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
+</div>
+
+
+</section>
+</main>
+<!-- <script type="text/javascript" src="js/main.js"></script> -->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/trips.js"></script>
 </body>
-
-
