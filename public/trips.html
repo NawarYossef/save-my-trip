@@ -110,7 +110,7 @@ Email
 
 
 
-<div class="trip hidden" id="example-trip">
+<div class="trip slide-down hidden" id="example-trip">
 	<div class="trip-header">
 		<div class="confirmation col-4">
 			<div class="confir-wrapper col-6">
@@ -120,9 +120,9 @@ Email
 		</div>
 
 		<div class="airports-wrapper col-4">
-			<h3>${trip.departure.airport}</h3>
+			<h3 class="depart-airport">${trip.departure.airport}</h3>
 			<i class="fa fa-arrow-right" aria-hidden="true"></i>
-			<h3>${trip.arrival.airport}</h3>
+			<h3 class="arrive-airport">${trip.arrival.airport}</h3>
 			<h4>${trip.arrival.date}</h4>
 		</div>
 
@@ -138,21 +138,21 @@ Email
 	</div>
 	<div class="trip-details">
 		<div class="departure-wrapper col-12">
-			<p><span class="depart-word">DEPARTS:</span><span class="date-text">${trip.departure.date}</span></p>
+			<p><span class="depart-word">DEPARTS:</span><span class="date-text depart-date-text">${trip.departure.date}</span></p>
 			<p class="city">${trip.departure.city}</p>
 
 			<div class="terminal-gate-wrapper col-4">
 				<p class="terminal">Terminal: ${trip.departure.terminal}</p>
-				<p class="gate">Gate: ${trip.departure.gate}</p>
+				<p class="gate depart-gate">Gate: ${trip.departure.gate}</p>
 			</div>
 		</div>
 		<div class="arrival-wrapper col-12">
-			<p><span class="depart-word">ARRIVES:</span><span class="date-text">${trip.arrival.date}</span></p>
+			<p><span class="depart-word">ARRIVES:</span><span class="date-text arrive-date-text">${trip.arrival.date}</span></p>
 			<p class="city">${trip.arrival.city}</p>
 
 			<div class="terminal-gate-wrapper col-4">
 				<p class="terminal">Terminal: ${trip.arrival.terminal}</p>
-				<p class="gate">Gate: ${trip.arrival.gate}</p>
+				<p class="gate arrive-gate">Gate: ${trip.arrival.gate}</p>
 			</div>
 		</div>
 		<div class="col-12 control-btns">
