@@ -3,17 +3,11 @@
 class NewTrip  {
 
   init() {
-    // this.initializeCalender();
     this.postNewTrip();
     this.toggleHamburger();
-    this.dateAndTimePickerSetup();
+    this.initializeDateAndTimePicker();
     this.airportFieldAutocomplete();
   }
-
-  // initializeCalender() {
-  //   $("#datepicker-1").datepicker();
-  //   $("#datepicker-2").datepicker();
-  // }
 
   postNewTrip() {
     $("#new-trip-form").submit(function(e) {
@@ -36,7 +30,6 @@ class NewTrip  {
           date: $("#datepicker-2").val(),
         }
     }
-    console.log(trip)
 
       $.ajax({
         "type": "POST",
@@ -65,7 +58,7 @@ class NewTrip  {
     })
   }
 
-  dateAndTimePickerSetup() {
+  initializeDateAndTimePicker() {
     $("#datepicker-1, #datepicker-2")
     .flatpickr({ 
       enableTime: true,

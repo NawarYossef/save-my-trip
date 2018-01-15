@@ -21,11 +21,16 @@ h2 {
   color: #424242;
 }
 
-.trip-container {
+.trips-container {
   width: 80%;
   float: none;
   margin: auto;
   margin-bottom: 20px;
+}
+
+.trip {
+  width: 100%;
+  /* background: #888888; */
 }
 
 .trip-header {
