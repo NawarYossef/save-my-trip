@@ -6,7 +6,7 @@
   display: inline-block;
   margin: 100px auto 0 auto;
   background-color: #d7e3f0;
-  border-radius: 10px;  
+  border-radius: 10px;
   padding-top: 0px;
 }
 
@@ -55,23 +55,23 @@ body section .confirmation {
   text-align: center;
 }
 
-main .confirmation .confirmation-title, 
+main .confirmation .confirmation-title,
 main .airline-wrapper .airline-title {
   font: bold 1em 'Kanit', sans-serif;
-  color: #2C2A87; 
+  color: #2C2A87;
 }
 
-main .confirmation .confirmation-text, 
+main .confirmation .confirmation-text,
 main .airline-wrapper .airline-text {
   font: bold 0.9em 'roboto', sans-serif;
-  color: #4F4F4F; 
+  color: #4F4F4F;
 }
 
 .confir-wrapper {
   text-align: center;
 }
 
-body section .data-wrapper { 
+body section .data-wrapper {
   display: inline-block;
   padding-right: 20px;
   float: none;
@@ -85,7 +85,7 @@ body .airports-wrapper h3 {
 }
 
 h4 {
-  font: normal 1em 'Bree Serif', serif; 
+  font: normal 1em 'Bree Serif', serif;
   /* font-size: 14px; */
   margin-top: -2px;
 }
@@ -96,7 +96,7 @@ h4 {
 }
 
 .arrow-wrapper {
- text-align: right; 
+ text-align: right;
  font-size: 4em;
  margin-top: -9px;
 }
@@ -133,7 +133,7 @@ h4 {
 
 .departure-wrapper {
   margin-top: 15px;
-  margin-left: 20px;  
+  margin-left: 20px;
 }
 
 .arrival-wrapper {
@@ -143,14 +143,14 @@ h4 {
 }
 
 .depart-word {
-  font: bold 1.1em 'Bree Serif', serif; 
+  font: bold 1.1em 'Bree Serif', serif;
   color: #333333;
   margin-right: 5px;
 }
 
 .date-text {
   font: normal 1.1em 'roboto', sans-serif;
-  color: #1862C7; 
+  color: #1862C7;
 }
 
 .city {
@@ -189,7 +189,7 @@ h4 {
 
 .control-btns button:hover {
   cursor: pointer;
-  background: rgb(153, 83, 21); 
+  background: rgb(153, 83, 21);
 }
 
 .email-btn {
@@ -208,6 +208,20 @@ h4 {
 .fa-trash-o, .fa-envelope, .fa-pencil {
   margin-left: 8px;
 }
+
+
+
+
+.hidden{
+  display:none;
+}
+
+
+
+
+
+
+
 /* * * * * * * * * * * * * */
 /* general Media Queries   */
 /* * * * * * * * * * * * * */
