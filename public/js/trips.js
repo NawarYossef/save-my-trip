@@ -23,8 +23,6 @@ class Trips  {
 
   renderTrips(data) {
     const allTrips = data.trips.map(trip => {
-      this.changeArrowDirection(trip.id)
-      this.slideDownAndShowDetails(trip.id)
       return (
         `<div class="trip">
           <div class="trip-header" id="${trip.id}">
