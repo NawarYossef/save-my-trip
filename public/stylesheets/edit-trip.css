@@ -1,0 +1,266 @@
+/* * * * * * * * * * * */
+/*      main            */
+/* * * * * * * * * * * */
+ main {
+  padding-top: 50px;
+}
+
+.h2-wrapper, .h3-wrapper  {
+  text-align: center; 
+}
+
+h2 {
+  font: bold 1.2em 'Merriweather', serif;
+}
+
+h3 {
+  font: normal 2em 'Bree Serif', serif;
+  color: #424242;
+  padding-top: 20px;
+  /* text-decoration: underline; */
+}
+
+h4 {
+  font: normal 1em 'Bree Serif', serif;
+  color: #424242;
+  padding-bottom: 10px;
+  text-decoration: underline; 
+}
+/* * * * * * * * * * * */
+/*      form styles    */
+/* * * * * * * * * * * */
+.form-box {
+  background: #f5f5f5;
+  display: inline-block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+body form {
+  margin: 0 auto;
+  width: 50%;
+}
+
+body form fieldset {
+  width: 100%;
+}
+
+.departure-info-wrapper img, .arrival-info-wrapper img {
+  width: 15%;
+  vertical-align: middle;
+  /* margin-bottom: 10px; */
+}
+
+body form input {
+  font: normal 1.2em 'Raleway', sans-serif;
+  color: #020202;
+  width: 80%;
+  border: 1px solid #d8d8d8;
+  padding: 2px 0;
+  background-color: transparent;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  text-align: center;
+  outline: none;
+  overflow-x: scroll;
+}
+
+body form .airline, body form .confirmation {
+  width: 50%;
+}
+
+body form ::-webkit-input-placeholde {
+  font: normal 1.2em 'Raleway', sans-serif;
+  color: #6b6b6b;
+}
+
+body form input:focus {
+  border-bottom: 2px solid #0088ff;
+}
+
+body form button {
+  width: 25%;
+  height: 43px;
+  color: #ffffff;
+  background: #e28714;
+  margin-top: 15px;
+  font-size: 1.4em;
+  border: none;
+  outline: none;
+}
+
+/* .arrival-info-wrapper, .departure-info-wrapper {
+  margin-top: 30px;
+} */
+
+.departure-info-wrapper {
+  border-right: 1px solid rgb(177, 177, 177);
+}
+  
+.departure-data, .departure-info-wrapper, .arrival-info-wrapper, .btns-wrapper {
+  text-align: center;
+}
+
+.departure-data {
+  margin-bottom: 15px;
+}
+
+.btns-wrapper {
+  padding-bottom: 20px;
+}
+
+legend {
+  font: normal 1.2em 'Bree Serif', serif;
+  color: #1f1818; 
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/* Autocomplete for airport input      */
+/* * * * * * * * * * * * * * * * * * * */
+.autocomplete-wrapper {
+  position: relative;
+}
+
+.autocomplete-results {
+  position: absolute;
+  background: white;
+  width: 100%;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  font-size: 13px;
+  border-top-width: 0;
+  border-bottom-color: #ccc;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.autocomplete-result {
+  padding: 12px 15px;
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+.autocomplete-result:last-child {
+  border-bottom-width: 0;
+}
+.autocomplete-location {
+  opacity: 0.8;
+  font-size: smaller;
+}
+.autocomplete-results[data-highlight="0"] > :nth-child(1) {
+  color: white;
+  background: #26c9ff;
+  border-bottom-color: #26c9ff;
+  outline: solid 1px #00b6f2;
+}
+.autocomplete-results[data-highlight="1"] > :nth-child(2) {
+  color: white;
+  background: #26c9ff;
+  border-bottom-color: #26c9ff;
+  outline: solid 1px #00b6f2;
+}
+.autocomplete-results[data-highlight="2"] > :nth-child(3) {
+  color: white;
+  background: #26c9ff;
+  border-bottom-color: #26c9ff;
+  outline: solid 1px #00b6f2;
+}
+.autocomplete-results[data-highlight="3"] > :nth-child(4) {
+  color: white;
+  background: #26c9ff;
+  border-bottom-color: #26c9ff;
+  outline: solid 1px #00b6f2;
+}
+.autocomplete-results[data-highlight="4"] > :nth-child(5) {
+  color: white;
+  background: #26c9ff;
+  border-bottom-color: #26c9ff;
+  outline: solid 1px #00b6f2;
+}
+.autocomplete-results[data-highlight="5"] > :nth-child(6) {
+  color: white;
+  background: #26c9ff;
+  border-bottom-color: #26c9ff;
+  outline: solid 1px #00b6f2;
+}
+.autocomplete-results[data-highlight="6"] > :nth-child(7) {
+  color: white;
+  background: #26c9ff;
+  border-bottom-color: #26c9ff;
+  outline: solid 1px #00b6f2;
+}
+.autocomplete-results[data-highlight="7"] > :nth-child(8) {
+  color: white;
+  background: #26c9ff;
+  border-bottom-color: #26c9ff;
+  outline: solid 1px #00b6f2;
+}
+
+/* * * * * * * * * * * * * */
+/* general Media Queries   */
+/* * * * * * * * * * * * * */
+@media screen and (max-width: 320px) {
+  body header .h1-wrapper {
+    float: left;
+    margin-top: 3%;
+    margin-left: 2%;
+  }
+
+  body header h1 {
+    font-size: 1.3em;
+  }
+
+  body header nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  body header nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  body header nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  body header nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body header nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  body header button.hamburger {
+    display: none;
+  }
+
+  body header nav {
+    display: initial;
+    float: right;
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
+  body header button.hamburger {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 2560px) {
+  body header button.hamburger {
+    display: none;
+  }
+}
+/* * * * * * * * * * * * * */
+/* specific Media Queries  */
+/* * * * * * * * * * * * * */

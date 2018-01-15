@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>New Trip</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">  
+  <link rel="stylesheet" type="text/css" href="stylesheets/grid.css">
+  <link rel="stylesheet" href="./stylesheets/hamburger.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/edit-trip.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/confetti.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.min.js"></script>
+  <script src="https://unpkg.com/fuse.js@2.5.0/src/fuse.min.js"></script>
+  <script src="https://screenfeedcontent.blob.core.windows.net/html/airports.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-wrapper col-12">
+      <nav class="">
+        <ul class=" ul-header">
+          <li class="">
+            <a href="#" class="hvr-underline-from-center">Trips</a>
+          </li>
+          <li class="">
+            <a href="#" class="hvr-underline-from-center">New Trip</a>
+          </li>
+          <li class="log-in">
+            <a href="#" class="hvr-underline-from-center">Log Out</a>
+          </li>
+        </ul>
+      </nav>
+  
+      <div class="h1-wrapper">
+        <h1>SaveMyTrip</h1>
+      </div>
+      <button class="hamburger hamburger--spin noSelect" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>  
+    </div>
+  </header>
+
+  <main role="main">
+    <script>
+      $(document).ready(function() {
+        function init() {
+          const departureCity = document.getElementById('departure-city');
+          const arrivalCity = document.getElementById('arrival-city');
+          const autocompleteDeparture = new google.maps.places.Autocomplete(departureCity);
+          const autocompleteArrival = new google.maps.places.Autocomplete(arrivalCity);
+        }
+        google.maps.event.addDomListener(window, 'load', init);	
+      });	
+    </script>
+    <section class="col-12 new-trip-form">
+      <div class="form-box">
+        <div class="h3-wrapper col-12">
+          <h3 class="heading-for-new-trip">Edit Trip Information</h3>
+          <!-- <h4>Enter your trip information below</h4> -->
+        </div>
+        <form class="col-12" id="new-trip-form">
+          <div class="departure-data col-12">
+            <fieldset></fieldset>
+              <input type="text" name="airline-choice" id="airline" placeholder="Airline.."  maxlength="20" required="" class="airline">
+              <input type="text" name="confirmation-number" id="confirmation" maxlength="10" placeholder="Confirmation Code.."  required="" class="confirmation">
+            </fieldset>
+          </div>
+          <div class="departure-info-wrapper col-6">
+            <legend>
+              Departure
+            </legend>
+            
+            <fieldset name="register-info">
+              <input type="text" name="city-choice" id="departure-city" placeholder="City.." required="" class="">
+              <input type="text" name="airport-choice" id="departure-airport" maxlength="3" placeholder="Airport.." required="" class="">
+              <input type="text" name="terminal-choice" id="departure-terminal"  min="0" max="100" placeholder="Terminal.." required="" class="">
+              <input type="number" name="gate-choice" id="departure-gate" min="-999" max="999" placeholder="Gate.." required="" class="">
+              <input type="text" name="date" id="datepicker-1" placeholder="Date And Time.."  class="">
+            </fieldset>
+          </div>
+
+          <div class="arrival-info-wrapper col-6"> 
+            <legend>
+              Arrival
+            </legend>
+            <fieldset name="register-info">
+              <input type="text" name="city-choice" id="arrival-city" placeholder="City.." required="" class="">
+              <input type="text" name="airport-choice" id="arrival-airport" maxlength="3" placeholder="Airport.."  required="" class="">
+              <input type="text" name="terminal-choice" id="arrival-termianl" maxlength="3" placeholder="Terminal.." required="" class="">
+              <input type="number" name="gate-choice" id="arrival-gate" maxlength="3" placeholder="Gate.." required="" class="">
+              <input type="text" name="date" id="datepicker-2" placeholder="Date And Time.." required="" class="">
+            </fieldset>
+          </div>
+          <div class="btns-wrapper col-12">
+            <button type="button" value="Reset">Reset</button>
+            <button type="submit" value="Submit" class="save-button" >Save</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxbrnP5jd_Uq6TwZ9frPsnqhD2_wgIAnU&v=3.exp&libraries=places"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script type="text/javascript" src="js/new-trip.js"></script>
+</body>
+
