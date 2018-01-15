@@ -40,6 +40,7 @@ class NewTrip  {
       })
       .done(data => {
         console.log(data)
+        $("#new-trip-form")[0].reset();
       })
       .fail(data => {
         console.log(data)
@@ -128,7 +129,7 @@ class NewTrip  {
     
     function selectIndex(index) {
       if (results.length >= index + 1) {
-        ac.val(results[index].iata);
+        // ac.val(results[index].iata);
         clearResults();
       }  
     }
