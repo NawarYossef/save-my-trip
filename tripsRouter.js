@@ -22,6 +22,16 @@ Trip
   });
 });
 
+router.get('/:id', (req, res) => {
+  Trip
+    .findById(req.params.id)
+    .then(trip => res.json(trip.serialize()))
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({error: 'something went horribly awry'});
+    });
+});
+
 router.post('/', (req, res) => {
   const requiredFields = [
     "airline", "confirmationCode", 'departure', "arrival",
