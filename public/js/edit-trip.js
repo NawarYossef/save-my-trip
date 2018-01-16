@@ -32,7 +32,7 @@ class EditTrip  {
     }
 
       $.ajax({
-        "type": "POST",
+        "type": "PUT",
         url: 'http://localhost:8081/trips',
         dataType : "json",
         contentType: "application/json; charset=utf-8",
