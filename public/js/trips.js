@@ -7,6 +7,7 @@ class Trips  {
     this.getTripEntries();
     this.toggleHamburger();
     this.setToggleListener();
+    this.httpRedirectToEditPage();
   }
 
   getTripEntries() {
@@ -20,14 +21,21 @@ class Trips  {
     });
   }
 
+  httpRedirectToEditPage() {
+    $(".trips-container").on('click', '.edit-btn' , function() {
+      const tripId = $(this).parents(".trip").attr('id') 
+      window.location.replace(`http://localhost:8081/edit-trip.html?tripid=${tripId}`)
+    })
+  }
+
   renderTrips(data) {
     const allTrips = data.trips.map(trip => {
-
       const tripHTML = $("#example-trip").clone();
+      
       tripHTML.removeClass("hidden")
       tripHTML.attr("id", trip.id);
       // tripHTML.find(".confirmation-text").text(trip.confirmationCode);
-      this.validateConfirmationCode(tripHTML, trip)
+      this.validateConfirmationCode(tripHTML, trip);
       tripHTML.find(".depart-airport").text(trip.departure.airport);
       tripHTML.find(".arrive-airport").text(trip.arrival.airport);
       tripHTML.find("h4").text(trip.arrival.date);
@@ -44,9 +52,8 @@ class Trips  {
       tripHTML.find("arrive.gate").text(`Gate: ${trip.arrival.gate}`);
 
       return tripHTML;
-
     })
-    $(".trips-container").html(allTrips)
+  $(".trips-container").html(allTrips)
   }
 
   validateConfirmationCode(tripHTML, trip) {
@@ -63,25 +70,28 @@ class Trips  {
     })
   }
 
-
   setToggleListener() {
-    $(".trips-container").on('click', '.trip' , function() {
-      const trip = $(this);
-      if (trip.hasClass("slide-down")) {
-        trip.find(".arrow-wrapper > i").removeClass("fa-caret-down");
-        trip.find(".arrow-wrapper > i").addClass("fa-caret-up");
+    $('.trip-header').addClass("slide-down");
+
+    $(".trips-container").on('click', '.trip-header' , function() {
+      const tripHeader = $(this);
+      const trip = $(this).closest(".trip");
+
+      if (tripHeader.hasClass("slide-down")) {
+        tripHeader.find(".arrow-wrapper > i").removeClass("fa-caret-down");
+        tripHeader.find(".arrow-wrapper > i").addClass("fa-caret-up");
         trip.find(".arrival-wrapper").slideDown({duration: 450});
         trip.find(".departure-wrapper").slideDown({duration: 450});
-        trip.removeClass("slide-down");
-        trip.addClass("slide-up");
+        tripHeader.removeClass("slide-down");
+        tripHeader.addClass("slide-up");
 
       } else {
-        $(".arrow-wrapper > i").removeClass("fa-caret-up");
-        $(".arrow-wrapper > i").addClass("fa-caret-down");
+        tripHeader.find(".arrow-wrapper > i").removeClass("fa-caret-up");
+        tripHeader.find(".arrow-wrapper > i").addClass("fa-caret-down");
         trip.find(".arrival-wrapper").slideUp({duration: 450});
         trip.find(".departure-wrapper").slideUp({duration: 450}); 
-        trip.removeClass("slide-up");
-        trip.addClass("slide-down");
+        tripHeader.removeClass("slide-up");
+        tripHeader.addClass("slide-down");
       }
     })
   }
