@@ -6,7 +6,7 @@ class Trips  {
   init() {
     this.getTripEntries();
     this.toggleHamburger();
-    this.setToggleListener();
+    this.dropDownTripToggleListener();
     this.httpRedirectToEditPage();
   }
 
@@ -70,7 +70,7 @@ class Trips  {
     })
   }
 
-  setToggleListener() {
+  dropDownTripToggleListener() {
     $('.trip-header').addClass("slide-down");
 
     $(".trips-container").on('click', '.trip-header' , function() {
