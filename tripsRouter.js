@@ -5,7 +5,7 @@ const jsonParser = bodyParser.json();
 
 const {Trip} = require('./models');
 
-// ============== test requests ==============
+// ============== GET endpoint ==============
 router.get('/', (req, res) => {
 Trip
   .find()
@@ -32,6 +32,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// ============== POST endpoint ==============
 router.post('/', (req, res) => {
   const requiredFields = [
     "airline", "confirmationCode", 'departure', "arrival",
@@ -60,7 +61,7 @@ router.post('/', (req, res) => {
     });
 });
 
-
+// ============== PUT endpoint ==============
 router.put('/:id', (req, res) => {
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
     res.status(400).json({
@@ -85,7 +86,7 @@ router.put('/:id', (req, res) => {
     .catch(err => res.status(500).json({message: 'Something went wrong'}));
 });
 
-
+// ============== DELETE endpoint ==============
 router.delete('/:id', (req, res) => {
   Trip
     .findByIdAndRemove(req.params.id)
