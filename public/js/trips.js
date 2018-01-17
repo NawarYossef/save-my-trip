@@ -42,13 +42,13 @@ class Trips  {
       tripHTML.find(".airline-text").text(trip.airline);
       
       tripHTML.find(".depart-date-text").text(trip.departure.date);
-      tripHTML.find(".city").text(trip.departure.city);
-      tripHTML.find(".terminal").text(`Terminal: ${trip.departure.terminal}`);
+      tripHTML.find(".depart-city").text(trip.departure.city);
+      tripHTML.find(".depart-terminal").text(`Terminal: ${trip.departure.terminal}`);
       tripHTML.find(".depart-gate").text(`Gate: ${trip.departure.gate}`);
 
       tripHTML.find(".arrive-date-text").text(trip.arrival.date);
-      tripHTML.find(".city").text(trip.arrival.city);
-      tripHTML.find(".terminal").text(`Terminal: ${trip.arrival.terminal}`);
+      tripHTML.find(".arrive-city").text(trip.arrival.city);
+      tripHTML.find(".arrive-terminal").text(`Terminal: ${trip.arrival.terminal}`);
       tripHTML.find(".arrive-gate").text(`Gate: ${trip.arrival.gate}`);
 
       return tripHTML;

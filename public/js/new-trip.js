@@ -25,7 +25,7 @@ class NewTrip  {
         arrival: {
           city: $("#arrival-city").val(),
           airport: $("#arrival-airport").val(),
-          terminal: $("#arrival-terminal").val(),
+          terminal: $("#arrival-termianl").val(),
           gate: $("#arrival-gate").val(),
           date: $("#datepicker-2").val(),
         }
@@ -129,7 +129,7 @@ class NewTrip  {
     
     function selectIndex(index) {
       if (results.length >= index + 1) {
-        // ac.val(results[index].iata);
+        ac.val(results[index].iata);
         clearResults();
       }  
     }

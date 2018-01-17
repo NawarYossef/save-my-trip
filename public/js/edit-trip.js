@@ -12,17 +12,15 @@ class EditTrip  {
 
   }
 
-  updateNewTrip() {
+  getTripData() {
     const tripId = this.getTripId();
-    console.log(tripId)
     $.ajax({
       url: `http://localhost:8081/trips/${tripId}`,
       type: 'GET',
-      // data : JSON.stringify(trip)
     })
     .done(data => {
-      console.log(data)
-      this.renderData();
+      this.renderData(data);
+      this.submitUpdatedTrip(tripId);
     })
     .fail(data => {
       console.error("something is wrong")
@@ -33,8 +31,62 @@ class EditTrip  {
     return window.location.href.substring(window.location.href.lastIndexOf('=') + 1);
   }
 
-  renderData() {
+  renderData(data) {
+    const trip = data;
+    $("#airline").val(trip.airline);
+    $("#confirmation").val(trip.confirmationCode);
 
+    $("#departure-city").val(trip.departure.city);
+    $("#departure-airport").val(trip.departure.airport);
+    $("#departure-terminal").val(trip.departure.terminal);
+    $("#departure-gate").val(trip.departure.gate);
+    $("#datepicker-1").val(trip.departure.date);
+
+    $("#arrival-city").val(trip.departure.city);
+    $("#arrival-airport").val(trip.arrival.airport);
+    $("#arrival-terminal").val(trip.arrival.terminal);
+    $("#arrival-gate").val(trip.arrival.gate);
+    $("#datepicker-2").val(trip.arrival.date);
+  }
+
+  submitUpdatedTrip(tripId) {
+    $("#new-trip-form").submit(function(e) {
+      e.preventDefault();
+      const trip = {
+        airline: $("#airline").val(),
+        confirmationCode: $("#confirmation").val(),
+        departure: {
+          city: $("#departure-city").val(),
+          airport: $("#departure-airport").val(),
+          terminal: $("#departure-terminal").val(),
+          gate: $("#departure-gate").val(),
+          date: $("#datepicker-1").val(),
+        },
+        arrival: {
+          city: $("#arrival-city").val(),
+          airport: $("#arrival-airport").val(),
+          terminal: $("#arrival-terminal").val(),
+          gate: $("#arrival-gate").val(),
+          date: $("#datepicker-2").val(),
+        }
+      }
+
+      $.ajax({
+        "type": "PUT",
+        url:`http://localhost:8081/trips/${tripId}`,
+        dataType : "json",
+        contentType: "application/json; charset=utf-8"
+        // data : JSON.stringify(trip)
+      })
+      .done(data => {
+        console.log(data)
+        $("#new-trip-form")[0].reset();
+      })
+      .fail(data => {
+        console.log(data)
+        console.error("something is wrong")
+      })
+    });
   }
 
   toggleHamburger() {
@@ -54,7 +106,6 @@ class EditTrip  {
       dateFormat: "m-d-y H:i",
       minDate: "today",
       time_24hr: false,
-      
     })
   }
 
@@ -117,7 +168,7 @@ class EditTrip  {
     
     function selectIndex(index) {
       if (results.length >= index + 1) {
-        // ac.val(results[index].iata);
+        ac.val(results[index].iata);
         clearResults();
       }  
     }
