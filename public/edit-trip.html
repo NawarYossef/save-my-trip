@@ -58,15 +58,23 @@
     </script>
     <section class="col-12 new-trip-form">
       <div class="form-box">
-        <div class="h3-wrapper col-12">
-          <h3 class="heading-for-new-trip">Edit Trip Information</h3>
+        <div class="h2-wrapper col-12">
+          <h2 class="heading-for-new-trip">Edit Trip Information</h2>
           <!-- <h4>Enter your trip information below</h4> -->
         </div>
         <form class="col-12" id="new-trip-form">
           <div class="departure-data col-12">
-            <fieldset></fieldset>
-              <input type="text" name="airline-choice" id="airline" placeholder="Airline.."  maxlength="20" required="" class="airline">
-              <input type="text" name="confirmation-number" id="confirmation" maxlength="10" placeholder="Confirmation Code.."  required="" class="confirmation">
+            <fieldset>
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">Airline</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="text" name="airline-choice" id="airline"  maxlength="20" required="" class="airline">
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">Confirmation Code</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="text" name="confirmation-number" id="confirmation" maxlength="10"   required="" class="confirmation">
             </fieldset>
           </div>
           <div class="departure-info-wrapper col-6">
@@ -75,11 +83,36 @@
             </legend>
             
             <fieldset name="register-info">
-              <input type="text" name="city-choice" id="departure-city" placeholder="City.." required="" class="">
-              <input type="text" name="airport-choice" id="departure-airport" maxlength="3" placeholder="Airport.." required="" class="">
-              <input type="text" name="terminal-choice" id="departure-terminal"  min="0" max="100" placeholder="Terminal.." required="" class="">
-              <input type="number" name="gate-choice" id="departure-gate" min="-999" max="999" placeholder="Gate.." required="" class="">
-              <input type="text" name="date" id="datepicker-1" placeholder="Date And Time.."  class="">
+              <div class="h2-wrapper col-12">
+
+                <h3 class="heading-for-new-trip">City</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="text" name="city-choice" id="departure-city" required="" class="">
+
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">Airport</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="text" name="airport-choice" id="departure-airport" maxlength="3" required="" class="">
+
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">Terminal</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="text" name="terminal-choice" id="departure-terminal"  min="0" max="100" required="" class="">
+
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">Gate</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="number" name="gate-choice" id="departure-gate" min="-999" max="999" required="" class="">
+
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">Date And Time</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="text" name="date" id="datepicker-1" class="">
             </fieldset>
           </div>
 
@@ -88,11 +121,35 @@
               Arrival
             </legend>
             <fieldset name="register-info">
-              <input type="text" name="city-choice" id="arrival-city" placeholder="City.." required="" class="">
-              <input type="text" name="airport-choice" id="arrival-airport" maxlength="3" placeholder="Airport.."  required="" class="">
-              <input type="text" name="terminal-choice" id="arrival-termianl" maxlength="3" placeholder="Terminal.." required="" class="">
-              <input type="number" name="gate-choice" id="arrival-gate" maxlength="3" placeholder="Gate.." required="" class="">
-              <input type="text" name="date" id="datepicker-2" placeholder="Date And Time.." required="" class="">
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">City</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="text" name="city-choice" id="arrival-city" required="" class="">
+
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">Airport</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="text" name="airport-choice" id="arrival-airport" maxlength="3" required="" class="">
+              
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">Terminal</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="text" name="terminal-choice" id="arrival-termianl" maxlength="3" required="" class="">
+
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">Gate</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="number" name="gate-choice" id="arrival-gate" maxlength="3" required="" class="">
+
+              <div class="h2-wrapper col-12">
+                <h3 class="heading-for-new-trip">Date And Time</h3>
+                <!-- <h4>Enter your trip information below</h4> -->
+              </div>
+              <input type="text" name="date" id="datepicker-2" required="" class="">
             </fieldset>
           </div>
           <div class="btns-wrapper col-12">
