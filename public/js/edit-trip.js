@@ -2,7 +2,7 @@
 
 class EditTrip  {
   init() {
-    this.updateNewTrip();
+    this.getTripData();
     this.toggleHamburger();
     this.initializeDateAndTimePicker();
     this.airportFieldAutocomplete();
@@ -42,7 +42,7 @@ class EditTrip  {
     $("#departure-gate").val(trip.departure.gate);
     $("#datepicker-1").val(trip.departure.date);
 
-    $("#arrival-city").val(trip.departure.city);
+    $("#arrival-city").val(trip.arrival.city);
     $("#arrival-airport").val(trip.arrival.airport);
     $("#arrival-terminal").val(trip.arrival.terminal);
     $("#arrival-gate").val(trip.arrival.gate);
@@ -50,9 +50,10 @@ class EditTrip  {
   }
 
   submitUpdatedTrip(tripId) {
-    $("#new-trip-form").submit(function(e) {
+    $("#new-trip-form").submit((e) => {
       e.preventDefault();
       const trip = {
+        id: tripId,
         airline: $("#airline").val(),
         confirmationCode: $("#confirmation").val(),
         departure: {
@@ -75,18 +76,23 @@ class EditTrip  {
         "type": "PUT",
         url:`http://localhost:8081/trips/${tripId}`,
         dataType : "json",
-        contentType: "application/json; charset=utf-8"
-        // data : JSON.stringify(trip)
+        contentType: "application/json; charset=utf-8",
+        data : JSON.stringify(trip)
       })
       .done(data => {
         console.log(data)
-        $("#new-trip-form")[0].reset();
+        // $("#new-trip-form")[0].reset();
+        this.changeRouteToTripsPage();
       })
       .fail(data => {
         console.log(data)
         console.error("something is wrong")
       })
     });
+  }
+
+  changeRouteToTripsPage() {
+    window.location.replace(`http://localhost:8081/trips.html`)
   }
 
   toggleHamburger() {
@@ -168,7 +174,7 @@ class EditTrip  {
     
     function selectIndex(index) {
       if (results.length >= index + 1) {
-        ac.val(results[index].iata);
+        ac.val(results[index].iata);  
         clearResults();
       }  
     }

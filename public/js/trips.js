@@ -5,6 +5,7 @@ class Trips  {
 
   init() {
     this.getTripEntries();
+    this.deleteTrip();
     this.toggleHamburger();
     this.dropDownTripToggleListener();
     this.httpRedirectToEditPage();
@@ -13,12 +14,35 @@ class Trips  {
   getTripEntries() {
     $.ajax({
       url: "http://localhost:8081/trips",
-      type: 'GET',
-      success: (data) => {
-        console.log(data)
-        this.renderTrips(data);
-      }
-    });
+      type: 'GET'
+    })
+    .done(data => {
+      this.renderTrips(data);
+    })
+    .fail(data => {
+      console.error("something is wrong")
+    })
+  }
+
+  deleteTrip() {
+    $(".trips-container").on('click', '.delete-btn' , () => {
+      const tripId = $(this).parents(".trip").attr('id') 
+      $.ajax({
+        url: `http://localhost:8081/trips/${tripId}`,
+        type: 'DELETE',
+        dataType: 'json'
+      })
+      .done(data => {
+        this.changeRouteToTripsPage();
+      })
+      .fail(data => {
+        console.error("something is wrong")
+      })
+    })
+  }
+
+  changeRouteToTripsPage() {
+    window.location.replace(`http://localhost:8081/trips.html`)
   }
 
   httpRedirectToEditPage() {
