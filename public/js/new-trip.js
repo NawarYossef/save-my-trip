@@ -23,10 +23,10 @@ class NewTrip  {
           date: $("#datepicker-1").val(),
         },
         arrival: {
-          city: $("#departure-city").val(),
-          airport: $("#departure-airport").val(),
-          terminal: $("#departure-terminal").val(),
-          gate: $("#departure-gate").val(),
+          city: $("#arrival-city").val(),
+          airport: $("#arrival-airport").val(),
+          terminal: $("#arrival-terminal").val(),
+          gate: $("#arrival-gate").val(),
           date: $("#datepicker-2").val(),
         }
     }
@@ -43,6 +43,7 @@ class NewTrip  {
         $("#new-trip-form")[0].reset();
       })
       .fail(data => {
+        console.log(data)
         console.error("something is wrong")
       })
     });
