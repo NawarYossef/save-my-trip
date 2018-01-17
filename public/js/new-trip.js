@@ -43,7 +43,6 @@ class NewTrip  {
         $("#new-trip-form")[0].reset();
       })
       .fail(data => {
-        console.log(data)
         console.error("something is wrong")
       })
     });

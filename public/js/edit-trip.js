@@ -1,7 +1,6 @@
 "use strict";
 
 class EditTrip  {
-
   init() {
     this.updateNewTrip();
     this.toggleHamburger();
@@ -9,44 +8,33 @@ class EditTrip  {
     this.airportFieldAutocomplete();
   }
 
-  updateNewTrip() {
-    $("#new-trip-form").submit(function(e) {
-      e.preventDefault();
-      const trip = {
-        airline: $("#airline").val(),
-        confirmationCode: $("#confirmation").val(),
-        departure: {
-          city: $("#departure-city").val(),
-          airport: $("#departure-airport").val(),
-          terminal: $("#departure-terminal").val(),
-          gate: $("#departure-gate").val(),
-          date: $("#datepicker-1").val(),
-        },
-        arrival: {
-          city: $("#departure-city").val(),
-          airport: $("#departure-airport").val(),
-          terminal: $("#departure-terminal").val(),
-          gate: $("#departure-gate").val(),
-          date: $("#datepicker-2").val(),
-        }
-    }
+  showTripForUpdate() {
 
-      $.ajax({
-        "type": "PUT",
-        url: 'http://localhost:8081/trips',
-        dataType : "json",
-        contentType: "application/json; charset=utf-8",
-        data : JSON.stringify(trip)
-      })
-      .done(data => {
-        console.log(data)
-        $("#new-trip-form")[0].reset();
-      })
-      .fail(data => {
-        console.log(data)
-        console.error("something is wrong")
-      })
-    });
+  }
+
+  updateNewTrip() {
+    const tripId = this.getTripId();
+    console.log(tripId)
+    $.ajax({
+      url: `http://localhost:8081/trips/${tripId}`,
+      type: 'GET',
+      // data : JSON.stringify(trip)
+    })
+    .done(data => {
+      console.log(data)
+      this.renderData();
+    })
+    .fail(data => {
+      console.error("something is wrong")
+    })
+  }
+
+  getTripId() {
+    return window.location.href.substring(window.location.href.lastIndexOf('=') + 1);
+  }
+
+  renderData() {
+
   }
 
   toggleHamburger() {
