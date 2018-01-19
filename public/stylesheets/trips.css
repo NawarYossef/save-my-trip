@@ -87,7 +87,6 @@ body .airports-wrapper h3 {
 h4 {
   font: normal 1em 'Bree Serif', serif;
   /* font-size: 14px; */
-  margin-top: -2px;
 }
 
 .airline-wrapper {
@@ -171,6 +170,131 @@ h4 {
 .gate {
   float: right;
 }
+
+/* * * * * * * * * * * */
+/*      modal          */
+/* * * * * * * * * * * */
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  position: absolute;
+  left: 22.5%;
+  top: -100px;
+  background-color: #f5f5f5;
+  margin:  5% auto 0 auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 55%; 
+}
+
+.modal-form input {
+  width: 60%;
+}
+
+.modal .heading-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modal-heading {
+margin-bottom: 20px;
+}
+
+.modal h2 {
+  font: normal 1.8em 'Fire-sans', sans-serif;
+}
+
+.modal .h4-wrapper {
+  width: 20%;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  font: normal 1.2em 'Quicksand', sans-serif;
+}
+
+::placeholder {
+  margin: 0px;
+  color: rgb(170, 170, 170)
+}
+
+textarea {
+  resize: none
+}
+
+.modal .input-wrapper {
+  display: inline-block;
+  width: 79%;
+}
+
+.cont-for-info {
+  padding: 0px;
+  margin-bottom: 20px;
+}
+.modal .input-wrapper input, textarea, .modal button {
+  width: 80%;
+  font: normal 1.1em 'Fire-sans', sans-serif;
+  color: rgb(32, 31, 31);
+  text-align: left;
+  padding-left: 3px;
+  margin-bottom: 1px;
+  margin-right: 10%;
+  border-radius: 5px;
+  height: 40px;
+  border: 1px solid rgb(199, 199, 199);
+  outline: none;
+}
+
+#comments {
+  height: 70px;
+}
+
+.btn-send-wrapper {
+  text-align: left;
+}
+
+.modal button {
+  width: 12%;
+  color: #ffffff;
+   margin-left: 5%;
+   height: 35px;
+   text-align: center;
+   background: rgb(40, 107, 206);
+   outline: none;
+   border: none;
+}
+
+.modal h6:hover {
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 /* * * * * * * * * * * * * */
 /*      Control Buttons    */
 /* * * * * * * * * * * * * */
@@ -209,20 +333,10 @@ h4 {
   margin-left: 8px;
 }
 
-
-
-
 .hidden{
   display:none;
 }
 
-
-
-
-
-
-
-/* * * * * * * * * * * * * */
 /* general Media Queries   */
 /* * * * * * * * * * * * * */
 @media screen and (max-width: 320px) {

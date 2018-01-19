@@ -39,11 +39,10 @@ class NewTrip  {
         data : JSON.stringify(trip)
       })
       .done(data => {
-        console.log(data)
+        // reset all form input values after form submission
         $("#new-trip-form")[0].reset();
       })
       .fail(data => {
-        console.log(data)
         console.error("something is wrong")
       })
     });

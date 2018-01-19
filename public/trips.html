@@ -41,6 +41,7 @@
 	</header>
 
 	<main role="main">
+		<!-- show trips -->
 		<div class="h2-wrapper col-12">
 			<h2 class="heading-for-trips">
 				Your Trips
@@ -48,6 +49,59 @@
 		</div>
 		<section class="trips-container">
 			<div class="trip slide-down hidden" id="example-trip">
+				<!-- The Modal -->
+				<div id="my-modal" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<section class="send-email-section col-12">
+							<!-- <div class="sign-up-wrapper col-12"> -->
+							<div class="heading-wrapper col-12">
+								<h2 class="heading-for-login">
+									Email Your Trip Information
+								</h2>
+							</div>
+							<form class="modal-form" action="" method="post" autocomplete="off">
+								<fieldset name="register-info col-12">
+									<div class="cont-for-info col-12">
+										<div class="h4-wrapper">
+											<h4>Name</h4>
+										</div>
+										<div class="input-wrapper">
+											<input type="text" name="name" id="username" placeholder="Enter a name.." required="" class="">
+										</div>
+									</div>
+									<div class="cont-for-info col-12">
+										<div class="h4-wrapper">
+											<h4>Email</h4>
+										</div>
+										<div class="input-wrapper">
+											<input type="email" name="name" id="email" placeholder="example@domain.com" required="" class="">
+										</div>
+									</div>
+									<div class="cont-for-info col-12">
+										<div class="h4-wrapper">
+											<h4 class="message-header">Message</h4>
+										</div>
+										<div class="input-wrapper">
+											<textarea id="comments" placeholder="your message.." required="" class=""></textarea>
+										</div>
+									</div>
+									<div class="cont-for-info col-12">
+										<div class="h4-wrapper">
+											<h4 class="message-header"></h4>
+										</div>
+										<div class="btn-send-wrapper input-wrapper">
+											<button id="send-email-btn" class="email-btn">Send</button>
+										</div>
+									</div>
+								</fieldset>
+								<!-- <button type="submit" class="sign-in-button">Log In</button> -->
+							</form>
+							<!-- </div> -->
+						</section>
+					</div>
+				</div>
 				<div class="trip-header">
 					<div class="confirmation col-4">
 						<div class="confir-wrapper col-6">
@@ -61,7 +115,7 @@
 						<h3 class="depart-airport">${trip.departure.airport}</h3>
 						<i class="fa fa-arrow-right" aria-hidden="true"></i>
 						<h3 class="arrive-airport">${trip.arrival.airport}</h3>
-						<h4>${trip.arrival.date}</h4>
+						<h4 class="departure-date">${trip.arrival.date}</h4>
 					</div>
 
 					<div class="data-wrapper col-4">

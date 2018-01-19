@@ -58,14 +58,14 @@ function generateTripData() {
       city: faker.address.city(),
       airport: generateAirport(),
       terminal: String(faker.random.number()), 
-      gate: faker.random.number(), 
+      gate: String(faker.random.number()), 
       date: faker.date.recent(), 
     }, 
     arrival: {
       city: faker.address.city(),
       airport: generateAirport(), 
       terminal: String(faker.random.number()),
-      gate: faker.random.number(),
+      gate: String(faker.random.number()),
       date: faker.date.future(), 
     }, 
   };

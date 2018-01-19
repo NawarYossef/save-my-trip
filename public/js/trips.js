@@ -6,6 +6,9 @@ class Trips  {
   init() {
     this.getTripEntries();
     this.deleteTrip();
+    this.showEmailModal();
+    this.closeEmailModal();
+    this.sendEmail();
     this.toggleHamburger();
     this.dropDownTripToggleListener();
     this.httpRedirectToEditPage();
@@ -17,6 +20,7 @@ class Trips  {
       type: 'GET'
     })
     .done(data => {
+      console.log(data)
       this.renderTrips(data);
     })
     .fail(data => {
@@ -58,30 +62,43 @@ class Trips  {
       
       tripHTML.removeClass("hidden")
       tripHTML.attr("id", trip.id);
-      // tripHTML.find(".confirmation-text").text(trip.confirmationCode);
-      this.validateConfirmationCode(tripHTML, trip);
+      tripHTML.find(".confirmation-text").text(trip.confirmationCode);
       tripHTML.find(".depart-airport").text(trip.departure.airport);
       tripHTML.find(".arrive-airport").text(trip.arrival.airport);
-      tripHTML.find("h4").text(trip.arrival.date);
+      tripHTML.find(".departure-date").text(trip.departure.date);
       tripHTML.find(".airline-text").text(trip.airline);
       
       tripHTML.find(".depart-date-text").text(trip.departure.date);
       tripHTML.find(".depart-city").text(trip.departure.city);
-      tripHTML.find(".depart-terminal").text(`Terminal: ${trip.departure.terminal}`);
-      tripHTML.find(".depart-gate").text(`Gate: ${trip.departure.gate}`);
+      tripHTML.find(".depart-terminal").text(`Terminal: ${trip.departure.terminal}` || '-');
+      tripHTML.find(".depart-gate").text(`Gate: ${trip.departure.gate}` || '-');
 
       tripHTML.find(".arrive-date-text").text(trip.arrival.date);
       tripHTML.find(".arrive-city").text(trip.arrival.city);
-      tripHTML.find(".arrive-terminal").text(`Terminal: ${trip.arrival.terminal}`);
-      tripHTML.find(".arrive-gate").text(`Gate: ${trip.arrival.gate}`);
+      tripHTML.find(".arrive-terminal").text(`Terminal: ${trip.arrival.terminal}` || '-');
+      tripHTML.find(".arrive-gate").text(`Gate: ${trip.arrival.gate}` || '-');
 
       return tripHTML;
     })
   $(".trips-container").html(allTrips)
   }
 
-  validateConfirmationCode(tripHTML, trip) {
-    trip.confirmationCode !== undefined ? tripHTML.find(".confirmation-text").text(trip.confirmationCode) : null;
+  showEmailModal() {
+    $(".trips-container").on('click', '.email-btn' , () => {
+      $("#my-modal").css("display", "block");
+      $(".modal-content").animate({'top' : '70px'}, 600);
+    })
+  }
+
+  closeEmailModal() {
+    $(".trips-container").on('click', '.close' , function() {
+      $(this).parents().find(".modal").css("display", "none");
+      $(this).parents().find(".modal-content").animate({'top' : '-100px'}, 600);
+    })
+  }
+  
+  sendEmail() {
+    
   }
 
   toggleHamburger() {
