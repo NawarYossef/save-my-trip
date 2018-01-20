@@ -36,6 +36,7 @@ router.get('/:id', (req, res) => {
 // ============== Email GET endpoint ==============
 router.get('/email/:id', (req, res) => {
   sgMail.setApiKey(SENDGRID_API_KEY);
+  console.log(process.env.SENDGRID_API_KEY)
   const msg = {
     to: 'nawaryossef@gmail.com',
     from: 'nawaryossef@gmail.com',
