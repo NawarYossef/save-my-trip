@@ -23,6 +23,13 @@ app.use('*', function(req, res) {
   res.status(404).json({message: 'Not Found'});
 });
 
+// Cross origin resource sharing
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE');
+  next();
+});
 
 // server` object is declared in the global scope
 // because closeServer functions needs access to it.
