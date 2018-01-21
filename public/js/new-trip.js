@@ -41,7 +41,7 @@ class NewTrip  {
       .done(data => {
         this.changeRouteToTripsPage();
         // reset all form input values after form submission
-        $("#new-trip-form")[0].reset();
+        // $("#new-trip-form")[0].reset();
       })
       .fail(data => {
         console.error("something is wrong")
@@ -52,7 +52,7 @@ class NewTrip  {
   changeRouteToTripsPage() {
     window.location.replace(`https://save-my-trip.herokuapp.com/trips.html`)
   }
-  
+
   toggleHamburger() {
     $(".hamburger").click(function() {
       if ($(this).hasClass("is-active")) {
