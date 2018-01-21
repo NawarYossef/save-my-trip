@@ -16,7 +16,7 @@ class Trips  {
 
   getTripEntries() {
     $.ajax({
-      url: "http://localhost:8081/trips",
+      url: "https://save-my-trip.herokuapp.com/trips",
       type: 'GET'
     })
     .done(data => {
@@ -32,7 +32,7 @@ class Trips  {
     $(".trips-container").on('click', '.delete-btn' , () => {
       const tripId = $(this).parents(".trip").attr('id') 
       $.ajax({
-        url: `http://localhost:8081/trips/${tripId}`,
+        url: `https://save-my-trip.herokuapp.com/trips/${tripId}`,
         type: 'DELETE',
         dataType: 'json'
       })
@@ -46,13 +46,13 @@ class Trips  {
   }
 
   changeRouteToTripsPage() {
-    window.location.replace(`http://localhost:8081/trips.html`)
+    window.location.replace(`https://save-my-trip.herokuapp.com/trips.html`)
   }
 
   httpRedirectToEditPage() {
     $(".trips-container").on('click', '.edit-btn' , function() {
       const tripId = $(this).parents(".trip").attr('id') 
-      window.location.replace(`http://localhost:8081/edit-trip.html?tripid=${tripId}`)
+      window.location.replace(`https://save-my-trip.herokuapp.com/edit-trip.html?tripid=${tripId}`)
     })
   }
 
