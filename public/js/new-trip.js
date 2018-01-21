@@ -33,7 +33,7 @@ class NewTrip  {
 
       $.ajax({
         "type": "POST",
-        url: 'http://localhost:8081/trips',
+        url: 'https://save-my-trip.herokuapp.com/trips.html',
         dataType : "json",
         contentType: "application/json; charset=utf-8",
         data : JSON.stringify(trip)

@@ -15,7 +15,7 @@ class EditTrip  {
   getTripData() {
     const tripId = this.getTripId();
     $.ajax({
-      url: `http://localhost:8081/trips/${tripId}`,
+      url: `https://save-my-trip.herokuapp.com/trips/${tripId}`,
       type: 'GET',
     })
     .done(data => {
@@ -74,7 +74,7 @@ class EditTrip  {
 
       $.ajax({
         "type": "PUT",
-        url:`http://localhost:8081/trips/${tripId}`,
+        url:`https://save-my-trip.herokuapp.com/trips/${tripId}`,
         dataType : "json",
         contentType: "application/json; charset=utf-8",
         data : JSON.stringify(trip)
@@ -92,7 +92,7 @@ class EditTrip  {
   }
 
   changeRouteToTripsPage() {
-    window.location.replace(`http://localhost:8081/trips.html`)
+    window.location.replace(`https://save-my-trip.herokuapp.com/trips.html`)
   }
 
   toggleHamburger() {
