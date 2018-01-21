@@ -10,7 +10,7 @@ class NewTrip  {
   }
 
   postNewTrip() {
-    $("#new-trip-form").submit(function(e) {
+    $("#new-trip-form").submit((e) => {
       e.preventDefault();
       const trip = {
         airline: $("#airline").val(),
