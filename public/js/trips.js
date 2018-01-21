@@ -31,6 +31,7 @@ class Trips  {
   deleteTrip() {
     $(".trips-container").on('click', '.delete-btn' , () => {
       const tripId = $(this).parents(".trip").attr('id') 
+      console.log(tripId)
       $.ajax({
         url: `https://save-my-trip.herokuapp.com/trips/${tripId}`,
         type: 'DELETE',
