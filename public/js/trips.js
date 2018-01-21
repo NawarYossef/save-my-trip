@@ -20,7 +20,6 @@ class Trips  {
       type: 'GET'
     })
     .done(data => {
-      console.log(data)
       this.renderTrips(data);
     })
     .fail(data => {
@@ -29,16 +28,16 @@ class Trips  {
   }
 
   deleteTrip() {
-    $(".trips-container").on('click', '.delete-btn' , () => {
-      const tripId = $(this).parents(".trip").attr('id') 
-      console.log(tripId)
+    const that = this;
+    $(".trips-container").on('click', '.delete-btn' , function() {
+      const tripId = $(this).parents(".trip").attr('id')  
       $.ajax({
         url: `https://save-my-trip.herokuapp.com/trips/${tripId}`,
         type: 'DELETE',
         dataType: 'json'
       })
       .done(data => {
-        this.changeRouteToTripsPage();
+        that.changeRouteToTripsPage();
       })
       .fail(data => {
         console.error("something is wrong")
