@@ -1,5 +1,4 @@
 "use strict";
-console.log(334);
 
 class Trips  {
 
