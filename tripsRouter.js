@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
-const sgMail = require('@sendgrid/mail');
+// const sgMail = require('@sendgrid/mail');
 
 const {Trip} = require('./models');
 // ============== GET endpoint ==============
