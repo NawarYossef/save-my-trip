@@ -15,13 +15,7 @@ mongoose.Promise = global.Promise;
 const app = express();
 app.use(bodyParser.json());
 app.use(morgan("common"));
-app.use(express.static('public'));
 
-app.use('/trips', tripsRouter);
-
-app.use('*', function(req, res) {
-  res.status(404).json({message: 'Not Found'});
-});
 
 // Cross origin resource sharing
 app.use(function (req, res, next) {
@@ -30,6 +24,15 @@ app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE');
   next();
 });
+
+app.use(express.static('public'));
+
+app.use('/trips', tripsRouter);
+
+app.use('*', function(req, res) {
+  res.status(404).json({message: 'Not Found'});
+});
+
 
 // server` object is declared in the global scope
 // because closeServer functions needs access to it.
