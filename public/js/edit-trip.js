@@ -82,7 +82,7 @@ class EditTrip  {
       .done(data => {
         console.log(data)
         // $("#new-trip-form")[0].reset();
-        this.changeRouteToTripsPage();
+        // this.changeRouteToTripsPage();
       })
       .fail(data => {
         console.log(data)
