@@ -1,10 +1,8 @@
 "use strict"
-
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
-
 const {SENDGRID_API_KEY} = require("./config");
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(SENDGRID_API_KEY);
@@ -37,6 +35,8 @@ router.get('/:id', (req, res) => {
       res.status(500).json({error: 'something went horribly awry'});
     });
 });
+
+
 
 // ============== Email POST endpoint ==============
 router.post('/email/:id', (req, res) => {

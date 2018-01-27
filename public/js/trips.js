@@ -139,17 +139,19 @@ class Trips  {
   }
 
   emailSentMessage() {
-    $(".send-email-section").fadeOut("fast", () => {
-      $(".cont-for-success-message ").fadeIn();
-    }) 
+    $(".send-email-section").css("display", "none");
+    $(".cont-for-success-message ").fadeIn(); 
     this.clearEmailSuccessMessage();
   }
 
   clearEmailSuccessMessage() {
     setTimeout(() => {
       $("#my-modal").removeClass("animated slideInDown").addClass('animated fadeOutRight');
-      $(".cont-for-success-message ").css("display", "none");
     }, 1500)
+
+    setTimeout(() => {
+      $(".cont-for-success-message ").css("display", "none");
+    }, 2000)
   }
 
   changeRouteToTripsPage() {

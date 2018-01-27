@@ -273,6 +273,9 @@ textarea {
   padding: 15px;
 }
 
+.fa-check {
+  margin-right: 5px;
+}
 .btn-send-wrapper {
   text-align: left;
 }
