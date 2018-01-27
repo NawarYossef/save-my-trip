@@ -1,6 +1,9 @@
 "use strict";
 
 class Trips  {
+  constructor() {
+    this.state = {currentTripId: ''}
+  }
 
   init() {
     this.getTripEntries();
@@ -15,7 +18,7 @@ class Trips  {
 
   getTripEntries() {
     $.ajax({
-      url: "https://save-my-trip.herokuapp.com/trips",
+      url: "/trips",
       type: 'GET'
     })
     .done(data => {
@@ -31,7 +34,7 @@ class Trips  {
     $(".trips-container").on('click', '.delete-btn' , function() {
       const tripId = $(this).parents(".trip").attr('id')  
       $.ajax({
-        url: `https://save-my-trip.herokuapp.com/trips/${tripId}`,
+        url: `/trips/${tripId}`,
         type: 'DELETE',
         dataType: 'json'
       })
@@ -45,13 +48,13 @@ class Trips  {
   }
 
   changeRouteToTripsPage() {
-    window.location.replace(`https://save-my-trip.herokuapp.com/trips.html`)
+    window.location.replace(`/trips.html`)
   }
 
   httpRedirectToEditPage() {
     $(".trips-container").on('click', '.edit-btn' , function() {
       const tripId = $(this).parents(".trip").attr('id') 
-      window.location.replace(`https://save-my-trip.herokuapp.com/edit-trip.html?tripid=${tripId}`)
+      window.location.replace(`/edit-trip.html?tripid=${tripId}`)
     })
   }
 
@@ -83,26 +86,64 @@ class Trips  {
   }
 
   showEmailModal() {
-    $(".trips-container").on('click', '.email-btn' , () => {
+    const that = this
+    $(".trips-container").on('click', '.email' , function() {
+      // save the trip id 
+      that.state.currentTripId = $(this).parents(".trip").attr('id') 
+
       $("#my-modal").css("display", "block");
       $(".modal-content").animate({'top' : '70px'}, 600);
     })
   }
 
   closeEmailModal() {
+    const that = this
     $(".trips-container").on('click', '.close' , function() {
+      // reset the value of trip id when modal is closed
+      that.state.currentTripId = '';
       $(this).parents().find(".modal").css("display", "none");
       $(this).parents().find(".modal-content").animate({'top' : '-100px'}, 600);
     })
   }
   
   sendEmail() {
-    
+    const that = this;
+    $(".trips-container").on('click', "#send-email-btn" , function() { 
+      const emailInfo = {
+        email: $("#email").val(),
+        message: $("#comments").val() 
+      }
+
+      // reset modal input values 
+      $("#email").val('')
+      $("#comments").val('')
+
+      $.ajax({
+        "type": "POST",
+        url: `/trips/email/${that.state.currentTripId}`,
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(emailInfo),
+      })
+      .done((data) => {
+        console.log(data)
+        // that.changeRouteToTripsPage();
+        // reset all form input values after form submission
+        // $("#new-trip-form")[0].reset();
+      })
+      .fail((data) => {
+        console.error("something is wrong")
+      })
+    })
+  }
+
+  changeRouteToTripsPage() {
+    window.location.replace(`/trips.html`)
   }
 
   toggleHamburger() {
     $(".hamburger").click(function() {
-      if ($(this).hasClass("is-active")) {
+      if ($(this).hasClass("is-active")) {  
         $(this).removeClass("is-active");
       } else {
         $(this).addClass("is-active");

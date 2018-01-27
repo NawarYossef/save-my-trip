@@ -265,7 +265,7 @@ textarea {
   text-align: left;
 }
 
-.modal button {
+.modal #send-email-btn {
   width: 12%;
   color: #ffffff;
    margin-left: 5%;
@@ -316,7 +316,7 @@ textarea {
   background: rgb(153, 83, 21);
 }
 
-.email-btn {
+.email {
   border: none;
 }
 

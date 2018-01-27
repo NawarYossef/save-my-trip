@@ -33,7 +33,7 @@ class NewTrip  {
 
       $.ajax({
         "type": "POST",
-        url: 'https://save-my-trip.herokuapp.com/trips',
+        url: '/trips',
         dataType : "json",
         contentType: "application/json; charset=utf-8",
         data : JSON.stringify(trip)
@@ -50,7 +50,7 @@ class NewTrip  {
   }
 
   changeRouteToTripsPage() {
-    window.location.replace(`https://save-my-trip.herokuapp.com/trips.html`)
+    window.location.replace(`/trips.html`)
   }
 
   toggleHamburger() {

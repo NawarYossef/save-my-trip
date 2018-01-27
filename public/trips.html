@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="./stylesheets/hamburger.css">
+	<link rel="stylesheet" href="stylesheets/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="./stylesheets/grid.css">
 	<link rel="stylesheet" type="text/css" href="./stylesheets/trips.css">
 </head>
@@ -61,16 +62,16 @@
 									Email Your Trip Information
 								</h2>
 							</div>
-							<form class="modal-form" action="" method="post" autocomplete="off">
+							<section class="modal-form" action="" id="#email-trip-form" autocomplete="off">
 								<fieldset name="register-info col-12">
-									<div class="cont-for-info col-12">
+									<!-- <div class="cont-for-info col-12">
 										<div class="h4-wrapper">
 											<h4>Name</h4>
 										</div>
 										<div class="input-wrapper">
 											<input type="text" name="name" id="username" placeholder="Enter a name.." required="" class="">
 										</div>
-									</div>
+									</div> -->
 									<div class="cont-for-info col-12">
 										<div class="h4-wrapper">
 											<h4>Email</h4>
@@ -92,12 +93,12 @@
 											<h4 class="message-header"></h4>
 										</div>
 										<div class="btn-send-wrapper input-wrapper">
-											<button id="send-email-btn" class="email-btn">Send</button>
+											<button type="button" id="send-email-btn" class="send-email-button">Send</button>
 										</div>
 									</div>
 								</fieldset>
 								<!-- <button type="submit" class="sign-in-button">Log In</button> -->
-							</form>
+							</section>
 							<!-- </div> -->
 						</section>
 					</div>
@@ -156,7 +157,7 @@
 							Delete
 							<i class="fa fa-trash-o" aria-hidden="true"></i>
 						</button>
-						<button class="col-4 email-btn">
+						<button class="col-4 email">
 							Email
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</button>

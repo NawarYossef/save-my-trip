@@ -1,10 +1,16 @@
+"use strict"
+
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
-// const sgMail = require('@sendgrid/mail');
+
+const {SENDGRID_API_KEY} = require("./config");
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(SENDGRID_API_KEY);
 
 const {Trip} = require('./models');
+
 // ============== GET endpoint ==============
 router.get('/', (req, res) => {
 Trip
@@ -32,29 +38,26 @@ router.get('/:id', (req, res) => {
     });
 });
 
-
-// ============== Email GET endpoint ==============
-router.get('/email/:id', (req, res) => {
-  sgMail.setApiKey(SENDGRID_API_KEY);
-  console.log(process.env.SENDGRID_API_KEY)
-  const msg = {
-    to: 'nawaryossef@gmail.com',
-    from: 'nawaryossef@gmail.com',
-    subject: 'Sending with SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js',
-    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-  };
-  sgMail.send(msg);
-  
+// ============== Email POST endpoint ==============
+router.post('/email/:id', (req, res) => {
   Trip
     .findById(req.params.id)
-    .then(trip => console.log(trip.arrival))
+    .then(trip => {
+      const msg = {
+        to: "nawaryossef2@gmail.com",
+        // from: req.user.email,
+        from: "nawaryossef2@gmail.com",
+        subject: 'Sending with SendGrid is Fun',
+        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+      };
+      sgMail.send(msg);  
+      res.json({trip, message: "Email sent"})
+    })
     .catch(err => {
       console.error(err);
       res.status(500).json({error: 'something went horribly awry'});
-    });
+    }); 
 })
-
 
 // ============== POST endpoint ==============
 router.post('/', (req, res) => {
@@ -119,3 +122,4 @@ router.delete('/:id', (req, res) => {
 });
 
 module.exports = router;
+
