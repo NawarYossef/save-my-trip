@@ -192,7 +192,6 @@ h4 {
 .modal-content {
   position: absolute;
   left: 22.5%;
-  top: -100px;
   background-color: #f5f5f5;
   margin:  5% auto 0 auto; 
   padding: 20px;
@@ -234,14 +233,18 @@ textarea {
   resize: none
 }
 
-.modal .input-wrapper {
+.modal .input-wrapper, .modal .message-wrapper {
   display: inline-block;
   width: 79%;
 }
 
-.cont-for-info {
+.cont-for-info, .cont-for-success-message {
   padding: 0px;
   margin-bottom: 20px;
+}
+
+.cont-for-success-message  {
+  display: none;
 }
 .modal .input-wrapper input, textarea, .modal button {
   width: 80%;
@@ -259,6 +262,15 @@ textarea {
 
 #comments {
   height: 70px;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 15px;
 }
 
 .btn-send-wrapper {

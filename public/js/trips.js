@@ -90,9 +90,10 @@ class Trips  {
     $(".trips-container").on('click', '.email' , function() {
       // save the trip id 
       that.state.currentTripId = $(this).parents(".trip").attr('id') 
-
+      $(".send-email-section").css("display", "block");
       $("#my-modal").css("display", "block");
-      $(".modal-content").animate({'top' : '70px'}, 600);
+      $('#my-modal').addClass('animated slideInDown');
+      // $(".modal-content").animate({'top' : '70px'}, 600);
     })
   }
 
@@ -101,8 +102,7 @@ class Trips  {
     $(".trips-container").on('click', '.close' , function() {
       // reset the value of trip id when modal is closed
       that.state.currentTripId = '';
-      $(this).parents().find(".modal").css("display", "none");
-      $(this).parents().find(".modal-content").animate({'top' : '-100px'}, 600);
+      $("#my-modal").removeClass("animated slideInDown").addClass('animated fadeOutRight');
     })
   }
   
@@ -127,6 +127,7 @@ class Trips  {
       })
       .done((data) => {
         console.log(data)
+        that.emailSentMessage();
         // that.changeRouteToTripsPage();
         // reset all form input values after form submission
         // $("#new-trip-form")[0].reset();
@@ -135,6 +136,20 @@ class Trips  {
         console.error("something is wrong")
       })
     })
+  }
+
+  emailSentMessage() {
+    $(".send-email-section").fadeOut("fast", () => {
+      $(".cont-for-success-message ").fadeIn();
+    }) 
+    this.clearEmailSuccessMessage();
+  }
+
+  clearEmailSuccessMessage() {
+    setTimeout(() => {
+      $("#my-modal").removeClass("animated slideInDown").addClass('animated fadeOutRight');
+      $(".cont-for-success-message ").css("display", "none");
+    }, 1500)
   }
 
   changeRouteToTripsPage() {
