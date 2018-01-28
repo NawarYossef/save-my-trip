@@ -158,15 +158,15 @@ class Trips  {
     window.location.replace(`/trips.html`)
   }
 
-  toggleHamburger() {
-    $(".hamburger").click(function() {
-      if ($(this).hasClass("is-active")) {  
-        $(this).removeClass("is-active");
-      } else {
-        $(this).addClass("is-active");
-      }
-    })
-  }
+  // toggleHamburger() {
+  //   $(".hamburger").click(function() {
+  //     if ($(this).hasClass("is-active")) {  
+  //       $(this).removeClass("is-active");
+  //     } else {
+  //       $(this).addClass("is-active");
+  //     }
+  //   })
+  // }
 
   dropDownTripToggleListener() {
     $('.trip-header').addClass("slide-down");
