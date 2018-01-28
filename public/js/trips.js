@@ -10,7 +10,7 @@ class Trips  {
     this.deleteTrip();
     this.showEmailModal();
     this.closeEmailModal();
-    this.sendEmail();
+    this.emailHandler();
     this.toggleHamburger();
     this.dropDownTripToggleListener();
     this.httpRedirectToEditPage();
@@ -106,15 +106,19 @@ class Trips  {
     })
   }
   
-  sendEmail() {
+  emailHandler() {
     const that = this;
-    $(".trips-container").on('click', "#send-email-btn" , function() { 
+    $(".modal-form").submit(function(e) { 
+      e.preventDefault()
+      // store input values in order to send it in the POST request
       const emailInfo = {
+        title: $("#title").val(),
         email: $("#email").val(),
         message: $("#comments").val() 
       }
 
       // reset modal input values 
+      $("#title").val('')
       $("#email").val('')
       $("#comments").val('')
 
@@ -126,11 +130,7 @@ class Trips  {
         data: JSON.stringify(emailInfo),
       })
       .done((data) => {
-        console.log(data)
-        that.emailSentMessage();
-        // that.changeRouteToTripsPage();
-        // reset all form input values after form submission
-        // $("#new-trip-form")[0].reset();
+        that.handleEmailSentMessage();
       })
       .fail((data) => {
         console.error("something is wrong")
@@ -138,7 +138,7 @@ class Trips  {
     })
   }
 
-  emailSentMessage() {
+  handleEmailSentMessage() {
     $(".send-email-section").css("display", "none");
     $(".cont-for-success-message ").fadeIn(); 
     this.clearEmailSuccessMessage();

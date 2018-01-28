@@ -40,6 +40,7 @@ router.get('/:id', (req, res) => {
 
 // ============== Email POST endpoint ==============
 router.post('/email/:id', (req, res) => {
+  console.log(req.body)
   Trip
     .findById(req.params.id)
     .then(trip => {
@@ -47,8 +48,18 @@ router.post('/email/:id', (req, res) => {
         to: "nawaryossef2@gmail.com",
         // from: req.user.email,
         from: "nawaryossef2@gmail.com",
-        subject: 'Sending with SendGrid is Fun',
-        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+        subject: `${JSON.stringify(req.body.title)}`,
+        text: "Hey Hey Hey ",
+        html: `<div>
+                <h4>${JSON.stringify(req.body.message)}</h4>
+                <h2>Trip Information</h2><br>
+                <p><strong>Origin: </strong>${trip.departure.city}</p><br>
+                <p><strong>Destination: </strong>${trip.arrival.city}</p><br>
+                <p>Confirmation: ${trip.confirmationCode}</p><br>
+                <p>Airlines: ${trip.airline}</p><br>
+                <p>Departure-date and Time: ${trip.departure.date}</p><br>
+                <p>Arrival-date and Time: ${trip.arrival.date}</p><br>
+              </div>`,
       };
       sgMail.send(msg);  
       res.json({trip, message: "Email sent"})

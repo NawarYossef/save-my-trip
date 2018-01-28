@@ -264,6 +264,10 @@ textarea {
   height: 70px;
 }
 
+input:focus {
+  background: #ffffff;
+}
+
 .alert-success {
   color: #3c763d;
   background-color: #dff0d8;

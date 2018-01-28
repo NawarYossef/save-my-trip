@@ -62,7 +62,7 @@
 									Email Your Trip Information
 								</h2>
 							</div>
-							<section class="modal-form" action="" id="#email-trip-form" autocomplete="off">
+							<form class="modal-form" action="" id="#email-trip-form" autocomplete="off">
 								<div name="register-info col-12">
 									<!-- <div class="cont-for-info col-12">
 										<div class="h4-wrapper">
@@ -82,10 +82,18 @@
 									</div>
 									<div class="cont-for-info col-12">
 										<div class="h4-wrapper">
+											<h4>Title</h4>
+										</div>
+										<div class="input-wrapper">
+											<input type="text" name="name" id="title" placeholder="Enter a name.." class="">
+										</div>
+									</div>
+									<div class="cont-for-info col-12">
+										<div class="h4-wrapper">
 											<h4 class="message-header">Message</h4>
 										</div>
 										<div class="input-wrapper">
-											<textarea id="comments" placeholder="your message.." required="" class=""></textarea>
+											<textarea id="comments" placeholder="your message.." class=""></textarea>
 										</div>
 									</div>
 									<div class="cont-for-info col-12">
@@ -93,25 +101,15 @@
 											<h4 class="message-header"></h4>
 										</div>
 										<div class="btn-send-wrapper input-wrapper">
-											<button type="button" id="send-email-btn" class="send-email-button">Send</button>
+											<button type="submit" id="send-email-btn" class="send-email-button">Send</button>
 										</div>
 									</div>
 								</div>
-								<!-- <button type="submit" class="sign-in-button">Log In</button> -->
-							</section>
-							<!-- </div> -->
+							</form>
 						</section>
 
 							<!-- success message modal content -->
 							<div name="success-info col-12">
-								<!-- <div class="cont-for-info col-12">
-									<div class="h4-wrapper">
-										<h4>Name</h4>
-									</div>
-									<div class="input-wrapper">
-										<input type="text" name="name" id="username" placeholder="Enter a name.." required="" class="">
-									</div>
-								</div> -->
 								<div class="cont-for-success-message alert-success col-12">
 									<div class="message-wrapper">
 										<strong><i class="fa fa-check" aria-hidden="true"></i>Success!</strong> Your Email was sent.
