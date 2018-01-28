@@ -104,7 +104,7 @@ body header {
   position: relative;
   text-align: center;
   height: 50px;
-  background-color: rgba(0,0,0,0.6);
+  background-color: #ffffff;
 }
 
 body header nav {
