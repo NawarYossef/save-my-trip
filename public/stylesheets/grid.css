@@ -142,7 +142,7 @@ body header .h1-wrapper {
 }
 
 body header h1 {
-  color: #ffffff;
+  color: #000000;
   font: italic 1.8em 'Merriweather', serif;
   padding: 5px; 
 }
