@@ -23,6 +23,9 @@ class Trips  {
     $.ajax({
       url: "/trips",
       type: 'GET'
+      // headers: {
+      //   "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoibmFtZSIsImZpcnN0TmFtZSI6ImZpcnN0bmFtZSIsImxhc3ROYW1lIjoibGFzdG5hbWUifSwiaWF0IjoxNTE3MjQ3ODQ1LCJleHAiOjE1MTc4NTI2NDUsInN1YiI6Im5hbWUifQ.4FitM7W75z9VYPK1RDw1u6p-S3OM5bi_n5-N1SUd4Ww"
+      // } 
     })
     .done(data => {
       this.renderTrips(data);

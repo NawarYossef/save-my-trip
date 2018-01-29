@@ -4,11 +4,15 @@ const bodyParser = require('body-parser');
 const express = require("express");
 const mongoose = require('mongoose');
 const morgan = require("morgan")
+const passport = require("passport")
 
 
 const tripsRouter = require('./tripsRouter');
 const {PORT, DATABASE_URL} = require("./config");
 const {Trip} = require("./models")
+
+const { router: usersRouter } = require('./users');
+const { router: authRouter, localStrategy, jwtStrategy } = require('./auth');
 
 mongoose.Promise = global.Promise;
 
@@ -27,7 +31,14 @@ app.use(function (req, res, next) {
 
 app.use(express.static('public'));
 
+passport.use(localStrategy);
+passport.use(jwtStrategy);
+
+app.use('/api/users/', usersRouter);
+app.use('/api/auth/', authRouter);
+
 app.use('/trips', tripsRouter);
+
 
 app.use('*', function(req, res) {
   res.status(404).json({message: 'Not Found'});

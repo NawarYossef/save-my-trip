@@ -1,16 +1,19 @@
 "use strict"
 const express = require('express');
+const passport = require("passport")
 const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
+
 const {SENDGRID_API_KEY} = require("./config");
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(SENDGRID_API_KEY);
 
 const {Trip} = require('./models');
+const jwtAuth = passport.authenticate('jwt', { session: false });
 
 // ============== GET endpoint ==============
-router.get('/', (req, res) => {
+router.get('/', jwtAuth, (req, res) => {
 Trip
   .find()
   // call the `.serialize` instance method we've created in

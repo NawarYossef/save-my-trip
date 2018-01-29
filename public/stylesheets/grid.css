@@ -151,7 +151,7 @@ body header .h1-wrapper {
 
 .header-wrapper {
   padding-left: 30px;
-  padding-right: 30px;
+  padding-right: 0px;
 }
 
 body header h1 {
