@@ -8,7 +8,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-	<link rel="stylesheet" href="./stylesheets/hamburger.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="./stylesheets/grid.css">
 	<link rel="stylesheet" type="text/css" href="./stylesheets/trips.css">
@@ -18,13 +17,13 @@
 		<div class="header-wrapper col-12">
 			<nav>
 				<ul class=" ul-header">
-					<li class="">
+					<li class="trips">
 						<a href="#" class="hvr-underline-from-center">Trips</a>
 					</li>
-					<li class="">
+					<li class="new-trip">
 						<a href="#" class="hvr-underline-from-center">New Trip</a>
 					</li>
-					<li class="log-in">
+					<li class="log-out">
 						<a href="#" class="hvr-underline-from-center">Log Out</a>
 					</li>
 				</ul>
@@ -33,11 +32,23 @@
 			<div class="h1-wrapper">
 				<h1>SaveMyTrip</h1>
 			</div>
-			<button class="hamburger hamburger--spin noSelect" type="button">
-				<div></div>
-				<div></div>
-				<div></div>
+			<!-- hamburger icon -->
+			<button class="hamburger" type="button">
+				<div class="hamburger-line"></div>
+				<div class="hamburger-line"></div>
+				<div class="hamburger-line"></div>
 			</button>
+
+			<!-- sidebar  -->
+			<section class="side-menu-nav">
+					<p class="close-side-bar"><span>&times;</span>Close</p>
+				<ul>
+					<li class="trips"><a>Trips</a></li>
+					<li class="new-trip"><a>New Trip</a></li>
+					<!-- <li class="booking"><a>Booking</a></li> -->
+					<li class="log-out"><a>Log Out</a></li>
+				</ul>
+			</section>
 		</div>
 	</header>
 

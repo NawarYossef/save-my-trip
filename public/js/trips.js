@@ -11,9 +11,12 @@ class Trips  {
     this.showEmailModal();
     this.closeEmailModal();
     this.emailHandler();
-    this.toggleHamburger();
     this.dropDownTripToggleListener();
     this.httpRedirectToEditPage();
+    this.showSidebar();
+    this.hideSidebar();
+    this.navbarNavigation();
+    this.sidebarNavigation(); 
   }
 
   getTripEntries() {
@@ -85,6 +88,65 @@ class Trips  {
   $(".trips-container").html(allTrips)
   }
 
+  showSidebar() {
+    $(".hamburger").click(() => {
+      $(".side-menu-nav").removeClass("animated slideOutRight")
+      $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInRight")
+    })
+  }
+
+  hideSidebar() {
+    $(".close-side-bar").click(() => {
+      $(".side-menu-nav").fadeOut().addClass("animated slideOutRight")
+    })
+  }
+
+  navbarNavigation() {
+    $('nav').on('click', '.trips, .new-trip, .log-out, .booking', function(e) {
+      e.preventDefault();
+
+      switch(true) {
+        case $(this).hasClass("trips"):
+          window.location.replace(`/trips.html`);
+          break;
+        case $(this).hasClass("new-trip"):
+          window.location.replace(`/new-trip.html`)
+          break;
+        case $(this).hasClass("log-out"):
+          window.location.replace(`/`)
+          break;
+        case $(this).hasClass("booking"):
+          window.location.replace(`/booking.html`)
+          break;
+        default:
+          // do nothing
+      }
+    });
+  }
+
+  sidebarNavigation() {
+    $('.side-menu-nav').on('click', '.trips, .new-trip, .log-out, .booking', function(e) {
+      e.preventDefault();
+      console.log($(this).hasClass("new-trip"))
+      switch(true) {
+        case $(this).hasClass("trips"):
+          window.location.replace(`/trips.html`);
+          break;
+        case $(this).hasClass("new-trip"):
+          window.location.replace(`/new-trip.html`)
+          break;
+        case $(this).hasClass("log-out"):
+          window.location.replace(`/`)
+          break;
+        case $(this).hasClass("booking"):
+          window.location.replace(`/booking.html`)
+          break;
+        default:
+          // do nothing
+      }
+  });
+}
+
   showEmailModal() {
     const that = this
     $(".trips-container").on('click', '.email' , function() {
@@ -93,7 +155,6 @@ class Trips  {
       $(".send-email-section").css("display", "block");
       $("#my-modal").css("display", "block");
       $('#my-modal').addClass('animated slideInDown');
-      // $(".modal-content").animate({'top' : '70px'}, 600);
     })
   }
 
@@ -158,15 +219,6 @@ class Trips  {
     window.location.replace(`/trips.html`)
   }
 
-  // toggleHamburger() {
-  //   $(".hamburger").click(function() {
-  //     if ($(this).hasClass("is-active")) {  
-  //       $(this).removeClass("is-active");
-  //     } else {
-  //       $(this).addClass("is-active");
-  //     }
-  //   })
-  // }
 
   dropDownTripToggleListener() {
     $('.trip-header').addClass("slide-down");

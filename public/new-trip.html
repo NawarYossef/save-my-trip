@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./stylesheets/hamburger.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/new-trip.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/confetti.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.min.js"></script>
   <script src="https://unpkg.com/fuse.js@2.5.0/src/fuse.min.js"></script>
@@ -21,13 +22,13 @@
     <div class="header-wrapper col-12">
       <nav class="">
         <ul class=" ul-header">
-          <li class="">
+          <li class="trips">
             <a href="#" class="hvr-underline-from-center">Trips</a>
           </li>
-          <li class="">
+          <li class="new-trip">
             <a href="#" class="hvr-underline-from-center">New Trip</a>
           </li>
-          <li class="log-in">
+          <li class="log-out">
             <a href="#" class="hvr-underline-from-center">Log Out</a>
           </li>
         </ul>
@@ -36,11 +37,23 @@
       <div class="h1-wrapper">
         <h1>SaveMyTrip</h1>
       </div>
-      <button class="hamburger hamburger--spin noSelect" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>  
+      <!-- hamburger icon -->
+			<button class="hamburger" type="button">
+				<div class="hamburger-line"></div>
+				<div class="hamburger-line"></div>
+				<div class="hamburger-line"></div>
+			</button>
+
+			<!-- sidebar  -->
+			<section class="side-menu-nav">
+					<p class="close-side-bar"><span>&times;</span>Close</p>
+          <ul>
+            <li class="trips"><a>Trips</a></li>
+            <li class="new-trip"><a>New Trip</a></li>
+            <li class="booking"><a>Booking</a></li>
+            <li class="log-out"><a>Log Out</a></li>
+          </ul>
+			</section> 
     </div>
   </header>
 

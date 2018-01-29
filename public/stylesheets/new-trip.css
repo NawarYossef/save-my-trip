@@ -5,6 +5,17 @@
   padding-top: 50px;
 }
 
+.hamburger {
+  width: 45px;
+  margin-right: 10px;
+  margin-top: 8px;
+  border: solid #cbcbcb 0.5px;
+  border-radius: 5px;
+  vertical-align: center;
+  float: right;
+  outline: none;
+}
+
 .h2-wrapper, .h3-wrapper  {
   text-align: center; 
 }
@@ -228,13 +239,13 @@ legend {
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  body header nav {
+  body header button.hamburger {
     display: none;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  body header nav {
+  body header button.hamburger {
     display: none;
   }
 }

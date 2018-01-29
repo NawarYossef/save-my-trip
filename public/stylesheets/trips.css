@@ -1,7 +1,7 @@
 /* * * * * * * * * * * */
 /*      main            */
 /* * * * * * * * * * * */
- main {
+main {
   width: 60%;
   display: inline-block;
   margin: 100px auto 0 auto;
@@ -387,13 +387,13 @@ input:focus {
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  body header nav {
+  body header button.hamburger {
     display: none;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  body header nav {
+  body header button.hamburger {
     display: none;
   }
 }

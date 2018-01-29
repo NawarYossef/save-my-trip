@@ -6,10 +6,54 @@ class EditTrip  {
     this.toggleHamburger();
     this.initializeDateAndTimePicker();
     this.airportFieldAutocomplete();
+    this.showSidebar();
+    this.hideSidebar();
   }
 
-  showTripForUpdate() {
+  navbarNavigation() {
+    $('nav').on('click', '.trips, .new-trip, .log-out, .booking', function(e) {
+      e.preventDefault();
 
+      switch(true) {
+        case $(this).hasClass("trips"):
+          window.location.replace(`/trips.html`);
+          break;
+        case $(this).hasClass("new-trip"):
+          window.location.replace(`/new-trip.html`)
+          break;
+        case $(this).hasClass("log-out"):
+          window.location.replace(`/`)
+          break;
+        case $(this).hasClass("booking"):
+          window.location.replace(`/booking.html`)
+          break;
+        default:
+          // do nothing
+      }
+    });
+  }
+
+  sidebarNavigation() {
+    $('.side-menu-nav').on('click', '.trips, .new-trip, .log-out, .booking', function(e) {
+      e.preventDefault();
+      console.log($(this).hasClass("new-trip"))
+      switch(true) {
+        case $(this).hasClass("trips"):
+          window.location.replace(`/trips.html`);
+          break;
+        case $(this).hasClass("new-trip"):
+          window.location.replace(`/new-trip.html`)
+          break;
+        case $(this).hasClass("log-out"):
+          window.location.replace(`/`)
+          break;
+        case $(this).hasClass("booking"):
+          window.location.replace(`/booking.html`)
+          break;
+        default:
+          // do nothing
+      }
+    });
   }
 
   getTripData() {
@@ -89,6 +133,19 @@ class EditTrip  {
         console.error("something is wrong")
       })
     });
+  }
+
+  showSidebar() {
+    $(".hamburger").click(() => {
+      $(".side-menu-nav").removeClass("animated slideOutRight")
+      $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInRight")
+    })
+  }
+
+  hideSidebar() {
+    $(".close-side-bar").click(() => {
+      $(".side-menu-nav").fadeOut().addClass("animated slideOutRight")
+    })
   }
 
   changeRouteToTripsPage() {
