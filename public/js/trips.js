@@ -144,8 +144,8 @@ class Trips  {
         default:
           // do nothing
       }
-  });
-}
+    });
+  }
 
   showEmailModal() {
     const that = this
