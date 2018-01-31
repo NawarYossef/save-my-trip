@@ -1,7 +1,10 @@
 "use strict";
 
 class NewTrip  {
-
+  constructor() {
+    this.token = localStorage.getItem("token");
+  }
+  
   init() {
     this.postNewTrip();
     this.toggleHamburger();
@@ -38,7 +41,10 @@ class NewTrip  {
         url: '/trips',
         dataType : "json",
         contentType: "application/json; charset=utf-8",
-        data : JSON.stringify(trip)
+        data : JSON.stringify(trip),
+        headers: {
+          "Authorization": `Bearer ${token}`
+        } 
       })
       .done(data => {
         this.changeRouteToTripsPage();

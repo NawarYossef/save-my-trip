@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Fire+Sans|Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 </head>
 
@@ -59,14 +60,14 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <section class="sign-up-section col-12">
-          <div class="sign-up-wrapper col-12">
+          <div class="sign-in-wrapper col-12">
               <div class="heading-wrapper col-12">
                   <h2 class="heading-for-login">
                     Login
                   </h2>
                   <h4>Enter your credentials to access your account.</h4>
                 </div>
-            <form class="modal-form" action="" method="post" autocomplete="off">
+            <form class="modal-form log-in" action="" method="post" autocomplete="off">
               <fieldset name="register-info">
                 <input type="text" name="username" id="sign-in-username" placeholder="User Name" required="" class="">
                 <input type="password" name="password" id="sign-in-password" placeholder="Password" required="" class="">
@@ -85,7 +86,7 @@
   <main role="main" class="">
     <section class=" about-section col-12">
       <div class="h2-wrapper col-12">
-        <h2 class="heading-for-trips">
+        <h2 class="heading-for-about">
           Plan your next business, road trip or weekend getaway
         </h2>
       </div>
@@ -127,9 +128,8 @@
     </section>
     <section class="sign-up-section col-12">
       <div class="sign-up-heading-wrapper col-12">
-        <h2 class="heading-for-trips" id="sign-up">
-          Sign Up
-        </h2>
+        <h2 class="heading-for-trips" id="sign-up">Sign Up</h2>
+        <h2 class="heading-for-trips-login" id="">Thank you for signing up!</h2>
       </div>
       <div class="sign-up-wrapper col-12">
         <form class="register" action="" method="post" autocomplete="off">
@@ -138,11 +138,23 @@
             <input type="text" name="name" id="lastName" placeholder="Last Name" required="" class="">
             <input type="text" name="username" id="username" placeholder="Username" required="" class="">
             <input type="password" name="password" id="password" placeholder="Password" required="" class="">
-            <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required="" class="">
+            <!-- <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required="" class=""> -->
           </fieldset>
           <button type="submit" class="sign-up-button">Sign Up</button>
         </form>
       </div>
+
+      <div class=" go-to-login-section col-12">
+        <div class="go-to-login-wrapper ">
+          <h3>Please click below to log in.</h3>
+        </div>
+        <div class="go-to-login-wrapper">
+          <button type="button" class="go-to-login-button">Log In</button>
+        </div>
+      </div>
+    </section>
+    <section class=" footer col-12">
+      <p>Built by</p>
     </section>
   </main>
   <!-- <script type="text/javascript" src="js/main.js"></script> -->

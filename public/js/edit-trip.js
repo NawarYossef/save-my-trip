@@ -1,6 +1,10 @@
 "use strict";
 
 class EditTrip  {
+  constructor() {
+    this.token = localStorage.getItem("token");
+  }
+
   init() {
     this.getTripData();
     this.toggleHamburger();
@@ -61,6 +65,9 @@ class EditTrip  {
     $.ajax({
       url: `/trips/${tripId}`,
       type: 'GET',
+      headers: {
+        "Authorization": `Bearer ${this.token}`
+      } 
     })
     .done(data => {
       this.renderData(data);
@@ -121,7 +128,10 @@ class EditTrip  {
         url:`/trips/${tripId}`,
         dataType : "json",
         contentType: "application/json; charset=utf-8",
-        data : JSON.stringify(trip)
+        data : JSON.stringify(trip),
+        headers: {
+          "Authorization": `Bearer ${this.token}`
+        } 
       })
       .done(data => {
         console.log(data)

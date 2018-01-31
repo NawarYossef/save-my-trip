@@ -3,6 +3,7 @@
 class Trips  {
   constructor() {
     this.state = {currentTripId: ''}
+    this.token = localStorage.getItem("token");
   }
 
   init() {
@@ -22,10 +23,10 @@ class Trips  {
   getTripEntries() {
     $.ajax({
       url: "/trips",
-      type: 'GET'
-      // headers: {
-      //   "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoibmFtZSIsImZpcnN0TmFtZSI6ImZpcnN0bmFtZSIsImxhc3ROYW1lIjoibGFzdG5hbWUifSwiaWF0IjoxNTE3MjQ3ODQ1LCJleHAiOjE1MTc4NTI2NDUsInN1YiI6Im5hbWUifQ.4FitM7W75z9VYPK1RDw1u6p-S3OM5bi_n5-N1SUd4Ww"
-      // } 
+      type: 'GET',
+      headers: {
+        "Authorization": `Bearer ${that.token}`
+      } 
     })
     .done(data => {
       this.renderTrips(data);
@@ -39,10 +40,14 @@ class Trips  {
     const that = this;
     $(".trips-container").on('click', '.delete-btn' , function() {
       const tripId = $(this).parents(".trip").attr('id')  
+      
       $.ajax({
         url: `/trips/${tripId}`,
         type: 'DELETE',
-        dataType: 'json'
+        dataType: 'json',
+        headers: {
+          "Authorization": `Bearer ${that.token}`
+        } 
       })
       .done(data => {
         that.changeRouteToTripsPage();
@@ -192,6 +197,9 @@ class Trips  {
         dataType : "json",
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(emailInfo),
+        headers: {
+          "Authorization": `Bearer ${that.token}`
+        } 
       })
       .done((data) => {
         that.handleEmailSentMessage();
