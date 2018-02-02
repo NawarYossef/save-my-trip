@@ -8,52 +8,48 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Fire+Sans|Quicksand" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/grid.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 </head>
 
 <body>
-  <header class="">
-    <div class="header-wrapper col-12">
-      <nav class="navbar col-6">
-        <ul class=" ul-header">
-          <li class="">
-            <a href="#" class="hvr-underline-from-center">About</a>
-          </li>
-          <li class="">
-            <a href="#" class="hvr-underline-from-center">Trips</a>
-          </li>
-          <li class="log-in">
-            <a href="#" class="hvr-underline-from-center">Log In</a>
-          </li>
-        </ul>
-      </nav>
+  <header>
+		<div class="header-wrapper col-12">
+			<nav>
+				<ul class=" ul-header">
+					<li class="about">
+						<a href="#" class="hvr-underline-from-center">About</a>
+					</li>
+					<li class="trips">
+						<a href="#" class="hvr-underline-from-center">Trips</a>
+					</li>
+					<li class="log-in">
+						<a href="#" class="hvr-underline-from-center">Log in</a>
+					</li>
+				</ul>
+			</nav>
 
-      <div class="h1-wrapper">
-        <h1>SaveMyTrip</h1>
-      </div>
+			<div class="h1-wrapper">
+				<h1>SaveMyTrip</h1>
+			</div>
+			<!-- hamburger icon -->
+			<button class="hamburger" type="button">
+				<div class="hamburger-line"></div>
+				<div class="hamburger-line"></div>
+				<div class="hamburger-line"></div>
+			</button>
 
-
-      <section class="container-for-header-text col-12">
-        <div class="header-text-wrapper col-6">
-          <p>
-            an app designed to make your next trip goes off without a hitch.
-          </p>
-          <h2>
-            Manage all your trips in one place.
-          </h2>
-        </div>
-      </section>
-      <div class="btn-wrapper col-12">
-        <!-- <a href="#sign-up"> -->
-        <button class="sign-up-btn">Sign Up</button>
-      <!-- </a> -->
-      </div>
-      <svg class="arrows">
-        <path d="M0 20 L20 42 L40 20"></path>
-        <path d="M0 40 L20 62 L40 40"></path>
-      </svg>
+			<!-- sidebar  -->
+			<section class="side-menu-nav">
+					<p class="close-side-bar"><span>&times;</span>Close</p>
+				<ul>
+					<li class="about"><a>About</a></li>
+					<li class="trips"><a>Trips</a></li>
+					<li class="log-in"><a>Log in</a></li>
+				</ul>
+			</section>
     </div>
-
+    
     <!-- The Modal -->
     <div id="my-modal" class="modal">
       <!-- Modal content -->
@@ -63,13 +59,16 @@
           <div class="sign-in-wrapper col-12">
               <div class="heading-wrapper col-12">
                   <h2 class="heading-for-login">
-                    Login
+                    Welcome Back!
                   </h2>
-                  <h4>Enter your credentials to access your account.</h4>
+                  <div class="cont-for-invalid-message-login">
+                      <p class="invalid-message-txt-login"></p>
+                    </div>
+                  <!-- <h4>Enter your credentials to access your account.</h4> -->
                 </div>
             <form class="modal-form log-in" action="" method="post" autocomplete="off">
               <fieldset name="register-info">
-                <input type="text" name="username" id="sign-in-username" placeholder="User Name" required="" class="">
+                <input type="text" name="username" id="sign-in-username" placeholder="Username" required="" class="">
                 <input type="password" name="password" id="sign-in-password" placeholder="Password" required="" class="">
               </fieldset>
               <button type="submit" class="sign-in-button">Log In</button>
@@ -81,7 +80,25 @@
         </section>
       </div>
     </div>
-  </header>
+	</header>
+
+      <!-- <section class="container-for-header-text col-12">
+        <div class="header-text-wrapper col-6">
+          <p>
+            an app designed to make your next trip goes off without a hitch.
+          </p>
+          <h2>
+            Manage all your trips in one place.
+          </h2>
+        </div>
+      </section>
+      <div class="btn-wrapper col-12">
+        <button class="sign-up-btn sign-up">Sign Up</button>
+      </div>
+      <svg class="arrows">
+        <path d="M0 20 L20 42 L40 20"></path>
+        <path d="M0 40 L20 62 L40 40"></path>
+      </svg> -->
 
   <main role="main" class="">
     <section class=" about-section col-12">
@@ -128,15 +145,30 @@
     </section>
     <section class="sign-up-section col-12">
       <div class="sign-up-heading-wrapper col-12">
-        <h2 class="heading-for-trips" id="sign-up">Sign Up</h2>
+        <h2 class="heading-for-trips" id="sign-up">Sign Up for Free</h2>
+        <div class="cont-for-invalid-message">
+          <p class="invalid-message-txt"></p>
+        </div>
         <h2 class="heading-for-trips-login" id="">Thank you for signing up!</h2>
       </div>
       <div class="sign-up-wrapper col-12">
         <form class="register" action="" method="post" autocomplete="off">
           <fieldset name="register-info">
-            <input type="text" name="name" id="firstName" placeholder="First Name" required="" class="">
-            <input type="text" name="name" id="lastName" placeholder="Last Name" required="" class="">
+            <!-- <div class="cont-for-input-label">
+              <p>First Name:</p>
+            </div> -->
+            <input type="text" name="name" id="firstName" placeholder="First name" required="" class="">
+            <!-- <div class="cont-for-input-label">
+              <p>Last Name:</p>
+            </div> -->
+            <input type="text" name="name" id="lastName" placeholder="Last name" required="" class="">
+            <!-- <div class="cont-for-input-label">
+              <p>Username:</p>
+            </div> -->
             <input type="text" name="username" id="username" placeholder="Username" required="" class="">
+            <!-- <div class="cont-for-input-label">
+              <p>Password:</p>
+            </div> -->
             <input type="password" name="password" id="password" placeholder="Password" required="" class="">
             <!-- <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required="" class=""> -->
           </fieldset>

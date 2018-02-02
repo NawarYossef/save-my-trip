@@ -23,9 +23,9 @@
 					<li class="new-trip">
 						<a href="#" class="hvr-underline-from-center">New Trip</a>
 					</li>
-					<li class="booking">
+					<!-- <li class="booking">
 						<a href="#" class="hvr-underline-from-center">Book a flight</a>
-					</li>
+					</li> -->
 					<li class="log-out">
 						<a href="#" class="hvr-underline-from-center">Log Out</a>
 					</li>
@@ -76,8 +76,8 @@
 									Email Your Trip Information
 								</h2>
 							</div>
-							<form class="modal-form" action="" id="#email-trip-form" autocomplete="off">
-								<div name="register-info col-12">
+							<div class="modal-form" action="" id="email-trip-form" autocomplete="off">
+								<div name="register-info" class="col-12">
 									<!-- <div class="cont-for-info col-12">
 										<div class="h4-wrapper">
 											<h4>Name</h4>
@@ -115,11 +115,12 @@
 											<h4 class="message-header"></h4>
 										</div>
 										<div class="btn-send-wrapper input-wrapper">
-											<button type="submit" id="send-email-btn" class="send-email-button">Send</button>
+											<!-- <button type="" id="send-email-btn" class="send-email-button">Send</button> -->
+											<button type="" id="send-email-btn" class="send-email-button">Send</button>
 										</div>
 									</div>
 								</div>
-							</form>
+							</div>
 						</section>
 
 							<!-- success message modal content -->
@@ -137,21 +138,21 @@
 						<div class="confir-wrapper col-6">
 							<span class="confirmation-title">CONFIRMATION</span>
 							<br>
-							<span class="confirmation-text">${trip.confirmationCode}</span>
+							<span class="confirmation-text"></span>
 						</div>
 					</div>
 
 					<div class="airports-wrapper col-4">
-						<h3 class="depart-airport">${trip.departure.airport}</h3>
+						<h3 class="depart-airport"></h3>
 						<i class="fa fa-arrow-right" aria-hidden="true"></i>
-						<h3 class="arrive-airport">${trip.arrival.airport}</h3>
-						<h4 class="departure-date">${trip.arrival.date}</h4>
+						<h3 class="arrive-airport"></h3>
+						<h4 class="departure-date"></h4>
 					</div>
 
 					<div class="data-wrapper col-4">
 						<div class="airline-wrapper col-6">
 							<span class="airline-title">AIRLINE</span><br>
-							<span class="airline-text">${trip.airline}</span>
+							<span class="airline-text"></span>
 						</div>
 						<div class="arrow-wrapper col-6">
 							<i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -160,21 +161,21 @@
 				</div>
 				<div class="trip-details">
 					<div class="departure-wrapper col-12">
-						<p><span class="depart-word">DEPARTS:</span><span class="date-text depart-date-text">${trip.departure.date}</span></p>
-						<p class="depart-city city">${trip.departure.city}</p>
+						<p><span class="depart-word">DEPARTS:</span><span class="date-text depart-date-text"></span></p>
+						<p class="depart-city city"></p>
 
 						<div class="terminal-gate-wrapper col-4">
-							<p class="depart-terminal terminal">Terminal: ${trip.departure.terminal}</p>
-							<p class="gate depart-gate">Gate: ${trip.departure.gate}</p>
+							<p class="depart-terminal terminal">Terminal: </p>
+							<p class="gate depart-gate">Gate: </p>
 						</div>
 					</div>
 					<div class="arrival-wrapper col-12">
-						<p><span class="depart-word">ARRIVES:</span><span class="date-text arrive-date-text">${trip.arrival.date}</span></p>
-						<p class="arrive-city city">${trip.arrival.city}</p>
+						<p><span class="depart-word">ARRIVES:</span><span class="date-text arrive-date-text"></span></p>
+						<p class="arrive-city city"></p>
 
 						<div class="terminal-gate-wrapper col-4">
-							<p class="arrive-terminal terminal">Terminal: ${trip.arrival.terminal}</p>
-							<p class="gate arrive-gate">Gate: ${trip.arrival.gate}</p>
+							<p class="arrive-terminal terminal">Terminal: </p>
+							<p class="gate arrive-gate">Gate: </p>
 						</div>
 					</div>
 					<div class="col-12 control-btns">

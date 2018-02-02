@@ -125,7 +125,7 @@ body header nav .ul-header {
 }
 
 body header nav ul li {
-  width: 24%;
+  width: 32%;
   height: 50px;
   display: inline-block;
   margin-left: 0px;
@@ -150,7 +150,6 @@ body header .h1-wrapper {
 }
 
 .header-wrapper {
-  padding-left: 30px;
   padding-right: 0px;
 }
 
@@ -223,6 +222,10 @@ body header h1 {
 
 .side-menu-nav ul li a {
   font: normal 1.3em Raleway, sans-serif;
+}
+
+.side-menu-nav ul li a:hover {
+  cursor: pointer;
 }
 
 /* Non-mobile, grid */

@@ -4,7 +4,7 @@ class NewTrip  {
   constructor() {
     this.token = localStorage.getItem("token");
   }
-  
+
   init() {
     this.postNewTrip();
     this.toggleHamburger();
@@ -12,6 +12,8 @@ class NewTrip  {
     this.airportFieldAutocomplete();
     this.showSidebar();
     this.hideSidebar();
+    this.navbarNavigation();
+    this.sidebarNavigation(); 
   }
 
   postNewTrip() {
@@ -43,7 +45,7 @@ class NewTrip  {
         contentType: "application/json; charset=utf-8",
         data : JSON.stringify(trip),
         headers: {
-          "Authorization": `Bearer ${token}`
+          "Authorization": `Bearer ${this.token}`
         } 
       })
       .done(data => {
@@ -96,7 +98,7 @@ class NewTrip  {
   }
 
   navbarNavigation() {
-    $('nav').on('click', '.trips, .new-trip, .log-out, .booking', function(e) {
+    $('nav').on('click', '.trips, .new-trip, .log-out', function(e) {
       e.preventDefault();
 
       switch(true) {
@@ -108,9 +110,6 @@ class NewTrip  {
           break;
         case $(this).hasClass("log-out"):
           window.location.replace(`/`)
-          break;
-        case $(this).hasClass("booking"):
-          window.location.replace(`/booking.html`)
           break;
         default:
           // do nothing

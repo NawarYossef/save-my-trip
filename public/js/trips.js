@@ -25,14 +25,15 @@ class Trips  {
       url: "/trips",
       type: 'GET',
       headers: {
-        "Authorization": `Bearer ${that.token}`
+        "Authorization": `Bearer ${this.token}`
       } 
     })
     .done(data => {
       this.renderTrips(data);
     })
-    .fail(data => {
+    .fail(error => {
       console.error("something is wrong")
+      console.error(error)
     })
   }
 
@@ -40,7 +41,7 @@ class Trips  {
     const that = this;
     $(".trips-container").on('click', '.delete-btn' , function() {
       const tripId = $(this).parents(".trip").attr('id')  
-      
+
       $.ajax({
         url: `/trips/${tripId}`,
         type: 'DELETE',
@@ -90,7 +91,6 @@ class Trips  {
       tripHTML.find(".arrive-city").text(trip.arrival.city);
       tripHTML.find(".arrive-terminal").text(`Terminal: ${trip.arrival.terminal}` || '-');
       tripHTML.find(".arrive-gate").text(`Gate: ${trip.arrival.gate}` || '-');
-
       return tripHTML;
     })
   $(".trips-container").html(allTrips)
@@ -110,7 +110,7 @@ class Trips  {
   }
 
   navbarNavigation() {
-    $('nav').on('click', '.trips, .new-trip, .log-out, .booking', function(e) {
+    $('nav').on('click', '.trips, .new-trip, .log-out', function(e) {
       e.preventDefault();
 
       switch(true) {
@@ -122,9 +122,6 @@ class Trips  {
           break;
         case $(this).hasClass("log-out"):
           window.location.replace(`/`)
-          break;
-        case $(this).hasClass("booking"):
-          window.location.replace(`/booking.html`)
           break;
         default:
           // do nothing
@@ -177,8 +174,9 @@ class Trips  {
   
   emailHandler() {
     const that = this;
-    $(".modal-form").submit(function(e) { 
-      e.preventDefault()
+    $("#send-email-btn").click(function() { 
+      // e.preventDefault()
+      console.log("FDdf")
       // store input values in order to send it in the POST request
       const emailInfo = {
         title: $("#title").val(),

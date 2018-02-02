@@ -15,7 +15,7 @@ class EditTrip  {
   }
 
   navbarNavigation() {
-    $('nav').on('click', '.trips, .new-trip, .log-out, .booking', function(e) {
+    $('nav').on('click', '.trips, .new-trip, .log-out', function(e) {
       e.preventDefault();
 
       switch(true) {
@@ -27,9 +27,6 @@ class EditTrip  {
           break;
         case $(this).hasClass("log-out"):
           window.location.replace(`/`)
-          break;
-        case $(this).hasClass("booking"):
-          window.location.replace(`/booking.html`)
           break;
         default:
           // do nothing

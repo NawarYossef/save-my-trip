@@ -1,201 +1,29 @@
 @import url("whitespace-reset.css");
 
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-size: 1em;
+  background-image: none;
 }
-
-/* Grid measurements:
- *
- *   960px wide including 12 gutters (half gutters on both edges)
- *
- *   60px columns (12)
- *   20px gutters (two half-gutters + 11 full gutters, so 12 total)
- *
- *
- *   For smaller screens, we always want 20px of padding on either side,
- *   so 960 + 20 + 20 => 1000px
- *
- **/
- main {
-  padding-top: 100px;
-}
-
-main .row {
-  margin-bottom: 20px;
-}
-
-.box {
-  height: 200px;
-  text-align: center;
-  padding-top: 30px;
-}
-
-.row {
-  max-width: 1000px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-}
-
-/* Clearfix */
-.row::before,
-.row::after {
-  display: table;
-  content: '';
-}
-
-.row::after {
-  clear: both;
-}
-
-.col-3, .col-4, .col-6, .col-12 {
-  float: left;
-
-  /* Gutters:
-   * Each column is padded by half-a-gutter on each side,
-   *
-   * Half a gutter is 10px, 10/960 (context) = 1.041666%
-   *
-   */
-  padding-left: 1.04166666%;
-  padding-right: 1.04166666%;
-}
-
-.black {
-  background-color: black;
-  color: white;
-}
-
-.green {
-  background-color: green;
-}
-
-.orange {
-  background-color: orange;
-}
-
-.blue {
-  background-color: blue;
-}
-
-
-/* Mobile defaults */
-.col-3, .col-4, .col-6, .col-12 {
-  width: 100%;
-}
-
-/* * * * * * * * * * * * * * * * * * * */
-/*      css hover effect for nav bar   */
-/* * * * * * * * * * * * * * * * * * * */
-/* Underline From Center */
-.hvr-underline-from-center {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  position: relative;
-  overflow: hidden;
-}
-.hvr-underline-from-center:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: rgb(255, 255, 255);
-  height: 2px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
-  left: 0;
-  right: 0;
-}
-/* ========================== */
-
-
-/* Non-mobile, grid */
-@media only screen and (min-width: 640px) {
-  /* 3 columns, 3/12 in % */
-  .col-3 {
-    width: 25%;
-  }
-
-  /* 4 columns */
-  .col-4 {
-		width: 33.33%;
-  }
-
-  /* 6 columns */
-  .col-6 {
-		width: 50%;
-  }
-
-  /* 12 columns */
-  .col-12 {
-  }
-}
-
-/* * * * * * * * * * * */
-/*      header css     */
-/* * * * * * * * * * * */
-header {
-  display: block;
-  position: relative;
-  text-align: center;
-  height: 700px;
-  background-image: url("../images/airport1.jpg");
-  background-position: 50% 80%; 
-  background-size: 100%;
-}
-
-body header .header-wrapper {
-  background-color: rgba(0,0,0,0.6);
-  height: 700px;
-}
-
-body header .navbar {
-  display: inline-block;
-  text-align: center;
-  float: right;
-  margin-top: 5px;
-}
-
-body header nav .ul-header {
-  width: 80%;
-  display: inline-block;
-  float: none;
-  padding: 5px;
-}
-
-nav ul li {
-  width: 24%;
-  display: inline-block;
-  text-align: center;
-}
-
-nav ul li a {
-  font: normal 1.2em 'Merriweather', serif;
-  color: #ffffff;
-  text-decoration: none;
-}
-
 /* * * * * * * * * * * */
 /*      modal          */
 /* * * * * * * * * * * */
 
 /* The Modal (background) */
+body header {
+  background-image: url("../images/airport1.jpg");
+  background-color: rgba(0,0,0,0.4);
+  background-position: 50% 80%; 
+  background-size: 100%;
+  height: 700px;
+}
+
+body .header-wrapper {
+  display: block;
+  position: relative;
+  text-align: center;
+  height: 50px;
+  background-color: #ffffff;
+}
+
 .modal {
   display: none; 
   position: fixed;
@@ -263,8 +91,13 @@ nav ul li a {
   text-decoration: none;
   cursor: pointer;
 }
+
+.header-wrapper {
+  padding-right: 0px;
+}
+
 /* //////////////////////////////////// */
-h1 {
+/* h1 {
   color: #ffffff;
   font: italic 1.8em 'Merriweather', serif;
   padding: 5px;
@@ -295,7 +128,7 @@ h1 {
   margin-top: 15%;
   font: normal 1.2em sans-serif;
   color: #ffffff;
-}
+} */
 
 .sign-up-btn {
   background: #fdcc52;
@@ -381,6 +214,10 @@ main {
   margin-top: 40px;
 }
 
+.description-2  {
+  text-align: left;
+}
+
 .description-1 {
   text-align: right;
 }
@@ -423,7 +260,7 @@ body main .description-header {
 }
 
 .sign-up-wrapper, .sign-in-wrapper  {
-
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -436,6 +273,7 @@ body .register {
   /* padding-top: 20px; */
   margin: 0 auto;
   width: 50%;
+  margin-bottom: 10px;
 }
 
 body form fieldset {
@@ -443,7 +281,7 @@ body form fieldset {
 }
 
 body form input {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Times New Roman";
   color: #2f2e2e;
   width: 50%;
   border: 2px solid #d8d8d8;
@@ -451,12 +289,38 @@ body form input {
   border-top: none;
   border-right: none;
   padding: 2px 0;
-  font-size: 1.4em;
+  font-size: 1em;
   background-color: transparent;
   margin-bottom: 20px;
-  margin-top: 15px;
-  text-align: center;
+  margin-top: 5px;
+  text-align: left;
   outline: none;
+}
+
+.cont-for-input-label {
+  width: 50%;
+  text-align: left;
+  margin: 0 auto;
+  font-family: "Times New Roman";
+  color: #515151;
+  font-size: 1em;
+}
+
+.cont-for-invalid-message, .cont-for-invalid-message-login {
+  display: none;
+  background: #fcc;
+  color: #f00;
+  width: 25%;
+  text-align: left;
+  margin: 0 auto;
+  font-family: "Times New Roman";
+  /* margin: 0 0 20px; */
+  padding: 6px 8px;
+  border-radius: 3px;
+}
+
+.cont-for-invalid-message-login {
+  width: 100%;
 }
 
 body form input:focus {
@@ -504,31 +368,50 @@ body .go-to-login-button {
 /* general Media Queries   */
 /* * * * * * * * * * * * * */
 @media screen and (max-width: 320px) {
-
+  body header nav {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 321px) and (max-width: 375px) {
-
+  body header nav {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
-
+  body header nav {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
-
+  body header button.hamburger {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
+  body header button.hamburger {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  
+  body header button.hamburger {
+    display: none;
+  }
+
+  body header nav {
+    display: initial;
+    float: right;
+  }
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1600px) {
-
+  body header button.hamburger {
+    display: none;
+  }
 }
 
 /* * * * * * * * * * * * * */
