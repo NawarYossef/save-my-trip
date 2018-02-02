@@ -18,6 +18,8 @@ class Trips  {
     this.hideSidebar();
     this.navbarNavigation();
     this.sidebarNavigation(); 
+    this.activeLinkBackgroundColor();
+    // this.changeBackgroundColorForPageLink();
   }
 
   getTripEntries() {
@@ -34,6 +36,7 @@ class Trips  {
     .fail(error => {
       console.error("something is wrong")
       console.error(error)
+      window.location.replace(`/`)
     })
   }
 
@@ -55,6 +58,7 @@ class Trips  {
       })
       .fail(data => {
         console.error("something is wrong")
+        window.location.replace(`/`)
       })
     })
   }
@@ -110,17 +114,23 @@ class Trips  {
   }
 
   navbarNavigation() {
+    const that = this
     $('nav').on('click', '.trips, .new-trip, .log-out', function(e) {
       e.preventDefault();
 
       switch(true) {
-        case $(this).hasClass("trips"):
+        case ($(this).hasClass("trips")):
           window.location.replace(`/trips.html`);
           break;
         case $(this).hasClass("new-trip"):
+          // change background color for page link when another link is clicked
+          $(".trips").css("background", "#ffffff")
           window.location.replace(`/new-trip.html`)
           break;
         case $(this).hasClass("log-out"):
+          // change background color for page link when another link is clicked
+          $(".trips").css("background", "#ffffff")
+          localStorage.removeItem("token");
           window.location.replace(`/`)
           break;
         default:
@@ -141,10 +151,8 @@ class Trips  {
           window.location.replace(`/new-trip.html`)
           break;
         case $(this).hasClass("log-out"):
+          localStorage.removeItem(this.token);
           window.location.replace(`/`)
-          break;
-        case $(this).hasClass("booking"):
-          window.location.replace(`/booking.html`)
           break;
         default:
           // do nothing
@@ -171,7 +179,7 @@ class Trips  {
       $("#my-modal").removeClass("animated slideInDown").addClass('animated fadeOutRight');
     })
   }
-  
+
   emailHandler() {
     const that = this;
     $("#send-email-btn").click(function() { 
@@ -204,6 +212,7 @@ class Trips  {
       })
       .fail((data) => {
         console.error("something is wrong")
+        window.location.replace(`/`)
       })
     })
   }
@@ -228,6 +237,13 @@ class Trips  {
     window.location.replace(`/trips.html`)
   }
 
+  activeLinkBackgroundColor() {
+    $(".trips").css("background", "rgb(214, 214, 214)")
+  }
+
+  // changeBackgroundColorForPageLink() {
+  //   $("").click(function() { 
+  // }
 
   dropDownTripToggleListener() {
     $('.trip-header').addClass("slide-down");
@@ -258,3 +274,18 @@ class Trips  {
 
 const app = new Trips();
 app.init();
+
+
+
+
+
+// #### Show error message when password too short/username taken.(use the message on the server) LOGIN+SIGNUP
+// #### Logout(delete the token)
+// - Show right links on nav for logged in / not logged in base on has token
+// - Responsiveness
+// -  Footer
+// ####Link trips on nav to /trips.html
+// ####if they visit trips.html without token -> redirect them home
+// - Change "your trips" -> "trips" and do active on the page you are on
+// - ####delete ${} from html files
+// - Deserialize the token, get the email and prepopulate the modal with the users email;

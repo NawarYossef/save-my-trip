@@ -26,6 +26,7 @@ class EditTrip  {
           window.location.replace(`/new-trip.html`)
           break;
         case $(this).hasClass("log-out"):
+          localStorage.removeItem(this.token);
           window.location.replace(`/`)
           break;
         default:
@@ -72,6 +73,7 @@ class EditTrip  {
     })
     .fail(data => {
       console.error("something is wrong")
+      window.location.replace(`/`)
     })
   }
 
@@ -138,6 +140,7 @@ class EditTrip  {
       .fail(data => {
         console.log(data)
         console.error("something is wrong")
+        window.location.replace(`/`)
       })
     });
   }

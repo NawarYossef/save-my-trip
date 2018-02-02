@@ -28,9 +28,8 @@ class SaveMyTrip {
   }
 
   headerNavigation() {
-    $('header').on('click', '.about, .sign-up', function(e) {
+    $('header').on('click', '.about, .trips, .sign-up', function(e) {
       e.preventDefault();
-
       switch(true) {
         case $(this).hasClass("about"):
           $('html, body').animate({
@@ -41,6 +40,9 @@ class SaveMyTrip {
           $('html, body').animate({
 					  scrollTop: $("#sign-up").offset().top
 			    }, 900);
+          break;
+        case $(this).hasClass("trips"):
+          localStorage.getItem("token") ? window.location.replace(`/trips.html`) : window.location.replace(`/`)
           break;
         default:
           // do nothing
@@ -49,7 +51,7 @@ class SaveMyTrip {
   }
 
   sidebarNavigation() {
-    $('.side-menu-nav').on('click', '.about, .sign-up', function(e) {
+    $('.side-menu-nav').on('click', '.about, .sign-up, .trips', function(e) {
       e.preventDefault();
 
       switch(true) {
@@ -62,6 +64,9 @@ class SaveMyTrip {
           $('html, body').animate({
 					  scrollTop: $("#sign-up").offset().top
 			    }, 900);
+          break;
+        case $(this).hasClass("trips"):
+          localStorage.getItem("token") ? window.location.replace(`/trips.html`) : window.location.replace(`/`)
           break;
           default:
           // do nothing
@@ -78,7 +83,8 @@ class SaveMyTrip {
         firstName: $("#firstName").val(),
         lastName: $("#lastName").val(),
         username: $("#username").val(),
-        password: $("#password").val()
+        password: $("#password").val(),
+        email: $("#email").val()
       }
 
       $.ajax({
@@ -108,6 +114,7 @@ class SaveMyTrip {
     $("#lastName").val("");
     $("#username").val("");
     $("#password").val(""); 
+    $("#email").val(""); 
   }
 
   showInvalidMessage(data) { 

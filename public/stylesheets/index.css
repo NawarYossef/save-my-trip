@@ -18,7 +18,7 @@ body header {
 
 body .header-wrapper {
   display: block;
-  position: relative;
+  position: fixed;
   text-align: center;
   height: 50px;
   background-color: #ffffff;
