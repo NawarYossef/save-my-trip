@@ -1,8 +1,18 @@
 /* * * * * * * * * * * */
 /*      main            */
 /* * * * * * * * * * * */
- main {
-  padding-top: 50px;
+
+body header nav .ul-header {
+  width: 100%;
+}
+
+body header nav ul li {
+  margin-left: 40px; 
+}
+
+body header {
+  background-color: rgba(0,0,0,0.6);
+  height: 60px;
 }
 
 .hamburger {

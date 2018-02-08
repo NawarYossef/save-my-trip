@@ -12,9 +12,6 @@ class NewTrip  {
     this.airportFieldAutocomplete();
     this.showSidebar();
     this.hideSidebar();
-    this.navbarNavigation();
-    this.sidebarNavigation(); 
-    this.activeLinkBackgroundColor();
   }
 
   postNewTrip() {
@@ -96,56 +93,6 @@ class NewTrip  {
       time_24hr: false,
       
     })
-  }
-
-  navbarNavigation() {
-    $('nav').on('click', '.trips, .new-trip, .log-out', function(e) {
-      e.preventDefault();
-
-      switch(true) {
-        case $(this).hasClass("trips"):
-          window.location.replace(`/trips.html`);
-          break;
-        case $(this).hasClass("new-trip"):
-          window.location.replace(`/new-trip.html`)
-          break;
-        case $(this).hasClass("log-out"):
-          localStorage.removeItem(this.token);
-          window.location.replace(`/`)
-          break;
-        default:
-          // do nothing
-      }
-    });
-  }
-
-  activeLinkBackgroundColor() {
-    $(".new-trip").css("background", "rgb(214, 214, 214)")
-  }
-
-  sidebarNavigation() {
-    $('.side-menu-nav').on('click', '.trips, .new-trip, .log-out, .booking', function(e) {
-      e.preventDefault();
-      console.log($(this).hasClass("new-trip"))
-      switch(true) {
-        case $(this).hasClass("trips"):
-          // change background color for page link when another link is clicked
-          $(".new-trip").css("background", "#ffffff")
-          window.location.replace(`/trips.html`);
-          break;
-        case $(this).hasClass("new-trip"):
-          window.location.replace(`/new-trip.html`)
-          break;
-        case $(this).hasClass("log-out"):
-          // change background color for page link when another link is clicked
-          $(".new-trip").css("background", "#ffffff")
-          localStorage.removeItem("token");
-          window.location.replace(`/`)
-          break;
-        default:
-          // do nothing
-      }
-    });
   }
 
   airportFieldAutocomplete() {

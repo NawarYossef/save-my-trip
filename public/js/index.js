@@ -10,8 +10,8 @@ class SaveMyTrip {
     this.closeLoginModal();
     this.signUpUser();
     this.logInUser();
-    this.headerNavigation();
-    this.sidebarNavigation();
+    this.NavbarScrollToSection();
+    this.changeHeaderStylesOnScroll();
   }
 
   showLoginModal() {
@@ -27,48 +27,21 @@ class SaveMyTrip {
     })
   }
 
-  headerNavigation() {
-    $('header').on('click', '.about, .trips, .sign-up', function(e) {
+  NavbarScrollToSection() {
+    $('header').on('click', '.about, .sign-up-btn', function(e) {
       e.preventDefault();
       switch(true) {
         case $(this).hasClass("about"):
           $('html, body').animate({
-            scrollTop: $(".about-section").offset().top
+            scrollTop: $("main").offset().top - 66
           }, 900);
           break;
-        case $(this).hasClass("sign-up"):
+        case $(this).hasClass("sign-up-btn"):
           $('html, body').animate({
 					  scrollTop: $("#sign-up").offset().top
 			    }, 900);
-          break;
-        case $(this).hasClass("trips"):
-          localStorage.getItem("token") ? window.location.replace(`/trips.html`) : window.location.replace(`/`)
           break;
         default:
-          // do nothing
-      }
-    });
-  }
-
-  sidebarNavigation() {
-    $('.side-menu-nav').on('click', '.about, .sign-up, .trips', function(e) {
-      e.preventDefault();
-
-      switch(true) {
-        case $(this).hasClass("about"):
-          $('html, body').animate({
-            scrollTop: $(".about-section").offset().top
-          }, 900);
-          break;
-        case $(this).hasClass("sign-up"):
-          $('html, body').animate({
-					  scrollTop: $("#sign-up").offset().top
-			    }, 900);
-          break;
-        case $(this).hasClass("trips"):
-          localStorage.getItem("token") ? window.location.replace(`/trips.html`) : window.location.replace(`/`)
-          break;
-          default:
           // do nothing
       }
     });
@@ -177,6 +150,20 @@ class SaveMyTrip {
 
   hideSignupSection() {
     $(".heading-for-trips, .sign-up-wrapper").hide(); 
+  }
+
+  changeHeaderStylesOnScroll() {
+    $(document).scroll(function(){
+      if($(this).scrollTop() > 180)
+      {   
+        $('.h1-wrapper, nav').css({
+          transition : 'background-color 0.2s ease-in-out',
+          "background-color": "rgba(0,0,0,0.7)"
+        });
+      } else {
+        $('.h1-wrapper, nav').css({"background":"transparent"});
+      }
+  });
   }
 }
 

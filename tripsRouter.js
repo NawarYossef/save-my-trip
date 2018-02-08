@@ -4,6 +4,7 @@ const passport = require("passport")
 const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
+const legit = require('legit');
 
 const {SENDGRID_API_KEY} = require("./config");
 const sgMail = require('@sendgrid/mail');
@@ -12,8 +13,9 @@ sgMail.setApiKey(SENDGRID_API_KEY);
 const {Trip} = require('./models');
 const jwtAuth = passport.authenticate('jwt', { session: false });
 
+router.use(jsonParser)
 // ============== GET endpoint ==============
-router.get('/', jwtAuth, (req, res) => {
+router.get('/', (req, res) => {
 Trip
   .find()
   // call the `.serialize` instance method we've created in
@@ -43,34 +45,40 @@ router.get('/:id', (req, res) => {
 
 // ============== Email POST endpoint ==============
 router.post('/email/:id', (req, res) => {
-  console.log(req.body)
-  Trip
-    .findById(req.params.id)
-    .then(trip => {
-      const msg = {
-        to: "nawaryossef2@gmail.com",
-        // from: req.user.email,
-        from: "nawaryossef2@gmail.com",
-        subject: `${JSON.stringify(req.body.title)}`,
-        text: "Hey Hey Hey ",
-        html: `<div>
-                <h4>${JSON.stringify(req.body.message)}</h4>
-                <h2>Trip Information</h2><br>
-                <p><strong>Origin: </strong>${trip.departure.city}</p><br>
-                <p><strong>Destination: </strong>${trip.arrival.city}</p><br>
-                <p>Confirmation: ${trip.confirmationCode}</p><br>
-                <p>Airlines: ${trip.airline}</p><br>
-                <p>Departure-date and Time: ${trip.departure.date}</p><br>
-                <p>Arrival-date and Time: ${trip.arrival.date}</p><br>
-              </div>`,
-      };
-      sgMail.send(msg);  
-      res.json({trip, message: "Email sent"})
-    })
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({error: 'something went horribly awry'});
-    }); 
+  legit(req.body.email, function(err, validation, addresses) {
+    if (validation == false) {
+      res.status(500).json({error: "Invalid Email. Please try again"}); 
+    } else {
+      Trip
+      .findById(req.params.id)
+      .then(trip => {
+        const msg = {
+          to:  req.body.email,
+          from: req.body.email,
+          // to: "nawaryossef2@gmail.com",
+          subject: `${JSON.stringify(req.body.title)}`,
+          text: "Hey Hey Hey ",
+          html: `<div>
+                  <h4>${JSON.stringify(req.body.message)}</h4>
+                  <h2>Trip Information</h2><br>
+                  <p><strong>Origin: </strong>${trip.departure.city}</p>
+                  <p><strong>Destination: </strong>${trip.arrival.city}</p>
+                  <p><strong>Confirmation-code: </strong>${trip.confirmationCode}</p>
+                  <p><strong>Airlines: </strong>${trip.airline}</p>
+                  <p><strong>Departure-date and Time: </strong>${trip.departure.date}</p>
+                  <p><strong>Arrival-date and Time: </strong>${trip.arrival.date}</p><br>
+                </div>`,
+        };
+        sgMail.send(msg);  
+        res.json({trip, message: "Email sent"})
+      })
+      .catch(err => {
+        console.error(err);
+        res.status(500).json({error: 'something went horribly awry'});
+      });
+    }
+  });
+  
 })
 
 // ============== POST endpoint ==============

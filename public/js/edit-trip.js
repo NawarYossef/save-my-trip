@@ -14,49 +14,6 @@ class EditTrip  {
     this.hideSidebar();
   }
 
-  navbarNavigation() {
-    $('nav').on('click', '.trips, .new-trip, .log-out', function(e) {
-      e.preventDefault();
-
-      switch(true) {
-        case $(this).hasClass("trips"):
-          window.location.replace(`/trips.html`);
-          break;
-        case $(this).hasClass("new-trip"):
-          window.location.replace(`/new-trip.html`)
-          break;
-        case $(this).hasClass("log-out"):
-          localStorage.removeItem(this.token);
-          window.location.replace(`/`)
-          break;
-        default:
-          // do nothing
-      }
-    });
-  }
-
-  sidebarNavigation() {
-    $('.side-menu-nav').on('click', '.trips, .new-trip, .log-out, .booking', function(e) {
-      e.preventDefault();
-      console.log($(this).hasClass("new-trip"))
-      switch(true) {
-        case $(this).hasClass("trips"):
-          window.location.replace(`/trips.html`);
-          break;
-        case $(this).hasClass("new-trip"):
-          window.location.replace(`/new-trip.html`)
-          break;
-        case $(this).hasClass("log-out"):
-          window.location.replace(`/`)
-          break;
-        case $(this).hasClass("booking"):
-          window.location.replace(`/booking.html`)
-          break;
-        default:
-          // do nothing
-      }
-    });
-  }
 
   getTripData() {
     const tripId = this.getTripId();

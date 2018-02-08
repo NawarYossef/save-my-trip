@@ -4,7 +4,7 @@
 	<title>New Trip</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">  
   <link rel="stylesheet" type="text/css" href="stylesheets/grid.css">
@@ -18,42 +18,51 @@
   <script src="https://screenfeedcontent.blob.core.windows.net/html/airports.js"></script>
 </head>
 <body>
-  <header>
-    <div class="header-wrapper col-12">
-      <nav class="">
-        <ul class=" ul-header">
-          <li class="trips">
-            <a href="#" class="hvr-underline-from-center">Your Trips</a>
-          </li>
-          <li class="new-trip">
-            <a href="#" class="hvr-underline-f  rom-center">New Trip</a>
-          </li>
-          <li class="log-out">
-            <a href="#" class="hvr-underline-from-center">Log Out</a>
-          </li>
-        </ul>
-      </nav>
+  <header class="header-wrapper col-12">
+    <nav>
+      <ul class=" ul-header">
+        <li class="trips">
+          <a href="http://localhost:8081/trips.html" class="hvr-underline-from-center">Your Trips</a>
+        </li>
+        <li class="new-trip">
+          <a href="http://localhost:8081/new-trip.html" class="hvr-underline-from-center">New Trip</a>
+        </li>
+        <li class="log-out">
+          <a href="#" class="hvr-underline-from-center">Log Out</a>
+        </li>
+      </ul>
+    </nav>
   
-      <div class="h1-wrapper">
-        <h1>SaveMyTrip</h1>
+    <div class="h1-wrapper">
+      <div class="inner-h1-wrapper">
+        <h1>SaveMyTrip
+          <i class="fas fa-plane"></i>
+        </h1>
       </div>
-      <!-- hamburger icon -->
-			<button class="hamburger" type="button">
-				<div class="hamburger-line"></div>
-				<div class="hamburger-line"></div>
-				<div class="hamburger-line"></div>
-			</button>
-
-			<!-- sidebar  -->
-			<section class="side-menu-nav">
-					<p class="close-side-bar"><span>&times;</span>Close</p>
-          <ul>
-            <li class="trips"><a>Trips</a></li>
-            <li class="new-trip"><a>New Trip</a></li>
-            <li class="log-out"><a>Log Out</a></li>
-          </ul>
-			</section> 
     </div>
+    <!-- hamburger icon -->
+    <button class="hamburger" type="button">
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+    </button>
+  
+    <!-- sidebar  -->
+    <section class="side-menu-nav">
+      <p class="close-side-bar">
+        <span>&times;</span>Close</p>
+      <ul>
+        <li class="trips">
+          <a href="http://localhost:8081/trips.html">Your Trips</a>
+        </li>
+        <li class="new-trip">
+          <a href="http://localhost:8081/new-trip.html">New Trip</a>
+        </li>
+        <li class="log-out">
+          <a>Log Out</a>
+        </li>
+      </ul>
+    </section>
   </header>
 
   <main role="main">
@@ -119,6 +128,7 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script type="text/javascript" src="js/helpers.js"></script>
   <script type="text/javascript" src="js/new-trip.js"></script>
 </body>
 

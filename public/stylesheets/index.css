@@ -3,26 +3,71 @@
 body {
   background-image: none;
 }
-/* * * * * * * * * * * */
-/*      modal          */
-/* * * * * * * * * * * */
 
-/* The Modal (background) */
 body header {
-  background-image: url("../images/airport1.jpg");
-  background-color: rgba(0,0,0,0.4);
+  background-image: url("../images/airport6.jpg");
   background-position: 50% 80%; 
   background-size: 100%;
   height: 700px;
 }
 
-body .header-wrapper {
-  display: block;
-  position: fixed;
-  text-align: center;
-  height: 50px;
+header .background-wrapper {
+  background-color: rgba(0,0,0,0.6);
+  height: 700px;
+  padding: 0px;
+}
+
+.link-for-h1 {
+  text-decoration: none;
+}
+
+.header-scroll {
   background-color: #ffffff;
 }
+
+body .header-wrapper {
+  display: block;
+  /* position: fixed; */
+  text-align: center;
+  height: 50px;
+  /* background-color: rgba(0,0,0,0.6); */
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.inner-h1-wrapper {
+  width: 80%;
+}
+
+.fa-plane {
+  vertical-align: middle;
+}
+
+.container-for-header-text {
+  text-align: center;
+}
+
+.header-text-wrapper {
+  margin: 25% auto 0 auto;
+  width: 80%;
+  float: none;
+}
+
+.container-for-header-text p {
+  margin-top: 15%;
+  font: normal 1.2em sans-serif;
+  color: #ffffff;
+}
+
+.container-for-header-text h2 {
+  font: normal 2.4em 'Merriweather', serif;
+  color: #ffffff;
+}
+/* * * * * * * * * * * */
+/*      modal          */
+/* * * * * * * * * * * */
+
+/* The Modal (background) */
 
 .modal {
   display: none; 
@@ -92,47 +137,9 @@ body .header-wrapper {
   cursor: pointer;
 }
 
-.header-wrapper {
-  padding-right: 0px;
-}
-
-/* //////////////////////////////////// */
-/* h1 {
-  color: #ffffff;
-  font: italic 1.8em 'Merriweather', serif;
-  padding: 5px;
-}
-
-.h1-wrapper {
-  display: inline-block;
-  margin-right: 10%;
-  text-align: center;
-}
-
-.header-text-wrapper {
-  margin: 15% auto 0 auto;
-  width: 80%;
-  float: none;
-}
-
-.container-for-header-text {
-  text-align: center;
-}
-
-.container-for-header-text h2 {
-  font: italic 3em 'Merriweather', serif;
-  color: #ffffff;
-}
-
-.container-for-header-text p {
-  margin-top: 15%;
-  font: normal 1.2em sans-serif;
-  color: #ffffff;
-} */
-
 .sign-up-btn {
-  background: #fdcc52;
-  font: normal 1.5em sans-serif;
+  background-color: #fdcc52;
+  font: normal 1.4em 'Merriweather', serif;
   color: #222020;
   border: none;
   outline: none;
@@ -144,9 +151,17 @@ body .header-wrapper {
   /* box-shadow: 6px 5px 10px #484848; */
 }
 
-.sign-up-btn:hover {
+ .sign-up-btn:hover {
   cursor: pointer;
-  background: #e6b949;
+  background-color: #d4a429;
+} 
+
+.sign-up-btn {
+  -webkit-transition: background-color 0.7s ease-out;
+  -moz-transition: background-color 0.7s ease-out;
+  -o-transition: background-color 0.7s ease-out;
+  -ms-transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out;
 }
 
 .arrows {
@@ -166,9 +181,10 @@ body .header-wrapper {
 /* * * * * * * * * * * */
 /*       Body          */
 /* * * * * * * * * * * */
-.h2-wrapper {
+main .h2-wrapper {
   text-align: center;
-  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 80px;
 }
 
 main {
@@ -185,7 +201,8 @@ main {
 /* * * * * * * * * * * */
 
 .about-section {
-  height: 500px;
+  height: 550px;
+  margin-bottom: 80px;
 }
 
 .about-img {
@@ -230,9 +247,8 @@ main {
 } 
 
 body main h2 {
-  font: normal 2.5em 'Roboto', sans-serif;
-  color: #303030;
-  padding: 15px;  
+  font: normal 2.2em 'Merriweather', serif;
+  color: #484646;
 }
 
 body main .description-header {
@@ -247,6 +263,125 @@ body main .description-header {
   text-align: center;
 }
 
+.line-wrapper {
+  margin-bottom: 10px;
+}
+
+.line-1 {
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.line-2 {
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  background: #b8b8b8;
+}
+
+/* * * * * * * * * * * */
+/*       cards         */
+/* * * * * * * * * * * */
+.cards {
+  background-color: #333036;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231a191c' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  display: inline-block;
+  height: 700px;
+}
+
+.container-for-card {
+  height: 450px;
+}
+ .cards h2 {
+  color: #ffffff;
+} 
+
+.img-box {
+  width: 100%;
+  padding: 0px;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 17px 20px 15px rgba(0,0,0,0.30), 10px 20px 16px rgba(78, 78, 78, 0.3);
+  
+ }
+ 
+ img {
+   width: 100%;
+   height: 300px;
+ }
+
+ .cards-text {
+  font: normal 1.4em 'Fredoka One', cursive;
+  color: rgb(90, 99, 114);
+ }
+
+ .text-wrapper {
+   text-align: center;
+   height: 80px;
+ }
+
+ .text-wrapper p {
+  font: normal 1em 'Roboto', sans-serif;
+  color: #414141;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+ }
+
+ /* * * * * * * * * * * */
+/*       illustration   */
+/* * * * * * * * * * * */
+.illustration {
+  background: #ffffff;
+  height: 600px;
+}
+
+.illustration  .h2-wrapper {
+  padding-bottom: 40px;
+}
+
+.illustration-wrapper {
+  margin-bottom: 150px; 
+}
+
+.box {
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 2px;
+  width: 80%;
+  margin: auto;
+}
+
+.step-icon {
+  width: 10%;
+  height: 10%;
+  /* margin-bottom: 35px;  */
+}
+
+.illustration h3 {
+  font: bold 1.4em 'Poppins', sans-serif;
+  color: rgb(90, 99, 114);
+  margin-top: 20px;  
+  margin-bottom: 25px;  
+}
+
+.illustration hr {
+  margin: -5px auto 0 auto;
+  background: rgb(126, 121, 121);
+  border-radius: 25px;
+}
+
+.box p {
+  font: normal 1em/170% 'Roboto', sans-serif;
+  color: rgb(109, 103, 103);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.box p span {
+  color: rgb(189, 0, 195);
+}
 /* * * * * * * * * * * */
 /*       Sign Up        */
 /* * * * * * * * * * * */

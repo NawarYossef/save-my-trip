@@ -5,82 +5,115 @@
   <title>SaveMyTrip</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Fredoka+One" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Fire+Sans|Quicksand" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/hover.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/grid.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
-		<div class="header-wrapper col-12">
-			<nav>
-				<ul class=" ul-header">
-					<li class="about">
-						<a href="#" class="hvr-underline-from-center">About</a>
-					</li>
-					<li class="trips">
-						<a href="#" class="hvr-underline-from-center">Trips</a>
-					</li>
-					<li class="log-in">
-						<a href="#" class="hvr-underline-from-center">Log in</a>
-					</li>
-				</ul>
-			</nav>
+    <div class="background-wrapper col-12">
+      <div class="header-wrapper col-12">
+        <nav>
+          <ul class=" ul-header">
+            <li class="about">
+              <a href="#" class="">About</a>
+            </li>
+            <li class="trips">
+              <a href="http://localhost:8081/trips.html" class="">Trips</a>
+            </li>
+            <li class="log-in">
+              <a href="#" class="">Log in</a>
+            </li>
+          </ul>
+        </nav>
+  
+        <div class="h1-wrapper">
+          <div class="inner-h1-wrapper">
+            <a class="link-for-h1" href="http://localhost:8081/">
+              <h1>SaveMyTrip
+                <i class="fas fa-plane"></i>
+              </h1>
+            </a>
+          </div>
+        </div>
 
-			<div class="h1-wrapper">
-				<h1>SaveMyTrip</h1>
-			</div>
-			<!-- hamburger icon -->
-			<button class="hamburger" type="button">
-				<div class="hamburger-line"></div>
-				<div class="hamburger-line"></div>
-				<div class="hamburger-line"></div>
-			</button>
-
-			<!-- sidebar  -->
-			<section class="side-menu-nav">
-					<p class="close-side-bar"><span>&times;</span>Close</p>
-				<ul>
-					<li class="about"><a>About</a></li>
-					<li class="trips"><a>Trips</a></li>
-					<li class="log-in"><a>Log in</a></li>
-				</ul>
-			</section>
-    </div>
-    
-    <!-- The Modal -->
-    <div id="my-modal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <section class="sign-up-section col-12">
-          <div class="sign-in-wrapper col-12">
-              <div class="heading-wrapper col-12">
-                  <h2 class="heading-for-login">
-                    Welcome Back!
-                  </h2>
-                  <div class="cont-for-invalid-message-login">
-                      <p class="invalid-message-txt-login"></p>
-                    </div>
-                  <!-- <h4>Enter your credentials to access your account.</h4> -->
-                </div>
-            <form class="modal-form log-in" action="" method="post" autocomplete="off">
-              <fieldset name="register-info">
-                <input type="text" name="username" id="sign-in-username" placeholder="Username" required="" class="">
-                <input type="password" name="password" id="sign-in-password" placeholder="Password" required="" class="">
-              </fieldset>
-              <button type="submit" class="sign-in-button">Log In</button>
-              <div class="heading-wrapper col-12">
-                <h6>Login with Demo Account</h6>
-              </div>
-            </form>
+        <section class="container-for-header-text col-12">
+          <div class="header-text-wrapper col-6">
+            <p>
+              an app designed to make your next trip goes off without a hitch.
+            </p>
+            <h2>
+              Manage all your trips in one place.
+            </h2>
           </div>
         </section>
+        <div class="btn-wrapper col-12">
+          <!-- <a href="#sign-up"> -->
+          <button class="sign-up-btn">Sign Up</button>
+        <!-- </a> -->
+        </div>
+        <!-- hamburger icon -->
+        <button class="hamburger" type="button">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </button>
+  
+        <!-- sidebar  -->
+        <section class="side-menu-nav">
+          <p class="close-side-bar">
+            <span>&times;</span>Close</p>
+          <ul>
+            <li class="about">
+              <a>About</a>
+            </li>
+            <li class="trips">
+              <a href="http://localhost:8081/trips.html">Trips</a>
+            </li>
+            <li class="log-in">
+              <a>Log in</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+  
+      <!-- The Modal -->
+      <div id="my-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <section class="sign-up-section col-12">
+            <div class="sign-in-wrapper col-12">
+              <div class="heading-wrapper col-12">
+                <h2 class="heading-for-login">
+                  Welcome Back!
+                </h2>
+                <div class="cont-for-invalid-message-login">
+                  <p class="invalid-message-txt-login"></p>
+                </div>
+                <!-- <h4>Enter your credentials to access your account.</h4> -->
+              </div>
+              <form class="modal-form log-in" action="" method="post" autocomplete="off">
+                <fieldset name="register-info">
+                  <input type="text" name="username" id="sign-in-username" placeholder="Username" required="" class="">
+                  <input type="password" name="password" id="sign-in-password" placeholder="Password" required="" class="">
+                </fieldset>
+                <button type="submit" class="sign-in-button">Log In</button>
+                <div class="heading-wrapper col-12">
+                  <h6>Login with Demo Account</h6>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
-	</header>
+  </header>
 
       <!-- <section class="container-for-header-text col-12">
         <div class="header-text-wrapper col-6">
@@ -104,7 +137,7 @@
     <section class=" about-section col-12">
       <div class="h2-wrapper col-12">
         <h2 class="heading-for-about">
-          Plan your next business, road trip or weekend getaway
+          Plan Your Business Trip Or Weekend Getaway
         </h2>
       </div>
       <div class="description-1 col-4">
@@ -118,7 +151,7 @@
         <div class="text-2">
           <p>
             <span class="description-header">Save Time</span>
-            <br> manage all details of your trip and check-in to your flight on time.
+            <br> Manage all details of your trip and check-in to your flight on time.
           </p>
           <i class="fa fa-clock-o" aria-hidden="true"></i>
         </div>
@@ -138,14 +171,98 @@
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <p>
             <span class="description-header">Email Friends</span>
-            <br> send your flight information to friends and family with the click of a button.
+            <br> Send your flight information to friends and family with the click of a button.
           </p>
         </div>
       </div>
     </section>
+    <!-- <section class="line-wrapper col-12">
+      <div class="line-1 "></div>
+      <div class="line-2 "></div>
+    </section> -->
+    <section class="cards col-12">
+      <div class="h2-wrapper col-12">
+        <h2 class="heading-for-about">
+          Plan verything Ahead Of Time
+        </h2>
+      </div>
+      <div class="-cards-wrapper col-12">
+        
+        <div class="container-for-card col-4">
+          <div class="img-box col-12">
+            <img src="images/card-img-1.jpg">
+            <p class="cards-text">Plan Ahead</p>
+            <div class="text-wrapper">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-for-card col-4">
+          <div class="img-box">
+            <img src="images/card-img-4.jpg">
+            <p class="cards-text">Do Things Your Way</p>
+            <div class="text-wrapper">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet Lorem ipsum dool</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-for-card col-4">
+          <div class="img-box col-12">
+            <img src="images/card-img-5.jpg">
+            <p class="cards-text">Take Off</p>
+            <div class="text-wrapper">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="illustration">
+      <div class="h2-wrapper col-12">
+        <h2 class="heading-for-about">
+          Manage The Details
+        </h2>
+      </div>
+      <div class="illustration-row row">
+        <div class=" illustration-wrapper col-4">
+          <img src="images/work-step-icon-1.png" class="step-icon">
+          <hr width="3" size="40">
+          <h3>Sign Up</h3>
+          <div class="box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> tellus dolor <span>sollicitudin metus, vel scelerie</span> nulla purus at orci.sed purus quissollicitudin metus
+            </p>
+          </div>
+        </div>
+        <div class=" illustration-wrapper col-4">
+          <img src="images/work-step-icon-2.png" class="step-icon">
+          <hr width="3" size="40">
+          <h3>Plan Your Trip</h3>
+          <div class="box ">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus eleifend feugiat fermentum. Class aptent taciti sociosqu ad litora <span>torquent per conubia nostra, </span>per inceptos himenaeos.
+            </p>
+          </div>
+        </div>
+        <div class=" illustration-wrapper col-4">
+          <img src="images/work-step-icon-3.png" class="step-icon">
+          <hr width="3" size="40">
+          <h3>Save The Details</h3>
+          <div class="box ">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Sed efficitur velit non ipsum <span>lacinia condimentum.</span> Nullam eu aliquam nisi. Nulla in metus enim.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="sign-up-section col-12">
       <div class="sign-up-heading-wrapper col-12">
-        <h2 class="heading-for-trips" id="sign-up">Sign Up for Free</h2>
+        <h2 class="heading-for-trips" id="sign-up">Sign up for free</h2>
         <div class="cont-for-invalid-message">
           <p class="invalid-message-txt"></p>
         </div>
@@ -193,5 +310,6 @@
   </main>
   <!-- <script type="text/javascript" src="js/main.js"></script> -->
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/helpers.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 </body>
