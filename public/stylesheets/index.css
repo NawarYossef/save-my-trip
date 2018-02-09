@@ -252,6 +252,12 @@ body main h2 {
   color: #484646;
 }
 
+.sign-up-heading-wrapper h2 {
+  width: 25%;
+  margin: 40px auto 0 auto;
+  padding-right: 10px; 
+}
+
 body main .description-header {
   font: normal 1.5em 'Josefin Sans', sans-serif;
   color: #169ece;
@@ -294,6 +300,14 @@ body main .description-header {
 
 .container-for-card {
   height: 450px;
+}
+
+.img-box  { 
+  transition: all .4s ease-in-out; 
+}
+
+.img-box:hover { 
+  transform: scale(1.1); 
 }
  .cards h2 {
   color: #ffffff;
@@ -392,7 +406,7 @@ body main .description-header {
 .reviews-wrapper {
   width: 60%;
   display: inline-block;
-  margin: -90px auto 120px auto;
+  margin: -90px auto 69px auto;
   background: rgb(255, 255, 255);
   border: 1px solid rgb(211, 211, 211);
   border-radius: 3px;
@@ -429,8 +443,16 @@ body main .description-header {
   color: #505050;
   position: absolute;
   left: 12%;
-  top: 27%;
+  top: 18%;
 }
+
+.fa-star-wrapper {
+  position: absolute;
+  left: 12%;
+  top: 34%;
+  color: #424242;
+}
+
 .fa-quote-left, .fa-quote-right {
   font-size: 15px;
 }
@@ -440,7 +462,7 @@ body main .description-header {
 /* * * * * * * * * * * */
 .sign-up-heading-wrapper {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .sign-up-section, .sign-in-section {
@@ -562,6 +584,11 @@ body .go-to-login-button {
   height: 35px;
 }
 
+hr {
+  width: 30%;
+  height: 2px;
+  background: #a19f9f;
+}
 /* * * * * * * * * * * */
 /*       footer        */
 /* * * * * * * * * * * */
