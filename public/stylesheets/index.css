@@ -27,10 +27,8 @@ header .background-wrapper {
 
 body .header-wrapper {
   display: block;
-  /* position: fixed; */
   text-align: center;
   height: 50px;
-  /* background-color: rgba(0,0,0,0.6); */
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -67,7 +65,7 @@ body .header-wrapper {
 /*      modal          */
 /* * * * * * * * * * * */
 
-/* The Modal (background) */
+/* Modal (background) */
 
 .modal {
   display: none; 
@@ -79,18 +77,20 @@ body .header-wrapper {
   height: 100%;
   overflow: auto; 
   background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.3);
 }
 
 .modal-content {
   position: absolute;
   left: 30%;
   /* top: -100px; */
-  background-color: #f5f5f5;
-  margin:  5% auto 0 auto; 
+  background-color: #ffffff;
+  margin:  10% auto 0 auto; 
   padding: 20px;
   border: 1px solid #888;
   width: 40%; 
+  border-radius: 5px;
+  box-shadow: 5px 10px 18px #1d1d20;
 }
 
 .modal-form input {
@@ -99,11 +99,12 @@ body .header-wrapper {
 
 .modal .heading-wrapper {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .modal h2 {
-  font: normal 1.8em 'Fire-sans', sans-serif;
+  font: normal 1.5em 'Raleway', sans-serif;
+  color: #414141;
 }
 
 .modal h4 {
@@ -123,9 +124,9 @@ body .header-wrapper {
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: #888888;
   float: right;
-  font-size: 28px;
+  font-size: 2.2em;
   font-weight: bold;
   padding: 0px;
 }
@@ -285,7 +286,7 @@ body main .description-header {
 /*       cards         */
 /* * * * * * * * * * * */
 .cards {
-  background-color: #333036;
+  background-color: #262328;
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231a191c' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
   display: inline-block;
   height: 700px;
@@ -303,13 +304,13 @@ body main .description-header {
   padding: 0px;
   border-radius: 3px;
   background: #ffffff;
-  box-shadow: 17px 20px 15px rgba(0,0,0,0.30), 10px 20px 16px rgba(78, 78, 78, 0.3);
-  
+  box-shadow: 14px 19px 29px #0b0b0b;
  }
  
  img {
    width: 100%;
    height: 300px;
+   border-radius: 3px;
  }
 
  .cards-text {
@@ -343,18 +344,19 @@ body main .description-header {
 }
 
 .illustration-wrapper {
-  margin-bottom: 150px; 
+  margin-bottom: 220px; 
 }
 
-.box {
+.illustration .box {
   border: 1px solid rgb(211, 211, 211);
   border-radius: 2px;
   width: 80%;
   margin: auto;
+  padding-top: 5px;
 }
 
 .step-icon {
-  width: 10%;
+  width: 15%;
   height: 10%;
   /* margin-bottom: 35px;  */
 }
@@ -377,21 +379,78 @@ body main .description-header {
   color: rgb(109, 103, 103);
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 0px;
 }
 
 .box p span {
   color: rgb(189, 0, 195);
 }
+
+ /* * * * * * * * * * * */
+/*       review         */
+/* * * * * * * * * * * */
+.reviews-wrapper {
+  width: 60%;
+  display: inline-block;
+  margin: -90px auto 120px auto;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 3px;
+  box-shadow: 2px 2px 12px #707070;
+}
+
+.review {
+  width: 100%;
+  text-align: initial;
+  position: relative;
+}
+
+.review img {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.review p {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  font: italic 1em/170% 'Roboto', sans-serif;
+  color: rgb(109, 103, 103);
+}
+
+.review span {
+  font: normal 1.1em/170% 'Roboto', sans-serif;
+  color: #505050;
+  position: absolute;
+  left: 12%;
+  top: 27%;
+}
+.fa-quote-left, .fa-quote-right {
+  font-size: 15px;
+}
+
 /* * * * * * * * * * * */
 /*       Sign Up        */
 /* * * * * * * * * * * */
 .sign-up-heading-wrapper {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.sign-up-section {
+.sign-up-section, .sign-in-section {
+  padding-bottom: 80px;
+  position: relative;
   background: #f5f5f5;
-  height: 460px;
+}
+
+.sign-in-section {
+  background: #ffffff;   
 }
 
 .sign-up-wrapper, .sign-in-wrapper  {
@@ -405,7 +464,6 @@ body main .description-header {
 }
 
 body .register {
-  /* padding-top: 20px; */
   margin: 0 auto;
   width: 50%;
   margin-bottom: 10px;
@@ -424,7 +482,7 @@ body form input {
   border-top: none;
   border-right: none;
   padding: 2px 0;
-  font-size: 1em;
+  font-size: 1.2em;
   background-color: transparent;
   margin-bottom: 20px;
   margin-top: 5px;
@@ -449,7 +507,7 @@ body form input {
   text-align: left;
   margin: 0 auto;
   font-family: "Times New Roman";
-  /* margin: 0 0 20px; */
+  margin-top: 15px;
   padding: 6px 8px;
   border-radius: 3px;
 }
@@ -467,9 +525,22 @@ body form button, body .go-to-login-button {
   height: 43px;
   color: #ffffff;
   background: #0088ff;
-  margin-top: 15px;
+  margin-top: 25px;
   font-size: 1.4em;
   border: none;
+  border-radius: 3px;
+}
+
+body form button:hover, body .go-to-login-button:hover {
+  background: #006bc8;
+}
+
+body form button, body .go-to-login-button {
+  -webkit-transition: background-color 0.7s ease-out;
+    -moz-transition: background-color 0.7s ease-out;
+    -o-transition: background-color 0.7s ease-out;
+    -ms-transition: background-color 0.7s ease-out;
+    transition: background-color 0.7s ease-out;
 }
 
 .go-to-login-section {

@@ -12,18 +12,20 @@ class SaveMyTrip {
     this.logInUser();
     this.NavbarScrollToSection();
     this.changeHeaderStylesOnScroll();
+    this.reviewSlideShow();
   }
 
   showLoginModal() {
     $(".log-in, .go-to-login-button").click(() => {
       $("#my-modal").css("display", "block");
-      $('#my-modal').addClass('animated slideInDown');
+      $('.modal-content').addClass('animated slideInDown');
     })
   }
 
   closeLoginModal() {
     $(".close").click(() => {
-      $("#my-modal").removeClass("animated slideInDown").addClass('animated fadeOutRight');
+      $(".modal-content").removeClass("animated slideInDown").addClass('animated fadeOutRight');
+      $("#my-modal").fadeOut(1200);    
     })
   }
 
@@ -39,7 +41,7 @@ class SaveMyTrip {
         case $(this).hasClass("sign-up-btn"):
           $('html, body').animate({
 					  scrollTop: $("#sign-up").offset().top
-			    }, 900);
+			    }, 1000);
           break;
         default:
           // do nothing
@@ -93,7 +95,7 @@ class SaveMyTrip {
   showInvalidMessage(data) { 
     const field = data.responseJSON.location.charAt(0).toUpperCase() + data.responseJSON.location.slice(1);
     $(".invalid-message-txt").text(`Invalid entry. ${field} ${data.responseJSON.message}`)
-    $(".cont-for-invalid-message").css("display", "block")
+    $(".cont-for-invalid-message").fadeIn().css("display", "block")
   }
 
   hideInvalidMessage() {
@@ -145,11 +147,11 @@ class SaveMyTrip {
   }
 
   showLogInSection() {
-    $(".heading-for-trips-login, .go-to-login-section").show();
+    $(".heading-for-trips-login, .go-to-login-section").fadeIn().show();
   }
 
   hideSignupSection() {
-    $(".heading-for-trips, .sign-up-wrapper").hide(); 
+    $(".heading-for-trips, .sign-up-wrapper").fadeOut().hide(); 
   }
 
   changeHeaderStylesOnScroll() {
@@ -163,7 +165,11 @@ class SaveMyTrip {
       } else {
         $('.h1-wrapper, nav').css({"background":"transparent"});
       }
-  });
+    });
+  }
+
+  reviewSlideShow() {
+
   }
 }
 
