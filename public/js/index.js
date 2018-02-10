@@ -37,6 +37,8 @@ class SaveMyTrip {
           $('html, body').animate({
             scrollTop: $("main").offset().top - 66
           }, 900);
+          // close sidebar after scrolling down to section
+          $(".side-menu-nav").fadeOut().addClass("animated slideOutRight");
           break;
         case $(this).hasClass("sign-up-btn"):
           $('html, body').animate({
@@ -160,16 +162,26 @@ class SaveMyTrip {
       {   
         $('.h1-wrapper, nav').css({
           transition : 'background-color 0.2s ease-in-out',
-          "background-color": "rgba(0,0,0,0.7)"
+          "background-color": "rgba(0,0,0,0.8)"
         });
       } else {
-        $('.h1-wrapper, nav').css({"background":"transparent"});
+        $('.h1-wrapper, nav').css({
+          "background":"transparent"
+        });
       }
     });
   }
 
   reviewSlideShow() {
-
+    $(function(){
+      $('.reviews-wrapper').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 4000,
+      });
+    })
   }
 }
 
