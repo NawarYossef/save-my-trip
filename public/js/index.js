@@ -40,7 +40,7 @@ class SaveMyTrip {
           break;
         case $(this).hasClass("sign-up-btn"):
           $('html, body').animate({
-					  scrollTop: $("#sign-up").offset().top
+					  scrollTop: $("#sign-up").offset().top - 105
 			    }, 1000);
           break;
         default:
