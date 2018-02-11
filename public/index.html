@@ -5,7 +5,7 @@
   <title>SaveMyTrip</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Fredoka+One|Patua+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Patua+One" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/hover.css">
@@ -35,22 +35,27 @@
         </nav>
   
         <div class="h1-wrapper">
-          <div class="inner-h1-wrapper">
-            <a class="link-for-h1" href="http://localhost:8081/">
-              <h1>SaveMyTrip
-                <i class="fas fa-plane"></i>
-              </h1>
-            </a>
-          </div>
+          <a class="link-for-h1" href="http://localhost:8081/">
+            <h1>SaveMyTrip
+              <i class="fas fa-plane"></i>
+            </h1>
+          </a>
         </div>
-
-        <section class="container-for-header-text col-12">
+        <!-- hamburger icon -->
+        <button class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        
+      </div>
+      <section class="container-for-header-text col-12">
           <div class="header-text-wrapper col-6">
             <p>
               an app designed to make your next trip goes off without a hitch.
             </p>
             <h2>
-              Manage all your trips in one place.
+              Manage All Your Trips In One Place.
             </h2>
           </div>
         </section>
@@ -59,17 +64,10 @@
           <button class="sign-up-btn">Sign Up</button>
         <!-- </a> -->
         </div>
-        <!-- hamburger icon -->
-        <button class="hamburger" type="button">
-          <div class="hamburger-line"></div>
-          <div class="hamburger-line"></div>
-          <div class="hamburger-line"></div>
-        </button>
   
         <!-- sidebar  -->
         <section class="side-menu-nav">
           <p class="close-side-bar">
-            <span>&times;</span>Close</p>
           <ul>
             <li class="about">
               <a>About</a>
@@ -82,7 +80,6 @@
             </li>
           </ul>
         </section>
-      </div>
   
       <!-- The Modal -->
       <div id="my-modal" class="modal">
@@ -346,13 +343,13 @@
             </a>
           </li>
           <li class="">
-            <a href="#">
-              <i class="fas fa-address-book" target="_blank"></i>
+            <a href="https://github.com/NawarYossef" target="_blank">
+              <i class="fab fa-github"></i>
             </a>
           </li>
           <li class="">
-            <a href="https://github.com/NawarYossef" target="_blank">
-              <i class="fab fa-github"></i>
+            <a href="#">
+              <i class="fas fa-shopping-bag"></i>
             </a>
           </li>
         </ul>

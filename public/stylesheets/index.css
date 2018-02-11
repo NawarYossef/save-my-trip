@@ -11,6 +11,12 @@ body header {
   height: 700px;
 }
 
+.fa-plane {
+  transform: rotate(320deg);
+  vertical-align: middle;
+  margin-left: -10px;
+}
+
 header .background-wrapper {
   background-color: rgba(0,0,0,0.6);
   height: 700px;
@@ -28,7 +34,6 @@ header .background-wrapper {
 body .header-wrapper {
   display: block;
   text-align: center;
-  height: 50px;
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -154,7 +159,7 @@ body .header-wrapper {
 
  .sign-up-btn:hover {
   cursor: pointer;
-  background-color: #d4a429;
+  background-color: #b48b22;
 } 
 
 .sign-up-btn {
@@ -295,7 +300,7 @@ body main .description-header {
   background-color: #262328;
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231a191c' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
   display: inline-block;
-  height: 792px;
+  height: 680px;
 }
 
 .container-for-card {
@@ -328,8 +333,9 @@ body main .description-header {
  }
 
  .cards-text {
-  font: normal 1.4em 'Fredoka One', cursive;
+  font: bold 1.4em 'Poppins', sans-serif;
   color: rgb(90, 99, 114);
+  margin-top: 5px;
  }
 
  .text-wrapper {
@@ -497,7 +503,7 @@ body form fieldset {
 }
 
 body form input {
-  font-family: "Times New Roman";
+  font: normal 1.2em "Roboto", sans-serif;
   color: #2f2e2e;
   width: 50%;
   border: 2px solid #d8d8d8;
@@ -505,7 +511,7 @@ body form input {
   border-top: none;
   border-right: none;
   padding: 2px 0;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   background-color: transparent;
   margin-bottom: 20px;
   margin-top: 5px;
@@ -596,9 +602,11 @@ hr {
 /* * * * * * * * * * * */
 .footer {
   margin: 0 auto;
-  height: 200px;
+  /* height: 200px; */
   background: #222020;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .footer .contacts {
@@ -607,7 +615,7 @@ hr {
 }
 
 .footer .contacts {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .footer .contacts ul {
@@ -649,7 +657,7 @@ hr {
   display: inline-block;
   color: #d1c5c5;
   font: normal 1em 'Roboto', sans-serif;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .fa-heart  {
@@ -675,12 +683,78 @@ hr {
   margin-right: 5px;
   color: #e952fd;
 }
+
+header button {
+  padding: 0 0;
+  background: transparent;
+}
 /* * * * * * * * * * * * * */
 /* general Media Queries   */
 /* * * * * * * * * * * * * */
+
 @media screen and (max-width: 320px) {
   body header nav {
     display: none;
+  }
+
+  body header {
+    background-image: url(../images/airport6.jpg);
+    background-position:  60% 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 
+
+  body header h1 {
+    font: normal 2.2em 'Patua One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+  }
+
+  body header .h1-wrapper {
+    width: 65%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 55% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 1.8em 'Patua One', serif;
+  }
+
+  .sign-up-btn { 
+    width: 40%;
   }
 }
 
@@ -697,19 +771,19 @@ hr {
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  body header button.hamburger {
+  body header .hamburger {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  body header button.hamburger {
+  body header .hamburger {
     display: none;
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  body header button.hamburger {
+  body header .hamburger {
     display: none;
   }
 
@@ -720,7 +794,7 @@ hr {
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1600px) {
-  body header button.hamburger {
+  body header .hamburger {
     display: none;
   }
 }

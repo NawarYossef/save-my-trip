@@ -160,13 +160,15 @@ class SaveMyTrip {
     $(document).scroll(function(){
       if($(this).scrollTop() > 180)
       {   
-        $('.h1-wrapper, nav').css({
+        $('.header-wrapper').css({
           transition : 'background-color 0.2s ease-in-out',
-          "background-color": "rgba(0,0,0,0.8)"
+          "background-color": "rgba(0,0,0,0.8)",
+          "box-shadow": "0 0 16px 8px rgba(0,0,0,.5)"
         });
       } else {
-        $('.h1-wrapper, nav').css({
-          "background":"transparent"
+        $('.header-wrapper').css({
+          "background":"transparent",
+          "box-shadow": "initial"
         });
       }
     });

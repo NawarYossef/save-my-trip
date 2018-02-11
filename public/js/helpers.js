@@ -5,8 +5,8 @@ class Helpers {
   
   init() {
     this.TokenCheck();
-    this.showSidebar();
-    this.hideSidebar();
+    this.handleSidebar();
+    this.handleHamburgerButton();
     this.userLogout();
   }
   //route to landing page if there is no token
@@ -14,20 +14,19 @@ class Helpers {
     if(window.location.href === 'http://localhost:8081/') {
       return;
     } else if(!this.token) {
-      window.location.replace('/')
+      window.location.replace('/');
     }
   }
 
-  showSidebar() {
-    $(".hamburger").click(() => {
-      $(".side-menu-nav").removeClass("animated slideOutRight")
-      $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInRight")
-    })
-  }
-
-  hideSidebar() {
-    $(".close-side-bar").click(() => {
-      $(".side-menu-nav").fadeOut().addClass("animated slideOutRight")
+  handleSidebar() {
+    $(".hamburger").click(function() {
+      if (!$(this).hasClass("is-active")) {
+        // make sure that side bar is hidden by default
+        $(".side-menu-nav").removeClass("animated slideOutLeft");
+        $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInLeft");
+      } else {
+        $(".side-menu-nav").fadeOut().addClass("animated slideOutLeft");
+      }
     })
   }
 
@@ -35,6 +34,12 @@ class Helpers {
     $(".log-out").click(() => {
       localStorage.removeItem("token");
       window.location.replace(`/`)
+    })
+  }
+
+  handleHamburgerButton() {
+    $(".hamburger").click(function() {
+      ($(this).hasClass("is-active")) ? $(this).removeClass("is-active") : $(this).addClass("is-active");
     })
   }
 }
