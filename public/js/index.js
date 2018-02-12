@@ -162,7 +162,7 @@ class SaveMyTrip {
       {   
         $('.header-wrapper').css({
           transition : 'background-color 0.2s ease-in-out',
-          "background-color": "rgba(0,0,0,0.8)",
+          "background-color": "rgba(0,0,0,0.9)",
           "box-shadow": "0 0 16px 8px rgba(0,0,0,.5)"
         });
       } else {

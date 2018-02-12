@@ -39,7 +39,6 @@ main .row {
 }
 
 .box {
-  height: 200px;
   text-align: center;
   padding-top: 30px;
 }
@@ -284,7 +283,7 @@ body header h1 {
 /* * * * * * * * * * * */
 .side-menu-nav {
   display: none;
-  width: 70%;
+  width: 77%;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -302,6 +301,10 @@ body header h1 {
 .side-menu-nav p {
   margin-top: 20px;
   font: normal 1em Raleway, sans-serif;
+}
+
+.center-side-bar {
+  position: fixed;
 }
 
 
@@ -327,12 +330,13 @@ body header h1 {
   background: none;
   text-decoration: none;
   outline: none;
-  font: normal 1.3em Raleway, sans-serif;
+  font: normal 1.3em 'Merriweather', serif;
 }
 
 .side-menu-nav ul li a:hover {
   cursor: pointer;
 }
+
 
 /* Non-mobile, grid */
 @media only screen and (min-width: 640px) {
