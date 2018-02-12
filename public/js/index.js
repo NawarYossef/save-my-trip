@@ -16,9 +16,13 @@ class SaveMyTrip {
   }
 
   showLoginModal() {
-    $(".log-in, .go-to-login-button").click(() => {
+    const that = this
+    $(".log-in, .go-to-login-button").click(function() {
       $("#my-modal").css("display", "block");
       $('.modal-content').addClass('animated slideInDown');
+      if($(this).hasClass("log-in-side-bar-link")) {
+        that.closeSidebar();
+      }
     })
   }
 
@@ -30,25 +34,41 @@ class SaveMyTrip {
   }
 
   NavbarScrollToSection() {
+    const that = this;
     $('header').on('click', '.about, .sign-up-btn', function(e) {
       e.preventDefault();
       switch(true) {
         case $(this).hasClass("about"):
+          that.closeSidebar();
           $('html, body').animate({
             scrollTop: $("main").offset().top - 66
           }, 900);
-          // close sidebar after scrolling down to section
-          $(".side-menu-nav").fadeOut().addClass("animated slideOutRight");
           break;
+
         case $(this).hasClass("sign-up-btn"):
           $('html, body').animate({
 					  scrollTop: $("#sign-up").offset().top - 105
 			    }, 1000);
           break;
+
+        
         default:
           // do nothing
       }
     });
+  }
+
+  closeSidebar() {
+    if (!$(".hamburger").hasClass("is-active")) {
+      $(".hamburger").addClass("is-active")
+      // make sure that side bar is hidden by default
+      $(".side-menu-nav").removeClass("animated slideOutLeft");
+      $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInLeft");
+      $(".side-menu-nav").fadeIn().addClass("center-side-bar");
+    } else {
+      $(".side-menu-nav").fadeOut().addClass("animated slideOutLeft");
+      $(".hamburger").removeClass("is-active")
+    }
   }
   
   signUpUser() {
@@ -163,16 +183,21 @@ class SaveMyTrip {
         $('.header-wrapper').css({
           transition : 'background-color 0.2s ease-in-out',
           "background-color": "rgba(0,0,0,0.9)",
-          "box-shadow": "0 0 16px 8px rgba(0,0,0,.5)"
+          "box-shadow": "0 0 16px 8px rgba(0,0,0,.5)",
+          "-webkit-box-shadow": "0 0 16px 8px rgba(0,0,0,.5)",
+          "-moz-box-shadow": "0 0 16px 8px rgba(0,0,0,.5)"
         });
       } else {
         $('.header-wrapper').css({
           "background":"transparent",
-          "box-shadow": "initial"
+          "box-shadow": "initial",
+          "-webkit-box-shadow": "initial",
+          "-moz-box-shadow":  "initial"
+           
         });
       }
     });
-  }
+  } 
 
   reviewSlideShow() {
     $(function(){

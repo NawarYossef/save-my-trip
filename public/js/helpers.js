@@ -5,7 +5,7 @@ class Helpers {
   
   init() {
     this.TokenCheck();
-    this.handleSidebar();
+    this.handleSidebarSlide();
     this.handleHamburgerButton();
     this.userLogout();
   }
@@ -18,7 +18,7 @@ class Helpers {
     }
   }
 
-  handleSidebar() {
+  handleSidebarSlide() {
     $(".hamburger").click(function() {
       if (!$(this).hasClass("is-active")) {
         // make sure that side bar is hidden by default
