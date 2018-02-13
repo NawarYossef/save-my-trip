@@ -1,26 +1,219 @@
-/* * * * * * * * * * * */
-/*      main            */
-/* * * * * * * * * * * */
-main {
-  width: 60%;
-  display: inline-block;
-  margin: 100px auto 0 auto;
-  background-color: #d7e3f0;
-  border-radius: 10px;
-  padding-top: 0px;
-}
+@import url("whitespace-reset.css");
 
 body header {
-  background-color: rgba(0,0,0,0.6);
-  height: 60px;
+   background-color: rgba(0,0,0,0.6);
+}
+
+header .fa-plane {
+  transform: rotate(320deg);
+  vertical-align: middle;
+  margin-left: -10px;
+}
+
+body header .h1-wrapper {
+  text-align: left;
+}
+
+body header h1 {
+  margin-left: 10%;
+}
+
+header .background-wrapper {
+  padding: 0px;
+}
+
+.link-for-h1 {
+  text-decoration: none;
+}
+
+.header-scroll {
+  background-color: #ffffff;
+}
+
+body .header-wrapper {
+  display: block;
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  position: initial;
+  
+}
+
+body header nav {
+  width: 60%;
+}
+
+body header .h1-wrapper {
+  width: 40%;
 }
 
 body header nav .ul-header {
   width: 100%;
+  text-align: right;
+  padding-right: 10%;
 }
 
-body header nav ul li {
-  margin-left: 40px; 
+.inner-h1-wrapper {
+  width: 80%;
+}
+
+header .fa-plane {
+  vertical-align: middle;
+}
+
+.container-for-header-text {
+  text-align: center;
+}
+
+.header-text-wrapper {
+  margin: 25% auto 0 auto;
+  width: 80%;
+  float: none;
+}
+
+.container-for-header-text p {
+  margin-top: 15%;
+  font: normal 1.2em sans-serif;
+  color: #ffffff;
+}
+
+.container-for-header-text h2 {
+  font: normal 2.4em 'Patua One', serif;
+  color: #ffffff;
+}
+/* * * * * * * * * * * */
+/*      modal          */
+/* * * * * * * * * * * */
+
+/* Modal (background) */
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.3);
+}
+
+.modal-content {
+  position: absolute;
+  left: 30%;
+  /* top: -100px; */
+  background-color: #ffffff;
+  margin:  10% auto 0 auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; 
+  border-radius: 5px;
+  box-shadow: 5px 10px 18px #1d1d20;
+}
+
+.modal-form input {
+  width: 60%;
+}
+
+.modal .heading-wrapper {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.modal h2 {
+  font: normal 1.5em 'Patua One', serif;
+  color: #414141;
+}
+
+.modal h4 {
+  padding-top: 10px;
+  font: normal 1.2em 'Quicksand', sans-serif;
+}
+
+.modal h6 {
+  padding-top: 10px;
+  font: normal 1.1em 'Fire-sans', sans-serif;
+  text-decoration: underline;
+}
+
+.modal h6:hover {
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close {
+  color: #888888;
+  float: right;
+  font-size: 2.2em;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sign-up-btn {
+  background-color: #fdcc52;
+  font: normal 1.2em 'Merriweather', serif;
+  color: #222020;
+  border: none;
+  outline: none;
+  width: 12%;
+  display: inline-block;
+  height: 48px;
+  margin-top: 40px;
+  border-radius: 25px;
+  /* box-shadow: 6px 5px 10px #484848; */
+}
+
+ .sign-up-btn:hover {
+  cursor: pointer;
+  background-color: #b48b22;
+} 
+
+.sign-up-btn {
+  -webkit-transition: background-color 0.7s ease-out;
+  -moz-transition: background-color 0.7s ease-out;
+  -o-transition: background-color 0.7s ease-out;
+  -ms-transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out;
+}
+
+.arrows {
+	width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 48.5%;
+  bottom: 25%;
+}
+
+.arrows path {
+	stroke: #F2E6C6;
+	fill: transparent;
+	stroke-width: 1.5px;	
+}
+
+
+/* * * * * * * * * * * */
+/*      main            */
+/* * * * * * * * * * * */
+main {
+  width: 90%;
+  display: block;
+  margin: 100px auto 0 auto;
+  background-color: #d7e3f0;
+  border-radius: 5px;
+  padding-top: 0px;
+}
+
+body header {
+  height: 60px;
 }
 
 .h2-wrapper {
@@ -35,7 +228,7 @@ h2 {
 }
 
 .trips-container {
-  width: 80%;
+  width: 90%;
   float: none;
   margin: auto;
   margin-bottom: 20px;
@@ -48,8 +241,8 @@ h2 {
 
 .trip-header {
   width: 100%;
-  height: 65px;
-  background: #F2994A;
+  height: 74px;
+  background: #274d7a;
   margin: 30px auto 0 auto;
 }
 
@@ -71,13 +264,13 @@ body section .confirmation {
 main .confirmation .confirmation-title,
 main .airline-wrapper .airline-title {
   font: bold 1em 'Kanit', sans-serif;
-  color: #2C2A87;
+  color: #ffffff;
 }
 
 main .confirmation .confirmation-text,
 main .airline-wrapper .airline-text {
   font: bold 0.9em 'roboto', sans-serif;
-  color: #4F4F4F;
+  color: #000;
 }
 
 .confir-wrapper {
@@ -92,14 +285,16 @@ body section .data-wrapper {
 
 body .airports-wrapper h3 {
   display: inline-block;
-  font: normal 1.7em 'Bree Serif', serif;
+  font: normal 2em 'Bree Serif', serif;
   color: #ffffff;
-  margin-bottom: -1px;
+  margin-bottom: -1px;     
+  margin-top: 0px;    
 }
 
 h4 {
   font: normal 1em 'Bree Serif', serif;
   /* font-size: 14px; */
+  margin: 0px;
 }
 
 .airline-wrapper {
@@ -113,17 +308,20 @@ h4 {
  margin-top: -9px;
 }
 
-.fa-arrow-right {
-  font-size: 1.4em;
-  color: #161616;
+.trip-header .fa-plane {
+  margin-top: 10px;
+  font-size: 1.8em;
+  color: #1f1d1d;
 }
 
 .fa-caret-down, .fa-caret-up {
-  color: #424242;
+  color: #1f1d1d;
 }
 
 .trip-header {
   cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 /* * * * * * * * * * * * * */
 /*     drop down details   */
@@ -137,7 +335,7 @@ h4 {
   width: 100%;
   text-align: left;
   margin: auto;
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255); */
   line-height: 100%;
   /* border-radius: 10px; */
 }
@@ -337,10 +535,12 @@ input:focus {
 .control-btns button {
   font: normal 1em 'roboto', sans-serif;
   color: #ffffff;
-  background: #F2994A;
-  height: 30px;
+  background: #274d7a;
+  height: 40px;
   outline: none;
   border-top: 1px solid rgb(255, 255, 255);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .control-btns button:hover {
@@ -369,21 +569,216 @@ input:focus {
   display:none;
 }
 
+
+/* * * * * * * * * * * * * */
 /* general Media Queries   */
 /* * * * * * * * * * * * * */
+
 @media screen and (max-width: 320px) {
-  body header .h1-wrapper {
-    float: left;
-    margin-top: 3%;
-    margin-left: 2%;
+  body header nav {
+    display: none;
   }
 
+  .cards {
+    padding-bottom: 235px;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  body header {
+    padding: 0px;
+    background-image: url(../images/airport6.jpg);
+    background-position:  60% 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 
+
   body header h1 {
+    font: normal 1.9em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 65%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 55% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 1.8em 'Patua One', serif;
+  }
+
+  .sign-up-btn { 
+    width: 55%;
+  }
+
+  body main h2 {
+    font-size: 1.7em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .illustration h3 {
     font-size: 1.3em;
   }
 
-  body header nav {
-    display: none;
+  .illustration-wrapper {
+    margin-bottom: 60px;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -150px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 34%;
+    top: 11%;
+  }
+
+  .fa-star-wrapper {
+    left: 33%;
+    top: 22%;
+  }
+
+  hr {
+    width: 72%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 1.2em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  .footer .contacts ul {
+    width: 60%;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 55%;
+  }
+
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
+  }
+
+  .step-icon {
+    width: 11%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .illustration .box {
+    width: 95%;
   }
 }
 
@@ -391,28 +786,642 @@ input:focus {
   body header nav {
     display: none;
   }
+
+  .cards {
+    padding-bottom: 200px;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 0px;
+  }
+
+  body header {
+    padding: 0px;
+    background-image: url(../images/airport6.jpg);
+    background-position:  60% 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 
+
+  body header h1 {
+    font: normal 2.1em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 65%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 55% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 1.8em 'Patua One', serif;
+  }
+
+  .sign-up-btn { 
+    width: 55%;
+    font-size: 1.3em;
+  }
+
+  body main h2 {
+    font-size: 1.9em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .illustration .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .illustration h3 {
+    font-size: 1.3em;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: 37px;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -90px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 34%;
+    top: 11%;
+  }
+
+  .fa-star-wrapper {
+    left: 33%;
+    top: 22%;
+  }
+
+  hr {
+    width: 72%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 1.2em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  .footer .contacts ul {
+    width: 60%;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 55%;
+  }
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+  }
+
+  .step-icon {
+    width: 11%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  .illustration .box {
+    width: 95%;
+  }
 }
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
   body header nav {
     display: none;
   }
-}
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
-  body header button.hamburger {
+  .cards {
+    padding-bottom: 235px;
+  }
+
+  body header nav {
     display: none;
+  }
+
+  body header nav {
+    display: none;
+  }
+
+  body header {
+    padding: 0px;
+    background-image: url(../images/airport6.jpg);
+    background-position:  63% 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 
+
+  body header h1 {
+    font: normal 2.2em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 65%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 45% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 1.8em 'Patua One', serif;
+  }
+
+  .sign-up-btn { 
+    width: 55%;
+    font-size: 1.3em;
+  }
+
+  body main h2 {
+    font-size: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .illustration h3 {
+    font-size: 1.4em;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: 66px;
+  }
+
+  .illustration .box {
+    width: 95%;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -90px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 34%;
+    top: 11%;
+  }
+
+  .fa-star-wrapper {
+    left: 33%;
+    top: 22%;
+  }
+
+  hr {
+    width: 72%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 1.2em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  .footer .contacts ul {
+    width: 60%;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 55%;
+  }
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+  }
+
+  .about-img {
+    width: 83%;
+  }
+
+  .step-icon {
+    width: 11%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  .modal-content {
+    width: 90%;
+    position: absolute;
+    left: 5%;
+  }
+
+  .side-menu-nav {
+    display: none;
+    width: 55%;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  body header button.hamburger {
+
+
+@media screen and (min-width: 426px) and (max-width: 639px) {
+  body header .hamburger {
+    display: initial;
+    position: absolute;
+    top: 33%;
+    right: 4%;
+  }
+
+  html body header {
+    background-position: 34% 80%;
+  }
+
+  body header nav {
     display: none;
+  }
+
+  body header nav .ul-header {
+    width: 100%;
+  }
+
+  body header {
+    padding: 0px;
+    background-image: url(../images/airport6.jpg);
+    background-position:  63% 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 
+
+  body header h1 {
+    font: normal 2.2em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 3%;
+  }
+
+  body header .h1-wrapper {
+    width: 85%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 18% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 2.2em 'Patua One', serif;
+  }
+
+  .text-wrapper p {
+    font-size: 1.1em;
+  }
+
+  .cards-text {
+    font-size: 1.7em; 
+  }
+
+  .review p {
+    font-size: 1.1em;
+  }
+
+  .sign-up-btn { 
+    width: 34%;
+    font-size: 1.3em;
+  }
+
+  body main h2 {
+    font-size: 2.2em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .illustration .h2-wrapper {
+    padding-top: 20px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2em;
+  }
+
+  .illustration h3 {
+    font-size: 1.4em;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: 46px;
+  }
+
+  .illustration .box {
+    width: 100%;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -90px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 33%;
+    top: 11%;
+    font-size: 1.3em;
+  }
+
+  .fa-star-wrapper {
+    left: 33%;
+    top: 25%;
+  }
+
+  hr {
+    width: 44%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 1.2em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  .footer .contacts ul {
+    width: 60%;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 55%;
+  }
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 42px;
+    height: 5px;
+  }
+
+  .step-icon {
+    width: 10%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  .modal-content {
+    width: 90%;
+    position: absolute;
+    left: 5%;
+  }
+
+  .about-img {
+    width: 60%;
+  }
+
+  .side-menu-nav ul li a {
+    font-size: 1.5em;
+  }
+
+  .cards {
+    padding-bottom: 234px;
+  }
+
+  .side-menu-nav {
+    display: none;
+    width: 48%;
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-  body header button.hamburger {
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  body header .hamburger {
     display: none;
   }
 
@@ -420,19 +1429,661 @@ input:focus {
     display: initial;
     float: right;
   }
+
+  body header .hamburger {
+    display: initial;
+    position: absolute;
+    top: 33%;
+    right: 5%;
+  }
+
+  html body header {
+    background-position: 34% 80%;
+  }
+
+  body header nav {
+    display: none;
+  }
+
+  body header nav .ul-header {
+    width: 100%;
+  }
+
+  body header {
+    padding: 0px;
+    background-image: url(../images/airport6.jpg);
+    background-position:  63% 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 
+
+  body header h1 {
+    font: normal 2.2em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 85%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 25% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: initial;
+    font-size: 1em;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 2.2em 'Patua One', serif;
+  }
+
+  .text-wrapper p {
+    font-size: 1.1em;
+  }
+
+  .cards-text {
+    font-size: 1.7em; 
+  }
+
+  .review p {
+    font-size: 1.1em;
+  }
+
+  .sign-up-btn { 
+    width: 28%;
+    font-size: 1.3em;
+  }
+
+  body main h2 {
+    font-size: 2.2em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .illustration .h2-wrapper {
+    padding-top: 20px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2em;
+  }
+
+  .illustration h3 {
+    font-size: 1em;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: 46px;
+  }
+
+  .illustration .box {
+    width: 100%;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -90px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 20%;
+    top: 9%;
+    font-size: 1.3em;
+  }
+
+  .fa-star-wrapper {
+    left: 20%;
+    top: 25%;
+  }
+
+  hr {
+    width: 44%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 1.2em "Roboto", sans-serif;
+    width: 75%;
+  }
+
+  .footer .contacts ul {
+    width: 42%;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 45%;
+  }
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 42px;
+    height: 5px;
+  }
+
+  .step-icon {
+    width: 25%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  .modal-content {
+    width: 90%;
+    position: absolute;
+    left: 5%;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+  .cards {
+    padding-bottom: 70px;
+  }
+
+  .container-for-card {
+    height: 530px;
+  }
+
+  .img-box {
+    height: 450px;
+  }
+
+  .side-menu-nav ul li a {
+    font-size: 1.5em;
+  }
+
+  .side-menu-nav {
+    display: none;
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body header .hamburger {
+    display: none;
+  }
+
+  body header nav {
+    display: initial;
+    float: right;
+  }
+
+  .side-menu-nav {
+    display: none;
+    width: 48%;
+  }
+
+  body header .hamburger {
+    display: initial;
+    position: absolute;
+    top: 33%;
+    right: 5%;
+  }
+
+  html body header {
+    background-position: 34% 80%;
+  }
+
+  body header nav {
+    display: none;
+  }
+
+  body header nav .ul-header {
+    width: 100%;
+  }
+
+  body header {
+    padding: 0px;
+    background-image: url(../images/airport6.jpg);
+    background-position:  63% 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 
+
+  body header h1 {
+    font: normal 2.5em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 85%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 11% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: initial;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 2.2em 'Patua One', serif;
+  }
+
+  .text-wrapper p {
+    font-size: 1.2em;
+  }
+
+  .cards-text {
+    font-size: 1.7em; 
+  }
+
+  .review p {
+    font-size: 1.2em;
+  }
+
+  .sign-up-btn { 
+    width: 22%;
+    font-size: 1.3em;
+  }
+
+  body main h2 {
+    font-size: 2.2em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .illustration .h2-wrapper {
+    padding-top: 20px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+    font-size: 1em;
+  }
+
+  .illustration h3 {
+    font-size: 1em;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: 46px;
+  }
+
+  .illustration .box {
+    width: 100%;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -90px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 15%;
+    top: 9%;
+    font-size: 1.3em;
+  }
+
+  .fa-star-wrapper {
+    left: 15%;
+    top: 25%;
+  }
+
+  hr {
+    width: 44%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 1.2em "Roboto", sans-serif;
+    width: 60%;
+  }
+
+  .footer .contacts ul {
+    width: 38%;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 30%;
+  }
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 42px;
+    height: 5px;
+  }
+
+  .step-icon {
+    width: 25%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  .modal-content {
+    width: 60%;
+    position: absolute;
+    left: 20%;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+  .cards {
+    padding-bottom: 70px;
+  }
+
+  .container-for-card {
+    height: 530px;
+  }
+
+  .img-box {
+    height: 460px;
+  }
+
+  .side-menu-nav ul li a {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .nav-bar {
+    display: initial;
+  }
+
+  body header .hamburger {
+    display: none;
+  }
+
+  .sign-up-btn {
+    width: 15%;
+  }
+
+  .about-section {
+    padding-bottom: 55px;
+  }
+
+  .cards {
+    padding-bottom: 114px;
+  }
+
+  .fa-star-wrapper {
+    position: absolute;
+    left: 15%;
+  }
+
+  .review span {
+    position: absolute;
+    left: 15%;
+  }
+
+  .reviews-wrapper {
+    margin: -90px auto 40px auto;
+  }
+
+  hr {
+    width: 23%;
+  }
+
+  body form input {
+    width: 77%;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 35%;
+  }
+
+  .about-img {
+    width: 83%;
+  }
 }
 
 @media screen and (min-width: 1441px) and (max-width: 1600px) {
-  body header button.hamburger {
+  .nav-bar {
+    display: initial;
+  }
+
+  .about-img {
+    width: 70%;
+  }
+
+  body header .hamburger {
     display: none;
+  }
+
+  body header {
+    background-image: url(../images/airport6.jpg);
+    background-position: 85% 80%;
+    background-size: 120%;
+    height: 700px;
+  }
+
+  .sign-up-btn {
+    width: 15%;
+  }
+
+  .about-section {
+    padding-bottom: 55px;
+  }
+
+  .cards {
+    padding-bottom: 125px;
+  }
+
+  .fa-star-wrapper {
+    position: absolute;
+    left: 15%;
+  }
+
+  .review span {
+    position: absolute;
+    left: 15%;
+  }
+
+  .reviews-wrapper {
+    margin: -90px auto 40px auto;
+  }
+
+  hr {
+    width: 23%;
+  }
+
+  body form input {
+    width: 77%;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 35%;
   }
 }
 
 @media screen and (min-width: 1601px) and (max-width: 2560px) {
-  body header button.hamburger {
+  .nav-bar {
+    display: initial;
+  }
+
+  .about-img {
+    width: 50%;
+  }
+
+  body header .hamburger {
     display: none;
   }
+
+  body header {
+    background-image: url(../images/airport6.jpg);
+    background-position: 85% 80%;
+    background-size: 120%;
+    height: 700px;
+  }
+
+  .sign-up-btn {
+    width: 15%;
+  }
+
+  .about-section {
+    padding-bottom: 55px;
+  }
+
+  .cards {
+    padding-bottom: 125px;
+  }
+
+  .fa-star-wrapper {
+    position: absolute;
+    left: 15%;
+  }
+
+  .review span {
+    position: absolute;
+    left: 15%;
+  }
+
+  .reviews-wrapper {
+    margin: -90px auto 40px auto;
+  }
+
+  hr {
+    width: 23%;
+  }
+
+  body form input {
+    width: 77%;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 35%;
+  }
+
+  .header-text-wrapper {
+    margin: 18% auto 0 auto;
+  }
 }
-/* * * * * * * * * * * * * */
-/* specific Media Queries  */
-/* * * * * * * * * * * * * */

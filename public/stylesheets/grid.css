@@ -103,8 +103,10 @@ main .row {
 body {
   font-size: 1em;
   background-image: url("../images/plane-view-img.jpg");
-  background-position: 0px -200px; 
-  text-align: center; 
+  background-position: 50% 80%; 
+  background-attachment: fixed;
+  /* background-size:cover; */
+  /* height: 700px; */
 }
 
 body header {
@@ -119,15 +121,17 @@ body header nav {
   width: 50%;
   display: initial;
   float: right;
+  text-align: right;
   /* position: fixed;
   height: 65px;
   z-index: 1; */
 }
 
 body header nav .ul-header {
-  width: 80%;
+  width: 100%;
   display: inline-block;
   float: none;
+  padding-right: 9%;
 }
 
 body header nav ul li {
@@ -163,7 +167,7 @@ body header nav ul li a {
 
 body header .h1-wrapper {
   /* display: inline-block; */
-  text-align: center;
+  text-align: left;
   float: left;
   width: 50%;
   /* position: fixed;
@@ -184,6 +188,7 @@ body header h1 {
   font-weight: 600;
   padding-top: 5px;  
   letter-spacing: 3px;
+  margin-left: 10%;
 }
 
 /* .hamburger {

@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Patua+One|Bungee|Alfa+Slab+One" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -14,52 +14,88 @@
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
 <body>
-	<header class="header-wrapper col-12">
-		<nav>
-			<ul class=" ul-header">
-				<li class="trips">
-					<a href="http://localhost:8081/trips.html" class="hvr-underline-from-center">Your Trips</a>
-				</li>
-				<li class="new-trip">
-					<a href="http://localhost:8081/new-trip.html" class="hvr-underline-from-center">New Trip</a>
-				</li>
-				<li class="log-out">
-					<a href="#" class="hvr-underline-from-center">Log Out</a>
-				</li>
-			</ul>
-		</nav>
-	
-		<div class="h1-wrapper">
-			<div class="inner-h1-wrapper">
-				<h1>SaveMyTrip
-					<i class="fas fa-plane"></i>
-				</h1>
-			</div>
-		</div>
-		<!-- hamburger icon -->
-		<button class="hamburger" type="button">
-			<div class="hamburger-line"></div>
-			<div class="hamburger-line"></div>
-			<div class="hamburger-line"></div>
-		</button>
-	
-		<!-- sidebar  -->
-		<section class="side-menu-nav">
-			<p class="close-side-bar">
-				<span>&times;</span>Close</p>
-			<ul>
-				<li class="trips">
-					<a href="http://localhost:8081/trips.html">Your Trips</a>
-				</li>
-				<li class="new-trip">
-					<a href="http://localhost:8081/new-trip.html">New Trip</a>
-				</li>
-				<li class="log-out">
-					<a>Log Out</a>
-				</li>
-			</ul>
-		</section>
-	</header>
+	<header>
+    <div class="background-wrapper col-12">
+      <div class="header-wrapper col-12">
+        <nav>
+      <ul class=" ul-header">
+        <li class="trips">
+          <a href="http://localhost:8081/trips.html" class="hvr-underline-from-center">Your Trips</a>
+        </li>
+        <li class="new-trip">
+          <a href="http://localhost:8081/new-trip.html" class="hvr-underline-from-center">New Trip</a>
+        </li>
+        <li class="log-out">
+          <a href="#" class="hvr-underline-from-center">Log Out</a>
+        </li>
+      </ul>
+    </nav>
+  
+        <div class="h1-wrapper">
+          <a class="link-for-h1" href="http://localhost:8081/">
+            <h1>SaveMyTrip
+              <i class="fas fa-plane"></i>
+            </h1>
+          </a>
+        </div>
+        <!-- hamburger icon -->
+        <button class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        
+      </div>
+     
+  
+        <!-- sidebar  -->
+        <section class="side-menu-nav">
+          <p class="close-side-bar">
+          <ul>
+            <li class="about about-side-bar-link">
+              <a>About</a>
+            </li>
+            <li class="trips">
+              <a href="http://localhost:8081/trips.html">Trips</a>
+            </li>
+            <li class="log-in log-in-side-bar-link">
+              <a>Log in</a>
+            </li>
+          </ul>
+        </section>
+  
+      <!-- The Modal -->
+      <div id="my-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <section class="sign-in-section col-12">
+            <div class="sign-in-wrapper col-12">
+              <div class="heading-wrapper col-12">
+                <h2 class="heading-for-login">
+                  Welcome Back!
+                </h2>
+                <div class="cont-for-invalid-message-login">
+                  <p class="invalid-message-txt-login"></p>
+                </div>
+                <!-- <h4>Enter your credentials to access your account.</h4> -->
+              </div>
+              <form class="modal-form log-in" action="" method="post" autocomplete="off">
+                <fieldset name="register-info">
+                  <input type="text" name="username" id="sign-in-username" placeholder="Username" required="" class="">
+                  <input type="password" name="password" id="sign-in-password" placeholder="Password" required="" class="">
+                </fieldset>
+                <button type="submit" class="sign-in-button">Log In</button>
+                <div class="heading-wrapper col-12">
+                  <h6>Login with Demo Account</h6>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </header>
 
 	<main role="main">
 		<!-- show trips -->
@@ -142,7 +178,7 @@
 
 					<div class="airports-wrapper col-4">
 						<h3 class="depart-airport"></h3>
-						<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						<i class="fas fa-plane"></i>
 						<h3 class="arrive-airport"></h3>
 						<h4 class="departure-date"></h4>
 					</div>
@@ -179,11 +215,11 @@
 					<div class="col-12 control-btns">
 						<button class="col-4 edit-btn">
 							Edit
-							<i class="fa fa-pencil" aria-hidden="true"></i>
+							<i class="far fa-edit"></i>
 						</button>
 						<button class="col-4 delete-btn">
 							Delete
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
+							<i class="far fa-trash-alt"></i>
 						</button>
 						<button class="col-4 email">
 							Email
