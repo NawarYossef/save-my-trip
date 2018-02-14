@@ -1,9 +1,5 @@
 @import url("whitespace-reset.css");
 
-body header {
-   background-color: rgba(0,0,0,0.6);
-}
-
 header .fa-plane {
   transform: rotate(320deg);
   vertical-align: middle;
@@ -129,7 +125,8 @@ header .fa-plane {
 
 .modal h4 {
   padding-top: 10px;
-  font: normal 1.2em 'Quicksand', sans-serif;
+  font: normal 1em 'Patua One', sans-serif;
+  color: rgb(73, 73, 73);
 }
 
 .modal h6 {
@@ -207,9 +204,10 @@ main {
   width: 90%;
   display: block;
   margin: 100px auto 0 auto;
-  background-color: #d7e3f0;
+  background-color: #d2e2f29e;
   border-radius: 5px;
   padding-top: 0px;
+  padding-bottom: 20px;
 }
 
 body header {
@@ -223,7 +221,7 @@ body header {
 }
 
 h2 {
-  font: normal 2.4em 'Bree Serif', serif;
+  font: normal 2.4em 'Patua One', serif;
   color: #424242;
 }
 
@@ -237,6 +235,7 @@ h2 {
 .trip {
   width: 100%;
   /* background: #888888; */
+  /* height: 315px; */
 }
 
 .trip-header {
@@ -254,22 +253,20 @@ body section .airports-wrapper {
 }
 
 body section .confirmation {
-  padding-left: 20px;
   display: inline-block;
   margin-top: 10px;
-  /* padding-right: 90px; */
   text-align: center;
 }
 
 main .confirmation .confirmation-title,
 main .airline-wrapper .airline-title {
-  font: bold 1em 'Kanit', sans-serif;
+  font: bold 1.1em 'roboto', sans-serif;
   color: #ffffff;
 }
 
 main .confirmation .confirmation-text,
 main .airline-wrapper .airline-text {
-  font: bold 0.9em 'roboto', sans-serif;
+  font: bold 1em 'roboto', sans-serif;
   color: #000;
 }
 
@@ -285,7 +282,7 @@ body section .data-wrapper {
 
 body .airports-wrapper h3 {
   display: inline-block;
-  font: normal 2em 'Bree Serif', serif;
+  font: normal 2em 'Patua One', serif;
   color: #ffffff;
   margin-bottom: -1px;     
   margin-top: 0px;    
@@ -322,12 +319,21 @@ h4 {
   cursor: pointer;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  background-image: url("../images/airport5.jpg");
+  background-position:  60% 0%; 
+  background-size: cover;
+  background-repeat: no-repeat; 
 }
 /* * * * * * * * * * * * * */
 /*     drop down details   */
 /* * * * * * * * * * * * * */
 .departure-wrapper, .arrival-wrapper {
   display: none;
+  height: 130px;
+}
+
+.wrapper-for-arrive-info  {
+  /* text-align: left; */
 }
 
 .trip-details {
@@ -335,21 +341,24 @@ h4 {
   width: 100%;
   text-align: left;
   margin: auto;
-  /* background: rgb(255, 255, 255); */
+  background: rgb(243, 243, 243);
   line-height: 100%;
-  /* border-radius: 10px; */
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 
 .departure-wrapper {
+  text-align: center;
   margin-top: 15px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .arrival-wrapper {
-  margin-top: 25px;
+  text-align: center;
+  margin-top: 15px;
   margin-bottom: 15px;
-  margin-left: 17px;
+  /* margin-left: 17px; */
 }
 
 .depart-word {
@@ -364,7 +373,7 @@ h4 {
 }
 
 .city {
-  font: normal 1em 'Kanit', sans-serif;
+  font: normal 1.2em 'Kanit', sans-serif;
   color: #787575;
 }
 
@@ -376,10 +385,7 @@ h4 {
   display: inline-block;
   font: normal 1em 'Kanit', sans-serif;
   color: #000000;
-}
-
-.gate {
-  float: right;
+  margin-right: 25px;
 }
 
 /* * * * * * * * * * * */
@@ -498,12 +504,12 @@ input:focus {
 .modal #send-email-btn {
   width: 12%;
   color: #ffffff;
-   margin-left: 5%;
-   height: 35px;
-   text-align: center;
-   background: rgb(40, 107, 206);
-   outline: none;
-   border: none;
+  margin-left: 5%;
+  height: 35px;
+  text-align: center;
+  background: rgb(40, 107, 206);
+  outline: none;
+  border: none;
 }
 
 .modal h6:hover {
@@ -538,14 +544,25 @@ input:focus {
   background: #274d7a;
   height: 40px;
   outline: none;
-  border-top: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid #c4c4c4;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  /* background-image: url("../images/airport2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;  */
 }
 
 .control-btns button:hover {
   cursor: pointer;
-  background: rgb(153, 83, 21);
+  background-color: #152841;
+}
+
+.control-btns button {
+  -webkit-transition: background-color 0.7s ease-out;
+  -moz-transition: background-color 0.7s ease-out;
+  -o-transition: background-color 0.7s ease-out;
+  -ms-transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out;
 }
 
 .email {
@@ -558,7 +575,24 @@ input:focus {
 
 .edit-btn, .delete-btn {
   border: none;
-  border-right: 1px solid #ffffff;
+  border-right: 1px solid #c4c4c4;
+}
+
+body .delete-btn {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+body .edit-btn {
+  border-bottom-right-radius: 0px;
+}
+
+body .email {
+  border-bottom-left-radius: 0px;
+}
+
+.departure-img, .arrival-img {
+  width: 10%;
 }
 
 .fa-trash-o, .fa-envelope, .fa-pencil {
@@ -579,8 +613,60 @@ input:focus {
     display: none;
   }
 
-  .cards {
-    padding-bottom: 235px;
+  body .edit-btn {
+    border-bottom-left-radius: 0px;
+  }
+
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
+  }
+
+  .departure-img, .arrival-img {
+    width: 16%;
+  }
+
+  .arrival-wrapper {
+    margin-top: 30px;
+  }
+
+  .city {
+    font: normal 1.2em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.9em;
+  }
+
+  body .trip-header {
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2.1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
   }
 
   .modal-content {
@@ -601,14 +687,6 @@ input:focus {
   .sign-up-section, .sign-in-section {
     padding-bottom: 40px;
   }
-
-  body header {
-    padding: 0px;
-    background-image: url(../images/airport6.jpg);
-    background-position:  60% 80%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  } 
 
   body header h1 {
     font: normal 1.9em 'Alfa Slab One', serif;
@@ -665,7 +743,7 @@ input:focus {
   }
 
   body main h2 {
-    font-size: 1.7em;
+    font-size: 2.1em;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -780,6 +858,23 @@ input:focus {
   .illustration .box {
     width: 95%;
   }
+
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
+  }
 }
 
 @media screen and (min-width: 321px) and (max-width: 375px) {
@@ -787,8 +882,56 @@ input:focus {
     display: none;
   }
 
-  .cards {
-    padding-bottom: 200px;
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
+  }
+
+  .departure-img, .arrival-img {
+    width: 16%;
+  }
+
+  .arrival-wrapper {
+    margin-top: 30px;
+  }
+
+  .city {
+    font: normal 1.2em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.9em;
+  }
+
+  body .trip-header {
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2.1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
   }
 
   .modal-content {
@@ -807,19 +950,11 @@ input:focus {
   }
 
   .sign-up-section, .sign-in-section {
-    padding-bottom: 0px;
+    padding-bottom: 40px;
   }
 
-  body header {
-    padding: 0px;
-    background-image: url(../images/airport6.jpg);
-    background-position:  60% 80%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  } 
-
   body header h1 {
-    font: normal 2.1em 'Alfa Slab One', serif;
+    font: normal 1.9em 'Alfa Slab One', serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -870,16 +1005,15 @@ input:focus {
 
   .sign-up-btn { 
     width: 55%;
-    font-size: 1.3em;
   }
 
   body main h2 {
-    font-size: 1.9em;
+    font-size: 2.1em;
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .illustration .h2-wrapper {
+  main .h2-wrapper {
     padding-bottom: 55px;
   }
 
@@ -911,12 +1045,12 @@ input:focus {
   }
 
   .illustration-wrapper {
-    margin-bottom: 37px;
+    margin-bottom: 60px;
   }
 
   .reviews-wrapper {
     width: 90%;
-    margin: -90px auto 30px auto;
+    margin: -150px auto 30px auto;
   }
 
   .illustration {
@@ -963,9 +1097,21 @@ input:focus {
     width: 55%;
   }
 
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
   }
 
   .step-icon {
@@ -974,12 +1120,25 @@ input:focus {
     /* margin-bottom: 35px; */
   }
 
-  .sign-up-section, .sign-in-section {
-    padding-bottom: 40px;
-  }
-
   .illustration .box {
     width: 95%;
+  }
+
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
   }
 }
 
@@ -988,28 +1147,82 @@ input:focus {
     display: none;
   }
 
-  .cards {
-    padding-bottom: 235px;
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
   }
 
-  body header nav {
-    display: none;
+  .departure-img, .arrival-img {
+    width: 16%;
   }
 
-  body header nav {
-    display: none;
+  .arrival-wrapper {
+    margin-top: 48px;
   }
 
-  body header {
-    padding: 0px;
-    background-image: url(../images/airport6.jpg);
-    background-position:  63% 80%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  } 
+  .modal .h4-wrapper {
+    text-align: initial;
+  }
+  .city {
+    font: normal 1.2em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.9em;
+  }
+
+  body .trip-header {
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2.1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
 
   body header h1 {
-    font: normal 2.2em 'Alfa Slab One', serif;
+    font: normal 1.9em 'Alfa Slab One', serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1046,7 +1259,7 @@ input:focus {
   }
 
   .container-for-header-text {
-    margin: 45% auto 0 auto;
+    margin: 55% auto 0 auto;
   }
 
   .container-for-header-text p {
@@ -1060,11 +1273,10 @@ input:focus {
 
   .sign-up-btn { 
     width: 55%;
-    font-size: 1.3em;
   }
 
   body main h2 {
-    font-size: 2em;
+    font-size: 2.1em;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -1097,20 +1309,16 @@ input:focus {
   }
 
   .illustration h3 {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 
   .illustration-wrapper {
-    margin-bottom: 66px;
-  }
-
-  .illustration .box {
-    width: 95%;
+    margin-bottom: 60px;
   }
 
   .reviews-wrapper {
     width: 90%;
-    margin: -90px auto 30px auto;
+    margin: -150px auto 30px auto;
   }
 
   .illustration {
@@ -1157,13 +1365,21 @@ input:focus {
     width: 55%;
   }
 
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
   }
 
-  .about-img {
-    width: 83%;
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
   }
 
   .step-icon {
@@ -1172,62 +1388,130 @@ input:focus {
     /* margin-bottom: 35px; */
   }
 
-  .sign-up-section, .sign-in-section {
-    padding-bottom: 40px;
+  .illustration .box {
+    width: 95%;
   }
 
-  .modal-content {
-    width: 90%;
-    position: absolute;
-    left: 5%;
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
   }
 
-  .side-menu-nav {
-    display: none;
-    width: 55%;
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
   }
 }
 
 
 
 @media screen and (min-width: 426px) and (max-width: 639px) {
-  body header .hamburger {
-    display: initial;
-    position: absolute;
-    top: 33%;
-    right: 4%;
-  }
-
-  html body header {
-    background-position: 34% 80%;
-  }
-
   body header nav {
     display: none;
   }
 
-  body header nav .ul-header {
-    width: 100%;
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 1.1em;
   }
 
-  body header {
-    padding: 0px;
-    background-image: url(../images/airport6.jpg);
-    background-position:  63% 80%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  } 
+  .departure-img, .arrival-img {
+    width: 11%;
+  }
+
+  .arrival-wrapper {
+    margin-top: 48px;
+  }
+
+  .side-menu-nav {
+    width: 48%;
+  }
+
+  .modal .h4-wrapper {
+    text-align: initial;
+  }
+  .city {
+    font: normal 1.2em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 1em;
+  }
+
+  body .trip-header {
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2.2em;
+  }
+  .control-btns button {
+    font-size: 1.1em;
+  }
+
+  .terminal, .gate {
+    font-size: 1.1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
 
   body header h1 {
-    font: normal 2.2em 'Alfa Slab One', serif;
+    font: normal 1.9em 'Alfa Slab One', serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
-    margin-left: 3%;
+    margin-left: 5%;
   }
 
   body header .h1-wrapper {
-    width: 85%;
+    width: 65%;
   }
 
   body .header-wrapper {
@@ -1237,6 +1521,10 @@ input:focus {
 
   body header .hamburger .hamburger-line {
     background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
   }
 
   body header .h1-wrapper {
@@ -1252,7 +1540,7 @@ input:focus {
   }
 
   .container-for-header-text {
-    margin: 18% auto 0 auto;
+    margin: 55% auto 0 auto;
   }
 
   .container-for-header-text p {
@@ -1261,38 +1549,21 @@ input:focus {
   }
 
   .container-for-header-text h2 {
-    font: normal 2.2em 'Patua One', serif;
-  }
-
-  .text-wrapper p {
-    font-size: 1.1em;
-  }
-
-  .cards-text {
-    font-size: 1.7em; 
-  }
-
-  .review p {
-    font-size: 1.1em;
+    font: normal 1.8em 'Patua One', serif;
   }
 
   .sign-up-btn { 
-    width: 34%;
-    font-size: 1.3em;
+    width: 55%;
   }
 
   body main h2 {
-    font-size: 2.2em;
+    font-size: 2.1em;
     padding-left: 10px;
     padding-right: 10px;
   }
 
   main .h2-wrapper {
     padding-bottom: 55px;
-  }
-
-  .illustration .h2-wrapper {
-    padding-top: 20px;
   }
 
   .description-1, .description-2 {
@@ -1316,24 +1587,19 @@ input:focus {
   .description-1 p, .description-2 p {
     width: 100%;
     padding: 5px;
-    font-size: 1.2em;
   }
 
   .illustration h3 {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 
   .illustration-wrapper {
-    margin-bottom: 46px;
-  }
-
-  .illustration .box {
-    width: 100%;
+    margin-bottom: 60px;
   }
 
   .reviews-wrapper {
     width: 90%;
-    margin: -90px auto 30px auto;
+    margin: -150px auto 30px auto;
   }
 
   .illustration {
@@ -1341,18 +1607,17 @@ input:focus {
   }
 
   .review span {
-    left: 33%;
+    left: 34%;
     top: 11%;
-    font-size: 1.3em;
   }
 
   .fa-star-wrapper {
     left: 33%;
-    top: 25%;
+    top: 22%;
   }
 
   hr {
-    width: 44%;
+    width: 72%;
   }
 
   .sign-up-heading-wrapper h2 {
@@ -1381,84 +1646,151 @@ input:focus {
     width: 55%;
   }
 
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 42px;
-    height: 5px;
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
   }
 
   .step-icon {
-    width: 10%;
+    width: 11%;
     height: 10%;
     /* margin-bottom: 35px; */
+  }
+
+  .illustration .box {
+    width: 95%;
+  }
+
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  body header nav {
+    display: none;
+  }
+
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
+  }
+
+  .departure-img, .arrival-img {
+    width: 11%;
+  }
+
+  .side-menu-nav {
+    width: 48%;
+  }
+
+  .modal .h4-wrapper {
+    text-align: initial;
+  }
+  .city {
+    font: normal 1.1em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 0.9em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+    padding-left: 25px;
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.8em;
+  }
+
+  body .trip-header {
+    margin-top: 0%;
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2em;
+  }
+
+  .control-btns button {
+    font-size: 1em;
+    border-top: none;
+  }
+
+  h4 {
+    font-size: 0.8em;
+  }
+
+  .terminal, .gate {
+    font-size: 1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
+  }
+
+  .confir-wrapper {
+    text-align: center;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
   }
 
   .sign-up-section, .sign-in-section {
     padding-bottom: 40px;
   }
 
-  .modal-content {
-    width: 90%;
-    position: absolute;
-    left: 5%;
-  }
-
-  .about-img {
-    width: 60%;
-  }
-
-  .side-menu-nav ul li a {
-    font-size: 1.5em;
-  }
-
-  .cards {
-    padding-bottom: 234px;
-  }
-
-  .side-menu-nav {
-    display: none;
-    width: 48%;
-  }
-}
-
-@media screen and (min-width: 640px) and (max-width: 768px) {
-  body header .hamburger {
-    display: none;
-  }
-
-  body header nav {
-    display: initial;
-    float: right;
-  }
-
-  body header .hamburger {
-    display: initial;
-    position: absolute;
-    top: 33%;
-    right: 5%;
-  }
-
-  html body header {
-    background-position: 34% 80%;
-  }
-
-  body header nav {
-    display: none;
-  }
-
-  body header nav .ul-header {
-    width: 100%;
-  }
-
-  body header {
-    padding: 0px;
-    background-image: url(../images/airport6.jpg);
-    background-position:  63% 80%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  } 
-
   body header h1 {
-    font: normal 2.2em 'Alfa Slab One', serif;
+    font: normal 1.9em 'Alfa Slab One', serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1466,7 +1798,7 @@ input:focus {
   }
 
   body header .h1-wrapper {
-    width: 85%;
+    width: 65%;
   }
 
   body .header-wrapper {
@@ -1476,6 +1808,10 @@ input:focus {
 
   body header .hamburger .hamburger-line {
     background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
   }
 
   body header .h1-wrapper {
@@ -1491,48 +1827,30 @@ input:focus {
   }
 
   .container-for-header-text {
-    margin: 25% auto 0 auto;
+    margin: 55% auto 0 auto;
   }
 
   .container-for-header-text p {
     /* font: normal 1em sans-serif; */
-    display: initial;
-    font-size: 1em;
+    display: none;
   }
 
   .container-for-header-text h2 {
-    font: normal 2.2em 'Patua One', serif;
-  }
-
-  .text-wrapper p {
-    font-size: 1.1em;
-  }
-
-  .cards-text {
-    font-size: 1.7em; 
-  }
-
-  .review p {
-    font-size: 1.1em;
+    font: normal 1.8em 'Patua One', serif;
   }
 
   .sign-up-btn { 
-    width: 28%;
-    font-size: 1.3em;
+    width: 55%;
   }
 
   body main h2 {
-    font-size: 2.2em;
+    font-size: 2.1em;
     padding-left: 10px;
     padding-right: 10px;
   }
 
   main .h2-wrapper {
     padding-bottom: 55px;
-  }
-
-  .illustration .h2-wrapper {
-    padding-top: 20px;
   }
 
   .description-1, .description-2 {
@@ -1556,24 +1874,19 @@ input:focus {
   .description-1 p, .description-2 p {
     width: 100%;
     padding: 5px;
-    font-size: 1.2em;
   }
 
   .illustration h3 {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   .illustration-wrapper {
-    margin-bottom: 46px;
-  }
-
-  .illustration .box {
-    width: 100%;
+    margin-bottom: 60px;
   }
 
   .reviews-wrapper {
     width: 90%;
-    margin: -90px auto 30px auto;
+    margin: -150px auto 30px auto;
   }
 
   .illustration {
@@ -1581,18 +1894,17 @@ input:focus {
   }
 
   .review span {
-    left: 20%;
-    top: 9%;
-    font-size: 1.3em;
+    left: 34%;
+    top: 11%;
   }
 
   .fa-star-wrapper {
-    left: 20%;
-    top: 25%;
+    left: 33%;
+    top: 22%;
   }
 
   hr {
-    width: 44%;
+    width: 72%;
   }
 
   .sign-up-heading-wrapper h2 {
@@ -1606,11 +1918,11 @@ input:focus {
 
   body form input {
     font: normal 1.2em "Roboto", sans-serif;
-    width: 75%;
+    width: 80%;
   }
 
   .footer .contacts ul {
-    width: 42%;
+    width: 60%;
   }
 
   .copyright {
@@ -1618,100 +1930,162 @@ input:focus {
   }
 
   body form button, body .go-to-login-button {
-    width: 45%;
+    width: 55%;
   }
 
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 42px;
-    height: 5px;
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
   }
 
   .step-icon {
-    width: 25%;
+    width: 11%;
     height: 10%;
     /* margin-bottom: 35px; */
+  }
+
+  .illustration .box {
+    width: 95%;
+  }
+
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
+  }
+
+  .departure-wrapper, .arrival-wrapper {
+    height: initial;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body header nav {
+    display: none;
+  }
+
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
+  }
+
+  .departure-img, .arrival-img {
+    width: 11%;
+  }
+
+  .side-menu-nav {
+    width: 48%;
+  }
+
+  .modal .h4-wrapper {
+    padding-right: 5px;
+  }
+
+  .city {
+    font: normal 1.1em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 0.9em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px; 
+    padding-left: 25px 
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.8em;
+  }
+
+  body .trip-header {
+    margin-top: 0%;
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2em;
+  }
+  .control-btns button {
+    /* font-size: 1em; */
+    border-top: none;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  .terminal, .gate {
+    font-size: 1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
+  }
+
+  .departure-wrapper, .arrival-wrapper {
+    height: initial;
+  }
+
+  .confir-wrapper {
+    text-align: center;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
   }
 
   .sign-up-section, .sign-in-section {
     padding-bottom: 40px;
   }
 
-  .modal-content {
-    width: 90%;
-    position: absolute;
-    left: 5%;
-  }
-
-  .about-img {
-    width: 100%;
-  }
-
-  .cards {
-    padding-bottom: 70px;
-  }
-
-  .container-for-card {
-    height: 530px;
-  }
-
-  .img-box {
-    height: 450px;
-  }
-
-  .side-menu-nav ul li a {
-    font-size: 1.5em;
-  }
-
-  .side-menu-nav {
-    display: none;
-    width: 48%;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  body header .hamburger {
-    display: none;
-  }
-
-  body header nav {
-    display: initial;
-    float: right;
-  }
-
-  .side-menu-nav {
-    display: none;
-    width: 48%;
-  }
-
-  body header .hamburger {
-    display: initial;
-    position: absolute;
-    top: 33%;
-    right: 5%;
-  }
-
-  html body header {
-    background-position: 34% 80%;
-  }
-
-  body header nav {
-    display: none;
-  }
-
-  body header nav .ul-header {
-    width: 100%;
-  }
-
-  body header {
-    padding: 0px;
-    background-image: url(../images/airport6.jpg);
-    background-position:  63% 80%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  } 
-
   body header h1 {
-    font: normal 2.5em 'Alfa Slab One', serif;
+    font: normal 1.9em 'Alfa Slab One', serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1719,7 +2093,7 @@ input:focus {
   }
 
   body header .h1-wrapper {
-    width: 85%;
+    width: 65%;
   }
 
   body .header-wrapper {
@@ -1729,6 +2103,10 @@ input:focus {
 
   body header .hamburger .hamburger-line {
     background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
   }
 
   body header .h1-wrapper {
@@ -1744,37 +2122,24 @@ input:focus {
   }
 
   .container-for-header-text {
-    margin: 11% auto 0 auto;
+    margin: 55% auto 0 auto;
   }
 
   .container-for-header-text p {
     /* font: normal 1em sans-serif; */
-    display: initial;
+    display: none;
   }
 
   .container-for-header-text h2 {
-    font: normal 2.2em 'Patua One', serif;
-  }
-
-  .text-wrapper p {
-    font-size: 1.2em;
-  }
-
-  .cards-text {
-    font-size: 1.7em; 
-  }
-
-  .review p {
-    font-size: 1.2em;
+    font: normal 1.8em 'Patua One', serif;
   }
 
   .sign-up-btn { 
-    width: 22%;
-    font-size: 1.3em;
+    width: 55%;
   }
 
   body main h2 {
-    font-size: 2.2em;
+    font-size: 2.1em;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -1783,12 +2148,9 @@ input:focus {
     padding-bottom: 55px;
   }
 
-  .illustration .h2-wrapper {
-    padding-top: 20px;
-  }
-
   .description-1, .description-2 {
     text-align: center;
+    margin-top: 0px;
   }
 
   body main .description-header {
@@ -1807,24 +2169,19 @@ input:focus {
   .description-1 p, .description-2 p {
     width: 100%;
     padding: 5px;
-    font-size: 1em;
   }
 
   .illustration h3 {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   .illustration-wrapper {
-    margin-bottom: 46px;
-  }
-
-  .illustration .box {
-    width: 100%;
+    margin-bottom: 60px;
   }
 
   .reviews-wrapper {
     width: 90%;
-    margin: -90px auto 30px auto;
+    margin: -150px auto 30px auto;
   }
 
   .illustration {
@@ -1832,18 +2189,17 @@ input:focus {
   }
 
   .review span {
-    left: 15%;
-    top: 9%;
-    font-size: 1.3em;
+    left: 34%;
+    top: 11%;
   }
 
   .fa-star-wrapper {
-    left: 15%;
-    top: 25%;
+    left: 33%;
+    top: 22%;
   }
 
   hr {
-    width: 44%;
+    width: 72%;
   }
 
   .sign-up-heading-wrapper h2 {
@@ -1857,11 +2213,11 @@ input:focus {
 
   body form input {
     font: normal 1.2em "Roboto", sans-serif;
-    width: 60%;
+    width: 80%;
   }
 
   .footer .contacts ul {
-    width: 38%;
+    width: 60%;
   }
 
   .copyright {
@@ -1869,54 +2225,70 @@ input:focus {
   }
 
   body form button, body .go-to-login-button {
-    width: 30%;
+    width: 55%;
   }
 
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 42px;
-    height: 5px;
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
   }
 
   .step-icon {
-    width: 25%;
+    width: 11%;
     height: 10%;
     /* margin-bottom: 35px; */
   }
 
-  .sign-up-section, .sign-in-section {
-    padding-bottom: 40px;
+  .illustration .box {
+    width: 95%;
   }
 
-  .modal-content {
+  .modal .input-wrapper, .modal .message-wrapper {
     width: 60%;
-    position: absolute;
-    left: 20%;
   }
 
-  .about-img {
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
     width: 100%;
   }
 
-  .cards {
-    padding-bottom: 70px;
-  }
-
-  .container-for-card {
-    height: 530px;
-  }
-
-  .img-box {
-    height: 460px;
-  }
-
-  .side-menu-nav ul li a {
-    font-size: 1.5em;
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
   .nav-bar {
     display: initial;
+  }
+
+  .control-btns button {
+    border-top: none;
+  }
+
+  body header {
+   background-color: rgba(0,0,0,0.6);
+  }
+
+  body .trip-header {
+    background-position: 1% 1%;
+    background-size: initial;
   }
 
   body header .hamburger {
@@ -1964,6 +2336,20 @@ input:focus {
   .about-img {
     width: 83%;
   }
+
+  .modal h4 {
+    padding-right: 5px;
+  }
+
+  .modal #send-email-btn {
+    width: 16%;
+    margin-left: 0%;
+  }
+
+  body {
+    background-position: 55% 1%;
+    background-size: cover;
+  }
 }
 
 @media screen and (min-width: 1441px) and (max-width: 1600px) {
@@ -1971,19 +2357,29 @@ input:focus {
     display: initial;
   }
 
-  .about-img {
-    width: 70%;
+  .control-btns button {
+    border-top: none;
+  }
+
+  body header {
+    background-color: rgba(0,0,0,0.6);
   }
 
   body header .hamburger {
     display: none;
   }
 
-  body header {
-    background-image: url(../images/airport6.jpg);
-    background-position: 85% 80%;
-    background-size: 120%;
-    height: 700px;
+  .nav-bar {
+    display: initial;
+  }
+
+  body .trip-header {
+    background-position: 1% 1%;
+    background-size: initial;
+  }
+
+  body header .hamburger {
+    display: none;
   }
 
   .sign-up-btn {
@@ -1995,7 +2391,7 @@ input:focus {
   }
 
   .cards {
-    padding-bottom: 125px;
+    padding-bottom: 114px;
   }
 
   .fa-star-wrapper {
@@ -2022,6 +2418,24 @@ input:focus {
 
   body form button, body .go-to-login-button {
     width: 35%;
+  }
+
+  .about-img {
+    width: 83%;
+  }
+
+  .modal h4 {
+    padding-right: 5px;
+  }
+
+  .modal #send-email-btn {
+    width: 16%;
+    margin-left: 0%;
+  }
+
+  body {
+    background-position: 64% 0%;
+    background-size: cover;
   }
 }
 

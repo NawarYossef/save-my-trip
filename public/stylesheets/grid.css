@@ -103,7 +103,7 @@ main .row {
 body {
   font-size: 1em;
   background-image: url("../images/plane-view-img.jpg");
-  background-position: 50% 80%; 
+  background-position: 50% 40%; 
   background-attachment: fixed;
   /* background-size:cover; */
   /* height: 700px; */
@@ -114,7 +114,7 @@ body header {
   position: relative;
   text-align: center;
   height: 50px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 
 body header nav {

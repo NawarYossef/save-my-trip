@@ -14,8 +14,7 @@ class Trips  {
     this.emailHandler();
     this.dropDownTripToggleListener();
     this.httpRedirectToEditPage();
-    this.showSidebar();
-    this.hideSidebar();
+    this.closeSidebar();
   }
 
   getTripEntries() {
@@ -93,19 +92,6 @@ class Trips  {
       return tripHTML;
     })
   $(".trips-container").html(allTrips)
-  }
-
-  showSidebar() {
-    $(".hamburger").click(() => {
-      $(".side-menu-nav").removeClass("animated slideOutRight")
-      $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInRight")
-    })
-  }
-
-  hideSidebar() {
-    $(".close-side-bar").click(() => {
-      $(".side-menu-nav").fadeOut().addClass("animated slideOutRight")
-    })
   }
 
   showEmailModal() {
@@ -198,8 +184,8 @@ class Trips  {
       if (tripHeader.hasClass("slide-down")) {
         tripHeader.find(".arrow-wrapper > i").removeClass("fa-caret-down");
         tripHeader.find(".arrow-wrapper > i").addClass("fa-caret-up");
-        trip.find(".arrival-wrapper").slideDown({duration: 450});
-        trip.find(".departure-wrapper").slideDown({duration: 450});
+        trip.find(".arrival-wrapper").slideDown({duration: 450}).css({"display": "inline-block"});
+        trip.find(".departure-wrapper").slideDown({duration: 450}).css({"display": "inline-block"});
         tripHeader.removeClass("slide-down");
         tripHeader.addClass("slide-up");
 
@@ -212,6 +198,22 @@ class Trips  {
         tripHeader.addClass("slide-down");
       }
     })
+  }
+
+  closeSidebar() {
+    const that = this;
+    $('header').on('click', '.trips, .new-trip, .log-out', function() {
+      if (!$(".hamburger").hasClass("is-active")) {
+        $(".hamburger").addClass("is-active")
+        // make sure that side bar is hidden by default
+        $(".side-menu-nav").removeClass("animated slideOutLeft");
+        $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInLeft");
+        $(".side-menu-nav").fadeIn().addClass("center-side-bar");
+      } else {
+        $(".side-menu-nav").fadeOut().addClass("animated slideOutLeft");
+        $(".hamburger").removeClass("is-active")
+      }
+    });
   }
 }
 
