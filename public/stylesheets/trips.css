@@ -26,14 +26,6 @@ header .background-wrapper {
   background-color: #ffffff;
 }
 
-body .header-wrapper {
-  display: block;
-  text-align: center;
-  padding-left: 0px;
-  padding-right: 0px;
-  position: initial;
-  
-}
 
 body header nav {
   width: 60%;
@@ -76,6 +68,16 @@ header .fa-plane {
 .container-for-header-text h2 {
   font: normal 2.4em 'Patua One', serif;
   color: #ffffff;
+}
+
+header .fa-plane {
+  vertical-align: middle;
+}
+
+header .fa-plane {
+  transform: rotate(320deg);
+  vertical-align: middle;
+  margin-left: -10px;
 }
 /* * * * * * * * * * * */
 /*      modal          */
@@ -1411,7 +1413,6 @@ body .email {
 }
 
 
-
 @media screen and (min-width: 426px) and (max-width: 639px) {
   body header nav {
     display: none;
@@ -1503,15 +1504,15 @@ body .email {
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 2.2em 'Alfa Slab One', serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
-    margin-left: 5%;
+    margin-left: 3%;
   }
 
   body header .h1-wrapper {
-    width: 65%;
+    width: 81%;
   }
 
   body .header-wrapper {
@@ -1521,10 +1522,6 @@ body .email {
 
   body header .hamburger .hamburger-line {
     background: #006bc8;
-  }
-
-  header .fa-plane {
-    display: none;
   }
 
   body header .h1-wrapper {
@@ -1790,7 +1787,7 @@ body .email {
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 2.2em 'Alfa Slab One', serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1798,7 +1795,7 @@ body .email {
   }
 
   body header .h1-wrapper {
-    width: 65%;
+    width: 85%;
   }
 
   body .header-wrapper {
@@ -1808,10 +1805,6 @@ body .email {
 
   body header .hamburger .hamburger-line {
     background: #006bc8;
-  }
-
-  header .fa-plane {
-    display: none;
   }
 
   body header .h1-wrapper {
@@ -2105,10 +2098,6 @@ body .email {
     background: #006bc8;
   }
 
-  header .fa-plane {
-    display: none;
-  }
-
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
@@ -2283,7 +2272,7 @@ body .email {
   }
 
   body header {
-   background-color: rgba(0,0,0,0.6);
+   background-color: rgba(0,0,0,0.8);
   }
 
   body .trip-header {
@@ -2362,7 +2351,7 @@ body .email {
   }
 
   body header {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.8);
   }
 
   body header .hamburger {
@@ -2444,19 +2433,33 @@ body .email {
     display: initial;
   }
 
-  .about-img {
-    width: 50%;
+  .control-btns button {
+    border-top: none;
+  }
+
+  .departure-wrapper, .arrival-wrapper {
+    height: 190px;
+  }
+
+  body header {
+    background-color: rgba(0,0,0,0.8);
   }
 
   body header .hamburger {
     display: none;
   }
 
-  body header {
-    background-image: url(../images/airport6.jpg);
-    background-position: 85% 80%;
-    background-size: 120%;
-    height: 700px;
+  .nav-bar {
+    display: initial;
+  }
+
+  body .trip-header {
+    background-position: 1% 1%;
+    background-size: initial;
+  }
+
+  body header .hamburger {
+    display: none;
   }
 
   .sign-up-btn {
@@ -2468,7 +2471,7 @@ body .email {
   }
 
   .cards {
-    padding-bottom: 125px;
+    padding-bottom: 114px;
   }
 
   .fa-star-wrapper {
@@ -2497,7 +2500,21 @@ body .email {
     width: 35%;
   }
 
-  .header-text-wrapper {
-    margin: 18% auto 0 auto;
+  .about-img {
+    width: 83%;
+  }
+
+  .modal h4 {
+    padding-right: 5px;
+  }
+
+  .modal #send-email-btn {
+    width: 16%;
+    margin-left: 0%;
+  }
+
+  body {
+    background-position: 64% 0%;
+    background-size: cover;
   }
 }
