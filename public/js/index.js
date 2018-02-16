@@ -13,6 +13,7 @@ class SaveMyTrip {
     this.NavbarScrollToSection();
     this.changeHeaderStylesOnScroll();
     this.reviewSlideShow();
+    this.tripsEndpointAuthValidation();
   }
 
   showLoginModal() {
@@ -35,10 +36,17 @@ class SaveMyTrip {
 
   NavbarScrollToSection() {
     const that = this;
-    $('header').on('click', '.about, .sign-up-btn', function(e) {
+    $('header').on('click', '.about, .sign-up-btn, .about-side-bar-link', function(e) {
       e.preventDefault();
       switch(true) {
         case $(this).hasClass("about"):
+          $('html, body').animate({
+            scrollTop: $("main").offset().top - 66
+          }, 900);
+          break;
+        
+        case $(this).hasClass("about-side-bar-link"):
+        console.log("i")
           that.closeSidebar();
           $('html, body').animate({
             scrollTop: $("main").offset().top - 66
@@ -92,7 +100,6 @@ class SaveMyTrip {
         data: JSON.stringify(userInfo)
       })
       .done((data) => {
-        console.log(userInfo)
         that.hideInvalidMessage();
         that.hideSignupSection();
         that.showLogInSection();
@@ -208,6 +215,12 @@ class SaveMyTrip {
         speed: 1000,
         autoplaySpeed: 4000,
       });
+    })
+  }
+
+  tripsEndpointAuthValidation() {
+    $(".trips").click(() => {
+      this.token ? this.changeRouteToTripsPage() : null;
     })
   }
 }

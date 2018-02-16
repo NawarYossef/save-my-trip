@@ -42,6 +42,10 @@ body .header-wrapper {
   width: 80%;
 }
 
+header .log-out {
+  display: none;
+}
+
 .fa-plane {
   vertical-align: middle;
 }

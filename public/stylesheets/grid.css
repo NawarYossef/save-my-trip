@@ -289,7 +289,7 @@ body header h1 {
 .side-menu-nav {
   display: none;
   width: 77%;
-  height: 100vh;
+  /* height: 100vh; */
   position: absolute;
   top: 0;
   bottom: 0;
