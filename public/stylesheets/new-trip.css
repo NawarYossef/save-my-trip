@@ -1,52 +1,97 @@
+@import url("whitespace-reset.css");
+
+header .fa-plane {
+  transform: rotate(320deg);
+  vertical-align: middle;
+  margin-left: -10px;
+}
+
+body header .h1-wrapper {
+  text-align: left;
+}
+
+body .header-wrapper {
+  background-color: rgba(0,0,0,0.8);
+}
+
+body header {
+  height: 60px;
+}
+
+body header h1 {
+  margin-left: 10%;
+}
+
+header .background-wrapper {
+  padding: 0px;
+}
+
+.link-for-h1 {
+  text-decoration: none;
+}
+
+.header-scroll {
+  background-color: #ffffff;
+}
+
+
+body header nav {
+  width: 60%;
+}
+
+body header .h1-wrapper {
+  width: 40%;
+}
+
+body header nav .ul-header {
+  width: 100%;
+  text-align: right;
+  padding-right: 10%;
+}
+
+.inner-h1-wrapper {
+  width: 80%;
+}
+
+header .fa-plane {
+  vertical-align: middle;
+}
+
+.container-for-header-text {
+  text-align: center;
+}
+
+.header-text-wrapper {
+  margin: 25% auto 0 auto;
+  width: 80%;
+  float: none;
+}
+
+.container-for-header-text p {
+  margin-top: 15%;
+  font: normal 1.2em sans-serif;
+  color: #ffffff;
+}
+
+.container-for-header-text h2 {
+  font: normal 2.4em 'Patua One', serif;
+  color: #ffffff;
+}
+
+header .fa-plane {
+  vertical-align: middle;
+}
+
+header .fa-plane {
+  transform: rotate(320deg);
+  vertical-align: middle;
+  margin-left: -10px;
+}
 /* * * * * * * * * * * */
 /*      main            */
 /* * * * * * * * * * * */
 
-body header nav .ul-header {
-  width: 100%;
-}
 
-body header nav ul li {
-  margin-left: 40px; 
-}
-
-body header {
-  background-color: rgba(0,0,0,0.6);
-  height: 60px;
-}
-
-.hamburger {
-  width: 45px;
-  margin-right: 10px;
-  margin-top: 8px;
-  border: solid #cbcbcb 0.5px;
-  border-radius: 5px;
-  vertical-align: center;
-  float: right;
-  outline: none;
-}
-
-.h2-wrapper, .h3-wrapper  {
-  text-align: center; 
-}
-
-h2 {
-  font: bold 1.2em 'Merriweather', serif;
-}
-
-h3 {
-  font: normal 2em 'Bree Serif', serif;
-  color: #424242;
-  padding-top: 20px;
-  /* text-decoration: underline; */
-}
-
-h4 {
-  font: normal 1em 'Bree Serif', serif;
-  color: #424242;
-  padding-bottom: 15px;
-  text-decoration: underline; 
-}
 /* * * * * * * * * * * */
 /*      form styles    */
 /* * * * * * * * * * * */
@@ -55,6 +100,47 @@ h4 {
   display: inline-block;
   width: 60%;
   margin: 0 auto;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.wrapper-lab-airline, .wrapper-lab-confirm, 
+.dep-city, .dep-airport, .dep-gate, .dep-terminal, .dep-date, 
+.lab-arrival-city,
+.lab-arrival-airport, .lab-arrival-gate, .lab-arrival-terminal, .lab-arrival-date {
+  position: relative;
+}
+
+label {
+  display: inline;
+  position: absolute;
+  top: -10%;
+  color: rgb(66, 134, 244);
+  font-size: 1em;
+}
+
+.arr-airport, .lab-dep-airport {
+  display: inline;
+  position: absolute;
+  top: -10%;
+  left: 12%;
+  color: rgb(66, 134, 244);
+  font-size: 1em;
+}
+
+.new-trip-form {
+  text-align: center;
+}
+
+h3 {
+  font: normal 2em "Patua One", serif;
+  color: #424242;
+}
+
+h4 {
+  font: normal 1em "roboto", serif;
+  color: #2c2b2b;
+  padding-bottom: 20px;
 }
 
 body form {
@@ -73,15 +159,19 @@ body form fieldset {
 }
 
 body form input {
-  font: normal 1.2em 'Raleway', sans-serif;
+  font: normal 1em 'Raleway', sans-serif;
   color: #020202;
   width: 80%;
-  border: 1px solid #d8d8d8;
-  padding: 2px 0;
+  border: none;
+  border-bottom: 1px solid #d8d8d8;
+  /* padding: 2px 0; */
+  padding-bottom: 0px;
   background-color: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   margin-top: 5px;
-  text-align: center;
+  text-align: left;
+  padding-left: 2px;
+  padding-top: 5px;
   outline: none;
   overflow-x: scroll;
 }
@@ -90,10 +180,37 @@ body form .airline, body form .confirmation {
   width: 50%;
 }
 
-body form ::-webkit-input-placeholde {
-  font: normal 1.2em 'Raleway', sans-serif;
+/* placeholder styles */
+body form ::-webkit-input-placeholder {
+  font: normal 1em 'Raleway', sans-serif;
+  color: #888888;
+}
+
+body form ::-moz-input-placeholder {
+  font: normal 1em 'Raleway', sans-serif;
   color: #6b6b6b;
 }
+
+body form ::-ms-input-placeholder {
+  font: normal 1em 'Raleway', sans-serif;
+  color: #6b6b6b;
+}
+
+/* body form input:focus::-webkit-input-placeholder {
+  font: normal 1em 'Raleway', sans-serif;
+  color: #f5f5f5;
+}
+
+body form input:focus::-moz-input-placeholder {
+  font: normal 1em 'Raleway', sans-serif;
+  color: #f5f5f5;
+}
+
+body form input:focus::-ms-input-placeholder {
+  font: normal 1em 'Raleway', sans-serif;
+  color: #f5f5f5;
+} */
+
 
 body form input:focus {
   border-bottom: 2px solid #0088ff;
@@ -103,11 +220,24 @@ body form button {
   width: 25%;
   height: 43px;
   color: #ffffff;
-  background: #e28714;
+  background: #0088ff;
   margin-top: 15px;
   font-size: 1.4em;
   border: none;
   outline: none;
+  border-radius: 3px;
+}
+
+body form button:hover {
+  background: #006bc8;
+}
+
+body form button {
+  -webkit-transition: background-color 0.7s ease-out;
+  -moz-transition: background-color 0.7s ease-out;
+  -o-transition: background-color 0.7s ease-out;
+  -ms-transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out;
 }
 
 /* .arrival-info-wrapper, .departure-info-wrapper {
@@ -220,19 +350,312 @@ legend {
 /* * * * * * * * * * * * * */
 /* general Media Queries   */
 /* * * * * * * * * * * * * */
+
 @media screen and (max-width: 320px) {
-  body header .h1-wrapper {
-    float: left;
-    margin-top: 3%;
-    margin-left: 2%;
+  body header nav {
+    display: none;
+  }
+
+  label {
+    font-size: 0.8em;
+  }
+
+  body form input {
+    font: normal 1em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  .side-menu-nav {
+    width: 77%;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  .form-box {
+    width: 90%;
+  }
+
+  body form .airline, body form .confirmation {
+    width: 80%;
+  }
+
+  body .edit-btn {
+    border-bottom-left-radius: 0px;
+  }
+
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
+  }
+
+  .departure-img, .arrival-img {
+    width: 16%;
+  }
+
+  .arrival-wrapper {
+    margin-top: 30px;
+  }
+
+  .city {
+    font: normal 1.2em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.9em;
+  }
+
+  body .trip-header {
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2.1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
   }
 
   body header h1 {
+    font: normal 1.9em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 65%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 55% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 1.8em 'Patua One', serif;
+  }
+
+  .sign-up-btn { 
+    width: 55%;
+  }
+
+  body main h2 {
+    font-size: 2.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .illustration h3 {
     font-size: 1.3em;
   }
 
-  body header nav {
-    display: none;
+  .illustration-wrapper {
+    margin-bottom: 60px;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -150px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 34%;
+    top: 11%;
+  }
+
+  .fa-star-wrapper {
+    left: 33%;
+    top: 22%;
+  }
+
+  hr {
+    width: 72%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 1em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  .departure-info-wrapper {
+    border-right: none;
+    padding-top: 15px;
+  }
+
+  .arrival-info-wrapper {
+    border-right: none;
+    padding-top: 25px;
+  }
+
+  .footer .contacts ul {
+    width: 60%;
+  }
+
+  legend {
+    font-size: 1.3em;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 55%;
+  }
+
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
+  }
+
+  .step-icon {
+    width: 11%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .illustration .box {
+    width: 95%;
+  }
+
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
   }
 }
 
@@ -240,48 +663,1786 @@ legend {
   body header nav {
     display: none;
   }
+
+  .side-menu-nav {
+    width: 77%;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  .form-box {
+    width: 90%;
+  }
+
+  body form .airline, body form .confirmation {
+    width: 80%;
+  }
+
+  body .edit-btn {
+    border-bottom-left-radius: 0px;
+  }
+
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
+  }
+
+  .departure-img, .arrival-img {
+    width: 16%;
+  }
+
+  .arrival-wrapper {
+    margin-top: 30px;
+  }
+
+  .city {
+    font: normal 1.2em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.9em;
+  }
+
+  body .trip-header {
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2.1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  body header h1 {
+    font: normal 1.9em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 65%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 55% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 1.8em 'Patua One', serif;
+  }
+
+  .sign-up-btn { 
+    width: 55%;
+  }
+
+  body main h2 {
+    font-size: 2.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .illustration h3 {
+    font-size: 1.3em;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: 60px;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -150px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 34%;
+    top: 11%;
+  }
+
+  .fa-star-wrapper {
+    left: 33%;
+    top: 22%;
+  }
+
+  hr {
+    width: 72%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 0.8em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  .departure-info-wrapper {
+    border-right: none;
+    padding-top: 15px;
+  }
+
+  .arrival-info-wrapper {
+    border-right: none;
+    padding-top: 25px;
+  }
+
+  .footer .contacts ul {
+    width: 60%;
+  }
+
+  legend {
+    font-size: 1.3em;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 55%;
+  }
+
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
+  }
+
+  .step-icon {
+    width: 11%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .illustration .box {
+    width: 95%;
+  }
+
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
+  }
 }
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
   body header nav {
     display: none;
   }
-}
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
-  body header button.hamburger {
+  label {
+    font-size: 0.9em;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  .side-menu-nav {
+    width: 55%;
+  }
+
+  .form-box {
+    width: 90%;
+  }
+
+  body form .airline, body form .confirmation {
+    width: 80%;
+  }
+
+  body .edit-btn {
+    border-bottom-left-radius: 0px;
+  }
+
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
+  }
+
+  .departure-img, .arrival-img {
+    width: 16%;
+  }
+
+  .arrival-wrapper {
+    margin-top: 30px;
+  }
+
+  .city {
+    font: normal 1.2em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.9em;
+  }
+
+  body .trip-header {
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2.1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  body header h1 {
+    font: normal 1.9em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 65%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  header .fa-plane {
     display: none;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 55% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 1.8em 'Patua One', serif;
+  }
+
+  .sign-up-btn { 
+    width: 55%;
+  }
+
+  body main h2 {
+    font-size: 2.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .illustration h3 {
+    font-size: 1.3em;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: 60px;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -150px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 34%;
+    top: 11%;
+  }
+
+  .fa-star-wrapper {
+    left: 33%;
+    top: 22%;
+  }
+
+  hr {
+    width: 72%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 1em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  .departure-info-wrapper {
+    border-right: none;
+    padding-top: 15px;
+  }
+
+  .arrival-info-wrapper {
+    border-right: none;
+    padding-top: 25px;
+  }
+
+  .footer .contacts ul {
+    width: 60%;
+  }
+
+  legend {
+    font-size: 1.3em;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 55%;
+  }
+
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
+  }
+
+  .step-icon {
+    width: 11%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .illustration .box {
+    width: 95%;
+  }
+
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  body header button.hamburger {
+
+@media screen and (min-width: 426px) and (max-width: 639px) {
+  body header nav {
     display: none;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  .side-menu-nav {
+    width: 55%;
+  }
+
+  .form-box {
+    width: 90%;
+  }
+
+  body form .airline, body form .confirmation {
+    width: 80%;
+  }
+
+  body .edit-btn {
+    border-bottom-left-radius: 0px;
+  }
+
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
+  }
+
+  .departure-img, .arrival-img {
+    width: 16%;
+  }
+
+  .arrival-wrapper {
+    margin-top: 30px;
+  }
+
+  .city {
+    font: normal 1.2em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.9em;
+  }
+
+  body .trip-header {
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2.1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  body header h1 {
+    font: normal 1.9em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 65%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 55% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 1.8em 'Patua One', serif;
+  }
+
+  .sign-up-btn { 
+    width: 55%;
+  }
+
+  body main h2 {
+    font-size: 2.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .illustration h3 {
+    font-size: 1.3em;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: 60px;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -150px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 34%;
+    top: 11%;
+  }
+
+  .fa-star-wrapper {
+    left: 33%;
+    top: 22%;
+  }
+
+  hr {
+    width: 72%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 1em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  label {
+    font-size: 0.9em;
+  }
+
+  .departure-info-wrapper {
+    border-right: none;
+    padding-top: 15px;
+  }
+
+  .arrival-info-wrapper {
+    border-right: none;
+    padding-top: 25px;
+  }
+
+  .footer .contacts ul {
+    width: 60%;
+  }
+
+  legend {
+    font-size: 1.4em;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 50%;
+  }
+
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
+  }
+
+  .step-icon {
+    width: 11%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .illustration .box {
+    width: 95%;
+  }
+
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+   body header nav {
+    display: none;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  body form input {
+    font: normal 1em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  label {
+    font-size: 0.9em;
+  }
+
+  .side-menu-nav {
+    width: 55%;
+  }
+
+  .form-box {
+    width: 90%;
+  }
+
+  body form .airline, body form .confirmation {
+    width: 55%;
+  }
+
+  body .edit-btn {
+    border-bottom-left-radius: 0px;
+  }
+
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
+  }
+
+  .departure-img, .arrival-img {
+    width: 16%;
+  }
+
+  .arrival-wrapper {
+    margin-top: 30px;
+  }
+
+  .city {
+    font: normal 1.2em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.9em;
+  }
+
+  body .trip-header {
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2.1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  body header h1 {
+    font: normal 1.9em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 65%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 55% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 1.8em 'Patua One', serif;
+  }
+
+  .sign-up-btn { 
+    width: 55%;
+  }
+
+  body main h2 {
+    font-size: 2.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .illustration h3 {
+    font-size: 1.3em;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: 60px;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -150px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 34%;
+    top: 11%;
+  }
+
+  .fa-star-wrapper {
+    left: 33%;
+    top: 22%;
+  }
+
+  hr {
+    width: 72%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 0.9em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  .departure-info-wrapper {
+    border-right: none;
+    padding-top: 10px;
+  }
+
+  .arrival-info-wrapper {
+    border-right: none;
+    padding-top: 10px;
+  }
+
+  .footer .contacts ul {
+    width: 60%;
+  }
+
+  legend {
+    font-size: 1.1em;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 25%;
+  }
+
+  body form button, body .go-to-login-button {
+    font-size: 1.2em;
+  }
+
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
+  }
+
+  .step-icon {
+    width: 11%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .illustration .box {
+    width: 95%;
+  }
+
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body header nav {
+    display: none;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  .side-menu-nav {
+    width: 55%;
+  }
+
+  .form-box {
+    width: 90%;
+  }
+
+  body form .airline, body form .confirmation {
+    width: 50%;
+  }
+
+  body .edit-btn {
+    border-bottom-left-radius: 0px;
+  }
+
+  .trip-header {
+    background-position: 1% 1%;
+  }
+  
+  main .confirmation .confirmation-title, 
+  main .airline-wrapper .airline-title {
+    font-size: 0.9em;
+  }
+
+  .departure-img, .arrival-img {
+    width: 16%;
+  }
+
+  .arrival-wrapper {
+    margin-top: 30px;
+  }
+
+  .city {
+    font: normal 1.2em 'Kanit', sans-serif;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+
+  body section .confirmation {
+    margin-bottom: 15px;  
+  }
+
+  body main .h2-wrapper {
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  main .confirmation .confirmation-text, 
+  main .airline-wrapper .airline-text {
+    font-size: 0.9em;
+  }
+
+  body .trip-header {
+    height: initial;
+    background-size: initial; 
+  }
+
+  body .airports-wrapper h3 {
+    font-size: 2.1em;
+  }
+
+  body .email {
+    border-bottom-left-radius: 3px;
+  }
+
+  .modal-content {
+    position: absolute;
+    left: 5%;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    border: 1px solid #888;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #1d1d20;
+  }
+
+  .modal-form input {
+    width: 85%;
+  }
+
+  .sign-up-section, .sign-in-section {
+    padding-bottom: 40px;
+  }
+
+  body header h1 {
+    font: normal 1.9em 'Alfa Slab One', serif;
+    padding: 0px;
+    padding-top: 2px;
+    line-height: 75px;
+    margin-left: 5%;
+  }
+
+  body header .h1-wrapper {
+    width: 65%;
+  }
+
+  body .header-wrapper {
+    height: 84px;
+    background-color: rgba(0,0,0,0.8)
+  }
+
+  body header .hamburger .hamburger-line {
+    background: #006bc8;
+  }
+
+  header .fa-plane {
+    display: none;
+  }
+
+  body header .h1-wrapper {
+    display: inline-block;
+    text-align: initial;
+    position: initial; 
+    height: 65px;
+    z-index: 0;
+  }
+
+  header h1 {
+    padding-top: 5px;
+  }
+
+  .container-for-header-text {
+    margin: 55% auto 0 auto;
+  }
+
+  .container-for-header-text p {
+    /* font: normal 1em sans-serif; */
+    display: none;
+  }
+
+  .container-for-header-text h2 {
+    font: normal 1.8em 'Patua One', serif;
+  }
+
+  .sign-up-btn { 
+    width: 55%;
+  }
+
+  body main h2 {
+    font-size: 2.1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .h2-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .description-1, .description-2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  body main .description-header {
+    font-size: 1.5em;
+  }
+
+  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+    display: none;
+  }
+
+  .description-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .description-1 p, .description-2 p {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .illustration h3 {
+    font-size: 1.3em;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: 60px;
+  }
+
+  .reviews-wrapper {
+    width: 90%;
+    margin: -150px auto 30px auto;
+  }
+
+  .illustration {
+    padding-bottom: 150px;
+  }
+
+  .review span {
+    left: 34%;
+    top: 11%;
+  }
+
+  .fa-star-wrapper {
+    left: 33%;
+    top: 22%;
+  }
+
+  hr {
+    width: 72%;
+  }
+
+  .sign-up-heading-wrapper h2 {
+    width: 85%;
+  }
+
+  body .register {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  body form input {
+    font: normal 1.1em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  label {
+    font-size: 1em;
+  }
+
+  .departure-info-wrapper {
+    border-right: none;
+    padding-top: 10px;
+  }
+
+  .arrival-info-wrapper {
+    border-right: none;
+    padding-top: 10px;
+  }
+
+  .footer .contacts ul {
+    width: 60%;
+  }
+
+  legend {
+    font-size: 1.1em;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 25%;
+  }
+
+  body form button, body .go-to-login-button {
+    font-size: 1.2em;
+  }
+
+  .header-placeholder {
+    height: 84px;
+    position: fixed;
+  }
+
+  main .row {
+    margin-bottom: 70px;
+  }
+
+  .container-for-card {
+    transition: none; 
+  }
+
+  .container-for-card:hover { 
+    transform: none; 
+  }
+
+  .step-icon {
+    width: 11%;
+    height: 10%;
+    /* margin-bottom: 35px; */
+  }
+
+  .illustration .box {
+    width: 95%;
+  }
+
+  .modal .input-wrapper, .modal .message-wrapper {
+    width: 100%;
+  }
+
+  .modal h2 {
+    font-size: 1.2em;
+  }
+
+  .modal .input-wrapper input, textarea, .modal button {
+    width: 100%;
+  }
+
+  .modal #send-email-btn {
+    width: 25%;
+    margin-left: 0%;
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  body header button.hamburger {
+  .nav-bar {
+    display: initial;
+  }
+
+  body form input {
+    font: normal 1.1em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  label {
+    font-size: 1em;
+  }
+
+  .control-btns button {
+    border-top: none;
+  }
+
+  body .trip-header {
+    background-position: 1% 1%;
+    background-size: initial;
+  }
+
+  body header .hamburger {
     display: none;
   }
 
-  body header nav {
-    display: initial;
-    float: right;
+  .sign-up-btn {
+    width: 15%;
+  }
+
+  .about-section {
+    padding-bottom: 55px;
+  }
+
+  .cards {
+    padding-bottom: 114px;
+  }
+
+  .fa-star-wrapper {
+    position: absolute;
+    left: 15%;
+  }
+
+  .review span {
+    position: absolute;
+    left: 15%;
+  }
+
+  .reviews-wrapper {
+    margin: -90px auto 40px auto;
+  }
+
+  hr {
+    width: 23%;
+  }
+
+  body form input {
+    width: 77%;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 25%;
+  }
+
+  .about-img {
+    width: 83%;
+  }
+
+  .modal h4 {
+    padding-right: 5px;
+  }
+
+  .modal #send-email-btn {
+    width: 16%;
+    margin-left: 0%;
+  }
+
+  body {
+    background-position: 55% 1%;
+    background-size: cover;
   }
 }
 
 @media screen and (min-width: 1441px) and (max-width: 1600px) {
-  body header button.hamburger {
+  .nav-bar {
+    display: initial;
+  }
+
+  body form input {
+    font: normal 1.1em "Roboto", sans-serif;
+    width: 80%;
+  }
+
+  label {
+    font-size: 1em;
+  }
+
+  .control-btns button {
+    border-top: none;
+  }
+
+  body header .hamburger {
     display: none;
+  }
+
+  .nav-bar {
+    display: initial;
+  }
+
+  body .trip-header {
+    background-position: 1% 1%;
+    background-size: initial;
+  }
+
+  body header .hamburger {
+    display: none;
+  }
+
+  .sign-up-btn {
+    width: 15%;
+  }
+
+  .about-section {
+    padding-bottom: 55px;
+  }
+
+  .cards {
+    padding-bottom: 114px;
+  }
+
+  .fa-star-wrapper {
+    position: absolute;
+    left: 15%;
+  }
+
+  .review span {
+    position: absolute;
+    left: 15%;
+  }
+
+  .reviews-wrapper {
+    margin: -90px auto 40px auto;
+  }
+
+  hr {
+    width: 23%;
+  }
+
+  body form input {
+    width: 77%;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 35%;
+  }
+
+  .about-img {
+    width: 83%;
+  }
+
+  .modal h4 {
+    padding-right: 5px;
+  }
+
+  .modal #send-email-btn {
+    width: 16%;
+    margin-left: 0%;
+  }
+
+  body {
+    background-position: 64% 0%;
+    background-size: cover;
   }
 }
 
 @media screen and (min-width: 1601px) and (max-width: 2560px) {
-  body header button.hamburger {
+  .nav-bar {
+    display: initial;
+  }
+
+  .control-btns button {
+    border-top: none;
+  }
+
+  .departure-wrapper, .arrival-wrapper {
+    height: 190px;
+  }
+
+  body header .hamburger {
     display: none;
   }
+
+  .nav-bar {
+    display: initial;
+  }
+
+  body .trip-header {
+    background-position: 1% 1%;
+    background-size: initial;
+  }
+
+  body header .hamburger {
+    display: none;
+  }
+
+  .sign-up-btn {
+    width: 15%;
+  }
+
+  .about-section {
+    padding-bottom: 55px;
+  }
+
+  .cards {
+    padding-bottom: 114px;
+  }
+
+  .fa-star-wrapper {
+    position: absolute;
+    left: 15%;
+  }
+
+  .review span {
+    position: absolute;
+    left: 15%;
+  }
+
+  .reviews-wrapper {
+    margin: -90px auto 40px auto;
+  }
+
+  hr {
+    width: 23%;
+  }
+
+  body form input {
+    width: 77%;
+  }
+
+  body form button, body .go-to-login-button {
+    width: 35%;
+  }
+
+  .about-img {
+    width: 83%;
+  }
+
+  .modal h4 {
+    padding-right: 5px;
+  }
+
+  .modal #send-email-btn {
+    width: 16%;
+    margin-left: 0%;
+  }
+
+  body {
+    background-position: 64% 0%;
+    background-size: cover;
+  }
 }
-/* * * * * * * * * * * * * */
-/* specific Media Queries  */
-/* * * * * * * * * * * * * */

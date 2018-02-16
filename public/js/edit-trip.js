@@ -7,11 +7,8 @@ class EditTrip  {
 
   init() {
     this.getTripData();
-    this.toggleHamburger();
     this.initializeDateAndTimePicker();
     this.airportFieldAutocomplete();
-    this.showSidebar();
-    this.hideSidebar();
   }
 
 
@@ -40,6 +37,7 @@ class EditTrip  {
 
   renderData(data) {
     const trip = data;
+    console.log(data)
     $("#airline").val(trip.airline);
     $("#confirmation").val(trip.confirmationCode);
 
@@ -102,31 +100,24 @@ class EditTrip  {
     });
   }
 
-  showSidebar() {
-    $(".hamburger").click(() => {
-      $(".side-menu-nav").removeClass("animated slideOutRight")
-      $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInRight")
-    })
-  }
-
-  hideSidebar() {
-    $(".close-side-bar").click(() => {
-      $(".side-menu-nav").fadeOut().addClass("animated slideOutRight")
-    })
-  }
-
   changeRouteToTripsPage() {
     window.location.replace(`/trips.html`)
   }
 
-  toggleHamburger() {
-    $(".hamburger").click(function() {
-      if ($(this).hasClass("is-active")) {
-        $(this).removeClass("is-active");
+  closeSidebar() {
+    const that = this;
+    $('header').on('click', '.trips, .new-trip, .log-out', function() {
+      if (!$(".hamburger").hasClass("is-active")) {
+        $(".hamburger").addClass("is-active")
+        // make sure that side bar is hidden by default
+        $(".side-menu-nav").removeClass("animated slideOutLeft");
+        $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInLeft");
+        $(".side-menu-nav").fadeIn().addClass("center-side-bar");
       } else {
-        $(this).addClass("is-active");
+        $(".side-menu-nav").fadeOut().addClass("animated slideOutLeft");
+        $(".hamburger").removeClass("is-active")
       }
-    })
+    });
   }
 
   initializeDateAndTimePicker() {

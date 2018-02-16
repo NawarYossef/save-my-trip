@@ -4,13 +4,13 @@
 	<title>New Trip</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Patua+One|Bungee|Alfa+Slab+One" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">  
   <link rel="stylesheet" type="text/css" href="stylesheets/grid.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/edit-trip.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/confetti.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.min.js"></script>
   <script src="https://unpkg.com/fuse.js@2.5.0/src/fuse.min.js"></script>
@@ -18,45 +18,53 @@
 </head>
 <body>
   <header>
-    <div class="header-wrapper col-12">
-      <nav class="">
-        <ul class=" ul-header">
-          <li class="trips">
-						<a  href="http://localhost:8081/trips.html" class="hvr-underline-from-center">Your Trips</a>
-					</li>
-					<li class="new-trip">
-						<a href="http://localhost:8081/new-trip.html" class="hvr-underline-from-center">New Trip</a>
-					</li>
-					<!-- <li class="booking">
-						<a href="#" class="hvr-underline-from-center">Book a flight</a>
-					</li> -->
-					<li class="log-out">
-						<a href="#" class="hvr-underline-from-center">Log Out</a>
-					</li>
-        </ul>
-      </nav>
+    <div class="background-wrapper col-12">
+      <div class="header-wrapper col-12">
+        <nav>
+      <ul class=" ul-header">
+        <li class="trips">
+          <a href="http://localhost:8081/trips.html" class="hvr-underline-from-center">Your Trips</a>
+        </li>
+        <!-- <li class="new-trip">
+          <a href="http://localhost:8081/new-trip.html" class="hvr-underline-from-center">New Trip</a>
+        </li> -->
+        <li class="log-out">
+          <a href="#" class="hvr-underline-from-center">Log Out</a>
+        </li>
+      </ul>
+    </nav>
   
-      <div class="h1-wrapper">
-        <h1>SaveMyTrip</h1>
+        <div class="h1-wrapper">
+          <a class="link-for-h1" href="http://localhost:8081/">
+            <h1>SaveMyTrip
+              <i class="fas fa-plane"></i>
+            </h1>
+          </a>
+        </div>
+        <!-- hamburger icon -->
+        <button class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
-      <!-- hamburger icon -->
-			<button class="hamburger" type="button">
-				<div class="hamburger-line"></div>
-				<div class="hamburger-line"></div>
-				<div class="hamburger-line"></div>
-			</button>
-
 			<!-- sidebar  -->
 			<section class="side-menu-nav">
-        <p class="close-side-bar"><span>&times;</span>Close</p>
-        <ul>
-          <li class="trips"><a href="http://localhost:8081/trips.html">Your Trips</a></li>
-          <li class="new-trip"><a href="http://localhost:8081/new-trip.html">New Trip</a></li>
-          <li class="log-out"><a>Log Out</a></li>
-        </ul>
-			</section> 
-    </div>
-  </header>
+				<p class="close-side-bar">
+				<ul>
+					<li class="about about-side-bar-link">
+						<a href="http://localhost:8081/trips.html">Your Trips</a>
+					</li>
+					<!-- <li class="trips">
+						<a href="http://localhost:8081/new-trip.html">New Trip</a>
+					</li> -->
+					<li class="log-in log-in-side-bar-link">
+						<a href="/">Log Out</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</header>
 
   <main role="main">
     <script>
@@ -72,23 +80,22 @@
     </script>
     <section class="col-12 new-trip-form">
       <div class="form-box">
-        <div class="h2-wrapper col-12">
-          <h2 class="heading-for-new-trip">Edit Trip Information</h2>
-          <!-- <h4>Enter your trip information below</h4> -->
+        <div class="h3-wrapper col-12">
+          <h3 class="heading-for-new-trip">Edit Trip</h3>
+          <h4>Edit your trip information below</h4>
         </div>
         <form class="col-12" id="new-trip-form">
           <div class="departure-data col-12">
             <fieldset>
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">Airline</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+              <div class="wrapper-lab-airline">
+                <label class="lab-airline">Airline</label>
+                <input type="text" name="airline-choice" id="airline"  maxlength="20" required="" class="airline">
               </div>
-              <input type="text" name="airline-choice" id="airline"  maxlength="20" required="" class="airline">
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">Confirmation Code</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+
+              <div class="wrapper-lab-confirm">
+                <label class="lab-confirm">Confrmation Number</label>
+                <input type="text" name="confirmation-number" id="confirmation" maxlength="10"  required="" class="confirmation">
               </div>
-              <input type="text" name="confirmation-number" id="confirmation" maxlength="10"   required="" class="confirmation">
             </fieldset>
           </div>
           <div class="departure-info-wrapper col-6">
@@ -97,36 +104,30 @@
             </legend>
             
             <fieldset name="register-info">
-              <div class="h2-wrapper col-12">
-
-                <h3 class="heading-for-new-trip">City</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+              <div class="dep-city">
+                <label class="lab-dep-city">City</label>
+                <input type="text" name="city-choice" id="departure-city"  required="" class="">
               </div>
-              <input type="text" name="city-choice" id="departure-city" required="" class="">
 
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">Airport</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+              <div class="dep-airport">
+                <label class="lab-dep-airport">Airport</label>
+                <input type="text" name="airport-choice" id="departure-airport" maxlength="3" required="" class="">
               </div>
-              <input type="text" name="airport-choice" id="departure-airport" maxlength="3" required="" class="">
 
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">Terminal</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+              <div class="dep-terminal">
+                <label class="lab-dep-termianl">Terminal</label>
+                <input type="text" name="terminal-choice" id="departure-terminal"  maxlength="3"class="">
               </div>
-              <input type="text" name="terminal-choice" id="departure-terminal"  maxlength="3" required="" class="">
 
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">Gate</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+              <div class="dep-gate">
+                <label class="lab-dep-gate">Gate</label>
+                <input type="text" name="gate-choice" id="departure-gate" maxlength="3"  class="">
               </div>
-              <input type="text" name="gate-choice" id="departure-gate" maxlength="3" required="" class="">
 
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">Date And Time</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+              <div class="dep-date">
+                <label class="lab-dep-date ">Date And Time</label>
+                <input type="text" name="date" id="datepicker-1"   class="">
               </div>
-              <input type="text" name="date" id="datepicker-1" class="">
             </fieldset>
           </div>
 
@@ -135,35 +136,29 @@
               Arrival
             </legend>
             <fieldset name="register-info">
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">City</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+              <div class="lab-arrival-city">
+                <label class>City</label>
+                <input type="text" name="city-choice" id="arrival-city"  required="" class="">
+              </div>  
+              <div class="lab-arrival-airport">
+                <label class="arr-airport">Airport</label>
+                <input type="text" name="airport-choice" id="arrival-airport" maxlength="3"  required="" class="">
               </div>
-              <input type="text" name="city-choice" id="arrival-city" required="" class="">
-
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">Airport</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
-              </div>
-              <input type="text" name="airport-choice" id="arrival-airport" maxlength="3" required="" class="">
               
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">Terminal</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+              <div class="lab-arrival-terminal">
+                <label class="">Terminal</label>
+                <input type="text" name="terminal-choice" id="arrival-termianl" maxlength="3"  class="">
               </div>
-              <input type="text" name="terminal-choice" id="arrival-terminal" maxlength="3" required="" class="">
 
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">Gate</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+              <div class="lab-arrival-gate">
+                <label class="">Gate</label>
+                <input type="text" name="gate-choice" id="arrival-gate" maxlength="3"  class="">
               </div>
-              <input type="text" name="gate-choice" id="arrival-gate" maxlength="3" required="" class="">
 
-              <div class="h2-wrapper col-12">
-                <h3 class="heading-for-new-trip">Date And Time</h3>
-                <!-- <h4>Enter your trip information below</h4> -->
+              <div class="lab-arrival-date">
+                <label class="">Date And Time</label>
+                <input type="text" name="date" id="datepicker-2" required="" class="">
               </div>
-              <input type="text" name="date" id="datepicker-2" required="" class="">
             </fieldset>
           </div>
           <div class="btns-wrapper col-12">
