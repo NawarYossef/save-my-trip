@@ -12,7 +12,7 @@ class Helpers {
   }
   //route to landing page if there is no token
   TokenCheck() {
-    if (window.location.href === 'http://localhost:8081/')  {
+    if (window.location.href === 'https://save-my-trip.herokuapp.com/')  {
       this.handleLoginStatus();
     } else if(!this.token) {
       window.location.replace('/');
@@ -22,7 +22,7 @@ class Helpers {
   handleLoginStatus() {
     if (this.token) {
       $(".log-out").css({"display": "inline-block"})
-     $(".log-in").css({"display": "none"})
+      $(".log-in").css({"display": "none"})
     }
     return null;
   }

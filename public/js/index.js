@@ -36,30 +36,45 @@ class SaveMyTrip {
 
   NavbarScrollToSection() {
     const that = this;
-    $('header').on('click', '.about, .sign-up-btn, .about-side-bar-link', function(e) {
+    $('header').on('click', '.about, .sign-up-btn, .about-side-bar-link, .trips, .trips-side-bar-link', function(e) {
       e.preventDefault();
       switch(true) {
-        case $(this).hasClass("about"):
-          $('html, body').animate({
-            scrollTop: $("main").offset().top - 66
-          }, 900);
-          break;
+        // case $(this).hasClass("about"):
+        //   $('html, body').animate({
+        //     scrollTop: $("main").offset().top - 66
+        //   }, 900);
+        //   break;
         
-        case $(this).hasClass("about-side-bar-link"):
-        console.log("i")
+        case $(this).hasClass("about"):
           that.closeSidebar();
           $('html, body').animate({
             scrollTop: $("main").offset().top - 66
           }, 900);
           break;
+        
+        case $(this).hasClass("trips-side-bar-link"):
+          if(!this.token) {
+              that.closeSidebar();
+              $('html, body').animate({
+                scrollTop: $("main").offset().top + 830
+            }, 900);
+            break;
+          }
+
+        case $(this).hasClass("trips"):
+          if(!this.token) {
+            $('html, body').animate({
+              scrollTop: $("main").offset().top + 430
+            }, 900);
+            break;
+          }
 
         case $(this).hasClass("sign-up-btn"):
           $('html, body').animate({
 					  scrollTop: $("#sign-up").offset().top - 105
 			    }, 1000);
           break;
-
-        
+                 
         default:
           // do nothing
       }
@@ -67,17 +82,19 @@ class SaveMyTrip {
   }
 
   closeSidebar() {
-    if (!$(".hamburger").hasClass("is-active")) {
-      $(".hamburger").addClass("is-active")
-      // make sure that side bar is hidden by default
-      $(".side-menu-nav").removeClass("animated slideOutLeft");
-      $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInLeft");
-      $(".side-menu-nav").fadeIn().addClass("center-side-bar");
-    } else {
-      $(".side-menu-nav").fadeOut().addClass("animated slideOutLeft");
-      $(".hamburger").removeClass("is-active")
-    }
+    $(".side-menu-nav").fadeOut().addClass("animated slideOutLeft");
+    $(".hamburger").removeClass("is-active");
   }
+
+  // openSideBar() {
+  //   if (!$(".hamburger").hasClass("is-active")) {
+  //     $(".hamburger").addClass("is-active")
+  //     // make sure that side bar is hidden by default
+  //     $(".side-menu-nav").removeClass("animated slideOutLeft");
+  //     $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInLeft");
+  //     $(".side-menu-nav").fadeIn().addClass("center-side-bar");
+  //   }
+  // }
   
   signUpUser() {
     const that = this;
