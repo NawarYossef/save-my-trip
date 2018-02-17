@@ -116,9 +116,9 @@ class Trips  {
 
   emailHandler() {
     const that = this;
-    $(".trips-container").on('click', '.send-email-button', function() { 
-      // e.preventDefault()
-
+    $(".modal-form").submit((e) => {
+      e.preventDefault();
+      that.clearEmailSuccessMessage()
       // store input values in order to send it in the POST request
       const emailInfo = {
         title: $("#title").val(),
@@ -130,6 +130,7 @@ class Trips  {
       $("#title").val('')
       $("#email").val('')
       $("#comments").val('')
+
 
       $.ajax({
         "type": "POST",
@@ -143,7 +144,7 @@ class Trips  {
       })
       .done((data) => {
         console.log(data)
-        // that.handleEmailSent(data);
+        that.handleEmailSent(data);
       })
       .fail((error) => {
         console.log(error)

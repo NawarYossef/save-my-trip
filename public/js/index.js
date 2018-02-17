@@ -14,6 +14,7 @@ class SaveMyTrip {
     this.changeHeaderStylesOnScroll();
     this.reviewSlideShow();
     this.tripsEndpointAuthValidation();
+    this.useDemoAccountValuesForLogin();
   }
 
   showLoginModal() {
@@ -39,11 +40,6 @@ class SaveMyTrip {
     $('header').on('click', '.about, .sign-up-btn, .about-side-bar-link, .trips, .trips-side-bar-link', function(e) {
       e.preventDefault();
       switch(true) {
-        // case $(this).hasClass("about"):
-        //   $('html, body').animate({
-        //     scrollTop: $("main").offset().top - 66
-        //   }, 900);
-        //   break;
         
         case $(this).hasClass("about"):
           that.closeSidebar();
@@ -64,7 +60,7 @@ class SaveMyTrip {
         case $(this).hasClass("trips"):
           if(!this.token) {
             $('html, body').animate({
-              scrollTop: $("main").offset().top + 430
+              scrollTop: $("#cards").offset().top - 50
             }, 900);
             break;
           }
@@ -127,6 +123,13 @@ class SaveMyTrip {
         that.showInvalidMessage(error);
         console.error("something is wrong");
       })
+    })
+  }
+
+  useDemoAccountValuesForLogin() {
+    $(".demo-account-access").click(() => {
+      $("#sign-in-username").val('hello');
+      $("#sign-in-password").val('hello');
     })
   }
 
