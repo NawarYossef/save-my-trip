@@ -16,9 +16,10 @@ const TripSchema = mongoose.Schema({
     terminal: {type: String, required: false},
     gate: {type: String, required: false},
     date: {type: Date, required: true},
-
-  }
+  },
+  user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 });
+
 
 
 TripSchema.methods.serialize = function() {

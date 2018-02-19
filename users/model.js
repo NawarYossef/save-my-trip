@@ -17,13 +17,14 @@ const UserSchema = mongoose.Schema({
   firstName: {type: String, default: ''},
   lastName: {type: String, default: ''},
   email: {type: String, default: '', unique: true, required: true}
-
+  
 });
 
 UserSchema.methods.serialize = function() {
   return {
     username: this.username || '',
     firstName: this.firstName || '',
+    id: this._id || '',
     lastName: this.lastName || '',
     email: this.email || ''
   };

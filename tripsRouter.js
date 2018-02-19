@@ -15,9 +15,9 @@ const jwtAuth = passport.authenticate('jwt', { session: false });
 
 router.use(jsonParser)
 // ============== GET endpoint ==============
-router.get('/', (req, res) => {
+router.get('/', jwtAuth, (req, res) => {
 Trip
-  .find()
+  .find({user: req.user.id})
   // call the `.serialize` instance method we've created in
   // models.js in order to only expose the data we want the API return.
   .then(trips => {
@@ -31,7 +31,7 @@ Trip
   });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', jwtAuth, (req, res) => {
   Trip
     .findById(req.params.id)
     .then(trip => res.json(trip.serialize()))
@@ -82,7 +82,7 @@ router.post('/email/:id', (req, res) => {
 })
 
 // ============== POST endpoint ==============
-router.post('/', (req, res) => {
+router.post('/', jwtAuth, (req, res) => {
   const requiredFields = [
     "airline", "confirmationCode", 'departure', "arrival",
   ];
@@ -101,7 +101,8 @@ router.post('/', (req, res) => {
       airline: req.body.airline,
       confirmationCode: req.body.confirmationCode,
       departure: req.body.departure,
-      arrival: req.body.arrival
+      arrival: req.body.arrival,
+      user: req.user.id
     })
     .then(trip => res.status(201).json(trip.serialize()))
     .catch(err => {
@@ -111,7 +112,7 @@ router.post('/', (req, res) => {
 });
 
 // ============== PUT endpoint ==============
-router.put('/:id', (req, res) => {
+router.put('/:id', jwtAuth,  (req, res) => {
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
     res.status(400).json({
       error: 'Request path id and request body id values must match'
@@ -136,7 +137,7 @@ router.put('/:id', (req, res) => {
 });
 
 // ============== DELETE endpoint ==============
-router.delete('/:id', (req, res) => {
+router.delete('/:id', jwtAuth, (req, res) => {
   Trip
     .findByIdAndRemove(req.params.id)
     .then(trip => res.status(204).end())

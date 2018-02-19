@@ -49,8 +49,8 @@ class NewTrip  {
         // reset all form input values after form submission
         // $("#new-trip-form")[0].reset();
       })
-      .fail(data => {
-        console.error("something is wrong")
+      .fail(error => {
+        console.error("something is wrong", error);
       })
     });
   }
