@@ -128,8 +128,8 @@ class SaveMyTrip {
 
   useDemoAccountValuesForLogin() {
     $(".demo-account-access").click(() => {
-      $("#sign-in-username").val('hello');
-      $("#sign-in-password").val('hello');
+      $("#sign-in-username").val('demouser');
+      $("#sign-in-password").val('wewewewe123');
     })
   }
 

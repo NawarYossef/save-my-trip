@@ -356,6 +356,10 @@ legend {
     display: none;
   }
 
+  .arr-airport, .lab-dep-airport { 
+    font-size: 0.8em;
+  }
+
   label {
     font-size: 0.8em;
   }
@@ -664,6 +668,14 @@ legend {
     display: none;
   }
 
+  .arr-airport, .lab-dep-airport { 
+    font-size: 0.9em;
+  }
+
+  label {
+    font-size: 0.9em;
+  }
+
   .side-menu-nav {
     width: 77%;
   }
@@ -967,6 +979,10 @@ legend {
     font-size: 0.9em;
   }
 
+  .arr-airport, .lab-dep-airport { 
+    font-size: 0.9em;
+  }
+
   h3 {
     padding-bottom: 10px;
   }
@@ -1265,6 +1281,18 @@ legend {
 @media screen and (min-width: 426px) and (max-width: 639px) {
   body header nav {
     display: none;
+  }
+
+  .arr-airport, .lab-dep-airport { 
+    font-size: 0.9em;
+    position: absolute;
+    top: -10%;
+    left: 10%;
+  }
+
+  label {
+    font-size: 0.9em;
+    
   }
 
   h3 {
@@ -1568,6 +1596,18 @@ legend {
 @media screen and (min-width: 640px) and (max-width: 767px) {
    body header nav {
     display: none;
+  }
+
+  .arr-airport, .lab-dep-airport { 
+    font-size: 0.9em;
+    position: absolute;
+    top: -10%;
+    left: 10%;
+  }
+
+  label {
+    font-size: 0.9em;
+    
   }
 
   h3 {
@@ -1884,6 +1924,17 @@ legend {
 
   h3 {
     padding-bottom: 10px;
+  }
+
+  .arr-airport, .lab-dep-airport { 
+    font-size: 1em;
+    position: absolute;
+    top: -10%;
+    left: 11%;
+  }
+
+  label {
+    font-size: 1em;
   }
 
   .side-menu-nav {

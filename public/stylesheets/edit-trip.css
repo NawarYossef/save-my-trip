@@ -592,7 +592,7 @@ legend {
   .arr-airport, .lab-dep-airport {
     position: absolute;
     left: 11%;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .departure-info-wrapper {
@@ -678,7 +678,7 @@ legend {
   .arr-airport, .lab-dep-airport {
     position: absolute;
     left: 10%;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   h3 {

@@ -118,7 +118,7 @@ class Trips  {
     const that = this;
     $(".modal-form").submit((e) => {
       e.preventDefault();
-      that.clearEmailSuccessMessage()
+      // that.clearEmailSuccessMessage()    
       // store input values in order to send it in the POST request
       const emailInfo = {
         title: $("#title").val(),
