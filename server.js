@@ -6,18 +6,11 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const passport = require("passport");
 
-<<<<<<< HEAD
-const tripsRouter = require("./tripsRouter");
-const { PORT, DATABASE_URL } = require("./config");
-const { Trip } = require("./models");
-
-const { router: usersRouter } = require("./users");
-=======
 const { PORT, DATABASE_URL } = require("./config");
 
 const { router: usersRouter } = require("./users");
 const { router: tripsRouter } = require("./tripsRouter");
->>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
+
 const { router: authRouter, localStrategy, jwtStrategy } = require("./auth");
 
 mongoose.Promise = global.Promise;
@@ -44,10 +37,6 @@ passport.use(jwtStrategy);
 
 app.use("/api/users/", usersRouter);
 app.use("/api/auth/", authRouter);
-<<<<<<< HEAD
-
-=======
->>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
 app.use("/trips", tripsRouter);
 
 app.use("*", function(req, res) {

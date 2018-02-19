@@ -69,12 +69,8 @@ function generateTripData() {
       terminal: String(faker.random.number()),
       gate: String(faker.random.number()),
       date: faker.date.future()
-<<<<<<< HEAD
-    }
-=======
     },
     user: id
->>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
   };
 }
 
@@ -88,15 +84,12 @@ function tearDownDb() {
 }
 
 describe("Trip API resource", function() {
-<<<<<<< HEAD
-=======
   const username = "exampleUser";
   const password = "examplePass";
   const firstName = "Example";
   const lastName = "User";
   const id = "";
 
->>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
   // each of these hook functions are needed to return a promise
   // otherwise a callback "done" will need to be called.
   before(function() {
@@ -131,8 +124,6 @@ describe("Trip API resource", function() {
     // res.body.id.should.not.be.null;
 
     it("should return all existing trips", function() {
-<<<<<<< HEAD
-=======
       const token = jwt.sign(
         {
           user: {
@@ -150,15 +141,11 @@ describe("Trip API resource", function() {
         }
       );
 
->>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
       let res;
       return chai
         .request(app)
         .get("/trips")
-<<<<<<< HEAD
-=======
         .set("authorization", `Bearer ${token}`)
->>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
         .then(function(_res) {
           // so subsequent .then blocks can access resp obj.
           res = _res;
