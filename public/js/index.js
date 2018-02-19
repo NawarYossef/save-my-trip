@@ -163,6 +163,7 @@ class SaveMyTrip {
       })
       .fail((error) => {
         console.error("something is wrong");
+        console.log(error)
         this.showInvalidLoginMessage();
       })
     })
