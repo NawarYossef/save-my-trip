@@ -6,8 +6,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<<<<<<< HEAD
   <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Patua+One|Bungee|Alfa+Slab+One"
     rel="stylesheet">
+=======
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Patua+One|Bungee|Alfa+Slab+One" rel="stylesheet">
+>>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/grid.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/new-trip.css">
@@ -24,6 +28,7 @@
     <div class="background-wrapper col-12">
       <div class="header-wrapper col-12">
         <nav>
+<<<<<<< HEAD
           <ul class=" ul-header">
             <li class="trips">
               <a href="/trips.html" class="hvr-underline-from-center">Your Trips</a>
@@ -36,6 +41,20 @@
             </li>
           </ul>
         </nav>
+=======
+      <ul class=" ul-header">
+        <li class="trips">
+          <a href="/trips.html" class="hvr-underline-from-center">Your Trips</a>
+        </li>
+        <li class="new-trip">
+          <a href="/new-trip.html" class="hvr-underline-from-center">New Trip</a>
+        </li>
+        <li class="log-out">
+          <a href="#" class="hvr-underline-from-center">Log Out</a>
+        </li>
+      </ul>
+    </nav>
+>>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
 
         <div class="h1-wrapper">
           <a class="link-for-h1" href="/">
@@ -71,6 +90,7 @@
 
   <main role="main">
     <script>
+<<<<<<< HEAD
       $(document).ready(function () {
         function init() {
           const departureCity = document.getElementById('departure-city');
@@ -81,6 +101,22 @@
         google.maps.event.addDomListener(window, 'load', init);
       });	
     </script>
+=======
+    $(document).ready(function() {
+  function init() {
+    const departureCity = document.getElementById("departure-city");
+    const arrivalCity = document.getElementById("arrival-city");
+    const autocompleteDeparture = new google.maps.places.Autocomplete(
+      departureCity
+    );
+    const autocompleteArrival = new google.maps.places.Autocomplete(
+      arrivalCity
+    );
+  }
+  google.maps.event.addDomListener(window, "load", init);
+});
+</script>
+>>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
     <section class="col-12 new-trip-form">
       <div class="form-box">
         <div class="h3-wrapper col-12">
@@ -141,7 +177,11 @@
             <fieldset name="register-info">
               <div class="lab-arrival-city">
                 <label class>City</label>
+<<<<<<< HEAD
                 <input type="text" name="city-choice" id="arrival-city" required="" class="">
+=======
+                <input type="text" name="city-choice" id="arrival-city"  required="" class="">
+>>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
               </div>
               <div class="lab-arrival-airport">
                 <label class="arr-airport">Airport</label>
@@ -179,5 +219,8 @@
   <script type="text/javascript" src="js/helpers.js"></script>
   <script type="text/javascript" src="js/new-trip.js"></script>
 </body>
+<<<<<<< HEAD
 
 </html>
+=======
+>>>>>>> 1e2680e66545afa3d25990c9280e4c783cccd7ae
