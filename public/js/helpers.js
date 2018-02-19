@@ -8,7 +8,6 @@ class Helpers {
     this.handleSidebarSlide();
     this.handleHamburgerButton();
     this.userLogout();
-    this.tripsPageRouter();
   }
   //route to landing page if there is no token
   TokenCheck() {
@@ -26,19 +25,6 @@ class Helpers {
       $(".log-in").css({"display": "none"})
     }
     return null;
-  }
-
-  tripsPageRouter() {
-    $(".trips").click(() => {
-      if(!this.token) {
-        // window.location.replace('/');
-        $('html, body').animate({
-          scrollTop: $("main").offset().top - 66
-        }, 900);
-      } else {
-        window.location.replace(`/trips.html`)
-      }
-    })
   }
 
   handleSidebarSlide() {

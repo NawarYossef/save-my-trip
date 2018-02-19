@@ -40,41 +40,26 @@ class SaveMyTrip {
   NavbarScrollToSection() {
     $('header').on('click', '.about, .sign-up-btn, .about-side-bar-link, .trips, .trips-side-bar-link', function(e) {
       e.preventDefault();
-      switch(true) {
         
-        case $(this).hasClass("about"):
-          that.closeSidebar();
+      if ($(this).hasClass("about")) {
+        this.closeSidebar();
+        $('html, body').animate({
+          scrollTop: $("main").offset().top - 66
+        }, 900);
+      } else if ($(this).hasClass("trips-side-bar-link") && !this.token) {
+          this.closeSidebar();
           $('html, body').animate({
-            scrollTop: $("main").offset().top - 66
+            scrollTop: $(".cards").offset().top - 80
+        }, 900);
+      } else if ($(this).hasClass("trips") && !this.token) {
+          $('html, body').animate({
+            scrollTop: $(".cards").offset().top - 63
           }, 900);
-          break;
-        
-        case $(this).hasClass("trips-side-bar-link"):
-          if(!this.token) {
-              that.closeSidebar();
-              $('html, body').animate({
-                scrollTop: $("main").offset().top + 830
-            }, 900);
-            break;
-          }
-
-        case $(this).hasClass("trips"):
-          if(!this.token) {
-            $('html, body').animate({
-              scrollTop: $("#cards").offset().top - 50
-            }, 900);
-            break;
-          }
-
-        case $(this).hasClass("sign-up-btn"):
-          $('html, body').animate({
-					  scrollTop: $("#sign-up").offset().top - 105
-			    }, 1000);
-          break;
-                 
-        default:
-          // do nothing
-      }
+      } else if ($(this).hasClass("sign-up-btn")) {
+        $('html, body').animate({
+          scrollTop: $("#sign-up").offset().top - 105
+        }, 1000);
+      } 
     });
   }
 
@@ -189,7 +174,6 @@ class SaveMyTrip {
 
   hideInvalidLoginMessage() {
     $(".cont-for-invalid-message-login").css("display", "none");
-    // $(".cont-for-invalid-message-login").text('');
   }
 
   changeRouteToTripsPage() {
