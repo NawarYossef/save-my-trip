@@ -6,7 +6,7 @@ body {
 
 body header {
   background-image: url("../images/airport6.jpg");
-  background-position: 50% 80%; 
+  background-position: 50% 80%;
   background-size: 100%;
   height: 700px;
 }
@@ -18,7 +18,7 @@ body header {
 }
 
 header .background-wrapper {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   height: 700px;
   padding: 0px;
 }
@@ -67,7 +67,7 @@ header .log-out {
 }
 
 .container-for-header-text h2 {
-  font: normal 2.4em 'Patua One', serif;
+  font: normal 2.4em "Patua One", serif;
   color: #ffffff;
 }
 /* * * * * * * * * * * */
@@ -77,16 +77,16 @@ header .log-out {
 /* Modal (background) */
 
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1; 
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.3);
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-content {
@@ -94,10 +94,10 @@ header .log-out {
   left: 30%;
   /* top: -100px; */
   background-color: #ffffff;
-  margin:  10% auto 0 auto; 
+  margin: 10% auto 0 auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 40%; 
+  width: 40%;
   border-radius: 5px;
   box-shadow: 5px 10px 18px #1d1d20;
 }
@@ -112,18 +112,18 @@ header .log-out {
 }
 
 .modal h2 {
-  font: normal 1.5em 'Patua One', serif;
+  font: normal 1.5em "Patua One", serif;
   color: #414141;
 }
 
 .modal h4 {
   padding-top: 10px;
-  font: normal 1.2em 'Quicksand', sans-serif;
+  font: normal 1.2em "Quicksand", sans-serif;
 }
 
 .modal h6 {
   padding-top: 10px;
-  font: normal 1.1em 'Fire-sans', sans-serif;
+  font: normal 1.1em "Fire-sans", sans-serif;
   text-decoration: underline;
 }
 
@@ -149,7 +149,7 @@ header .log-out {
 
 .sign-up-btn {
   background-color: #fdcc52;
-  font: normal 1.2em 'Merriweather', serif;
+  font: normal 1.2em "Merriweather", serif;
   color: #222020;
   border: none;
   outline: none;
@@ -161,10 +161,10 @@ header .log-out {
   /* box-shadow: 6px 5px 10px #484848; */
 }
 
- .sign-up-btn:hover {
+.sign-up-btn:hover {
   cursor: pointer;
   background-color: #b48b22;
-} 
+}
 
 .sign-up-btn {
   -webkit-transition: background-color 0.7s ease-out;
@@ -175,7 +175,7 @@ header .log-out {
 }
 
 .arrows {
-	width: 60px;
+  width: 60px;
   height: 72px;
   position: absolute;
   left: 48.5%;
@@ -183,9 +183,9 @@ header .log-out {
 }
 
 .arrows path {
-	stroke: #F2E6C6;
-	fill: transparent;
-	stroke-width: 1.5px;	
+  stroke: #f2e6c6;
+  fill: transparent;
+  stroke-width: 1.5px;
 }
 
 /* * * * * * * * * * * */
@@ -203,7 +203,7 @@ main {
   background-color: #f5f5f5;
   /* background-color: #fdcc52; */
   padding-left: 0px;
-  padding-right: 0px; 
+  padding-right: 0px;
 }
 
 /* * * * * * * * * * * */
@@ -213,14 +213,17 @@ main {
 .about-section {
   padding-bottom: 20px;
   padding-top: 20px;
-} 
+}
 
 .about-img {
   width: 90%;
 }
 
-.fa-clock-o, .fa-user, .fa-envelope, .fa-tasks {
-  color: #2576AC;
+.fa-clock-o,
+.fa-user,
+.fa-envelope,
+.fa-tasks {
+  color: #2576ac;
   width: 20px;
   height: 65px;
   display: inline-block;
@@ -228,20 +231,23 @@ main {
   font-size: 3em;
 }
 
-.fa-clock-o, .fa-user {
+.fa-clock-o,
+.fa-user {
   margin-left: 3px;
   margin-right: 20px;
 }
 
-.fa-envelope, .fa-tasks {
+.fa-envelope,
+.fa-tasks {
   margin-right: 33px;
 }
 
-.description-1, .description-2  {
+.description-1,
+.description-2 {
   margin-top: 40px;
 }
 
-.description-2  {
+.description-2 {
   text-align: left;
 }
 
@@ -249,31 +255,32 @@ main {
   text-align: right;
 }
 
-.description-1 p, .description-2 p {
-  font: normal 1em  'Roboto', sans-serif;
+.description-1 p,
+.description-2 p {
+  font: normal 1em "Roboto", sans-serif;
   color: #6a6a6a;
   display: inline-block;
   width: 200px;
-} 
+}
 
 body main h2 {
-  font: normal 2.4em 'Patua One', serif;
+  font: normal 2.4em "Patua One", serif;
   color: #484646;
 }
 
 .sign-up-heading-wrapper h2 {
-  margin: 40px auto 0 auto; 
+  margin: 40px auto 0 auto;
 }
 
 body main .description-header {
-  font: normal 1.5em 'Josefin Sans', sans-serif;
+  font: normal 1.5em "Josefin Sans", sans-serif;
   color: #169ece;
 }
 .text-2 {
   margin-top: 50px;
 }
 
-.description-img  {
+.description-img {
   text-align: center;
 }
 
@@ -309,16 +316,16 @@ body main .description-header {
   height: 450px;
 }
 
-.container-for-card   { 
-  transition: all .4s ease-in-out; 
+.container-for-card {
+  transition: all 0.4s ease-in-out;
 }
 
-.container-for-card:hover { 
-  transform: scale(1.1); 
+.container-for-card:hover {
+  transform: scale(1.1);
 }
- .cards h2 {
+.cards h2 {
   color: #ffffff;
-} 
+}
 
 .img-box {
   width: 100%;
@@ -326,35 +333,35 @@ body main .description-header {
   border-radius: 3px;
   background: #ffffff;
   box-shadow: 14px 19px 29px #0b0b0b;
- }
- 
- img {
-   width: 100%;
-   height: 283px;
-   border-radius: 3px;
- }
+}
 
- .cards-text {
-   text-align: center;
-  font: bold 1.4em 'Poppins', sans-serif;
+img {
+  width: 100%;
+  height: 283px;
+  border-radius: 3px;
+}
+
+.cards-text {
+  text-align: center;
+  font: bold 1.4em "Poppins", sans-serif;
   color: rgb(90, 99, 114);
   margin-top: 5px;
- }
+}
 
- .text-wrapper {
-   text-align: center;
-   height: 80px;
- }
+.text-wrapper {
+  text-align: center;
+  height: 80px;
+}
 
- .text-wrapper p {
-  font: normal 1em 'Roboto', sans-serif;
+.text-wrapper p {
+  font: normal 1em "Roboto", sans-serif;
   color: #414141;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
- }
+}
 
- /* * * * * * * * * * * */
+/* * * * * * * * * * * */
 /*       illustration   */
 /* * * * * * * * * * * */
 .illustration {
@@ -362,12 +369,12 @@ body main .description-header {
   padding-top: 20px;
 }
 
-.illustration  .h2-wrapper {
+.illustration .h2-wrapper {
   padding-bottom: 40px;
 }
 
 .illustration-wrapper {
-  margin-bottom: 220px; 
+  margin-bottom: 220px;
 }
 
 .illustration .box {
@@ -385,10 +392,10 @@ body main .description-header {
 }
 
 .illustration h3 {
-  font: bold 1.4em 'Poppins', sans-serif;
+  font: bold 1.4em "Poppins", sans-serif;
   color: rgb(90, 99, 114);
-  margin-top: 20px;  
-  margin-bottom: 25px;  
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 .illustration hr {
@@ -398,7 +405,7 @@ body main .description-header {
 }
 
 .box p {
-  font: normal 1em/170% 'Roboto', sans-serif;
+  font: normal 1em/170% "Roboto", sans-serif;
   color: rgb(109, 103, 103);
   padding-left: 10px;
   padding-right: 10px;
@@ -409,7 +416,7 @@ body main .description-header {
   color: rgb(189, 0, 195);
 }
 
- /* * * * * * * * * * * */
+/* * * * * * * * * * * */
 /*       review         */
 /* * * * * * * * * * * */
 .reviews-wrapper {
@@ -445,12 +452,12 @@ body main .description-header {
   margin-right: 15px;
   margin-bottom: 5px;
   padding-top: 5px;
-  font: italic 1em/170% 'Roboto', sans-serif;
+  font: italic 1em/170% "Roboto", sans-serif;
   color: rgb(109, 103, 103);
 }
 
 .review span {
-  font: normal 1.1em/170% 'Roboto', sans-serif;
+  font: normal 1.1em/170% "Roboto", sans-serif;
   color: #505050;
   position: absolute;
   left: 12%;
@@ -464,7 +471,8 @@ body main .description-header {
   color: #424242;
 }
 
-.fa-quote-left, .fa-quote-right {
+.fa-quote-left,
+.fa-quote-right {
   font-size: 15px;
 }
 
@@ -476,17 +484,19 @@ body main .description-header {
   margin-bottom: 35px;
 }
 
-.sign-up-section, .sign-in-section {
+.sign-up-section,
+.sign-in-section {
   padding-bottom: 80px;
   position: relative;
   background: #f5f5f5;
 }
 
 .sign-in-section {
-  background: #ffffff;   
+  background: #ffffff;
 }
 
-.sign-up-wrapper, .sign-in-wrapper  {
+.sign-up-wrapper,
+.sign-in-wrapper {
   margin-top: 10px;
   text-align: center;
 }
@@ -532,7 +542,8 @@ body form input {
   font-size: 1em;
 }
 
-.cont-for-invalid-message, .cont-for-invalid-message-login {
+.cont-for-invalid-message,
+.cont-for-invalid-message-login {
   display: none;
   background: #fcc;
   color: #f00;
@@ -553,7 +564,8 @@ body form input:focus {
   border-bottom: 2px solid #0088ff;
 }
 
-body form button, body .go-to-login-button {
+body form button,
+body .go-to-login-button {
   width: 50%;
   height: 43px;
   color: #ffffff;
@@ -564,16 +576,18 @@ body form button, body .go-to-login-button {
   border-radius: 3px;
 }
 
-body form button:hover, body .go-to-login-button:hover {
+body form button:hover,
+body .go-to-login-button:hover {
   background: #006bc8;
 }
 
-body form button, body .go-to-login-button {
+body form button,
+body .go-to-login-button {
   -webkit-transition: background-color 0.7s ease-out;
-    -moz-transition: background-color 0.7s ease-out;
-    -o-transition: background-color 0.7s ease-out;
-    -ms-transition: background-color 0.7s ease-out;
-    transition: background-color 0.7s ease-out;
+  -moz-transition: background-color 0.7s ease-out;
+  -o-transition: background-color 0.7s ease-out;
+  -ms-transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out;
 }
 
 .go-to-login-section {
@@ -634,7 +648,7 @@ hr {
   float: left;
 }
 
-.footer .contacts li i{
+.footer .contacts li i {
   font-size: 2em;
   color: #ffffff;
 }
@@ -651,32 +665,32 @@ hr {
   transition: color 0.7s ease-out;
 }
 
-.footer .contacts li i { 
-  transition: all .4s ease-in; 
+.footer .contacts li i {
+  transition: all 0.4s ease-in;
 }
 
-.footer .contacts li i { 
-  transform: scale(1.1); 
+.footer .contacts li i {
+  transform: scale(1.1);
 }
 
 .footer h4 {
   display: inline-block;
   color: #d1c5c5;
-  font: normal 1em 'Roboto', sans-serif;
+  font: normal 1em "Roboto", sans-serif;
   /* margin-top: 20px; */
 }
 
-.fa-heart  {
+.fa-heart {
   color: #fdcc52;
 }
 
-.fa-coffee  {
+.fa-coffee {
   color: #e952fd;
 }
 
 .copyright {
   padding-top: 40px;
-  font: normal 0.9em 'Roboto', sans-serif;
+  font: normal 0.9em "Roboto", sans-serif;
   color: #ffffff;
 }
 
@@ -722,20 +736,21 @@ header button {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header {
     padding: 0px;
     background-image: url(../images/airport6.jpg);
-    background-position:  60% 80%;
+    background-position: 60% 80%;
     background-size: cover;
     background-repeat: no-repeat;
-  } 
+  }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -748,7 +763,7 @@ header button {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -762,7 +777,7 @@ header button {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -781,10 +796,10 @@ header button {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -798,7 +813,8 @@ header button {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -807,7 +823,10 @@ header button {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -816,7 +835,8 @@ header button {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -874,7 +894,8 @@ header button {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
@@ -888,11 +909,11 @@ header button {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -930,20 +951,21 @@ header button {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 0px;
   }
 
   body header {
     padding: 0px;
     background-image: url(../images/airport6.jpg);
-    background-position:  60% 80%;
+    background-position: 60% 80%;
     background-size: cover;
     background-repeat: no-repeat;
-  } 
+  }
 
   body header h1 {
-    font: normal 2.1em 'Alfa Slab One', serif;
+    font: normal 2.1em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -956,7 +978,7 @@ header button {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -970,7 +992,7 @@ header button {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -989,10 +1011,10 @@ header button {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
     font-size: 1.3em;
   }
@@ -1007,7 +1029,8 @@ header button {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1016,7 +1039,10 @@ header button {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1025,7 +1051,8 @@ header button {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -1083,11 +1110,14 @@ header button {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
     width: 40px;
     height: 4px;
   }
@@ -1098,7 +1128,8 @@ header button {
     /* margin-bottom: 35px; */
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
@@ -1127,13 +1158,13 @@ header button {
   body header {
     padding: 0px;
     background-image: url(../images/airport6.jpg);
-    background-position:  63% 80%;
+    background-position: 63% 80%;
     background-size: cover;
     background-repeat: no-repeat;
-  } 
+  }
 
   body header h1 {
-    font: normal 2.2em 'Alfa Slab One', serif;
+    font: normal 2.2em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1146,7 +1177,7 @@ header button {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1160,7 +1191,7 @@ header button {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1179,10 +1210,10 @@ header button {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
     font-size: 1.3em;
   }
@@ -1197,7 +1228,8 @@ header button {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1206,7 +1238,10 @@ header button {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1215,7 +1250,8 @@ header button {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -1277,11 +1313,14 @@ header button {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
     width: 40px;
     height: 4px;
   }
@@ -1296,7 +1335,8 @@ header button {
     /* margin-bottom: 35px; */
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
@@ -1311,8 +1351,6 @@ header button {
     width: 55%;
   }
 }
-
-
 
 @media screen and (min-width: 426px) and (max-width: 639px) {
   body header .hamburger {
@@ -1337,13 +1375,13 @@ header button {
   body header {
     padding: 0px;
     background-image: url(../images/airport6.jpg);
-    background-position:  63% 80%;
+    background-position: 63% 80%;
     background-size: cover;
     background-repeat: no-repeat;
-  } 
+  }
 
   body header h1 {
-    font: normal 2.2em 'Alfa Slab One', serif;
+    font: normal 2.2em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1356,7 +1394,7 @@ header button {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1366,7 +1404,7 @@ header button {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1385,7 +1423,7 @@ header button {
   }
 
   .container-for-header-text h2 {
-    font: normal 2.2em 'Patua One', serif;
+    font: normal 2.2em "Patua One", serif;
   }
 
   .text-wrapper p {
@@ -1393,14 +1431,14 @@ header button {
   }
 
   .cards-text {
-    font-size: 1.7em; 
+    font-size: 1.7em;
   }
 
   .review p {
     font-size: 1.1em;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 34%;
     font-size: 1.3em;
   }
@@ -1419,7 +1457,8 @@ header button {
     padding-top: 20px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1428,7 +1467,10 @@ header button {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1437,7 +1479,8 @@ header button {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
     font-size: 1.2em;
@@ -1501,11 +1544,14 @@ header button {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
     width: 42px;
     height: 5px;
   }
@@ -1516,7 +1562,8 @@ header button {
     /* margin-bottom: 35px; */
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
@@ -1576,13 +1623,13 @@ header button {
   body header {
     padding: 0px;
     background-image: url(../images/airport6.jpg);
-    background-position:  63% 80%;
+    background-position: 63% 80%;
     background-size: cover;
     background-repeat: no-repeat;
-  } 
+  }
 
   body header h1 {
-    font: normal 2.2em 'Alfa Slab One', serif;
+    font: normal 2.2em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1595,7 +1642,7 @@ header button {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1605,7 +1652,7 @@ header button {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1625,7 +1672,7 @@ header button {
   }
 
   .container-for-header-text h2 {
-    font: normal 2.2em 'Patua One', serif;
+    font: normal 2.2em "Patua One", serif;
   }
 
   .text-wrapper p {
@@ -1633,14 +1680,14 @@ header button {
   }
 
   .cards-text {
-    font-size: 1.7em; 
+    font-size: 1.7em;
   }
 
   .review p {
     font-size: 1.1em;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 28%;
     font-size: 1.3em;
   }
@@ -1659,7 +1706,8 @@ header button {
     padding-top: 20px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1668,7 +1716,10 @@ header button {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1677,7 +1728,8 @@ header button {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
     font-size: 1.2em;
@@ -1741,11 +1793,14 @@ header button {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 45%;
   }
 
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
     width: 42px;
     height: 5px;
   }
@@ -1756,7 +1811,8 @@ header button {
     /* margin-bottom: 35px; */
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
@@ -1829,13 +1885,13 @@ header button {
   body header {
     padding: 0px;
     background-image: url(../images/airport6.jpg);
-    background-position:  63% 80%;
+    background-position: 63% 80%;
     background-size: cover;
     background-repeat: no-repeat;
-  } 
+  }
 
   body header h1 {
-    font: normal 2.5em 'Alfa Slab One', serif;
+    font: normal 2.5em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1848,7 +1904,7 @@ header button {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1858,7 +1914,7 @@ header button {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1877,7 +1933,7 @@ header button {
   }
 
   .container-for-header-text h2 {
-    font: normal 2.2em 'Patua One', serif;
+    font: normal 2.2em "Patua One", serif;
   }
 
   .text-wrapper p {
@@ -1885,14 +1941,14 @@ header button {
   }
 
   .cards-text {
-    font-size: 1.7em; 
+    font-size: 1.7em;
   }
 
   .review p {
     font-size: 1.2em;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 22%;
     font-size: 1.3em;
   }
@@ -1911,7 +1967,8 @@ header button {
     padding-top: 20px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
   }
 
@@ -1919,7 +1976,10 @@ header button {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1928,7 +1988,8 @@ header button {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
     font-size: 1em;
@@ -1992,11 +2053,14 @@ header button {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 30%;
   }
 
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
     width: 42px;
     height: 5px;
   }
@@ -2007,7 +2071,8 @@ header button {
     /* margin-bottom: 35px; */
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
@@ -2088,7 +2153,8 @@ header button {
     width: 77%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 35%;
   }
 
@@ -2151,7 +2217,8 @@ header button {
     width: 77%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 35%;
   }
 }
@@ -2210,7 +2277,8 @@ header button {
     width: 77%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 35%;
   }
 

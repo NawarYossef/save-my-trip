@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Trips</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Patua+One|Bungee|Alfa+Slab+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Patua+One|Bungee|Alfa+Slab+One"
+	 rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -13,52 +15,53 @@
 	<link rel="stylesheet" type="text/css" href="./stylesheets/trips.css">
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
+
 <body>
 	<header>
-    <div class="background-wrapper col-12">
-      <div class="header-wrapper col-12">
-        <nav>
-      <ul class=" ul-header">
-        <li class="trips">
-          <a href="/trips.html" class="hvr-underline-from-center">Your Trips</a>
-        </li>
-        <li class="new-trip">
-          <a href="/new-trip.html" class="hvr-underline-from-center">New Trip</a>
-        </li>
-        <li class="log-out">
-          <a href="#" class="hvr-underline-from-center">Log Out</a>
-        </li>
-      </ul>
-    </nav>
-  
-        <div class="h1-wrapper">
-          <a class="link-for-h1" href="/">
-            <h1>SaveMyTrip
-              <i class="fas fa-plane"></i>
-            </h1>
-          </a>
-        </div>
-        <!-- hamburger icon -->
-        <button class="hamburger hamburger--spin" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-      </div>
+		<div class="background-wrapper col-12">
+			<div class="header-wrapper col-12">
+				<nav>
+					<ul class=" ul-header">
+						<li class="trips">
+							<a href="/trips.html" class="hvr-underline-from-center">Your Trips</a>
+						</li>
+						<li class="new-trip">
+							<a href="/new-trip.html" class="hvr-underline-from-center">New Trip</a>
+						</li>
+						<li class="log-out">
+							<a href="#" class="hvr-underline-from-center">Log Out</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="h1-wrapper">
+					<a class="link-for-h1" href="/">
+						<h1>SaveMyTrip
+							<i class="fas fa-plane"></i>
+						</h1>
+					</a>
+				</div>
+				<!-- hamburger icon -->
+				<button class="hamburger hamburger--spin" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</div>
 			<!-- sidebar  -->
 			<section class="side-menu-nav">
 				<p class="close-side-bar">
-				<ul>
-					<li class="about about-side-bar-link">
-						<a href="/trips.html">Your Trips</a>
-					</li>
-					<li class="trips">
-						<a href="/new-trip.html">New Trip</a>
-					</li>
-					<li class="log-out log-out-side-bar-link">
-						<a href="/">Log Out</a>
-					</li>
-				</ul>
+					<ul>
+						<li class="about about-side-bar-link">
+							<a href="/trips.html">Your Trips</a>
+						</li>
+						<li class="trips">
+							<a href="/new-trip.html">New Trip</a>
+						</li>
+						<li class="log-out log-out-side-bar-link">
+							<a href="/">Log Out</a>
+						</li>
+					</ul>
 			</section>
 		</div>
 	</header>
@@ -116,21 +119,22 @@
 										</div>
 										<div class="btn-send-wrapper input-wrapper">
 											<!-- <button type="" id="send-email-btn" class="send-email-button">Send</button> -->
-											<button type="submit"  id="send-email-btn" class="send-email-button" />Send</button>
+											<button type="submit" id="send-email-btn" class="send-email-button" />Send</button>
 										</div>
 									</div>
 								</div>
 							</form>
 						</section>
 
-							<!-- success message modal content -->
-							<div name="success-info col-12">
-								<div class="cont-for-success-message alert-success col-12">
-									<div class="message-wrapper">
-										<strong><i class="fa fa-check" aria-hidden="true"></i>Success!</strong> Your Email was sent.
-									</div>
+						<!-- success message modal content -->
+						<div name="success-info col-12">
+							<div class="cont-for-success-message alert-success col-12">
+								<div class="message-wrapper">
+									<strong>
+										<i class="fa fa-check" aria-hidden="true"></i>Success!</strong> Your Email was sent.
 								</div>
 							</div>
+						</div>
 					</div>
 				</div>
 				<div class="trip-header">
@@ -151,7 +155,8 @@
 
 					<div class="data-wrapper col-4">
 						<div class="airline-wrapper col-6">
-							<span class="airline-title">AIRLINE</span><br>
+							<span class="airline-title">AIRLINE</span>
+							<br>
 							<span class="airline-text"></span>
 						</div>
 						<div class="arrow-wrapper col-6">
@@ -163,7 +168,9 @@
 					<div class="departure-wrapper col-6">
 						<img src="images/departure.png" class="departure-img">
 						<p class="depart-city city"></p>
-						<p><span class="date-text depart-date-text"></span></p>
+						<p>
+							<span class="date-text depart-date-text"></span>
+						</p>
 						<div class="terminal-gate-wrapper">
 							<p class="depart-terminal terminal">Terminal: </p>
 							<p class="gate depart-gate">Gate: </p>
@@ -172,7 +179,9 @@
 					<div class="arrival-wrapper col-6">
 						<img src="images/arrival.png" class="arrival-img">
 						<p class="arrive-city city"></p>
-						<p><span class="date-text arrive-date-text"></span></p>
+						<p>
+							<span class="date-text arrive-date-text"></span>
+						</p>
 						<div class="terminal-gate-wrapper ">
 							<p class="arrive-terminal terminal">Terminal: </p>
 							<p class="gate arrive-gate">Gate: </p>
@@ -196,8 +205,10 @@
 			</div>
 		</section>
 	</main>
-<!-- <script type="text/javascript" src="js/main.js"></script> -->
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/helpers.js"></script>
-<script type="text/javascript" src="js/trips.js"></script>
+	<!-- <script type="text/javascript" src="js/main.js"></script> -->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/helpers.js"></script>
+	<script type="text/javascript" src="js/trips.js"></script>
 </body>
+
+</html>

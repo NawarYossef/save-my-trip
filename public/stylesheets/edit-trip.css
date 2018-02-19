@@ -11,7 +11,7 @@ body header .h1-wrapper {
 }
 
 body .header-wrapper {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 body header {
@@ -33,7 +33,6 @@ header .background-wrapper {
 .header-scroll {
   background-color: #ffffff;
 }
-
 
 body header nav {
   width: 60%;
@@ -74,7 +73,7 @@ header .fa-plane {
 }
 
 .container-for-header-text h2 {
-  font: normal 2.4em 'Patua One', serif;
+  font: normal 2.4em "Patua One", serif;
   color: #ffffff;
 }
 
@@ -90,7 +89,6 @@ header .fa-plane {
 /* * * * * * * * * * * */
 /*      main            */
 /* * * * * * * * * * * */
-
 
 /* * * * * * * * * * * */
 /*      form styles    */
@@ -129,13 +127,20 @@ body form {
   position: relative;
 } */
 
-.wrapper-lab-airline, .wrapper-lab-confirm, 
-.dep-city, .dep-airport, .dep-gate, .dep-terminal, .dep-date, 
+.wrapper-lab-airline,
+.wrapper-lab-confirm,
+.dep-city,
+.dep-airport,
+.dep-gate,
+.dep-terminal,
+.dep-date,
 .lab-arrival-city,
-.lab-arrival-airport, .lab-arrival-gate, .lab-arrival-terminal, .lab-arrival-date {
+.lab-arrival-airport,
+.lab-arrival-gate,
+.lab-arrival-terminal,
+.lab-arrival-date {
   position: relative;
 }
-
 
 label {
   display: inline;
@@ -145,7 +150,8 @@ label {
   font-size: 1em;
 }
 
-.arr-airport, .lab-dep-airport {
+.arr-airport,
+.lab-dep-airport {
   display: inline;
   position: absolute;
   top: -10%;
@@ -154,14 +160,15 @@ label {
   font-size: 1em;
 }
 
-.departure-info-wrapper img, .arrival-info-wrapper img {
+.departure-info-wrapper img,
+.arrival-info-wrapper img {
   width: 15%;
   vertical-align: middle;
   /* margin-bottom: 10px; */
 }
 
 body form input {
-  font: normal 1em 'Raleway', sans-serif;
+  font: normal 1em "Raleway", sans-serif;
   color: #020202;
   width: 80%;
   border: none;
@@ -178,23 +185,24 @@ body form input {
   overflow-x: scroll;
 }
 
-body form .airline, body form .confirmation {
+body form .airline,
+body form .confirmation {
   width: 50%;
 }
 
 /* placeholder styles */
 body form ::-webkit-input-placeholder {
-  font: normal 1em 'Raleway', sans-serif;
+  font: normal 1em "Raleway", sans-serif;
   color: #888888;
 }
 
 body form ::-moz-input-placeholder {
-  font: normal 1em 'Raleway', sans-serif;
+  font: normal 1em "Raleway", sans-serif;
   color: #6b6b6b;
 }
 
 body form ::-ms-input-placeholder {
-  font: normal 1em 'Raleway', sans-serif;
+  font: normal 1em "Raleway", sans-serif;
   color: #6b6b6b;
 }
 
@@ -212,7 +220,6 @@ body form input:focus::-ms-input-placeholder {
   font: normal 1em 'Raleway', sans-serif;
   color: #f5f5f5;
 } */
-
 
 body form input:focus {
   border-bottom: 2px solid #0088ff;
@@ -253,8 +260,11 @@ body form button {
 .departure-info-wrapper {
   border-right: 1px solid rgb(177, 177, 177);
 }
-  
-.departure-data, .departure-info-wrapper, .arrival-info-wrapper, .btns-wrapper {
+
+.departure-data,
+.departure-info-wrapper,
+.arrival-info-wrapper,
+.btns-wrapper {
   text-align: center;
 }
 
@@ -267,8 +277,8 @@ body form button {
 }
 
 legend {
-  font: normal 1.2em 'Bree Serif', serif;
-  color: #1f1818; 
+  font: normal 1.2em "Bree Serif", serif;
+  color: #1f1818;
   text-decoration: underline;
   margin-bottom: 10px;
 }
@@ -378,7 +388,8 @@ legend {
     width: 90%;
   }
 
-  body form .airline, body form .confirmation {
+  body form .airline,
+  body form .confirmation {
     width: 80%;
   }
 
@@ -389,13 +400,14 @@ legend {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 16%;
   }
 
@@ -404,7 +416,7 @@ legend {
   }
 
   .city {
-    font: normal 1.2em 'Kanit', sans-serif;
+    font: normal 1.2em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -412,7 +424,7 @@ legend {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
   }
 
   body main .h2-wrapper {
@@ -420,14 +432,14 @@ legend {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.9em;
   }
 
   body .trip-header {
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -453,12 +465,13 @@ legend {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -471,7 +484,7 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -485,7 +498,7 @@ legend {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -504,10 +517,10 @@ legend {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -521,7 +534,8 @@ legend {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -530,7 +544,10 @@ legend {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -539,7 +556,8 @@ legend {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -589,7 +607,8 @@ legend {
     width: 80%;
   }
 
-  .arr-airport, .lab-dep-airport {
+  .arr-airport,
+  .lab-dep-airport {
     position: absolute;
     left: 11%;
     font-size: 0.8em;
@@ -617,7 +636,8 @@ legend {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
@@ -631,11 +651,11 @@ legend {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -648,7 +668,8 @@ legend {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -656,7 +677,9 @@ legend {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -675,7 +698,8 @@ legend {
     width: 77%;
   }
 
-  .arr-airport, .lab-dep-airport {
+  .arr-airport,
+  .lab-dep-airport {
     position: absolute;
     left: 10%;
     font-size: 0.8em;
@@ -689,7 +713,8 @@ legend {
     width: 90%;
   }
 
-  body form .airline, body form .confirmation {
+  body form .airline,
+  body form .confirmation {
     width: 80%;
   }
 
@@ -700,13 +725,14 @@ legend {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 16%;
   }
 
@@ -715,7 +741,7 @@ legend {
   }
 
   .city {
-    font: normal 1.2em 'Kanit', sans-serif;
+    font: normal 1.2em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -723,7 +749,7 @@ legend {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
   }
 
   body main .h2-wrapper {
@@ -731,14 +757,14 @@ legend {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.9em;
   }
 
   body .trip-header {
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -764,12 +790,13 @@ legend {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -782,7 +809,7 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -796,7 +823,7 @@ legend {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -815,10 +842,10 @@ legend {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -832,7 +859,8 @@ legend {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -841,7 +869,10 @@ legend {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -850,7 +881,8 @@ legend {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -926,7 +958,8 @@ legend {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
@@ -940,11 +973,11 @@ legend {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -957,7 +990,8 @@ legend {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -965,7 +999,9 @@ legend {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -980,7 +1016,8 @@ legend {
     display: none;
   }
 
-  .arr-airport, .lab-dep-airport {
+  .arr-airport,
+  .lab-dep-airport {
     position: absolute;
     left: 10%;
     font-size: 0.9em;
@@ -998,7 +1035,8 @@ legend {
     width: 90%;
   }
 
-  body form .airline, body form .confirmation {
+  body form .airline,
+  body form .confirmation {
     width: 80%;
   }
 
@@ -1009,13 +1047,14 @@ legend {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 16%;
   }
 
@@ -1024,7 +1063,7 @@ legend {
   }
 
   .city {
-    font: normal 1.2em 'Kanit', sans-serif;
+    font: normal 1.2em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -1032,7 +1071,7 @@ legend {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
   }
 
   body main .h2-wrapper {
@@ -1040,14 +1079,14 @@ legend {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.9em;
   }
 
   body .trip-header {
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -1073,12 +1112,13 @@ legend {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1091,7 +1131,7 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1105,7 +1145,7 @@ legend {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1124,10 +1164,10 @@ legend {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -1141,7 +1181,8 @@ legend {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1150,7 +1191,10 @@ legend {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1159,7 +1203,8 @@ legend {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -1235,7 +1280,8 @@ legend {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
@@ -1249,11 +1295,11 @@ legend {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -1266,7 +1312,8 @@ legend {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -1274,7 +1321,9 @@ legend {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -1284,13 +1333,13 @@ legend {
   }
 }
 
-
 @media screen and (min-width: 426px) and (max-width: 639px) {
   body header nav {
     display: none;
   }
 
-  .arr-airport, .lab-dep-airport {
+  .arr-airport,
+  .lab-dep-airport {
     position: absolute;
     left: 10%;
     font-size: 0.9em;
@@ -1308,7 +1357,8 @@ legend {
     width: 90%;
   }
 
-  body form .airline, body form .confirmation {
+  body form .airline,
+  body form .confirmation {
     width: 80%;
   }
 
@@ -1319,13 +1369,14 @@ legend {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 16%;
   }
 
@@ -1334,7 +1385,7 @@ legend {
   }
 
   .city {
-    font: normal 1.2em 'Kanit', sans-serif;
+    font: normal 1.2em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -1342,7 +1393,7 @@ legend {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
   }
 
   body main .h2-wrapper {
@@ -1350,14 +1401,14 @@ legend {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.9em;
   }
 
   body .trip-header {
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -1383,12 +1434,13 @@ legend {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1401,7 +1453,7 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1415,7 +1467,7 @@ legend {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1434,10 +1486,10 @@ legend {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -1451,7 +1503,8 @@ legend {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1460,7 +1513,10 @@ legend {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1469,7 +1525,8 @@ legend {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -1545,7 +1602,8 @@ legend {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 50%;
   }
 
@@ -1559,11 +1617,11 @@ legend {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -1576,7 +1634,8 @@ legend {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -1584,7 +1643,9 @@ legend {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -1595,11 +1656,12 @@ legend {
 }
 
 @media screen and (min-width: 640px) and (max-width: 767px) {
-   body header nav {
+  body header nav {
     display: none;
   }
 
-  .arr-airport, .lab-dep-airport {
+  .arr-airport,
+  .lab-dep-airport {
     position: absolute;
     left: 10%;
     font-size: 0.9em;
@@ -1617,7 +1679,8 @@ legend {
     width: 90%;
   }
 
-  body form .airline, body form .confirmation {
+  body form .airline,
+  body form .confirmation {
     width: 55%;
   }
 
@@ -1628,13 +1691,14 @@ legend {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 16%;
   }
 
@@ -1643,7 +1707,7 @@ legend {
   }
 
   .city {
-    font: normal 1.2em 'Kanit', sans-serif;
+    font: normal 1.2em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -1651,7 +1715,7 @@ legend {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
   }
 
   body main .h2-wrapper {
@@ -1659,14 +1723,14 @@ legend {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.9em;
   }
 
   body .trip-header {
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -1692,12 +1756,13 @@ legend {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1710,7 +1775,7 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1724,7 +1789,7 @@ legend {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1743,10 +1808,10 @@ legend {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -1760,7 +1825,8 @@ legend {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1769,7 +1835,10 @@ legend {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1778,7 +1847,8 @@ legend {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -1854,11 +1924,13 @@ legend {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 25%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     font-size: 1.2em;
   }
 
@@ -1872,11 +1944,11 @@ legend {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -1889,7 +1961,8 @@ legend {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -1897,7 +1970,9 @@ legend {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -1912,7 +1987,8 @@ legend {
     display: none;
   }
 
-  .arr-airport, .lab-dep-airport {
+  .arr-airport,
+  .lab-dep-airport {
     position: absolute;
     left: 9.5%;
     font-size: 1em;
@@ -1930,7 +2006,8 @@ legend {
     width: 90%;
   }
 
-  body form .airline, body form .confirmation {
+  body form .airline,
+  body form .confirmation {
     width: 50%;
   }
 
@@ -1941,13 +2018,14 @@ legend {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 16%;
   }
 
@@ -1956,7 +2034,7 @@ legend {
   }
 
   .city {
-    font: normal 1.2em 'Kanit', sans-serif;
+    font: normal 1.2em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -1964,7 +2042,7 @@ legend {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
   }
 
   body main .h2-wrapper {
@@ -1972,14 +2050,14 @@ legend {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.9em;
   }
 
   body .trip-header {
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -2005,12 +2083,13 @@ legend {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -2023,7 +2102,7 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -2037,7 +2116,7 @@ legend {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -2056,10 +2135,10 @@ legend {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -2073,7 +2152,8 @@ legend {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -2082,7 +2162,10 @@ legend {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -2091,7 +2174,8 @@ legend {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -2167,11 +2251,13 @@ legend {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 25%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     font-size: 1.2em;
   }
 
@@ -2185,11 +2271,11 @@ legend {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -2202,7 +2288,8 @@ legend {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -2210,7 +2297,9 @@ legend {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -2225,7 +2314,8 @@ legend {
     display: initial;
   }
 
-  .arr-airport, .lab-dep-airport {
+  .arr-airport,
+  .lab-dep-airport {
     position: absolute;
     left: 10%;
     font-size: 1em;
@@ -2287,7 +2377,8 @@ legend {
     width: 77%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 25%;
   }
 
@@ -2319,7 +2410,8 @@ legend {
     border-top: none;
   }
 
-  .arr-airport, .lab-dep-airport {
+  .arr-airport,
+  .lab-dep-airport {
     position: absolute;
     left: 10%;
     font-size: 1em;
@@ -2376,7 +2468,8 @@ legend {
     width: 77%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 35%;
   }
 
@@ -2408,7 +2501,8 @@ legend {
     border-top: none;
   }
 
-  .departure-wrapper, .arrival-wrapper {
+  .departure-wrapper,
+  .arrival-wrapper {
     height: 190px;
   }
 
@@ -2463,7 +2557,8 @@ legend {
     width: 77%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 35%;
   }
 

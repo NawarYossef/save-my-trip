@@ -26,7 +26,6 @@ header .background-wrapper {
   background-color: #ffffff;
 }
 
-
 body header nav {
   width: 60%;
 }
@@ -66,7 +65,7 @@ header .fa-plane {
 }
 
 .container-for-header-text h2 {
-  font: normal 2.4em 'Patua One', serif;
+  font: normal 2.4em "Patua One", serif;
   color: #ffffff;
 }
 
@@ -86,16 +85,16 @@ header .fa-plane {
 /* Modal (background) */
 
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1; 
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.3);
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-content {
@@ -103,10 +102,10 @@ header .fa-plane {
   left: 30%;
   /* top: -100px; */
   background-color: #ffffff;
-  margin:  10% auto 0 auto; 
+  margin: 10% auto 0 auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 40%; 
+  width: 40%;
   border-radius: 5px;
   box-shadow: 5px 10px 18px #1d1d20;
 }
@@ -121,19 +120,19 @@ header .fa-plane {
 }
 
 .modal h2 {
-  font: normal 1.5em 'Patua One', serif;
+  font: normal 1.5em "Patua One", serif;
   color: #414141;
 }
 
 .modal h4 {
   padding-top: 10px;
-  font: normal 1em 'Patua One', sans-serif;
+  font: normal 1em "Patua One", sans-serif;
   color: rgb(73, 73, 73);
 }
 
 .modal h6 {
   padding-top: 10px;
-  font: normal 1.1em 'Fire-sans', sans-serif;
+  font: normal 1.1em "Fire-sans", sans-serif;
   text-decoration: underline;
 }
 
@@ -159,7 +158,7 @@ header .fa-plane {
 
 .sign-up-btn {
   background-color: #fdcc52;
-  font: normal 1.2em 'Merriweather', serif;
+  font: normal 1.2em "Merriweather", serif;
   color: #222020;
   border: none;
   outline: none;
@@ -171,10 +170,10 @@ header .fa-plane {
   /* box-shadow: 6px 5px 10px #484848; */
 }
 
- .sign-up-btn:hover {
+.sign-up-btn:hover {
   cursor: pointer;
   background-color: #b48b22;
-} 
+}
 
 .sign-up-btn {
   -webkit-transition: background-color 0.7s ease-out;
@@ -185,7 +184,7 @@ header .fa-plane {
 }
 
 .arrows {
-	width: 60px;
+  width: 60px;
   height: 72px;
   position: absolute;
   left: 48.5%;
@@ -193,11 +192,10 @@ header .fa-plane {
 }
 
 .arrows path {
-	stroke: #F2E6C6;
-	fill: transparent;
-	stroke-width: 1.5px;	
+  stroke: #f2e6c6;
+  fill: transparent;
+  stroke-width: 1.5px;
 }
-
 
 /* * * * * * * * * * * */
 /*      main            */
@@ -223,7 +221,7 @@ body header {
 }
 
 h2 {
-  font: normal 2.4em 'Patua One', serif;
+  font: normal 2.4em "Patua One", serif;
   color: #424242;
 }
 
@@ -251,7 +249,7 @@ body section .airports-wrapper {
   margin: auto;
   padding-bottom: 5px;
   text-align: center;
-  display: inline-block
+  display: inline-block;
 }
 
 body section .confirmation {
@@ -262,13 +260,13 @@ body section .confirmation {
 
 main .confirmation .confirmation-title,
 main .airline-wrapper .airline-title {
-  font: bold 1.1em 'roboto', sans-serif;
+  font: bold 1.1em "roboto", sans-serif;
   color: #ffffff;
 }
 
 main .confirmation .confirmation-text,
 main .airline-wrapper .airline-text {
-  font: bold 1em 'roboto', sans-serif;
+  font: bold 1em "roboto", sans-serif;
   color: #000;
 }
 
@@ -284,14 +282,14 @@ body section .data-wrapper {
 
 body .airports-wrapper h3 {
   display: inline-block;
-  font: normal 2em 'Patua One', serif;
+  font: normal 2em "Patua One", serif;
   color: #ffffff;
-  margin-bottom: -1px;     
-  margin-top: 0px;    
+  margin-bottom: -1px;
+  margin-top: 0px;
 }
 
 h4 {
-  font: normal 1em 'Bree Serif', serif;
+  font: normal 1em "Bree Serif", serif;
   /* font-size: 14px; */
   margin: 0px;
 }
@@ -302,9 +300,9 @@ h4 {
 }
 
 .arrow-wrapper {
- text-align: right;
- font-size: 4em;
- margin-top: -9px;
+  text-align: right;
+  font-size: 4em;
+  margin-top: -9px;
 }
 
 .trip-header .fa-plane {
@@ -313,7 +311,8 @@ h4 {
   color: #1f1d1d;
 }
 
-.fa-caret-down, .fa-caret-up {
+.fa-caret-down,
+.fa-caret-up {
   color: #1f1d1d;
 }
 
@@ -322,19 +321,20 @@ h4 {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-image: url("../images/airport5.jpg");
-  background-position:  60% 0%; 
+  background-position: 60% 0%;
   background-size: cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }
 /* * * * * * * * * * * * * */
 /*     drop down details   */
 /* * * * * * * * * * * * * */
-.departure-wrapper, .arrival-wrapper {
+.departure-wrapper,
+.arrival-wrapper {
   display: none;
   height: 130px;
 }
 
-.wrapper-for-arrive-info  {
+.wrapper-for-arrive-info {
   /* text-align: left; */
 }
 
@@ -348,7 +348,6 @@ h4 {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-
 
 .departure-wrapper {
   text-align: center;
@@ -364,18 +363,18 @@ h4 {
 }
 
 .depart-word {
-  font: bold 1.1em 'Bree Serif', serif;
+  font: bold 1.1em "Bree Serif", serif;
   color: #333333;
   margin-right: 5px;
 }
 
 .date-text {
-  font: normal 1.1em 'roboto', sans-serif;
-  color: #1862C7;
+  font: normal 1.1em "roboto", sans-serif;
+  color: #1862c7;
 }
 
 .city {
-  font: normal 1.2em 'Kanit', sans-serif;
+  font: normal 1.2em "Kanit", sans-serif;
   color: #787575;
 }
 
@@ -383,9 +382,10 @@ h4 {
   padding-left: 0px;
 }
 
-.terminal, .gate {
+.terminal,
+.gate {
   display: inline-block;
-  font: normal 1em 'Kanit', sans-serif;
+  font: normal 1em "Kanit", sans-serif;
   color: #000000;
   margin-right: 25px;
 }
@@ -396,26 +396,26 @@ h4 {
 
 /* The Modal (background) */
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1; 
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4);
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
   position: absolute;
   left: 22.5%;
   background-color: #f5f5f5;
-  margin:  5% auto 0 auto; 
+  margin: 5% auto 0 auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 55%; 
+  width: 55%;
 }
 
 .modal-form input {
@@ -428,11 +428,11 @@ h4 {
 }
 
 .modal-heading {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .modal h2 {
-  font: normal 1.8em 'Fire-sans', sans-serif;
+  font: normal 1.8em "Fire-sans", sans-serif;
 }
 
 .modal .h4-wrapper {
@@ -440,34 +440,38 @@ margin-bottom: 20px;
   display: inline-block;
   text-align: right;
   vertical-align: top;
-  font: normal 1.2em 'Quicksand', sans-serif;
+  font: normal 1.2em "Quicksand", sans-serif;
 }
 
 ::placeholder {
   margin: 0px;
-  color: rgb(170, 170, 170)
+  color: rgb(170, 170, 170);
 }
 
 textarea {
-  resize: none
+  resize: none;
 }
 
-.modal .input-wrapper, .modal .message-wrapper {
+.modal .input-wrapper,
+.modal .message-wrapper {
   display: inline-block;
   width: 79%;
 }
 
-.cont-for-info, .cont-for-success-message {
+.cont-for-info,
+.cont-for-success-message {
   padding: 0px;
   margin-bottom: 20px;
 }
 
-.cont-for-success-message  {
+.cont-for-success-message {
   display: none;
 }
-.modal .input-wrapper input, textarea, .modal button {
+.modal .input-wrapper input,
+textarea,
+.modal button {
   width: 80%;
-  font: normal 1.1em 'Fire-sans', sans-serif;
+  font: normal 1.1em "Fire-sans", sans-serif;
   color: rgb(32, 31, 31);
   text-align: left;
   padding-left: 3px;
@@ -541,7 +545,7 @@ input:focus {
 }
 
 .control-btns button {
-  font: normal 1em 'roboto', sans-serif;
+  font: normal 1em "roboto", sans-serif;
   color: #ffffff;
   background: #274d7a;
   height: 40px;
@@ -575,7 +579,8 @@ input:focus {
   border: none;
 }
 
-.edit-btn, .delete-btn {
+.edit-btn,
+.delete-btn {
   border: none;
   border-right: 1px solid #c4c4c4;
 }
@@ -593,16 +598,19 @@ body .email {
   border-bottom-left-radius: 0px;
 }
 
-.departure-img, .arrival-img {
+.departure-img,
+.arrival-img {
   width: 10%;
 }
 
-.fa-trash-o, .fa-envelope, .fa-pencil {
+.fa-trash-o,
+.fa-envelope,
+.fa-pencil {
   margin-left: 8px;
 }
 
-.hidden{
-  display:none;
+.hidden {
+  display: none;
 }
 
 /* * * * * * * * * * * * * */
@@ -621,13 +629,14 @@ body .email {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 16%;
   }
 
@@ -636,7 +645,7 @@ body .email {
   }
 
   .city {
-    font: normal 1.2em 'Kanit', sans-serif;
+    font: normal 1.2em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -644,7 +653,7 @@ body .email {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
   }
 
   body main .h2-wrapper {
@@ -652,14 +661,14 @@ body .email {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.9em;
   }
 
   body .trip-header {
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -685,12 +694,13 @@ body .email {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -703,7 +713,7 @@ body .email {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -717,7 +727,7 @@ body .email {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -736,10 +746,10 @@ body .email {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -753,7 +763,8 @@ body .email {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -762,7 +773,10 @@ body .email {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -771,7 +785,8 @@ body .email {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -829,7 +844,8 @@ body .email {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
@@ -843,11 +859,11 @@ body .email {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -860,7 +876,8 @@ body .email {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -868,7 +885,9 @@ body .email {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -886,13 +905,14 @@ body .email {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 16%;
   }
 
@@ -901,7 +921,7 @@ body .email {
   }
 
   .city {
-    font: normal 1.2em 'Kanit', sans-serif;
+    font: normal 1.2em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -909,7 +929,7 @@ body .email {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
   }
 
   body main .h2-wrapper {
@@ -917,14 +937,14 @@ body .email {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.9em;
   }
 
   body .trip-header {
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -950,12 +970,13 @@ body .email {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -968,7 +989,7 @@ body .email {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -982,7 +1003,7 @@ body .email {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1001,10 +1022,10 @@ body .email {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -1018,7 +1039,8 @@ body .email {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1027,7 +1049,10 @@ body .email {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1036,7 +1061,8 @@ body .email {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -1094,7 +1120,8 @@ body .email {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
@@ -1108,11 +1135,11 @@ body .email {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -1125,7 +1152,8 @@ body .email {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -1133,7 +1161,9 @@ body .email {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -1151,13 +1181,14 @@ body .email {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 16%;
   }
 
@@ -1169,7 +1200,7 @@ body .email {
     text-align: initial;
   }
   .city {
-    font: normal 1.2em 'Kanit', sans-serif;
+    font: normal 1.2em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -1177,7 +1208,7 @@ body .email {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
   }
 
   body main .h2-wrapper {
@@ -1185,14 +1216,14 @@ body .email {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.9em;
   }
 
   body .trip-header {
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -1218,12 +1249,13 @@ body .email {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1236,7 +1268,7 @@ body .email {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1250,7 +1282,7 @@ body .email {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1269,10 +1301,10 @@ body .email {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -1286,7 +1318,8 @@ body .email {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1295,7 +1328,10 @@ body .email {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1304,7 +1340,8 @@ body .email {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -1362,7 +1399,8 @@ body .email {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
@@ -1376,11 +1414,11 @@ body .email {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -1393,7 +1431,8 @@ body .email {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -1401,7 +1440,9 @@ body .email {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -1411,7 +1452,6 @@ body .email {
   }
 }
 
-
 @media screen and (min-width: 426px) and (max-width: 639px) {
   body header nav {
     display: none;
@@ -1420,13 +1460,14 @@ body .email {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 1.1em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 11%;
   }
 
@@ -1442,7 +1483,7 @@ body .email {
     text-align: initial;
   }
   .city {
-    font: normal 1.2em 'Kanit', sans-serif;
+    font: normal 1.2em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -1450,7 +1491,7 @@ body .email {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
   }
 
   body main .h2-wrapper {
@@ -1458,14 +1499,14 @@ body .email {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 1em;
   }
 
   body .trip-header {
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -1475,7 +1516,8 @@ body .email {
     font-size: 1.1em;
   }
 
-  .terminal, .gate {
+  .terminal,
+  .gate {
     font-size: 1.1em;
   }
 
@@ -1498,12 +1540,13 @@ body .email {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 2.2em 'Alfa Slab One', serif;
+    font: normal 2.2em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1516,7 +1559,7 @@ body .email {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1526,7 +1569,7 @@ body .email {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1545,10 +1588,10 @@ body .email {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -1562,7 +1605,8 @@ body .email {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1571,7 +1615,10 @@ body .email {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1580,7 +1627,8 @@ body .email {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -1638,7 +1686,8 @@ body .email {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
@@ -1652,11 +1701,11 @@ body .email {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -1669,7 +1718,8 @@ body .email {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -1677,7 +1727,9 @@ body .email {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -1695,13 +1747,14 @@ body .email {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 11%;
   }
 
@@ -1713,7 +1766,7 @@ body .email {
     text-align: initial;
   }
   .city {
-    font: normal 1.1em 'Kanit', sans-serif;
+    font: normal 1.1em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -1721,7 +1774,7 @@ body .email {
   }
 
   body section .confirmation {
-    margin-bottom: 15px;  
+    margin-bottom: 15px;
     padding-left: 25px;
   }
 
@@ -1730,7 +1783,7 @@ body .email {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.8em;
   }
@@ -1738,7 +1791,7 @@ body .email {
   body .trip-header {
     margin-top: 0%;
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -1754,7 +1807,8 @@ body .email {
     font-size: 0.8em;
   }
 
-  .terminal, .gate {
+  .terminal,
+  .gate {
     font-size: 1em;
   }
 
@@ -1781,12 +1835,13 @@ body .email {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 2.2em 'Alfa Slab One', serif;
+    font: normal 2.2em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1799,7 +1854,7 @@ body .email {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1809,7 +1864,7 @@ body .email {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -1828,10 +1883,10 @@ body .email {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -1845,7 +1900,8 @@ body .email {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -1854,7 +1910,10 @@ body .email {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -1863,7 +1922,8 @@ body .email {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -1921,7 +1981,8 @@ body .email {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
@@ -1935,11 +1996,11 @@ body .email {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -1952,7 +2013,8 @@ body .email {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 100%;
   }
 
@@ -1960,7 +2022,9 @@ body .email {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -1969,7 +2033,8 @@ body .email {
     margin-left: 0%;
   }
 
-  .departure-wrapper, .arrival-wrapper {
+  .departure-wrapper,
+  .arrival-wrapper {
     height: initial;
   }
 }
@@ -1982,13 +2047,14 @@ body .email {
   .trip-header {
     background-position: 1% 1%;
   }
-  
-  main .confirmation .confirmation-title, 
+
+  main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
   }
 
-  .departure-img, .arrival-img {
+  .departure-img,
+  .arrival-img {
     width: 11%;
   }
 
@@ -2001,7 +2067,7 @@ body .email {
   }
 
   .city {
-    font: normal 1.1em 'Kanit', sans-serif;
+    font: normal 1.1em "Kanit", sans-serif;
   }
 
   .date-text {
@@ -2009,8 +2075,8 @@ body .email {
   }
 
   body section .confirmation {
-    margin-bottom: 15px; 
-    padding-left: 25px 
+    margin-bottom: 15px;
+    padding-left: 25px;
   }
 
   body main .h2-wrapper {
@@ -2018,7 +2084,7 @@ body .email {
     padding-top: 10px;
   }
 
-  main .confirmation .confirmation-text, 
+  main .confirmation .confirmation-text,
   main .airline-wrapper .airline-text {
     font-size: 0.8em;
   }
@@ -2026,7 +2092,7 @@ body .email {
   body .trip-header {
     margin-top: 0%;
     height: initial;
-    background-size: initial; 
+    background-size: initial;
   }
 
   body .airports-wrapper h3 {
@@ -2041,7 +2107,8 @@ body .email {
     font-size: 1em;
   }
 
-  .terminal, .gate {
+  .terminal,
+  .gate {
     font-size: 1em;
   }
 
@@ -2049,7 +2116,8 @@ body .email {
     border-bottom-left-radius: 3px;
   }
 
-  .departure-wrapper, .arrival-wrapper {
+  .departure-wrapper,
+  .arrival-wrapper {
     height: initial;
   }
 
@@ -2072,12 +2140,13 @@ body .email {
     width: 85%;
   }
 
-  .sign-up-section, .sign-in-section {
+  .sign-up-section,
+  .sign-in-section {
     padding-bottom: 40px;
   }
 
   body header h1 {
-    font: normal 1.9em 'Alfa Slab One', serif;
+    font: normal 1.9em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -2090,7 +2159,7 @@ body .email {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -2100,7 +2169,7 @@ body .email {
   body header .h1-wrapper {
     display: inline-block;
     text-align: initial;
-    position: initial; 
+    position: initial;
     height: 65px;
     z-index: 0;
   }
@@ -2119,10 +2188,10 @@ body .email {
   }
 
   .container-for-header-text h2 {
-    font: normal 1.8em 'Patua One', serif;
+    font: normal 1.8em "Patua One", serif;
   }
 
-  .sign-up-btn { 
+  .sign-up-btn {
     width: 55%;
   }
 
@@ -2136,7 +2205,8 @@ body .email {
     padding-bottom: 55px;
   }
 
-  .description-1, .description-2 {
+  .description-1,
+  .description-2 {
     text-align: center;
     margin-top: 0px;
   }
@@ -2145,7 +2215,10 @@ body .email {
     font-size: 1.5em;
   }
 
-  body .fa-clock-o, body .fa-user, body .fa-envelope, body .fa-tasks {
+  body .fa-clock-o,
+  body .fa-user,
+  body .fa-envelope,
+  body .fa-tasks {
     display: none;
   }
 
@@ -2154,7 +2227,8 @@ body .email {
     margin-bottom: 30px;
   }
 
-  .description-1 p, .description-2 p {
+  .description-1 p,
+  .description-2 p {
     width: 100%;
     padding: 5px;
   }
@@ -2212,7 +2286,8 @@ body .email {
     font-size: 0.8em;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 55%;
   }
 
@@ -2226,11 +2301,11 @@ body .email {
   }
 
   .container-for-card {
-    transition: none; 
+    transition: none;
   }
 
-  .container-for-card:hover { 
-    transform: none; 
+  .container-for-card:hover {
+    transform: none;
   }
 
   .step-icon {
@@ -2243,7 +2318,8 @@ body .email {
     width: 95%;
   }
 
-  .modal .input-wrapper, .modal .message-wrapper {
+  .modal .input-wrapper,
+  .modal .message-wrapper {
     width: 60%;
   }
 
@@ -2251,7 +2327,9 @@ body .email {
     font-size: 1.2em;
   }
 
-  .modal .input-wrapper input, textarea, .modal button {
+  .modal .input-wrapper input,
+  textarea,
+  .modal button {
     width: 100%;
   }
 
@@ -2271,7 +2349,7 @@ body .email {
   }
 
   body header {
-   background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body .trip-header {
@@ -2317,7 +2395,8 @@ body .email {
     width: 77%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 35%;
   }
 
@@ -2350,7 +2429,7 @@ body .email {
   }
 
   body header {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger {
@@ -2404,7 +2483,8 @@ body .email {
     width: 77%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 35%;
   }
 
@@ -2436,12 +2516,13 @@ body .email {
     border-top: none;
   }
 
-  .departure-wrapper, .arrival-wrapper {
+  .departure-wrapper,
+  .arrival-wrapper {
     height: 190px;
   }
 
   body header {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger {
@@ -2495,7 +2576,8 @@ body .email {
     width: 77%;
   }
 
-  body form button, body .go-to-login-button {
+  body form button,
+  body .go-to-login-button {
     width: 35%;
   }
 

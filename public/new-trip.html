@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>New Trip</title>
+  <title>New Trip</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Patua+One|Bungee|Alfa+Slab+One" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">  
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Josefin+Sans|Roboto|Bree+Serif|Kanit|Righteous|Patua+One|Bungee|Alfa+Slab+One"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/grid.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/new-trip.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/confetti.min.css">
@@ -16,24 +18,25 @@
   <script src="https://unpkg.com/fuse.js@2.5.0/src/fuse.min.js"></script>
   <script src="https://screenfeedcontent.blob.core.windows.net/html/airports.js"></script>
 </head>
+
 <body>
   <header>
     <div class="background-wrapper col-12">
       <div class="header-wrapper col-12">
         <nav>
-      <ul class=" ul-header">
-        <li class="trips">
-          <a href="/trips.html" class="hvr-underline-from-center">Your Trips</a>
-        </li>
-        <li class="new-trip">
-          <a href="/new-trip.html" class="hvr-underline-from-center">New Trip</a>
-        </li>
-        <li class="log-out">
-          <a href="#" class="hvr-underline-from-center">Log Out</a>
-        </li>
-      </ul>
-    </nav>
-  
+          <ul class=" ul-header">
+            <li class="trips">
+              <a href="/trips.html" class="hvr-underline-from-center">Your Trips</a>
+            </li>
+            <li class="new-trip">
+              <a href="/new-trip.html" class="hvr-underline-from-center">New Trip</a>
+            </li>
+            <li class="log-out">
+              <a href="#" class="hvr-underline-from-center">Log Out</a>
+            </li>
+          </ul>
+        </nav>
+
         <div class="h1-wrapper">
           <a class="link-for-h1" href="/">
             <h1>SaveMyTrip
@@ -48,34 +51,34 @@
           </span>
         </button>
       </div>
-			<!-- sidebar  -->
-			<section class="side-menu-nav">
-				<p class="close-side-bar">
-				<ul>
-					<li class="about about-side-bar-link">
-						<a href="/trips.html">Your Trips</a>
-					</li>
-					<li class="trips">
-						<a href="/new-trip.html">New Trip</a>
-					</li>
-					<li class="log-in log-in-side-bar-link">
-						<a href="/">Log Out</a>
-					</li>
-				</ul>
-			</section>
-		</div>
-	</header>
+      <!-- sidebar  -->
+      <section class="side-menu-nav">
+        <p class="close-side-bar">
+          <ul>
+            <li class="about about-side-bar-link">
+              <a href="/trips.html">Your Trips</a>
+            </li>
+            <li class="trips">
+              <a href="/new-trip.html">New Trip</a>
+            </li>
+            <li class="log-in log-in-side-bar-link">
+              <a href="/">Log Out</a>
+            </li>
+          </ul>
+      </section>
+    </div>
+  </header>
 
   <main role="main">
     <script>
-      $(document).ready(function() {
+      $(document).ready(function () {
         function init() {
           const departureCity = document.getElementById('departure-city');
           const arrivalCity = document.getElementById('arrival-city');
           const autocompleteDeparture = new google.maps.places.Autocomplete(departureCity);
           const autocompleteArrival = new google.maps.places.Autocomplete(arrivalCity);
         }
-        google.maps.event.addDomListener(window, 'load', init);	
+        google.maps.event.addDomListener(window, 'load', init);
       });	
     </script>
     <section class="col-12 new-trip-form">
@@ -89,12 +92,12 @@
             <fieldset>
               <div class="wrapper-lab-airline">
                 <label class="lab-airline">Airline</label>
-                <input type="text" name="airline-choice" id="airline"  maxlength="20" required="" class="airline">
+                <input type="text" name="airline-choice" id="airline" maxlength="20" required="" class="airline">
               </div>
 
               <div class="wrapper-lab-confirm">
                 <label class="lab-confirm">Confrmation Number</label>
-                <input type="text" name="confirmation-number" id="confirmation" maxlength="10"  required="" class="confirmation">
+                <input type="text" name="confirmation-number" id="confirmation" maxlength="10" required="" class="confirmation">
               </div>
             </fieldset>
           </div>
@@ -102,11 +105,11 @@
             <legend>
               Departure
             </legend>
-            
+
             <fieldset name="register-info">
               <div class="dep-city">
                 <label class="lab-dep-city">City</label>
-                <input type="text" name="city-choice" id="departure-city"  required="" class="">
+                <input type="text" name="city-choice" id="departure-city" required="" class="">
               </div>
 
               <div class="dep-airport">
@@ -116,43 +119,43 @@
 
               <div class="dep-terminal">
                 <label class="lab-dep-termianl">Terminal</label>
-                <input type="text" name="terminal-choice" id="departure-terminal"  maxlength="3"class="">
+                <input type="text" name="terminal-choice" id="departure-terminal" maxlength="3" class="">
               </div>
 
               <div class="dep-gate">
                 <label class="lab-dep-gate">Gate</label>
-                <input type="text" name="gate-choice" id="departure-gate" maxlength="3"  class="">
+                <input type="text" name="gate-choice" id="departure-gate" maxlength="3" class="">
               </div>
 
               <div class="dep-date">
                 <label class="lab-dep-date ">Date And Time</label>
-                <input type="text" name="date" id="datepicker-1"   class="">
+                <input type="text" name="date" id="datepicker-1" class="">
               </div>
             </fieldset>
           </div>
 
-          <div class="arrival-info-wrapper col-6"> 
+          <div class="arrival-info-wrapper col-6">
             <legend>
               Arrival
             </legend>
             <fieldset name="register-info">
               <div class="lab-arrival-city">
                 <label class>City</label>
-                <input type="text" name="city-choice" id="arrival-city"  required="" class="">
-              </div>  
+                <input type="text" name="city-choice" id="arrival-city" required="" class="">
+              </div>
               <div class="lab-arrival-airport">
                 <label class="arr-airport">Airport</label>
-                <input type="text" name="airport-choice" id="arrival-airport" maxlength="3"  required="" class="">
+                <input type="text" name="airport-choice" id="arrival-airport" maxlength="3" required="" class="">
               </div>
-              
+
               <div class="lab-arrival-terminal">
                 <label class="">Terminal</label>
-                <input type="text" name="terminal-choice" id="arrival-termianl" maxlength="3"  class="">
+                <input type="text" name="terminal-choice" id="arrival-termianl" maxlength="3" class="">
               </div>
 
               <div class="lab-arrival-gate">
                 <label class="">Gate</label>
-                <input type="text" name="gate-choice" id="arrival-gate" maxlength="3"  class="">
+                <input type="text" name="gate-choice" id="arrival-gate" maxlength="3" class="">
               </div>
 
               <div class="lab-arrival-date">
@@ -163,7 +166,7 @@
           </div>
           <div class="btns-wrapper col-12">
             <button type="button" value="Reset">Reset</button>
-            <button type="submit" value="Submit" class="save-button" >Save</button>
+            <button type="submit" value="Submit" class="save-button">Save</button>
           </div>
         </form>
       </div>
@@ -171,9 +174,10 @@
   </main>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxbrnP5jd_Uq6TwZ9frPsnqhD2_wgIAnU&v=3.exp&libraries=places"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script type="text/javascript" src="js/helpers.js"></script>
   <script type="text/javascript" src="js/new-trip.js"></script>
 </body>
 
+</html>

@@ -1,6 +1,5 @@
 /* @import url("whitespace-reset.css"); */
 
-
 * {
   box-sizing: border-box;
 }
@@ -30,7 +29,7 @@ body {
  *   so 960 + 20 + 20 => 1000px
  *
  **/
- main {
+main {
   padding-top: 100px;
 }
 
@@ -54,14 +53,17 @@ main .row {
 .row::before,
 .row::after {
   display: table;
-  content: '';
+  content: "";
 }
 
 .row::after {
   clear: both;
 }
 
-.col-3, .col-4, .col-6, .col-12 {
+.col-3,
+.col-4,
+.col-6,
+.col-12 {
   float: left;
 
   /* Gutters:
@@ -91,9 +93,11 @@ main .row {
   background-color: blue;
 }
 
-
 /* Mobile defaults */
-.col-3, .col-4, .col-6, .col-12 {
+.col-3,
+.col-4,
+.col-6,
+.col-12 {
   width: 100%;
 }
 
@@ -103,7 +107,7 @@ main .row {
 body {
   font-size: 1em;
   background-image: url("../images/plane-view-img.jpg");
-  background-position: 50% 40%; 
+  background-position: 50% 40%;
   background-attachment: fixed;
   /* background-size:cover; */
   /* height: 700px; */
@@ -145,7 +149,7 @@ body header nav ul li {
 body header nav ul li a {
   vertical-align: middle;
   display: inline-block;
-  font: normal 1.4em 'Merriweather', serif;
+  font: normal 1.4em "Merriweather", serif;
   color: #ffffff;
   font-weight: 600;
   text-decoration: none;
@@ -184,9 +188,9 @@ body header .h1-wrapper {
 
 body header h1 {
   color: #ffffff;
-  font: normal 2.1em 'Patua One', serif;
+  font: normal 2.1em "Patua One", serif;
   font-weight: 600;
-  padding-top: 5px;  
+  padding-top: 5px;
   letter-spacing: 3px;
   margin-left: 10%;
 }
@@ -210,7 +214,6 @@ body header h1 {
   margin: 0px auto 7px auto;
 } */
 
-
 /* * * * * * * * * * * */
 /*      hamburger      */
 /* * * * * * * * * * * */
@@ -230,58 +233,76 @@ body header h1 {
   background-color: transparent;
   border: 0;
   margin: 0;
-  overflow: visible; }
-  .hamburger:hover {
-    opacity: 0.7; }
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
 
 .hamburger-box {
   width: 40px;
   height: 24px;
   display: inline-block;
-  position: relative; }
+  position: relative;
+}
 
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -2px; }
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
-    background-color: #3ba4ff;
-    border-radius: 4px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.5s;
-    transition-timing-function: ease; }
-  .hamburger-inner::before, .hamburger-inner::after {
-    content: "";
-    display: block; }
-  .hamburger-inner::before {
-    top: -10px; }
-  .hamburger-inner::after {
-    bottom: -10px; }
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #3ba4ff;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
 
-  .hamburger--spin .hamburger-inner {
-    transition-duration: 0.22s;
-    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-    .hamburger--spin .hamburger-inner::before {
-      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-    .hamburger--spin .hamburger-inner::after {
-      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
-  
-  .hamburger--spin.is-active .hamburger-inner {
-    transform: rotate(225deg);
-    transition-delay: 0.1s;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-    .hamburger--spin.is-active .hamburger-inner::before {
-      top: 0;
-      opacity: 0;
-      transition: top 0.16s ease-out, opacity 0.1s 0.16s ease-out; }
-    .hamburger--spin.is-active .hamburger-inner::after {
-      bottom: 0;
-      transform: rotate(-90deg);
-      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
 
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.1s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.16s ease-out, opacity 0.1s 0.16s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out,
+    transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 
 /* * * * * * * * * * * */
 /*      side-bar       */
@@ -295,10 +316,10 @@ body header h1 {
   bottom: 0;
   left: 0;
   background: #1a1919;
-  color: #ffffff; 
+  color: #ffffff;
   z-index: 1;
   box-shadow: 0 0 25px rgba(41, 38, 38, 0.7);
-  -webkit-box-shadow: 0 0 25px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
 }
 
 .show-side-bar {
@@ -313,7 +334,6 @@ body header h1 {
 .center-side-bar {
   position: fixed;
 }
-
 
 .side-menu-nav p span {
   margin-right: 5px;
@@ -333,17 +353,16 @@ body header h1 {
 }
 
 .side-menu-nav ul li a {
-  color: #ffffff; 
+  color: #ffffff;
   background: none;
   text-decoration: none;
   outline: none;
-  font: normal 1.3em 'Merriweather', serif;
+  font: normal 1.3em "Merriweather", serif;
 }
 
 .side-menu-nav ul li a:hover {
   cursor: pointer;
 }
-
 
 /* Non-mobile, grid */
 @media only screen and (min-width: 640px) {
@@ -354,12 +373,12 @@ body header h1 {
 
   /* 4 columns */
   .col-4 {
-		width: 33.33%;
+    width: 33.33%;
   }
 
   /* 6 columns */
   .col-6 {
-		width: 50%;
+    width: 50%;
   }
 
   /* 12 columns */

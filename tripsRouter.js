@@ -1,90 +1,93 @@
-"use strict"
-const express = require('express');
-const passport = require("passport")
+"use strict";
+const express = require("express");
+const passport = require("passport");
 const router = express.Router();
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
-const legit = require('legit');
+const legit = require("legit");
 
-const {SENDGRID_API_KEY} = require("./config");
-const sgMail = require('@sendgrid/mail');
+const { SENDGRID_API_KEY } = require("./config");
+const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(SENDGRID_API_KEY);
 
-const {Trip} = require('./models');
-const jwtAuth = passport.authenticate('jwt', { session: false });
+const { Trip } = require("./models");
+const jwtAuth = passport.authenticate("jwt", { session: false });
 
-router.use(jsonParser)
+router.use(jsonParser);
 // ============== GET endpoint ==============
-router.get('/', jwtAuth, (req, res) => {
-Trip
-  .find({user: req.user.id})
-  // call the `.serialize` instance method we've created in
-  // models.js in order to only expose the data we want the API return.
-  .then(trips => {
-    res.json({
-      trips: trips.map(trip => trip.serialize())
+router.get("/", jwtAuth, (req, res) => {
+  Trip.find({ user: req.user.id })
+    // call the `.serialize` instance method we've created in
+    // models.js in order to only expose the data we want the API return.
+    .then(trips => {
+      res.json({
+        trips: trips.map(trip => trip.serialize())
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ message: "Internal server error" });
     });
-  })
-  .catch(err => {
-    console.error(err);
-    res.status(500).json({ message: 'Internal server error' });
-  });
 });
 
-router.get('/:id', jwtAuth, (req, res) => {
-  Trip
-    .findById(req.params.id)
+router.get("/:id", jwtAuth, (req, res) => {
+  Trip.findById(req.params.id)
     .then(trip => res.json(trip.serialize()))
     .catch(err => {
       console.error(err);
-      res.status(500).json({error: 'something went horribly awry'});
+      res.status(500).json({ error: "something went horribly awry" });
     });
 });
 
-
-
 // ============== Email POST endpoint ==============
-router.post('/email/:id', (req, res) => {
+router.post("/email/:id", (req, res) => {
   legit(req.body.email, function(err, validation, addresses) {
     if (validation == false) {
-      res.status(500).json({error: "Invalid Email. Please try again"}); 
+      res.status(500).json({ error: "Invalid Email. Please try again" });
     } else {
-      Trip
-      .findById(req.params.id)
-      .then(trip => {
-        const msg = {
-          to:  req.body.email,
-          from: req.body.email,
-          // to: "nawaryossef2@gmail.com",
-          subject: `${JSON.stringify(req.body.title)}`,
-          text: "Hey Hey Hey ",
-          html: `<div>
+      Trip.findById(req.params.id)
+        .then(trip => {
+          const msg = {
+            to: req.body.email,
+            from: req.body.email,
+            // to: "nawaryossef2@gmail.com",
+            subject: `${JSON.stringify(req.body.title)}`,
+            text: "Hey Hey Hey ",
+            html: `<div>
                   <h4>${JSON.stringify(req.body.message)}</h4>
                   <h2>Trip Information</h2><br>
                   <p><strong>Origin: </strong>${trip.departure.city}</p>
                   <p><strong>Destination: </strong>${trip.arrival.city}</p>
-                  <p><strong>Confirmation-code: </strong>${trip.confirmationCode}</p>
+                  <p><strong>Confirmation-code: </strong>${
+                    trip.confirmationCode
+                  }</p>
                   <p><strong>Airlines: </strong>${trip.airline}</p>
-                  <p><strong>Departure-date and Time: </strong>${trip.departure.date}</p>
-                  <p><strong>Arrival-date and Time: </strong>${trip.arrival.date}</p><br>
-                </div>`,
-        };
-        sgMail.send(msg);  
-        res.json({trip, message: "Email sent"})
-      })
-      .catch(err => {
-        console.error(err);
-        res.status(500).json({error: 'something went horribly awry'});
-      });
+                  <p><strong>Departure-date and Time: </strong>${
+                    trip.departure.date
+                  }</p>
+                  <p><strong>Arrival-date and Time: </strong>${
+                    trip.arrival.date
+                  }</p><br>
+                </div>`
+          };
+          sgMail.send(msg);
+          res.json({ trip, message: "Email sent" });
+        })
+        .catch(err => {
+          console.error(err);
+          res.status(500).json({ error: "something went horribly awry" });
+        });
     }
   });
-  
-})
+});
 
 // ============== POST endpoint ==============
-router.post('/', jwtAuth, (req, res) => {
+router.post("/", jwtAuth, (req, res) => {
   const requiredFields = [
-    "airline", "confirmationCode", 'departure', "arrival",
+    "airline",
+    "confirmationCode",
+    "departure",
+    "arrival"
   ];
 
   for (let i = 0; i < requiredFields.length; i++) {
@@ -96,32 +99,34 @@ router.post('/', jwtAuth, (req, res) => {
     }
   }
 
-  Trip
-    .create({
-      airline: req.body.airline,
-      confirmationCode: req.body.confirmationCode,
-      departure: req.body.departure,
-      arrival: req.body.arrival,
-      user: req.user.id
-    })
+  Trip.create({
+    airline: req.body.airline,
+    confirmationCode: req.body.confirmationCode,
+    departure: req.body.departure,
+    arrival: req.body.arrival,
+    user: req.user.id
+  })
     .then(trip => res.status(201).json(trip.serialize()))
     .catch(err => {
       console.error(err);
-      res.status(500).json({ error: 'Something went wrong' });
+      res.status(500).json({ error: "Something went wrong" });
     });
 });
 
 // ============== PUT endpoint ==============
-router.put('/:id', jwtAuth,  (req, res) => {
+router.put("/:id", jwtAuth, (req, res) => {
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
     res.status(400).json({
-      error: 'Request path id and request body id values must match'
+      error: "Request path id and request body id values must match"
     });
   }
-  
+
   const updated = {};
   const updateableFields = [
-    "airline", "confirmationCode", 'departure', "arrival",
+    "airline",
+    "confirmationCode",
+    "departure",
+    "arrival"
   ];
 
   updateableFields.forEach(field => {
@@ -130,19 +135,16 @@ router.put('/:id', jwtAuth,  (req, res) => {
     }
   });
 
-  Trip
-    .findByIdAndUpdate(req.params.id, {$set: updated}, {new: true})
+  Trip.findByIdAndUpdate(req.params.id, { $set: updated }, { new: true })
     .then(updatedTrip => res.status(204).json(updatedTrip.serialize()))
-    .catch(err => res.status(500).json({message: 'Something went wrong'}));
+    .catch(err => res.status(500).json({ message: "Something went wrong" }));
 });
 
 // ============== DELETE endpoint ==============
-router.delete('/:id', jwtAuth, (req, res) => {
-  Trip
-    .findByIdAndRemove(req.params.id)
+router.delete("/:id", jwtAuth, (req, res) => {
+  Trip.findByIdAndRemove(req.params.id)
     .then(trip => res.status(204).end())
-    .catch(err => res.status(500).json({ message: 'Internal server error' }));
+    .catch(err => res.status(500).json({ message: "Internal server error" }));
 });
 
 module.exports = router;
-
