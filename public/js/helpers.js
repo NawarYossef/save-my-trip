@@ -16,6 +16,7 @@ class Helpers {
       this.handleLoginStatus();
     } else if(!this.token) {
       window.location.replace('/');
+      return
     }
   }
 
