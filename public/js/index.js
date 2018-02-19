@@ -18,60 +18,80 @@ class SaveMyTrip {
   }
 
   showLoginModal() {
-    const that = this
+    const that = this;
     $(".log-in, .go-to-login-button").click(function() {
       $("#my-modal").css("display", "block");
-      $('.modal-content').addClass('animated slideInDown');
-      if($(this).hasClass("log-in-side-bar-link")) {
+      $(".modal-content").addClass("animated slideInDown");
+      if ($(this).hasClass("log-in-side-bar-link")) {
         that.closeSidebar();
       }
-    })
+    });
   }
 
   closeLoginModal() {
     $(".close").click(() => {
-      $(".modal-content").removeClass("animated slideInDown").addClass('animated fadeOutRight');
-      
+      $(".modal-content")
+        .removeClass("animated slideInDown")
+        .addClass("animated fadeOutRight");
+
       this.hideInvalidLoginMessage();
-      $("#my-modal").fadeOut(1200);    
-    })
+      $("#my-modal").fadeOut(1200);
+    });
   }
 
   NavbarScrollToSection() {
     const that = this;
-    $('header').on('click', '.about, .sign-up-btn, .about-side-bar-link, .trips, .trips-side-bar-link', function(e) {
-      e.preventDefault();
-        
-      if ($(this).hasClass("about")) {
-        that.closeSidebar();
-        $('html, body').animate({
-          scrollTop: $("main").offset().top - 66
-        }, 900);
-      } else if ($(this).hasClass("trips-side-bar-link") && !that.token) {
+    $("header").on(
+      "click",
+      ".about, .sign-up-btn, .about-side-bar-link, .trips, .trips-side-bar-link",
+      function(e) {
+        e.preventDefault();
+
+        if ($(this).hasClass("about")) {
           that.closeSidebar();
-          $('html, body').animate({
-            scrollTop: $(".cards").offset().top - 80
-        }, 900);
-      } else if ($(this).hasClass("trips") && !that.token) {
-          $('html, body').animate({
-            scrollTop: $(".cards").offset().top - 63
-          }, 900);
-      } else if ($(this).hasClass("sign-up-btn")) {
-        $('html, body').animate({
-          scrollTop: $("#sign-up").offset().top - 105
-        }, 1000);
-      } 
-    });
+          $("html, body").animate(
+            {
+              scrollTop: $("main").offset().top - 66
+            },
+            900
+          );
+        } else if ($(this).hasClass("trips-side-bar-link") && !that.token) {
+          that.closeSidebar();
+          $("html, body").animate(
+            {
+              scrollTop: $(".cards").offset().top - 80
+            },
+            900
+          );
+        } else if ($(this).hasClass("trips") && !that.token) {
+          $("html, body").animate(
+            {
+              scrollTop: $(".cards").offset().top - 63
+            },
+            900
+          );
+        } else if ($(this).hasClass("sign-up-btn")) {
+          $("html, body").animate(
+            {
+              scrollTop: $("#sign-up").offset().top - 105
+            },
+            1000
+          );
+        }
+      }
+    );
   }
 
   closeSidebar() {
-    $(".side-menu-nav").fadeOut().addClass("animated slideOutLeft");
+    $(".side-menu-nav")
+      .fadeOut()
+      .addClass("animated slideOutLeft");
     $(".hamburger").removeClass("is-active");
   }
-  
+
   signUpUser() {
     const that = this;
-    $(".register").submit((e) => {
+    $(".register").submit(e => {
       e.preventDefault();
 
       const userInfo = {
@@ -80,44 +100,44 @@ class SaveMyTrip {
         username: $("#username").val(),
         password: $("#password").val(),
         email: $("#email").val()
-      }
+      };
 
       that.resetSignupInputValues();
 
       $.ajax({
-        "type": "POST",
+        type: "POST",
         url: "/api/users/signup",
-        dataType : "json",
+        dataType: "json",
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(userInfo)
       })
-      .done((data) => {
-        that.hideInvalidMessage();
-        that.hideSignupSection();
-        that.showLogInSection();
-        // reset input values for new input
-        that.resetInputValues();
-      })
-      .fail((error) => {
-        that.showInvalidMessage(error);
-        console.error("something is wrong");
-      })
-    })
+        .done(data => {
+          that.hideInvalidMessage();
+          that.hideSignupSection();
+          that.showLogInSection();
+          // reset input values for new input
+          that.resetInputValues();
+        })
+        .fail(error => {
+          that.showInvalidMessage(error);
+          console.error("something is wrong");
+        });
+    });
   }
 
   useDemoAccountValuesForLogin() {
     $(".demo-account-access").click(() => {
-      $("#sign-in-username").val('demouser');
-      $("#sign-in-password").val('wewewewe123');
-    })
+      $("#sign-in-username").val("demouser");
+      $("#sign-in-password").val("wewewewe123");
+    });
   }
 
   resetSignupInputValues() {
     $("#firstName").val("");
     $("#lastName").val("");
     $("#username").val("");
-    $("#password").val(""); 
-    $("#email").val(""); 
+    $("#password").val("");
+    $("#email").val("");
   }
 
   resetLoginInputValues() {
@@ -125,53 +145,61 @@ class SaveMyTrip {
     $("#sign-in-password").val("");
   }
 
-  showInvalidMessage(data) { 
-    const field = data.responseJSON.location.charAt(0).toUpperCase() + data.responseJSON.location.slice(1);
-    $(".invalid-message-txt").text(`Invalid entry. ${field} ${data.responseJSON.message}`)
-    $(".cont-for-invalid-message").fadeIn().css("display", "block")
+  showInvalidMessage(data) {
+    const field =
+      data.responseJSON.location.charAt(0).toUpperCase() +
+      data.responseJSON.location.slice(1);
+    $(".invalid-message-txt").text(
+      `Invalid entry. ${field} ${data.responseJSON.message}`
+    );
+    $(".cont-for-invalid-message")
+      .fadeIn()
+      .css("display", "block");
   }
 
   hideInvalidMessage() {
     $(".cont-for-invalid-message").css("display", "none");
-    $(".cont-for-invalid-message").text('');
+    $(".cont-for-invalid-message").text("");
   }
 
   logInUser() {
     const that = this;
-    $(".log-in").submit((e) => {
+    $(".log-in").submit(e => {
       e.preventDefault();
 
       const userInfo = {
         username: $("#sign-in-username").val(),
         password: $("#sign-in-password").val()
-      }
+      };
 
       // reset input values
       that.resetLoginInputValues();
 
       $.ajax({
-        "type": "POST",
+        type: "POST",
         url: "/api/auth/login",
-        dataType : "json",
+        dataType: "json",
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(userInfo)
       })
-      .done((data) => {
-        // store JWT to local storage and save it across all browser sessions
-        localStorage.setItem('token', data.authToken);
-        this.changeRouteToTripsPage()
-      })
-      .fail((error) => {
-        console.error("something is wrong");
-        console.log(error)
-        this.showInvalidLoginMessage();
-      })
-    })
+        .done(data => {
+          // store JWT to local storage and save it across all browser sessions
+          localStorage.setItem("token", data.authToken);
+          this.changeRouteToTripsPage();
+        })
+        .fail(error => {
+          console.error("something is wrong");
+          console.log(error);
+          this.showInvalidLoginMessage();
+        });
+    });
   }
 
   showInvalidLoginMessage() {
-    $(".invalid-message-txt-login").text(`Invalid username or password. Please try again`)
-    $(".cont-for-invalid-message-login").css("display", "block")
+    $(".invalid-message-txt-login").text(
+      `Invalid username or password. Please try again`
+    );
+    $(".cont-for-invalid-message-login").css("display", "block");
   }
 
   hideInvalidLoginMessage() {
@@ -179,56 +207,58 @@ class SaveMyTrip {
   }
 
   changeRouteToTripsPage() {
-    window.location.replace(`/trips.html`)
+    window.location.replace(`/trips.html`);
   }
 
   showLogInSection() {
-    $(".heading-for-trips-login, .go-to-login-section").fadeIn().show();
+    $(".heading-for-trips-login, .go-to-login-section")
+      .fadeIn()
+      .show();
   }
 
   hideSignupSection() {
-    $(".heading-for-trips, .sign-up-wrapper").fadeOut().hide(); 
+    $(".heading-for-trips, .sign-up-wrapper")
+      .fadeOut()
+      .hide();
   }
 
   changeHeaderStylesOnScroll() {
-    $(document).scroll(function(){
-      if($(this).scrollTop() > 180)
-      {   
-        $('.header-wrapper').css({
-          transition : 'background-color 0.2s ease-in-out',
+    $(document).scroll(function() {
+      if ($(this).scrollTop() > 180) {
+        $(".header-wrapper").css({
+          transition: "background-color 0.2s ease-in-out",
           "background-color": "rgba(0,0,0,0.9)",
           "box-shadow": "0 0 16px 8px rgba(0,0,0,.5)",
           "-webkit-box-shadow": "0 0 16px 8px rgba(0,0,0,.5)",
           "-moz-box-shadow": "0 0 16px 8px rgba(0,0,0,.5)"
         });
       } else {
-        $('.header-wrapper').css({
-          "background":"transparent",
+        $(".header-wrapper").css({
+          background: "transparent",
           "box-shadow": "initial",
           "-webkit-box-shadow": "initial",
-          "-moz-box-shadow":  "initial"
-           
+          "-moz-box-shadow": "initial"
         });
       }
     });
-  } 
+  }
 
   reviewSlideShow() {
-    $(function(){
-      $('.reviews-wrapper').slick({
+    $(function() {
+      $(".reviews-wrapper").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         speed: 1000,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 4000
       });
-    })
+    });
   }
 
   tripsEndpointAuthValidation() {
     $(".trips").click(() => {
       this.token ? this.changeRouteToTripsPage() : null;
-    })
+    });
   }
 }
 

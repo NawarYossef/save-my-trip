@@ -2,7 +2,7 @@ class Helpers {
   constructor() {
     this.token = localStorage.getItem("token");
   }
-  
+
   init() {
     this.TokenCheck();
     this.handleSidebarSlide();
@@ -11,18 +11,18 @@ class Helpers {
   }
   //route to landing page if there is no token
   TokenCheck() {
-    if (window.location.pathname === '/')  {
+    if (window.location.pathname === "/") {
       this.handleLoginStatus();
-    } else if(!this.token) {
-      window.location.replace('/');
+    } else if (!this.token) {
+      window.location.replace("/");
       return;
     }
   }
 
   handleLoginStatus() {
     if (this.token) {
-      $(".log-out").css({"display": "inline-block"})
-      $(".log-in").css({"display": "none"})
+      $(".log-out").css({ display: "inline-block" });
+      $(".log-in").css({ display: "none" });
     }
     return null;
   }
@@ -32,25 +32,33 @@ class Helpers {
       if (!$(this).hasClass("is-active")) {
         // make sure that side bar is hidden by default
         $(".side-menu-nav").removeClass("animated slideOutLeft");
-        $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInLeft");
-        $(".side-menu-nav").fadeIn().addClass("center-side-bar");
+        $(".side-menu-nav")
+          .fadeIn()
+          .addClass("show-side-bar animated slideInLeft");
+        $(".side-menu-nav")
+          .fadeIn()
+          .addClass("center-side-bar");
       } else {
-        $(".side-menu-nav").fadeOut().addClass("animated slideOutLeft");
+        $(".side-menu-nav")
+          .fadeOut()
+          .addClass("animated slideOutLeft");
       }
-    })
+    });
   }
 
   userLogout() {
     $(".log-out").click(() => {
       localStorage.removeItem("token");
-      window.location.replace(`/`)
-    })
+      window.location.replace(`/`);
+    });
   }
 
   handleHamburgerButton() {
     $(".hamburger").click(function() {
-      ($(this).hasClass("is-active")) ? $(this).removeClass("is-active") : $(this).addClass("is-active");
-    })
+      $(this).hasClass("is-active")
+        ? $(this).removeClass("is-active")
+        : $(this).addClass("is-active");
+    });
   }
 }
 
