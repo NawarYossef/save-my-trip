@@ -31,6 +31,7 @@ class SaveMyTrip {
   closeLoginModal() {
     $(".close").click(() => {
       $(".modal-content").removeClass("animated slideInDown").addClass('animated fadeOutRight');
+      this.hideInvalidLoginMessage();
       $("#my-modal").fadeOut(1200);    
     })
   }
