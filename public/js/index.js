@@ -31,13 +31,13 @@ class SaveMyTrip {
   closeLoginModal() {
     $(".close").click(() => {
       $(".modal-content").removeClass("animated slideInDown").addClass('animated fadeOutRight');
+      
       this.hideInvalidLoginMessage();
       $("#my-modal").fadeOut(1200);    
     })
   }
 
   NavbarScrollToSection() {
-    const that = this;
     $('header').on('click', '.about, .sign-up-btn, .about-side-bar-link, .trips, .trips-side-bar-link', function(e) {
       e.preventDefault();
       switch(true) {
@@ -82,16 +82,6 @@ class SaveMyTrip {
     $(".side-menu-nav").fadeOut().addClass("animated slideOutLeft");
     $(".hamburger").removeClass("is-active");
   }
-
-  // openSideBar() {
-  //   if (!$(".hamburger").hasClass("is-active")) {
-  //     $(".hamburger").addClass("is-active")
-  //     // make sure that side bar is hidden by default
-  //     $(".side-menu-nav").removeClass("animated slideOutLeft");
-  //     $(".side-menu-nav").fadeIn().addClass("show-side-bar animated slideInLeft");
-  //     $(".side-menu-nav").fadeIn().addClass("center-side-bar");
-  //   }
-  // }
   
   signUpUser() {
     const that = this;
@@ -144,6 +134,11 @@ class SaveMyTrip {
     $("#email").val(""); 
   }
 
+  resetLoginInputValues() {
+    $("#sign-in-username").val("");
+    $("#sign-in-password").val("");
+  }
+
   showInvalidMessage(data) { 
     const field = data.responseJSON.location.charAt(0).toUpperCase() + data.responseJSON.location.slice(1);
     $(".invalid-message-txt").text(`Invalid entry. ${field} ${data.responseJSON.message}`)
@@ -166,8 +161,7 @@ class SaveMyTrip {
       }
 
       // reset input values
-      $("#sign-in-username").val("");
-      $("#sign-in-password").val("");
+      that.resetLoginInputValues();
 
       $.ajax({
         "type": "POST",
@@ -195,7 +189,7 @@ class SaveMyTrip {
 
   hideInvalidLoginMessage() {
     $(".cont-for-invalid-message-login").css("display", "none");
-    $(".cont-for-invalid-message-login").text('');
+    // $(".cont-for-invalid-message-login").text('');
   }
 
   changeRouteToTripsPage() {
