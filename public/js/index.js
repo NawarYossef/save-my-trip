@@ -105,6 +105,8 @@ class SaveMyTrip {
         email: $("#email").val()
       }
 
+      that.resetSignupInputValues();
+
       $.ajax({
         "type": "POST",
         url: "/api/users/signup",
@@ -133,7 +135,7 @@ class SaveMyTrip {
     })
   }
 
-  resetInputValues() {
+  resetSignupInputValues() {
     $("#firstName").val("");
     $("#lastName").val("");
     $("#username").val("");
@@ -161,6 +163,10 @@ class SaveMyTrip {
         username: $("#sign-in-username").val(),
         password: $("#sign-in-password").val()
       }
+
+      // reset input values
+      $("#sign-in-username").val("");
+      $("#sign-in-password").val("");
 
       $.ajax({
         "type": "POST",
