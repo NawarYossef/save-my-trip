@@ -38,20 +38,21 @@ class SaveMyTrip {
   }
 
   NavbarScrollToSection() {
+    const that = this;
     $('header').on('click', '.about, .sign-up-btn, .about-side-bar-link, .trips, .trips-side-bar-link', function(e) {
       e.preventDefault();
         
       if ($(this).hasClass("about")) {
-        this.closeSidebar();
+        that.closeSidebar();
         $('html, body').animate({
           scrollTop: $("main").offset().top - 66
         }, 900);
-      } else if ($(this).hasClass("trips-side-bar-link") && !this.token) {
-          this.closeSidebar();
+      } else if ($(this).hasClass("trips-side-bar-link") && !that.token) {
+          that.closeSidebar();
           $('html, body').animate({
             scrollTop: $(".cards").offset().top - 80
         }, 900);
-      } else if ($(this).hasClass("trips") && !this.token) {
+      } else if ($(this).hasClass("trips") && !that.token) {
           $('html, body').animate({
             scrollTop: $(".cards").offset().top - 63
           }, 900);
