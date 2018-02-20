@@ -15,6 +15,7 @@ class SaveMyTrip {
     this.reviewSlideShow();
     this.tripsEndpointAuthValidation();
     this.useDemoAccountValuesForLogin();
+    this.userInputHideInvalidMessage();
   }
 
   showLoginModal() {
@@ -173,7 +174,6 @@ class SaveMyTrip {
       };
 
       // reset input values
-      that.resetLoginInputValues();
 
       $.ajax({
         type: "POST",
@@ -186,12 +186,19 @@ class SaveMyTrip {
           // store JWT to local storage and save it across all browser sessions
           localStorage.setItem("token", data.authToken);
           this.changeRouteToTripsPage();
+          that.resetLoginInputValues();
         })
         .fail(error => {
           console.error("something is wrong");
           console.log(error);
           this.showInvalidLoginMessage();
         });
+    });
+  }
+
+  userInputHideInvalidMessage() {
+    $("input").keypress(() => {
+      this.hideInvalidLoginMessage();
     });
   }
 
