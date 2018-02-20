@@ -16,6 +16,7 @@ class SaveMyTrip {
     this.tripsEndpointAuthValidation();
     this.useDemoAccountValuesForLogin();
     this.userInputHideInvalidMessage();
+    this.newUserGoToSignUp();
   }
 
   showLoginModal() {
@@ -50,34 +51,22 @@ class SaveMyTrip {
 
         if ($(this).hasClass("about")) {
           that.closeSidebar();
-          $("html, body").animate(
-            {
-              scrollTop: $("main").offset().top - 66
-            },
-            900
-          );
+          $("html, body").animate({
+            scrollTop: $("main").offset().top - 66
+            }, 900);
         } else if ($(this).hasClass("trips-side-bar-link") && !that.token) {
           that.closeSidebar();
-          $("html, body").animate(
-            {
+          $("html, body").animate({
               scrollTop: $(".cards").offset().top - 80
-            },
-            900
-          );
+            }, 900);
         } else if ($(this).hasClass("trips") && !that.token) {
-          $("html, body").animate(
-            {
-              scrollTop: $(".cards").offset().top - 63
-            },
-            900
-          );
+          $("html, body").animate({ 
+            scrollTop: $(".cards").offset().top - 63
+          }, 900);
         } else if ($(this).hasClass("sign-up-btn")) {
-          $("html, body").animate(
-            {
-              scrollTop: $("#sign-up").offset().top - 105
-            },
-            1000
-          );
+          $("html, body").animate({
+            scrollTop: $("#sign-up").offset().top - 105
+          }, 1000);
         }
       }
     );
@@ -121,7 +110,7 @@ class SaveMyTrip {
         })
         .fail(error => {
           that.showInvalidMessage(error);
-          console.error("something is wrong");
+          console.error("something is wrong", error);
         });
     });
   }
@@ -131,6 +120,25 @@ class SaveMyTrip {
       $("#sign-in-username").val("demouser");
       $("#sign-in-password").val("wewewewe123");
     });
+  }
+
+  newUserGoToSignUp() {
+    $(".new-member-go-signup").click(() => {
+      $(".modal-content")
+        .removeClass("animated slideInDown")
+        .addClass("animated fadeOutRight");
+
+      this.hideInvalidLoginMessage();
+
+      $("#my-modal").fadeOut("fast");
+
+      // scroll down to signup section after modal fades out
+      $("#my-modal").promise().done(() => {
+        $("html, body").animate({
+          scrollTop: $("#sign-up").offset().top - 105
+        }, 1000);
+      })
+    })
   }
 
   resetSignupInputValues() {
@@ -189,8 +197,7 @@ class SaveMyTrip {
           that.resetLoginInputValues();
         })
         .fail(error => {
-          console.error("something is wrong");
-          console.log(error);
+          console.error("something is wrong", error);
           this.showInvalidLoginMessage();
         });
     });

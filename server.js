@@ -9,7 +9,7 @@ const passport = require("passport");
 const { PORT, DATABASE_URL } = require("./config");
 
 const { router: usersRouter } = require("./users");
-const { router: tripsRouter } = require("./tripsRouter");
+const { router: tripsRouter } = require("./trips");
 
 const { router: authRouter, localStrategy, jwtStrategy } = require("./auth");
 
@@ -37,7 +37,7 @@ passport.use(jwtStrategy);
 
 app.use("/api/users/", usersRouter);
 app.use("/api/auth/", authRouter);
-app.use("/trips", tripsRouter);
+app.use("/trips/", tripsRouter);
 
 app.use("*", function(req, res) {
   res.status(404).json({ message: "Not Found" });

@@ -9,7 +9,6 @@ class NewTrip {
     this.postNewTrip();
     this.initializeDateAndTimePicker();
     this.airportFieldAutocomplete();
-    this.closeSidebar();
   }
 
   postNewTrip() {
@@ -85,6 +84,7 @@ class NewTrip {
     });
   }
 
+  // autocomplete for airport field input
   airportFieldAutocomplete() {
     var options = {
       shouldSort: true,
@@ -223,28 +223,6 @@ class NewTrip {
         }
         e.stopPropagation();
         e.preventDefault(); // prevent the default action (scroll / move caret)
-      }
-    });
-  }
-
-  closeSidebar() {
-    const that = this;
-    $("header").on("click", ".trips, .new-trip, .log-out", function() {
-      if (!$(".hamburger").hasClass("is-active")) {
-        $(".hamburger").addClass("is-active");
-        // make sure that side bar is hidden by default
-        $(".side-menu-nav").removeClass("animated slideOutLeft");
-        $(".side-menu-nav")
-          .fadeIn()
-          .addClass("show-side-bar animated slideInLeft");
-        $(".side-menu-nav")
-          .fadeIn()
-          .addClass("center-side-bar");
-      } else {
-        $(".side-menu-nav")
-          .fadeOut()
-          .addClass("animated slideOutLeft");
-        $(".hamburger").removeClass("is-active");
       }
     });
   }

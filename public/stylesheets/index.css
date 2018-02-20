@@ -121,13 +121,34 @@ header .log-out {
   font: normal 1.2em "Quicksand", sans-serif;
 }
 
-.modal h6 {
+.modal .demo-account-access {
   padding-top: 10px;
   font: normal 1.1em "Fire-sans", sans-serif;
   text-decoration: underline;
 }
 
-.modal h6:hover {
+.modal .not-yet-member-msg {
+  text-decoration: none;
+  color: #006bc8;
+  font: normal 0.9em "Fire-sans", sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+}
+
+.modal h6 .new-member-go-signup {
+  color: #222324;
+  font: normal 0.9em "Fire-sans", sans-serif;
+  text-decoration: underline;
+}
+
+
+.modal .new-member-go-signup:hover {
+  cursor: pointer;
+}
+
+
+.modal .demo-account-access:hover {
   cursor: pointer;
 }
 

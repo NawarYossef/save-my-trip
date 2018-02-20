@@ -6,11 +6,11 @@ const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 const legit = require("legit");
 
-const { SENDGRID_API_KEY } = require("./config");
+const { SENDGRID_API_KEY } = require("../config");
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(SENDGRID_API_KEY);
 
-const { Trip } = require("./models");
+const { Trip } = require("./model");
 const jwtAuth = passport.authenticate("jwt", { session: false });
 
 router.use(jsonParser);
@@ -147,4 +147,4 @@ router.delete("/:id", jwtAuth, (req, res) => {
     .catch(err => res.status(500).json({ message: "Internal server error" }));
 });
 
-module.exports = router;
+module.exports = {router};

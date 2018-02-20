@@ -14,7 +14,6 @@ class Trips {
     this.emailHandler();
     this.dropDownTripToggleListener();
     this.httpRedirectToEditPage();
-    this.closeSidebar();
   }
 
   getTripEntries() {
@@ -29,8 +28,7 @@ class Trips {
         this.renderTrips(data);
       })
       .fail(error => {
-        console.error("something is wrong");
-        console.error(error);
+        console.error("something is wrong", error);
       });
   }
 
@@ -53,7 +51,7 @@ class Trips {
           that.changeRouteToTripsPage();
         })
         .fail(data => {
-          console.error("something is wrong");
+          console.error("something is wrong", error);
           window.location.replace(`/`);
         });
     });
@@ -154,12 +152,10 @@ class Trips {
         }
       })
         .done(data => {
-          console.log(data);
           that.handleEmailSent(data);
         })
         .fail(error => {
-          console.log(error);
-          console.error("something is wrong");
+          console.error("something is wrong", error);
           // that.handleEmailSent(error)
         });
     });
@@ -215,28 +211,6 @@ class Trips {
         trip.find(".departure-wrapper").slideUp({ duration: 450 });
         tripHeader.removeClass("slide-up");
         tripHeader.addClass("slide-down");
-      }
-    });
-  }
-
-  closeSidebar() {
-    const that = this;
-    $("header").on("click", ".trips, .new-trip, .log-out", function() {
-      if (!$(".hamburger").hasClass("is-active")) {
-        $(".hamburger").addClass("is-active");
-        // make sure that side bar is hidden by default
-        $(".side-menu-nav").removeClass("animated slideOutLeft");
-        $(".side-menu-nav")
-          .fadeIn()
-          .addClass("show-side-bar animated slideInLeft");
-        $(".side-menu-nav")
-          .fadeIn()
-          .addClass("center-side-bar");
-      } else {
-        $(".side-menu-nav")
-          .fadeOut()
-          .addClass("animated slideOutLeft");
-        $(".hamburger").removeClass("is-active");
       }
     });
   }
