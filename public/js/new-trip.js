@@ -16,19 +16,19 @@ class NewTrip {
       e.preventDefault();
       const trip = {
         airline: $("#airline").val(),
-        confirmationCode: $("#confirmation").val(),
+        confirmationCode: $("#confirmation").val() || '--',
         departure: {
           city: $("#departure-city").val(),
           airport: $("#departure-airport").val(),
-          terminal: $("#departure-terminal").val(),
-          gate: $("#departure-gate").val(),
+          terminal: $("#departure-terminal").val() || '--',
+          gate: $("#departure-gate").val() || '--',
           date: $("#datepicker-1").val()
         },
         arrival: {
           city: $("#arrival-city").val(),
           airport: $("#arrival-airport").val(),
-          terminal: $("#arrival-termianl").val(),
-          gate: $("#arrival-gate").val(),
+          terminal: $("#arrival-termianl").val() || '--',
+          gate: $("#arrival-gate").val() || '--',
           date: $("#datepicker-2").val()
         }
       };
@@ -77,10 +77,9 @@ class NewTrip {
 
   initializeDateAndTimePicker() {
     $("#datepicker-1, #datepicker-2").flatpickr({
-      enableTime: true,
-      dateFormat: "m-d-y H:i",
+      altInput: true,
       minDate: "today",
-      time_24hr: false
+      dateFormat: "m d, Y",
     });
   }
 

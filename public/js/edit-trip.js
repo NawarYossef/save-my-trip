@@ -61,19 +61,19 @@ class EditTrip {
       const trip = {
         id: tripId,
         airline: $("#airline").val(),
-        confirmationCode: $("#confirmation").val(),
+        confirmationCode: $("#confirmation").val() || '--',
         departure: {
           city: $("#departure-city").val(),
           airport: $("#departure-airport").val(),
-          terminal: $("#departure-terminal").val(),
-          gate: $("#departure-gate").val(),
+          terminal: $("#departure-terminal").val() || '--',
+          gate: $("#departure-gate").val() || '--',
           date: $("#datepicker-1").val()
         },
         arrival: {
           city: $("#arrival-city").val(),
           airport: $("#arrival-airport").val(),
-          terminal: $("#arrival-terminal").val(),
-          gate: $("#arrival-gate").val(),
+          terminal: $("#arrival-terminal").val() || '--',
+          gate: $("#arrival-gate").val() || '--',
           date: $("#datepicker-2").val()
         }
       };

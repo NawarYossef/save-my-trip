@@ -8,14 +8,14 @@ const TripSchema = mongoose.Schema({
     airport: { type: String, required: true },
     terminal: { type: String, required: false },
     gate: { type: String, required: false },
-    date: { type: Date, required: true }
+    date: { type: String, required: true }
   },
   arrival: {
     city: { type: String, required: true },
     airport: { type: String, required: true },
     terminal: { type: String, required: false },
     gate: { type: String, required: false },
-    date: { type: Date, required: true }
+    date: { type: String, required: true }
   },
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" }
 });
