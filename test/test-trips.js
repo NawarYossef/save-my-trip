@@ -4,10 +4,18 @@ const chai = require("chai");
 const chaiHttp = require("chai-http");
 const faker = require("faker");
 const mongoose = require("mongoose");
-
+const jwt = require("jsonwebtoken");
 const { app, runServer, closeServer } = require("../server");
-const { TEST_DATABASE_URL } = require("../config");
-const { Trip } = require("../models");
+const { TEST_DATABASE_URL, JWT_SECRET } = require("../config");
+const { Trip } = require("../trips/model");
+const { User } = require("../users/model");
+
+const username = "exampleUser";
+const password = "examplePass";
+const email = "exampleUser@examplePass.com";
+const firstName = "Example";
+const lastName = "User";
+let id = "";
 
 // this makes the should syntax available throughout
 // this module
@@ -84,12 +92,6 @@ function tearDownDb() {
 }
 
 describe("Trip API resource", function() {
-  const username = "exampleUser";
-  const password = "examplePass";
-  const firstName = "Example";
-  const lastName = "User";
-  const id = "";
-
   // each of these hook functions are needed to return a promise
   // otherwise a callback "done" will need to be called.
   before(function() {
@@ -101,6 +103,7 @@ describe("Trip API resource", function() {
       User.create({
         username,
         password,
+        email,
         firstName,
         lastName
       }).then(user => (id = user.id))
