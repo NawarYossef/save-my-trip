@@ -80,17 +80,17 @@ class Trips {
       tripHTML.find(".confirmation-text").text(trip.confirmationCode);
       tripHTML.find(".depart-airport").text(trip.departure.airport);
       tripHTML.find(".arrive-airport").text(trip.arrival.airport);
-      tripHTML.find(".departure-date").text(new Date(trip.departure.date));
+      tripHTML.find(".departure-date").text(this.parseDate(trip.departure.date));
       tripHTML.find(".airline-text").text(trip.airline);
 
-      tripHTML.find(".depart-date-text").text(new Date(trip.departure.date));
+      tripHTML.find(".depart-date-text").text(this.parseDate(trip.departure.date));
       tripHTML.find(".depart-city").text(trip.departure.city);
       tripHTML
         .find(".depart-terminal")
         .text(`Terminal: ${trip.departure.terminal}` || "-");
       tripHTML.find(".depart-gate").text(`Gate: ${trip.departure.gate}` || "-");
 
-      tripHTML.find(".arrive-date-text").text(new Date(trip.arrival.date));
+      tripHTML.find(".arrive-date-text").text(this.parseDate(trip.arrival.date));
       tripHTML.find(".arrive-city").text(trip.arrival.city);
       tripHTML
         .find(".arrive-terminal")
@@ -101,13 +101,12 @@ class Trips {
     $(".trips-container").html(allTrips);
   }
 
-  // parseDate(date) {
-  //   const monthNumber = date.split("")[1]
-  //   let monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  //                       "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
-  //   const month = monthNames[new Date().getMonth()];
-  //  return date;
-  // }
+  parseDate(data) {
+    const month = new Date(data).toString().split(" ")[1];
+    const day = new Date(data).toString().split(" ")[2];
+    const year = new Date(data).toString().split(" ")[3];
+    return month + " " + day + ", " + year;
+  }
 
   showEmailModal() {
     const that = this;
