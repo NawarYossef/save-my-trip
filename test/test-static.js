@@ -5,7 +5,6 @@ const should = chai.should();
 
 const { app, runServer, closeServer } = require("../server");
 const { TEST_DATABASE_URL } = require("../config");
-const { Trip } = require("../models");
 
 describe("Server Static Serve", function() {
   before(function() {
