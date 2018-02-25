@@ -236,6 +236,7 @@ h2 {
   width: 100%;
   /* background: #888888; */
   /* height: 315px; */
+  padding-bottom: 25px;
 }
 
 .trip-header {
@@ -622,6 +623,10 @@ body .email {
     display: none;
   }
 
+  .edit-btn, .delete-btn {
+    border-right: 0px;
+  }
+
   body .edit-btn {
     border-bottom-left-radius: 0px;
   }
@@ -897,9 +902,13 @@ body .email {
   }
 }
 
-@media screen and (min-width: 321px) and (max-width: 375px) {
+@media screen and (min-width: 320px) and (max-width: 375px) {
   body header nav {
     display: none;
+  }
+
+  .edit-btn, .delete-btn {
+    border-right: 0px;
   }
 
   .trip-header {
@@ -1173,9 +1182,17 @@ body .email {
   }
 }
 
-@media screen and (min-width: 376px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 425px) {
   body header nav {
     display: none;
+  }
+
+  body .edit-btn {
+    border-bottom-left-radius: 0px;
+  }
+
+  .edit-btn, .delete-btn {
+    border-right: 0px;
   }
 
   .trip-header {
@@ -1452,9 +1469,17 @@ body .email {
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 639px) {
+@media screen and (min-width: 425px) and (max-width: 640px) {
   body header nav {
     display: none;
+  }
+
+  .edit-btn, .delete-btn {
+    border-right: 0px;
+  }
+
+  body .edit-btn {
+    border-bottom-left-radius: 0px;
   }
 
   .trip-header {
@@ -1748,6 +1773,10 @@ body .email {
     background-position: 1% 1%;
   }
 
+  body .edit-btn {
+    border-bottom-left-radius: 5px;
+  }
+
   main .confirmation .confirmation-title,
   main .airline-wrapper .airline-title {
     font-size: 0.9em;
@@ -1790,7 +1819,7 @@ body .email {
 
   body .trip-header {
     margin-top: 0%;
-    height: initial;
+    /* height: initial; */
     background-size: initial;
   }
 
@@ -2039,7 +2068,7 @@ body .email {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
   body header nav {
     display: none;
   }
@@ -2091,7 +2120,7 @@ body .email {
 
   body .trip-header {
     margin-top: 0%;
-    height: initial;
+    /* height: initial; */
     background-size: initial;
   }
 
@@ -2339,7 +2368,7 @@ body .email {
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
   .nav-bar {
     display: initial;
   }
@@ -2419,7 +2448,7 @@ body .email {
   }
 }
 
-@media screen and (min-width: 1441px) and (max-width: 1600px) {
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
   .nav-bar {
     display: initial;
   }
@@ -2507,7 +2536,7 @@ body .email {
   }
 }
 
-@media screen and (min-width: 1601px) and (max-width: 2560px) {
+@media screen and (min-width: 1600px) and (max-width: 2560px) {
   .nav-bar {
     display: initial;
   }

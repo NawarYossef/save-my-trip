@@ -46,13 +46,20 @@ class EditTrip {
     $("#departure-airport").val(trip.departure.airport);
     $("#departure-terminal").val(trip.departure.terminal);
     $("#departure-gate").val(trip.departure.gate);
-    $("#datepicker-1").val(trip.departure.date);
+    $("#datepicker-1").val(this.parseDate(trip.departure.date));
 
     $("#arrival-city").val(trip.arrival.city);
     $("#arrival-airport").val(trip.arrival.airport);
     $("#arrival-terminal").val(trip.arrival.terminal);
     $("#arrival-gate").val(trip.arrival.gate);
-    $("#datepicker-2").val(trip.arrival.date);
+    $("#datepicker-2").val(this.parseDate(trip.arrival.date));
+  }
+
+  parseDate(data) {
+    const month = new Date(data).toString().split(" ")[1];
+    const day = new Date(data).toString().split(" ")[2];
+    const year = new Date(data).toString().split(" ")[3];
+    return month + " " + day + ", " + year;
   }
 
   submitUpdatedTrip(tripId) {
@@ -107,10 +114,9 @@ class EditTrip {
 
   initializeDateAndTimePicker() {
     $("#datepicker-1, #datepicker-2").flatpickr({
-      enableTime: true,
-      dateFormat: "m-d-y H:i",
+      altInput: false,
       minDate: "today",
-      time_24hr: false
+      dateFormat: "m d, Y"
     });
   }
 
