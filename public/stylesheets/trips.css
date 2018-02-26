@@ -2188,7 +2188,7 @@ body .email {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   body header .hamburger .hamburger-line {
@@ -2377,10 +2377,6 @@ body .email {
     border-top: none;
   }
 
-  body header {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
   body .trip-header {
     background-position: 1% 1%;
     background-size: initial;
@@ -2455,10 +2451,6 @@ body .email {
 
   .control-btns button {
     border-top: none;
-  }
-
-  body header {
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger {

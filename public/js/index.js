@@ -51,22 +51,34 @@ class SaveMyTrip {
 
         if ($(this).hasClass("about")) {
           that.closeSidebar();
-          $("html, body").animate({
-            scrollTop: $("main").offset().top - 66
-            }, 900);
+          $("html, body").animate(
+            {
+              scrollTop: $("main").offset().top - 66
+            },
+            900
+          );
         } else if ($(this).hasClass("trips-side-bar-link") && !that.token) {
           that.closeSidebar();
-          $("html, body").animate({
+          $("html, body").animate(
+            {
               scrollTop: $(".cards").offset().top - 80
-            }, 900);
+            },
+            900
+          );
         } else if ($(this).hasClass("trips") && !that.token) {
-          $("html, body").animate({ 
-            scrollTop: $(".cards").offset().top - 63
-          }, 900);
+          $("html, body").animate(
+            {
+              scrollTop: $(".cards").offset().top - 63
+            },
+            900
+          );
         } else if ($(this).hasClass("sign-up-btn")) {
-          $("html, body").animate({
-            scrollTop: $("#sign-up").offset().top - 105
-          }, 1000);
+          $("html, body").animate(
+            {
+              scrollTop: $("#sign-up").offset().top - 105
+            },
+            1000
+          );
         }
       }
     );
@@ -133,12 +145,17 @@ class SaveMyTrip {
       $("#my-modal").fadeOut("fast");
 
       // scroll down to signup section after modal fades out
-      $("#my-modal").promise().done(() => {
-        $("html, body").animate({
-          scrollTop: $("#sign-up").offset().top - 105
-        }, 1000);
-      })
-    })
+      $("#my-modal")
+        .promise()
+        .done(() => {
+          $("html, body").animate(
+            {
+              scrollTop: $("#sign-up").offset().top - 105
+            },
+            1000
+          );
+        });
+    });
   }
 
   resetSignupInputValues() {
@@ -241,7 +258,7 @@ class SaveMyTrip {
       if ($(this).scrollTop() > 180) {
         $(".header-wrapper").css({
           transition: "background-color 0.2s ease-in-out",
-          "background-color": "rgba(0,0,0,0.9)",
+          "background-color": "rgba(0,0,0,0.8)",
           "box-shadow": "0 0 16px 8px rgba(0,0,0,.5)",
           "-webkit-box-shadow": "0 0 16px 8px rgba(0,0,0,.5)",
           "-moz-box-shadow": "0 0 16px 8px rgba(0,0,0,.5)"
@@ -264,7 +281,9 @@ class SaveMyTrip {
         slidesToScroll: 1,
         autoplay: true,
         speed: 1000,
-        autoplaySpeed: 4000
+        autoplaySpeed: 4000,
+        prevArrow: false,
+        nextArrow: false
       });
     });
   }

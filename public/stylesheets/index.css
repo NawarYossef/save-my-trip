@@ -137,16 +137,14 @@ header .log-out {
 }
 
 .modal h6 .new-member-go-signup {
-  color: #222324;
-  font: normal 0.9em "Fire-sans", sans-serif;
+  color: #000000;
+  font: normal 1em "Patua One", sans-serif;
   text-decoration: underline;
 }
-
 
 .modal .new-member-go-signup:hover {
   cursor: pointer;
 }
-
 
 .modal .demo-account-access:hover {
   cursor: pointer;
@@ -445,9 +443,9 @@ img {
   display: inline-block;
   margin: -90px auto 69px auto;
   background: rgb(255, 255, 255);
-  border: 1px solid rgb(211, 211, 211);
+  /* border: 1px solid rgb(211, 211, 211); */
   border-radius: 3px;
-  box-shadow: 2px 2px 12px #707070;
+  box-shadow: 2px 2px 4px #707070;
   padding: 5px;
 }
 
@@ -474,6 +472,11 @@ img {
   margin-bottom: 5px;
   padding-top: 5px;
   font: italic 1em/170% "Roboto", sans-serif;
+  color: rgb(26, 25, 25);
+}
+
+.fa-quote-left,
+.fa-quote-right {
   color: rgb(109, 103, 103);
 }
 
@@ -489,7 +492,7 @@ img {
   position: absolute;
   left: 12%;
   top: 34%;
-  color: #424242;
+  color: #e38b39;
 }
 
 .fa-quote-left,
@@ -986,7 +989,7 @@ header button {
   }
 
   body header h1 {
-    font: normal 2.1em "Alfa Slab One", serif;
+    font: normal 2em "Alfa Slab One", serif;
     padding: 0px;
     padding-top: 2px;
     line-height: 75px;
@@ -1435,7 +1438,7 @@ header button {
   }
 
   .container-for-header-text {
-    margin: 18% auto 0 auto;
+    margin: 33% auto 0 auto;
   }
 
   .container-for-header-text p {
@@ -1871,11 +1874,11 @@ header button {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   body header .hamburger {
-    display: none;
+    display: initial;
   }
 
   body header nav {
-    display: initial;
+    display: none;
     float: right;
   }
 
@@ -2124,7 +2127,7 @@ header button {
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
   .nav-bar {
     display: initial;
   }
