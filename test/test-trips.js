@@ -101,36 +101,36 @@ describe("Trip API resource", function() {
 
   beforeEach(function() {
     return User.hashPassword(password)
-      .then(password =>
-        User.create({
-          username,
-          password,
-          email,
-          firstName,
-          lastName
-        })
-      )
-      .then(user => (id = user.id))
-      .then(() => {
-        validToken = jwt.sign(
-          {
-            user: {
-              username,
-              firstName,
-              lastName,
-              email,
-              id
+    .then(password =>
+      User.create({
+        username,
+        password,
+        email,
+        firstName,
+        lastName
+      })
+        .then(user => (id = user.id))
+        .then(() => {
+          validToken = jwt.sign(
+            {
+              user: {
+                username,
+                firstName,
+                lastName,
+                email,
+                id
+              },
+              exp: Math.floor(Date.now() / 1000) + 500 // Expired ten seconds ago
             },
-            exp: Math.floor(Date.now() / 1000) + 500 // Expired ten seconds ago
-          },
-          JWT_SECRET,
-          {
-            algorithm: "HS256",
-            subject: username
-          }
-        );
-        return "";
-      });
+            JWT_SECRET,
+            {
+              algorithm: "HS256",
+              subject: username
+            }
+          );
+          return "";
+        })
+    );
   });
 
   beforeEach(function() {

@@ -80,17 +80,23 @@ class Trips {
       tripHTML.find(".confirmation-text").text(trip.confirmationCode);
       tripHTML.find(".depart-airport").text(trip.departure.airport);
       tripHTML.find(".arrive-airport").text(trip.arrival.airport);
-      tripHTML.find(".departure-date").text(this.parseDate(trip.departure.date));
+      tripHTML
+        .find(".departure-date")
+        .text(this.parseDate(trip.departure.date));
       tripHTML.find(".airline-text").text(trip.airline);
 
-      tripHTML.find(".depart-date-text").text(this.parseDate(trip.departure.date));
+      tripHTML
+        .find(".depart-date-text")
+        .text(this.parseDate(trip.departure.date));
       tripHTML.find(".depart-city").text(trip.departure.city);
       tripHTML
         .find(".depart-terminal")
         .text(`Terminal: ${trip.departure.terminal}` || "-");
       tripHTML.find(".depart-gate").text(`Gate: ${trip.departure.gate}` || "-");
 
-      tripHTML.find(".arrive-date-text").text(this.parseDate(trip.arrival.date));
+      tripHTML
+        .find(".arrive-date-text")
+        .text(this.parseDate(trip.arrival.date));
       tripHTML.find(".arrive-city").text(trip.arrival.city);
       tripHTML
         .find(".arrive-terminal")
@@ -134,8 +140,10 @@ class Trips {
 
   emailHandler() {
     const that = this;
-    $(".modal-form").submit(e => {
+    console.log($("#email-trip-form"))
+    $("#email-trip-form").submit(e => {
       e.preventDefault();
+      console.log("123")
       // that.clearEmailSuccessMessage()
       // store input values in order to send it in the POST request
       const emailInfo = {
