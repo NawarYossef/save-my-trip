@@ -1,5 +1,9 @@
 @import url("whitespace-reset.css");
 
+body {
+  background-position: 50% 0%;
+}
+
 header .fa-plane {
   transform: rotate(320deg);
   vertical-align: middle;
@@ -11,7 +15,7 @@ body header .h1-wrapper {
 }
 
 body .header-wrapper {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 body header {
@@ -484,8 +488,7 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
+  } 
 
   body header .hamburger .hamburger-line {
     background: #006bc8;
@@ -689,7 +692,7 @@ legend {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 375px) {
+@media screen and (min-width: 321px) and (max-width: 375px) {
   body header nav {
     display: none;
   }
@@ -702,7 +705,7 @@ legend {
   .lab-dep-airport {
     position: absolute;
     left: 10%;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   h3 {
@@ -809,7 +812,6 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1011,7 +1013,7 @@ legend {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 376px) and (max-width: 425px) {
   body header nav {
     display: none;
   }
@@ -1131,7 +1133,6 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1333,7 +1334,7 @@ legend {
   }
 }
 
-@media screen and (min-width: 425px) and (max-width: 640px) {
+@media screen and (min-width: 426px) and (max-width: 639px) {
   body header nav {
     display: none;
   }
@@ -1453,7 +1454,6 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1655,7 +1655,7 @@ legend {
   }
 }
 
-@media screen and (min-width: 640px) and (max-width: 767px) {
+@media screen and (min-width: 640px) and (max-width: 768px) {
   body header nav {
     display: none;
   }
@@ -1775,7 +1775,6 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1982,7 +1981,7 @@ legend {
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   body header nav {
     display: none;
   }
@@ -2309,7 +2308,7 @@ legend {
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
   .nav-bar {
     display: initial;
   }
@@ -2401,7 +2400,7 @@ legend {
   }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1600px) {
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
   .nav-bar {
     display: initial;
   }
@@ -2492,7 +2491,7 @@ legend {
   }
 }
 
-@media screen and (min-width: 1600px) and (max-width: 2560px) {
+@media screen and (min-width: 1601px) and (max-width: 2560px) {
   .nav-bar {
     display: initial;
   }

@@ -346,8 +346,8 @@ h4 {
   margin: auto;
   background: rgb(243, 243, 243);
   line-height: 100%;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .departure-wrapper {
@@ -2368,9 +2368,13 @@ body .email {
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
   .nav-bar {
     display: initial;
+  }
+
+  .header-wrapper {
+    background-color: rgba(0,0,0,0.7);
   }
 
   .control-btns button {
@@ -2444,9 +2448,13 @@ body .email {
   }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1600px) {
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
   .nav-bar {
     display: initial;
+  }
+
+  .header-wrapper {
+    background-color: rgba(0,0,0,0.7);
   }
 
   .control-btns button {
@@ -2533,17 +2541,12 @@ body .email {
     display: initial;
   }
 
+  .header-wrapper {
+    background-color: rgba(0,0,0,0.7);
+  }
+
   .control-btns button {
     border-top: none;
-  }
-
-  .departure-wrapper,
-  .arrival-wrapper {
-    height: 190px;
-  }
-
-  body header {
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger {

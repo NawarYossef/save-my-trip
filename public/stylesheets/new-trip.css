@@ -1,5 +1,9 @@
 @import url("whitespace-reset.css");
 
+body {
+  background-position: 50% 0%;
+}
+
 header .fa-plane {
   transform: rotate(320deg);
   vertical-align: middle;
@@ -11,7 +15,7 @@ body header .h1-wrapper {
 }
 
 body .header-wrapper {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 body header {
@@ -489,7 +493,6 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -809,7 +812,6 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1129,7 +1131,6 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1452,7 +1453,6 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -1788,7 +1788,6 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
@@ -2116,7 +2115,6 @@ legend {
 
   body .header-wrapper {
     height: 84px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   body header .hamburger .hamburger-line {
