@@ -117,13 +117,16 @@ class Trips {
   showEmailModal() {
     const that = this;
     $(".trips-container").on("click", ".email", function() {
+      // remove css class responsible for closing modal to insure that modal slides down with each click event.
+      $("#my-modal").removeClass("animated fadeOutRight");
       // save the trip id
       that.state.currentTripId = $(this)
         .parents(".trip")
         .attr("id");
-      $(".send-email-section").css("display", "block");
+      // $(".send-email-section").css("display", "block");
       $("#my-modal").css("display", "block");
-      $("#my-modal").addClass("animated slideInDown");
+      $(".send-email-section").css("display", "block");
+      $("#modal-content").addClass("animated slideInDown");
     });
   }
 
@@ -140,11 +143,10 @@ class Trips {
 
   emailHandler() {
     const that = this;
-    console.log($("#email-trip-form"))
-    $("#email-trip-form").submit(e => {
+    $("body").on("submit", "#email-trip-form", function(e) {
       e.preventDefault();
-      console.log("123")
-      // that.clearEmailSuccessMessage()
+
+      that.clearEmailSuccessMessage();
       // store input values in order to send it in the POST request
       const emailInfo = {
         title: $("#title").val(),
@@ -172,13 +174,12 @@ class Trips {
         })
         .fail(error => {
           console.error("something is wrong", error);
-          // that.handleEmailSent(error)
+          that.handleEmailSent(error)
         });
     });
   }
 
   handleEmailSent(data) {
-    console.log(data);
     $(".send-email-section").css("display", "none");
     $(".cont-for-success-message ").fadeIn();
     this.clearEmailSuccessMessage();

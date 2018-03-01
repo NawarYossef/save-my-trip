@@ -40,7 +40,7 @@ router.get("/:id", jwtAuth, (req, res) => {
 });
 
 // ============== Email POST endpoint ==============
-router.post("/email/:id", (req, res) => {
+router.post("/email/:id", jwtAuth, (req, res) => {
   legit(req.body.email, function(err, validation, addresses) {
     if (validation == false) {
       res.status(500).json({ error: "Invalid Email. Please try again" });
@@ -48,26 +48,32 @@ router.post("/email/:id", (req, res) => {
       Trip.findById(req.params.id)
         .then(trip => {
           const msg = {
+            from: req.user.email,
             to: req.body.email,
-            from: req.body.email,
-            // to: "nawaryossef2@gmail.com",
             subject: `${JSON.stringify(req.body.title)}`,
             text: "Hey Hey Hey ",
             html: `<div>
                   <h4>${JSON.stringify(req.body.message)}</h4>
                   <h2>Trip Information</h2><br>
-                  <p><strong>Origin: </strong>${trip.departure.city}</p>
-                  <p><strong>Destination: </strong>${trip.arrival.city}</p>
+                  <h3>Origin</h3>
+                  <p><strong>City: </strong>${trip.departure.city}</p>
+                  <p><strong>Terminal: </strong>${trip.departure.terminal}</p>
+                  <p><strong>Gate: </strong>${trip.departure.gate}</p>
+                  <p><strong>Departure-date and Time: </strong>${trip.formattedDate(
+                    trip.departure.date
+                  )}</p>
+                  <hr >
+                  <h3>Destination</h3>
+                  <p><strong>City: </strong>${trip.arrival.city}</p>
+                  <p><strong>Terminal: </strong>${trip.arrival.terminal}</p>
+                  <p><strong>Gate: </strong>${trip.arrival.gate}</p>
                   <p><strong>Confirmation-code: </strong>${
                     trip.confirmationCode
                   }</p>
                   <p><strong>Airlines: </strong>${trip.airline}</p>
-                  <p><strong>Departure-date and Time: </strong>${
-                    trip.departure.date
-                  }</p>
-                  <p><strong>Arrival-date and Time: </strong>${
+                  <p><strong>Arrival-date and Time: </strong>${trip.formattedDate(
                     trip.arrival.date
-                  }</p><br>
+                  )}</p><br>
                 </div>`
           };
           sgMail.send(msg);

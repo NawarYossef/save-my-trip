@@ -20,6 +20,13 @@ const TripSchema = mongoose.Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" }
 });
 
+TripSchema.methods.formattedDate = function(date) {
+  const month = new Date(date).toString().split(" ")[1];
+  const day = new Date(date).toString().split(" ")[2];
+  const year = new Date(date).toString().split(" ")[3];
+  return month + " " + day + ", " + year
+}
+
 TripSchema.methods.serialize = function() {
   return {
     id: this._id,
