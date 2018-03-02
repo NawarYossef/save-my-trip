@@ -118,15 +118,12 @@ class Trips {
     const that = this;
     $(".trips-container").on("click", ".email", function() {
       // remove css class responsible for closing modal to insure that modal slides down with each click event.
-      $("#my-modal").removeClass("animated fadeOutRight");
+      $("#my-modal").removeClass("animated fadeOutRight")
       // save the trip id
-      that.state.currentTripId = $(this)
-        .parents(".trip")
-        .attr("id");
-      // $(".send-email-section").css("display", "block");
+      that.state.currentTripId = $(this).parents(".trip").attr("id");
       $("#my-modal").css("display", "block");
-      $(".send-email-section").css("display", "block");
-      $("#modal-content").addClass("animated slideInDown");
+       $(".send-email-section").fadeIn()
+      $(".modal-content").addClass("animated slideInDown");
     });
   }
 
@@ -135,9 +132,10 @@ class Trips {
     $(".trips-container").on("click", ".close", function() {
       // reset the value of trip id when modal is closed
       that.state.currentTripId = "";
-      $("#my-modal")
+      $(".modal-content")
         .removeClass("animated slideInDown")
         .addClass("animated fadeOutRight");
+        $("#my-modal").fadeOut(1200);
     });
   }
 
@@ -146,7 +144,7 @@ class Trips {
     $("body").on("submit", "#email-trip-form", function(e) {
       e.preventDefault();
 
-      that.clearEmailSuccessMessage();
+      that.clearEmailMessage();
       // store input values in order to send it in the POST request
       const emailInfo = {
         title: $("#title").val(),
@@ -170,22 +168,28 @@ class Trips {
         }
       })
         .done(data => {
-          that.handleEmailSent(data);
+          that.handleEmailSuccess();
         })
         .fail(error => {
           console.error("something is wrong", error);
-          that.handleEmailSent(error)
+          that.handleEmailFail();
         });
     });
   }
 
-  handleEmailSent(data) {
+  handleEmailSuccess() {
     $(".send-email-section").css("display", "none");
     $(".cont-for-success-message ").fadeIn();
-    this.clearEmailSuccessMessage();
+    this.clearEmailMessage();
   }
 
-  clearEmailSuccessMessage() {
+  handleEmailFail() {
+    $(".send-email-section").css("display", "none");
+    $(".cont-for-fail-message ").fadeIn();
+    this.clearEmailMessage();
+  }
+
+  clearEmailMessage() {
     setTimeout(() => {
       $("#my-modal")
         .removeClass("animated slideInDown")
@@ -193,7 +197,7 @@ class Trips {
     }, 1500);
 
     setTimeout(() => {
-      $(".cont-for-success-message ").css("display", "none");
+      $(".cont-for-success-message, .cont-for-fail-message ").css("display", "none");
     }, 2000);
   }
 
