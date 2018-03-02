@@ -129,8 +129,30 @@ class SaveMyTrip {
 
   useDemoAccountValuesForLogin() {
     $(".demo-account-access").click(() => {
-      $("#sign-in-username").val("demouser");
-      $("#sign-in-password").val("wewewewe123");
+      const userInfo = {
+        username: "demouser",
+        password: "wewewewe123"
+      };
+
+      // reset input values
+
+      $.ajax({
+        type: "POST",
+        url: "/api/auth/login",
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(userInfo)
+      })
+        .done(data => {
+          // store JWT to local storage and save it across all browser sessions
+          localStorage.setItem("token", data.authToken);
+          this.changeRouteToTripsPage();
+          that.resetLoginInputValues();
+        })
+        .fail(error => {
+          console.error("something is wrong", error);
+          this.showInvalidLoginMessage();
+        });
     });
   }
 
