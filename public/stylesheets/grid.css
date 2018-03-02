@@ -107,9 +107,9 @@ main .row {
 body {
   font-size: 1em;
   background-image: url("../images/view-img1.jpg");
-  background-position: 50% 40%;
+  /* background-position: 50% 40%; */
   background-attachment: fixed;
-  /* background-size:cover; */
+  background-size:cover;
   /* height: 700px; */
 }
 
