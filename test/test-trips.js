@@ -58,7 +58,7 @@ function generateAirport() {
   return airport[Math.floor(Math.random() * airport.length)];
 }
 
-// generate an object represnting a trip.
+// generate an object representing a trip.
 // can be used to generate seed data for db
 // or request.body data
 function generateTripData() {
@@ -159,7 +159,7 @@ describe("Trip API resource", function() {
         .get("/trips")
         .set("Authorization", `Bearer ${validToken}`)
         .then(function(_res) {
-          // so subsequent .then blocks can access resp obj.
+          // so subsequent .then blocks can access res obj.
           res = _res;
           res.should.have.status(200);
           // otherwise the db seeding didn't work

@@ -50,30 +50,31 @@ router.post("/email/:id", jwtAuth, (req, res) => {
           const msg = {
             from: req.user.email,
             to: req.body.email,
-            subject: `${JSON.stringify(req.body.title)}`,
+            subject: `${req.body.title}`,
             text: "Hey Hey Hey ",
             html: `<div>
-                  <h4>${JSON.stringify(req.body.message)}</h4>
+                  <h4>${req.body.message}</h4>
                   <h2>Trip Information</h2><br>
+                  <h3><strong>Confirmation-code: </strong>${
+                    trip.confirmationCode
+                  }</h3>
+                  <h3><strong>Airlines: </strong>${trip.airline}</h3>
+                  <hr >
                   <h3>Origin</h3>
                   <p><strong>City: </strong>${trip.departure.city}</p>
                   <p><strong>Terminal: </strong>${trip.departure.terminal}</p>
                   <p><strong>Gate: </strong>${trip.departure.gate}</p>
-                  <p><strong>Departure-date and Time: </strong>${trip.formattedDate(
+                  <p><strong>Departure-date and Time: </strong>${
                     trip.departure.date
-                  )}</p>
+                  }</p>
                   <hr >
                   <h3>Destination</h3>
                   <p><strong>City: </strong>${trip.arrival.city}</p>
                   <p><strong>Terminal: </strong>${trip.arrival.terminal}</p>
                   <p><strong>Gate: </strong>${trip.arrival.gate}</p>
-                  <p><strong>Confirmation-code: </strong>${
-                    trip.confirmationCode
-                  }</p>
-                  <p><strong>Airlines: </strong>${trip.airline}</p>
-                  <p><strong>Arrival-date and Time: </strong>${trip.formattedDate(
+                  <p><strong>Arrival-date and Time: </strong>${
                     trip.arrival.date
-                  )}</p><br>
+                  }</p><br>
                 </div>`
           };
           sgMail.send(msg);
@@ -121,7 +122,7 @@ router.post("/", jwtAuth, (req, res) => {
 
 // ============== PUT endpoint ==============
 router.put("/:id", jwtAuth, (req, res) => {
-  console.log("wewewe")
+  console.log("wewewe");
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
     res.status(400).json({
       error: "Request path id and request body id values must match"
