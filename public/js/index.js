@@ -135,7 +135,6 @@ class SaveMyTrip {
       };
 
       // reset input values
-
       $.ajax({
         type: "POST",
         url: "/api/auth/login",

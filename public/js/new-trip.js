@@ -26,7 +26,7 @@ class NewTrip {
         arrival: {
           city: $("#arrival-city").val(),
           airport: $("#arrival-airport").val(),
-          terminal: $("#arrival-termianl").val() || '--',
+          terminal: $("#arrival-terminal").val() || `--`,
           gate: $("#arrival-gate").val() || '--',
           date: $("#datepicker-2").val()
         }

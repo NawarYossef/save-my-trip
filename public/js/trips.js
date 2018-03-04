@@ -67,14 +67,15 @@ class Trips {
       const tripId = $(this)
         .parents(".trip")
         .attr("id");
-      window.location.replace(`/edit-trip.html?tripid=${tripId}`);
+      window.location.replace(`/edit-trip.html?tripid=${$(this)
+        .parents(".trip")
+        .attr("id")}`);
     });
   }
 
   renderTrips(data) {
     const allTrips = data.trips.map(trip => {
       const tripHTML = $("#example-trip").clone();
-
       tripHTML.removeClass("hidden");
       tripHTML.attr("id", trip.id);
       tripHTML.find(".confirmation-text").text(trip.confirmationCode);
@@ -82,12 +83,12 @@ class Trips {
       tripHTML.find(".arrive-airport").text(trip.arrival.airport);
       tripHTML
         .find(".departure-date")
-        .text(this.parseDate(trip.departure.date));
+        .text(trip.departure.date);
       tripHTML.find(".airline-text").text(trip.airline);
 
       tripHTML
         .find(".depart-date-text")
-        .text(this.parseDate(trip.departure.date));
+        .text(trip.departure.date);
       tripHTML.find(".depart-city").text(trip.departure.city);
       tripHTML
         .find(".depart-terminal")
@@ -96,7 +97,7 @@ class Trips {
 
       tripHTML
         .find(".arrive-date-text")
-        .text(this.parseDate(trip.arrival.date));
+        .text(trip.arrival.date);
       tripHTML.find(".arrive-city").text(trip.arrival.city);
       tripHTML
         .find(".arrive-terminal")
@@ -107,12 +108,12 @@ class Trips {
     $(".trips-container").html(allTrips);
   }
 
-  parseDate(data) {
-    const month = new Date(data).toString().split(" ")[1];
-    const day = new Date(data).toString().split(" ")[2];
-    const year = new Date(data).toString().split(" ")[3];
-    return month + " " + day + ", " + year;
-  }
+  // parseDate(data) {
+  //   const month = new Date(data).toString().split(" ")[1];
+  //   const day = new Date(data).toString().split(" ")[2];
+  //   const year = new Date(data).toString().split(" ")[3];
+  //   return month + " " + day + ", " + year;
+  // }
 
   showEmailModal() {
     const that = this;

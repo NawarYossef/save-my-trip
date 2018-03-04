@@ -37,14 +37,14 @@ TripSchema.methods.serialize = function() {
       airport: this.departure.airport,
       terminal: this.departure.terminal,
       gate: this.departure.gate,
-      date: this.departure.date
+      date: this.formattedDate(this.departure.date)
     },
     arrival: {
       city: this.arrival.city,
       airport: this.arrival.airport,
       terminal: this.arrival.terminal,
       gate: this.arrival.gate,
-      date: this.arrival.date
+      date: this.formattedDate(this.arrival.date)
     }
   };
 };
