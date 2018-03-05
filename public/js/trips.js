@@ -67,9 +67,11 @@ class Trips {
       const tripId = $(this)
         .parents(".trip")
         .attr("id");
-      window.location.replace(`/edit-trip.html?tripid=${$(this)
-        .parents(".trip")
-        .attr("id")}`);
+      window.location.replace(
+        `/edit-trip.html?tripid=${$(this)
+          .parents(".trip")
+          .attr("id")}`
+      );
     });
   }
 
@@ -83,21 +85,17 @@ class Trips {
       tripHTML.find(".arrive-airport").text(trip.arrival.airport);
       tripHTML
         .find(".departure-date")
-        .text(trip.departure.date);
+        .text(helpers.parseDate(trip.departure.date));
       tripHTML.find(".airline-text").text(trip.airline);
 
-      tripHTML
-        .find(".depart-date-text")
-        .text(trip.departure.date);
+      tripHTML.find(".depart-date-text").text(helpers.parseDate(trip.departure.date));
       tripHTML.find(".depart-city").text(trip.departure.city);
       tripHTML
         .find(".depart-terminal")
         .text(`Terminal: ${trip.departure.terminal}` || "-");
       tripHTML.find(".depart-gate").text(`Gate: ${trip.departure.gate}` || "-");
 
-      tripHTML
-        .find(".arrive-date-text")
-        .text(trip.arrival.date);
+      tripHTML.find(".arrive-date-text").text(helpers.parseDate(trip.arrival.date));
       tripHTML.find(".arrive-city").text(trip.arrival.city);
       tripHTML
         .find(".arrive-terminal")
@@ -108,22 +106,17 @@ class Trips {
     $(".trips-container").html(allTrips);
   }
 
-  // parseDate(data) {
-  //   const month = new Date(data).toString().split(" ")[1];
-  //   const day = new Date(data).toString().split(" ")[2];
-  //   const year = new Date(data).toString().split(" ")[3];
-  //   return month + " " + day + ", " + year;
-  // }
-
   showEmailModal() {
     const that = this;
     $(".trips-container").on("click", ".email", function() {
       // remove css class responsible for closing modal to insure that modal slides down with each click event.
-      $("#my-modal").removeClass("animated fadeOutRight")
+      $("#my-modal").removeClass("animated fadeOutRight");
       // save the trip id
-      that.state.currentTripId = $(this).parents(".trip").attr("id");
+      that.state.currentTripId = $(this)
+        .parents(".trip")
+        .attr("id");
       $("#my-modal").css("display", "block");
-       $(".send-email-section").fadeIn()
+      $(".send-email-section").fadeIn();
       $(".modal-content").addClass("animated slideInDown");
     });
   }
@@ -136,7 +129,7 @@ class Trips {
       $(".modal-content")
         .removeClass("animated slideInDown")
         .addClass("animated fadeOutRight");
-        $("#my-modal").fadeOut(1200);
+      $("#my-modal").fadeOut(1200);
     });
   }
 
@@ -198,7 +191,10 @@ class Trips {
     }, 1500);
 
     setTimeout(() => {
-      $(".cont-for-success-message, .cont-for-fail-message ").css("display", "none");
+      $(".cont-for-success-message, .cont-for-fail-message ").css(
+        "display",
+        "none"
+      );
     }, 2000);
   }
 

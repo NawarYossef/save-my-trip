@@ -47,11 +47,12 @@ router.post("/email/:id", jwtAuth, (req, res) => {
     } else {
       Trip.findById(req.params.id)
         .then(trip => {
+          console.log(trip.departure.date)
           const msg = {
             from: req.user.email,
             to: req.body.email,
             subject: `${req.body.title}`,
-            text: "Hey Hey Hey ",
+            text: " ",
             html: `<div>
                   <h4>${req.body.message}</h4>
                   <h2>Trip Information</h2><br>
@@ -65,6 +66,7 @@ router.post("/email/:id", jwtAuth, (req, res) => {
                   <p><strong>Terminal: </strong>${trip.departure.terminal}</p>
                   <p><strong>Gate: </strong>${trip.departure.gate}</p>
                   <p><strong>Departure-date and Time: </strong>${
+                    // trip.parseDate(trip.departure.date)
                     trip.departure.date
                   }</p>
                   <hr >

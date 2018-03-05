@@ -20,10 +20,11 @@ const TripSchema = mongoose.Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: "User" }
 });
 
-TripSchema.methods.formattedDate = function(date) {
-  const month = new Date(date).toString().split(" ")[1];
-  const day = new Date(date).toString().split(" ")[2];
-  const year = new Date(date).toString().split(" ")[3];
+TripSchema.methods.parseDate = function(date) {
+  const strDate =  date.toString().split(" ")
+  const month = strDate[1];
+  const day = strDate[2];
+  const year = strDate[3];
   return month + " " + day + ", " + year
 }
 
@@ -37,14 +38,14 @@ TripSchema.methods.serialize = function() {
       airport: this.departure.airport,
       terminal: this.departure.terminal,
       gate: this.departure.gate,
-      date: this.formattedDate(this.departure.date)
+      date: this.departure.date
     },
     arrival: {
       city: this.arrival.city,
       airport: this.arrival.airport,
       terminal: this.arrival.terminal,
       gate: this.arrival.gate,
-      date: this.formattedDate(this.arrival.date)
+      date: this.arrival.date
     }
   };
 };

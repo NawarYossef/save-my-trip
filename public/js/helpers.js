@@ -82,6 +82,14 @@ class Helpers {
       }
     });
   }
+
+  parseDate(date) {
+    const strDate = new Date(date).toString().split(" ");
+    const month = strDate[1];
+    const day = strDate[2];
+    const year = strDate[3];
+    return month + " " + day + ", " + year;
+  }
 }
 
 const helpers = new Helpers();
