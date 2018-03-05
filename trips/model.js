@@ -21,12 +21,12 @@ const TripSchema = mongoose.Schema({
 });
 
 TripSchema.methods.parseDate = function(date) {
-  const strDate =  date.toString().split(" ")
+  const strDate = date.toString().split(" ");
   const month = strDate[1];
   const day = strDate[2];
   const year = strDate[3];
-  return month + " " + day + ", " + year
-}
+  return month + " " + day + ", " + year;
+};
 
 TripSchema.methods.serialize = function() {
   return {

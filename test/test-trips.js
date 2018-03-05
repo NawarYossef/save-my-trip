@@ -202,11 +202,19 @@ describe("Trip API resource", function() {
           // use dates to create two instances of the Date object.
           //  call 'getMilliseconds() to compare both values'
 
-          let tripDepartureDate = new Date(`${trip.departure.date}`).getMilliseconds();
-          let resTripDepartureDate = new Date(`${resTrip.departure.date}`).getMilliseconds();
+          let tripDepartureDate = new Date(
+            `${trip.departure.date}`
+          ).getMilliseconds();
+          let resTripDepartureDate = new Date(
+            `${resTrip.departure.date}`
+          ).getMilliseconds();
 
-          let tripArrivalDate = new Date(`${trip.arrival.date}`).getMilliseconds();
-          let resTripArrivalDate = new Date(`${resTrip.arrival.date}`).getMilliseconds();
+          let tripArrivalDate = new Date(
+            `${trip.arrival.date}`
+          ).getMilliseconds();
+          let resTripArrivalDate = new Date(
+            `${resTrip.arrival.date}`
+          ).getMilliseconds();
           resTrip.departure.city.should.equal(trip.departure.city);
           resTrip.departure.airport.should.equal(trip.departure.airport);
           resTrip.departure.terminal.should.equal(trip.departure.terminal);
@@ -239,11 +247,19 @@ describe("Trip API resource", function() {
           //strategy:
           // use dates to create two instances of the Date object.
           //  call 'getMilliseconds() to compare both values'
-          let tripDepartureDate = new Date(`${newTrip.departure.date}`).getMilliseconds();
-          let resDepartureDate = new Date(`${res.body.departure.date}`).getMilliseconds();
+          let tripDepartureDate = new Date(
+            `${newTrip.departure.date}`
+          ).getMilliseconds();
+          let resDepartureDate = new Date(
+            `${res.body.departure.date}`
+          ).getMilliseconds();
 
-          let tripArrivalDate = new Date(`${newTrip.arrival.date}`).getMilliseconds();
-          let resArrivalDate = new Date(`${res.body.arrival.date}`).getMilliseconds();
+          let tripArrivalDate = new Date(
+            `${newTrip.arrival.date}`
+          ).getMilliseconds();
+          let resArrivalDate = new Date(
+            `${res.body.arrival.date}`
+          ).getMilliseconds();
 
           res.should.have.status(201);
           res.should.be.json;
@@ -275,11 +291,19 @@ describe("Trip API resource", function() {
           //strategy:
           // use dates to create two instances of the Date object.
           //  call 'getMilliseconds() to compare both values'
-          let tripDepartureDate = new Date(`${newTrip.departure.date}`).getMilliseconds();
-          let resDepartureDate = new Date(`${trip.departure.date}`).getMilliseconds();
+          let tripDepartureDate = new Date(
+            `${newTrip.departure.date}`
+          ).getMilliseconds();
+          let resDepartureDate = new Date(
+            `${trip.departure.date}`
+          ).getMilliseconds();
 
-          let tripArrivalDate = new Date(`${newTrip.arrival.date}`).getMilliseconds();
-          let resArrivalDate = new Date(`${trip.arrival.date}`).getMilliseconds();
+          let tripArrivalDate = new Date(
+            `${newTrip.arrival.date}`
+          ).getMilliseconds();
+          let resArrivalDate = new Date(
+            `${trip.arrival.date}`
+          ).getMilliseconds();
 
           trip.airline.should.equal(newTrip.airline);
           trip.confirmationCode.should.equal(newTrip.confirmationCode);

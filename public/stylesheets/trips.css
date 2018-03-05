@@ -435,12 +435,14 @@ textarea {
 }
 
 .cont-for-info,
-.cont-for-success-message, .cont-for-fail-message {
+.cont-for-success-message,
+.cont-for-fail-message {
   padding: 0px;
   margin-bottom: 20px;
 }
 
-.cont-for-success-message, .cont-for-fail-message {
+.cont-for-success-message,
+.cont-for-fail-message {
   display: none;
 }
 
@@ -474,7 +476,8 @@ input:-webkit-autofill {
   -moz-box-shadow: 0 0 0 1000px white inset !important;
 }
 
-.alert-success, .alert-fail {
+.alert-success,
+.alert-fail {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
@@ -610,7 +613,8 @@ body .email {
     display: none;
   }
 
-  .edit-btn, .delete-btn {
+  .edit-btn,
+  .delete-btn {
     border-right: 0px;
   }
 
@@ -894,7 +898,8 @@ body .email {
     display: none;
   }
 
-  .edit-btn, .delete-btn {
+  .edit-btn,
+  .delete-btn {
     border-right: 0px;
   }
 
@@ -1178,7 +1183,8 @@ body .email {
     border-bottom-left-radius: 0px;
   }
 
-  .edit-btn, .delete-btn {
+  .edit-btn,
+  .delete-btn {
     border-right: 0px;
   }
 
@@ -1461,7 +1467,8 @@ body .email {
     display: none;
   }
 
-  .edit-btn, .delete-btn {
+  .edit-btn,
+  .delete-btn {
     border-right: 0px;
   }
 
@@ -2361,7 +2368,7 @@ body .email {
   }
 
   .header-wrapper {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   .control-btns button {
@@ -2441,7 +2448,7 @@ body .email {
   }
 
   .header-wrapper {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   .control-btns button {
@@ -2529,7 +2536,7 @@ body .email {
   }
 
   .header-wrapper {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   .control-btns button {

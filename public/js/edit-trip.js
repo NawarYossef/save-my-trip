@@ -37,7 +37,6 @@ class EditTrip {
 
   renderData(data) {
     const trip = data;
-    console.log(data);
     $("#airline").val(trip.airline);
     $("#confirmation").val(trip.confirmationCode);
 
@@ -89,12 +88,11 @@ class EditTrip {
         }
       })
         .done(data => {
-          console.log(data);
           // $("#new-trip-form")[0].reset();
           this.changeRouteToTripsPage();
         })
-        .fail(data => {
-          console.log(data);
+        .fail(error => {
+          console.log(error);
           console.error("something is wrong");
           window.location.replace(`/`);
         });

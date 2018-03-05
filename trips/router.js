@@ -47,7 +47,7 @@ router.post("/email/:id", jwtAuth, (req, res) => {
     } else {
       Trip.findById(req.params.id)
         .then(trip => {
-          console.log(trip.departure.date)
+          console.log(trip.departure.date);
           const msg = {
             from: req.user.email,
             to: req.body.email,
@@ -65,17 +65,17 @@ router.post("/email/:id", jwtAuth, (req, res) => {
                   <p><strong>City: </strong>${trip.departure.city}</p>
                   <p><strong>Terminal: </strong>${trip.departure.terminal}</p>
                   <p><strong>Gate: </strong>${trip.departure.gate}</p>
-                  <p><strong>Departure-date and Time: </strong>${
-                    trip.parseDate(trip.departure.date)
-                  }</p>
+                  <p><strong>Departure-date and Time: </strong>${trip.parseDate(
+                    trip.departure.date
+                  )}</p>
                   <hr >
                   <h3>Destination</h3>
                   <p><strong>City: </strong>${trip.arrival.city}</p>
                   <p><strong>Terminal: </strong>${trip.arrival.terminal}</p>
                   <p><strong>Gate: </strong>${trip.arrival.gate}</p>
-                  <p><strong>Arrival-date and Time: </strong>${
-                    trip.parseDate(trip.arrival.date)
-                  }</p><br>
+                  <p><strong>Arrival-date and Time: </strong>${trip.parseDate(
+                    trip.arrival.date
+                  )}</p><br>
                 </div>`
           };
           sgMail.send(msg);

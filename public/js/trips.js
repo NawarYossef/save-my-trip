@@ -88,14 +88,18 @@ class Trips {
         .text(helpers.parseDate(trip.departure.date));
       tripHTML.find(".airline-text").text(trip.airline);
 
-      tripHTML.find(".depart-date-text").text(helpers.parseDate(trip.departure.date));
+      tripHTML
+        .find(".depart-date-text")
+        .text(helpers.parseDate(trip.departure.date));
       tripHTML.find(".depart-city").text(trip.departure.city);
       tripHTML
         .find(".depart-terminal")
         .text(`Terminal: ${trip.departure.terminal}` || "-");
       tripHTML.find(".depart-gate").text(`Gate: ${trip.departure.gate}` || "-");
 
-      tripHTML.find(".arrive-date-text").text(helpers.parseDate(trip.arrival.date));
+      tripHTML
+        .find(".arrive-date-text")
+        .text(helpers.parseDate(trip.arrival.date));
       tripHTML.find(".arrive-city").text(trip.arrival.city);
       tripHTML
         .find(".arrive-terminal")
