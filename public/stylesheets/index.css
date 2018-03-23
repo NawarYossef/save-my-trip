@@ -176,7 +176,7 @@ header .log-out {
   display: inline-block;
   height: 48px;
   margin-top: 40px;
-  border-radius: 25px;
+  border-radius: 10px;
   /* box-shadow: 6px 5px 10px #484848; */
 }
 
@@ -593,7 +593,7 @@ body .go-to-login-button {
   width: 50%;
   height: 43px;
   color: #ffffff;
-  background: #0088ff;
+  background: #005aa8;
   margin-top: 25px;
   font-size: 1.4em;
   border: none;

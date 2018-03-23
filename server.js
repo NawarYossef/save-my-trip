@@ -8,8 +8,8 @@ const passport = require("passport");
 
 const { PORT, DATABASE_URL } = require("./config");
 
-const { router: usersRouter } = require("./users/router");
-const { router: tripsRouter } = require("./trips/router");
+const { router: usersRouter } = require("./users");
+const { router: tripsRouter } = require("./trips");
 
 const { router: authRouter, localStrategy, jwtStrategy } = require("./auth");
 
