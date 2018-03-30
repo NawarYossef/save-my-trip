@@ -14,6 +14,7 @@ const { Trip } = require("./model");
 const jwtAuth = passport.authenticate("jwt", { session: false });
 
 router.use(jsonParser);
+
 // ============== GET endpoint ==============
 router.get("/", jwtAuth, (req, res) => {
   Trip.find({ user: req.user.id })
@@ -123,7 +124,6 @@ router.post("/", jwtAuth, (req, res) => {
 
 // ============== PUT endpoint ==============
 router.put("/:id", jwtAuth, (req, res) => {
-  console.log("wewewe");
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
     res.status(400).json({
       error: "Request path id and request body id values must match"
